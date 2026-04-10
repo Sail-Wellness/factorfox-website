@@ -93,7 +93,7 @@ function OnboardSection() {
                   </span>
                 </div>
                 {bar && (
-                  <div className={`h-1.5 rounded-full w-full mt-1 bg-primary ${darkBarWhite ? 'dark:bg-white' : ''}`} />
+                  <div className={`h-1.5 rounded-full w-full mt-1 ${darkBarWhite ? 'bg-gray-200 dark:bg-white' : 'bg-primary'}`} />
                 )}
               </div>
             </AnimatedSection>
