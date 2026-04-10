@@ -31,27 +31,31 @@ const features = [
 
 function IntelligenceCore() {
   return (
-    <SectionWrapper
-      className="bg-white"
-      style={{
-        background: 'radial-gradient(ellipse 55% 75% at 0% 10%, rgba(147, 197, 253, 0.55) 0%, rgba(255,255,255,0) 60%)',
-        backgroundColor: '#ffffff',
-      } as React.CSSProperties}
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <SectionWrapper className="relative overflow-hidden bg-white dark:bg-[#0d0d0f]">
+      {/* Light mode gradient */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -inset-10 dark:hidden"
+        style={{
+          background:
+            'radial-gradient(ellipse 55% 75% at 0% 10%, rgba(147, 197, 253, 0.55) 0%, rgba(255,255,255,0) 60%)',
+        }}
+      />
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Left: activity feed card */}
         <AnimatedSection delay={0}>
-          <div className="rounded-3xl p-8 flex flex-col gap-4 bg-white border border-gray-100 shadow-sm">
+          <div className="rounded-3xl p-8 flex flex-col gap-4 bg-white dark:bg-[#0f1520] border border-gray-100 dark:border-gray-800 shadow-sm">
             {activities.map(({ icon: Icon, bg, text }) => (
               <div
                 key={text}
-                className="flex items-center gap-4 rounded-2xl bg-white px-5 py-4 shadow-sm border border-gray-100"
+                className="flex items-center gap-4 rounded-2xl bg-white dark:bg-[#1a2235] px-5 py-4 shadow-sm border border-gray-100 dark:border-gray-800"
               >
                 <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${bg}`}>
                   <Icon className="h-4 w-4 text-white" strokeWidth={2} />
                 </div>
-                <span className="text-[14px] text-gray-600">{text}</span>
+                <span className="text-[14px] text-gray-600 dark:text-gray-300">{text}</span>
               </div>
             ))}
           </div>
@@ -60,7 +64,7 @@ function IntelligenceCore() {
         {/* Right: heading + features */}
         <AnimatedSection delay={0.1} className="flex flex-col">
           <h2
-            className="font-bold text-gray-900 leading-[1.1] mb-8"
+            className="font-bold text-gray-900 dark:text-white leading-[1.1] mb-8"
             style={{ fontSize: 'clamp(28px, 3.2vw, 44px)' }}
           >
             The FactorFox Intelligence Core
@@ -73,8 +77,8 @@ function IntelligenceCore() {
                   <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <p className="text-[15px] font-semibold text-gray-900 mb-1">{title}</p>
-                  <p className="text-[14px] leading-relaxed text-gray-500">{description}</p>
+                  <p className="text-[15px] font-semibold text-gray-900 dark:text-white mb-1">{title}</p>
+                  <p className="text-[14px] leading-relaxed text-gray-500 dark:text-gray-400">{description}</p>
                 </div>
               </div>
             ))}
