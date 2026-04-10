@@ -16,13 +16,13 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>FactorFox — Financial Intelligence for Funding Operations</title>
+        <title>FactorFox | AI Factoring Software &amp; Financial Intelligence Platform for Capital Deployment</title>
         <meta
           name="description"
-          content="The FactorFox Intelligence Core connects factoring, capital, and client workflows into one AI-driven operating system. Built for transportation. Rebuilt for everything else."
+          content="FactorFox is an AI-powered financial intelligence platform for invoice factoring and receivables financing, automating underwriting, onboarding, and capital deployment."
         />
-        <meta property="og:title" content="FactorFox — Financial Intelligence for Funding Operations" />
-        <meta property="og:description" content="AI-powered factoring software that accelerates your funding operations." />
+        <meta property="og:title" content="FactorFox – Intelligent Infrastructure for Capital Deployment" />
+        <meta property="og:description" content="FactorFox is an AI-powered financial intelligence platform for invoice factoring and receivables financing, automating underwriting, onboarding, and capital deployment." />
         <meta property="og:type" content="website" />
       </Helmet>
 
