@@ -84,7 +84,7 @@ function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
-              'px-5 py-2 text-sm font-semibold rounded-full transition-colors',
+              'px-5 py-2 text-sm font-semibold rounded-[8px] transition-colors',
               'bg-primary text-primary-foreground hover:bg-primary/90'
             )}
           >
@@ -137,7 +137,7 @@ function Navbar() {
               href={DEMO_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Request Demo
             </a>
