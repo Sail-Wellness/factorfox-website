@@ -75,7 +75,7 @@ function HeroDashboardTabs() {
     else if (e.key === 'Home') nextIndex = 0
     else nextIndex = count - 1 // End
 
-    setActiveIndex(nextIndex)
+    handleTabClick(nextIndex)
     tabs[nextIndex].focus()
   }
 
