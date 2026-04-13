@@ -132,21 +132,21 @@ function HeroDashboardTabs() {
           id={`hero-tabpanel-${tab.id}`}
           aria-labelledby={`hero-tab-${tab.id}`}
           hidden={index !== activeIndex}
-          className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800"
+          className="rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800"
         >
           {/* Light mode */}
           <img
             src={tab.lightImg}
             alt={`FactorFox ${tab.label} view`}
             loading={index === 0 ? 'eager' : 'lazy'}
-            className="absolute inset-0 w-full h-full object-cover dark:hidden"
+            className="w-full h-auto block dark:hidden"
           />
           {/* Dark mode */}
           <img
             src={tab.darkImg}
             alt={`FactorFox ${tab.label} view`}
             loading={index === 0 ? 'eager' : 'lazy'}
-            className="absolute inset-0 w-full h-full object-cover hidden dark:block"
+            className="w-full h-auto block hidden dark:block"
           />
         </div>
       ))}
