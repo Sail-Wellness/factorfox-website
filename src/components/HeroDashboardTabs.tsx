@@ -11,9 +11,9 @@ type TabConfig = {
 
 const TABS: TabConfig[] = [
   // TODO: replace lightImg/darkImg with real per-tab screenshots when available
+  { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'control',      label: 'Control',      lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
-  { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
 ]
 
@@ -91,7 +91,7 @@ function HeroDashboardTabs() {
         role="tablist"
         aria-label="Dashboard views"
         onKeyDown={handleKeyDown}
-        className="flex gap-1 p-1.5 rounded-xl bg-muted border border-border dark:bg-white/5 dark:border-white/10"
+        className="flex gap-1 p-1 sm:p-1.5 rounded-xl bg-muted border border-border dark:bg-white/5 dark:border-white/10"
       >
         {TABS.map((tab, index) => {
           const isActive = index === activeIndex
@@ -105,7 +105,7 @@ function HeroDashboardTabs() {
               onClick={() => handleTabClick(index)}
               tabIndex={isActive ? 0 : -1}
               className={[
-                'flex-1 flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors',
+                'flex-1 flex items-center justify-center gap-1.5 sm:gap-2 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-[13px] font-medium transition-colors whitespace-nowrap',
                 isActive
                   ? 'bg-card text-foreground shadow-sm dark:bg-white/10 dark:shadow-none'
                   : 'text-muted-foreground hover:text-foreground',
