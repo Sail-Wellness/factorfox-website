@@ -20,16 +20,44 @@ const TABS: TabConfig[] = [
 function HeroDashboardTabs() {
   const [activeIndex, setActiveIndex] = useState(0)
   const tablistRef = useRef<HTMLDivElement>(null)
+  const hasInteractedRef = useRef(false)
+  const intervalRef = useRef<number | null>(null)
 
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
+  const startRotation = () => {
+    if (hasInteractedRef.current) return
+    if (intervalRef.current !== null) return
+    intervalRef.current = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % TABS.length)
     }, 4000)
+  }
 
-    return () => {
-      window.clearInterval(intervalId)
+  const stopRotation = () => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current)
+      intervalRef.current = null
     }
+  }
+
+  useEffect(() => {
+    startRotation()
+    return stopRotation
   }, [])
+
+  const handleTabClick = (index: number) => {
+    hasInteractedRef.current = true
+    stopRotation()
+    setActiveIndex(index)
+  }
+
+  const handleMouseEnter = () => {
+    if (hasInteractedRef.current) return
+    stopRotation()
+  }
+
+  const handleMouseLeave = () => {
+    if (hasInteractedRef.current) return
+    startRotation()
+  }
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return
@@ -52,7 +80,11 @@ function HeroDashboardTabs() {
   }
 
   return (
-    <div className="flex flex-col gap-4 w-full">
+    <div
+      className="flex flex-col gap-4 w-full"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Tab bar */}
       <div
         ref={tablistRef}
@@ -70,7 +102,7 @@ function HeroDashboardTabs() {
               role="tab"
               aria-selected={isActive}
               aria-controls={`hero-tabpanel-${tab.id}`}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => handleTabClick(index)}
               tabIndex={isActive ? 0 : -1}
               className={[
                 'flex-1 flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors',
