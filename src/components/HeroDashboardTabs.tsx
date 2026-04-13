@@ -10,6 +10,7 @@ type TabConfig = {
 }
 
 const TABS: TabConfig[] = [
+  // TODO: replace lightImg/darkImg with real per-tab screenshots when available
   { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'control',      label: 'Control',      lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
@@ -21,29 +22,23 @@ function HeroDashboardTabs() {
   const tablistRef = useRef<HTMLDivElement>(null)
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return
+    e.preventDefault() // prevent page scroll on Home/End and stray arrow scroll
+
     const tabs = tablistRef.current?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
     if (!tabs) return
     const count = tabs.length
+    const currentIndex = [...tabs].findIndex((t) => t === document.activeElement)
+    if (currentIndex === -1) return
 
-    if (e.key === 'ArrowRight') {
-      e.preventDefault()
-      const next = (activeIndex + 1) % count
-      setActiveIndex(next)
-      tabs[next].focus()
-    } else if (e.key === 'ArrowLeft') {
-      e.preventDefault()
-      const prev = (activeIndex - 1 + count) % count
-      setActiveIndex(prev)
-      tabs[prev].focus()
-    } else if (e.key === 'Home') {
-      e.preventDefault()
-      setActiveIndex(0)
-      tabs[0].focus()
-    } else if (e.key === 'End') {
-      e.preventDefault()
-      setActiveIndex(count - 1)
-      tabs[count - 1].focus()
-    }
+    let nextIndex: number
+    if (e.key === 'ArrowRight') nextIndex = (currentIndex + 1) % count
+    else if (e.key === 'ArrowLeft') nextIndex = (currentIndex - 1 + count) % count
+    else if (e.key === 'Home') nextIndex = 0
+    else nextIndex = count - 1 // End
+
+    setActiveIndex(nextIndex)
+    tabs[nextIndex].focus()
   }
 
   return (
@@ -66,6 +61,7 @@ function HeroDashboardTabs() {
               aria-selected={isActive}
               aria-controls={`hero-tabpanel-${tab.id}`}
               onClick={() => setActiveIndex(index)}
+              tabIndex={isActive ? 0 : -1}
               className={[
                 'flex-1 flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors',
                 isActive
