@@ -29,9 +29,9 @@ function Hero() {
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
             {/* Tag */}
-            <div className="mb-6 flex items-center gap-2">
-              <span className="text-primary text-base leading-none select-none">●</span>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
+            <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
                 AI Automated Factoring
               </span>
             </div>

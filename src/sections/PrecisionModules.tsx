@@ -58,14 +58,14 @@ function PrecisionModules() {
       </AnimatedSection>
 
       {/* 3×2 grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-100 dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {modules.map(({ icon: Icon, title, description }, i) => (
           <AnimatedSection key={title} delay={i * 0.06}>
-            <div className="flex flex-col gap-4 bg-white dark:bg-[#111827] p-7 h-full">
-              <Icon className="h-6 w-6 text-primary" strokeWidth={1.5} />
+            <div className="flex flex-col gap-10 bg-white dark:bg-[#111827] rounded-2xl border border-gray-200/80 dark:border-gray-800 p-8 h-full">
+              <Icon className="h-7 w-7 text-primary" strokeWidth={2} />
               <div>
-                <h3 className="text-[15px] font-bold text-gray-900 dark:text-white mb-2">{title}</h3>
-                <p className="text-[13.5px] leading-relaxed text-gray-500 dark:text-gray-400">{description}</p>
+                <h3 className="text-[20px] font-bold text-gray-900 dark:text-white mb-3 tracking-tight">{title}</h3>
+                <p className="text-[15px] leading-relaxed text-gray-500 dark:text-gray-400">{description}</p>
               </div>
             </div>
           </AnimatedSection>
