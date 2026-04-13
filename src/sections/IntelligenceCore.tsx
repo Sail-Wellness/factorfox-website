@@ -3,9 +3,9 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
 
 const activities = [
-  { icon: ScanText,    bg: 'bg-primary', text: 'Reading incoming documents...' },
-  { icon: ShieldAlert, bg: 'bg-red-500', text: 'Verifying against fraud signals...' },
-  { icon: GitFork,     bg: 'bg-primary', text: 'Turning data into decisions...' },
+  { icon: ScanText,    bg: 'bg-primary', text: 'Reading incoming documents...',      offset: '' },
+  { icon: ShieldAlert, bg: 'bg-red-500', text: 'Verifying against fraud signals...', offset: 'ml-8' },
+  { icon: GitFork,     bg: 'bg-primary', text: 'Turning data into decisions...',     offset: '' },
 ]
 
 const features = [
@@ -32,25 +32,24 @@ const features = [
 function IntelligenceCore() {
   return (
     <SectionWrapper className="relative overflow-hidden bg-white dark:bg-[#0d0d0f]">
-      {/* Light mode gradient */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -inset-10 dark:hidden"
-        style={{
-          background:
-            'radial-gradient(ellipse 55% 75% at 0% 10%, rgba(147, 197, 253, 0.55) 0%, rgba(255,255,255,0) 60%)',
-        }}
-      />
-
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Left: activity feed card */}
         <AnimatedSection delay={0}>
-          <div className="rounded-3xl p-8 flex flex-col gap-4 bg-white dark:bg-[#0f1520] border border-gray-100 dark:border-gray-800 shadow-sm">
-            {activities.map(({ icon: Icon, bg, text }) => (
+          <div className="relative rounded-3xl p-8 flex flex-col gap-4 bg-white dark:bg-[#0f1520] border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden">
+            {/* Gradient centered on card */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 dark:hidden"
+              style={{
+                background:
+                  'radial-gradient(ellipse 90% 90% at 50% 50%, rgba(147, 197, 253, 0.5) 0%, rgba(255,255,255,0) 70%)',
+              }}
+            />
+            {activities.map(({ icon: Icon, bg, text, offset }) => (
               <div
                 key={text}
-                className="flex items-center gap-4 rounded-2xl bg-white dark:bg-[#1a2235] px-5 py-4 shadow-sm border border-gray-100 dark:border-gray-800"
+                className={`relative flex items-center gap-4 rounded-2xl bg-white dark:bg-[#1a2235] px-5 py-4 shadow-sm border border-gray-100 dark:border-gray-800 ${offset}`}
               >
                 <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${bg}`}>
                   <Icon className="h-4 w-4 text-white" strokeWidth={2} />

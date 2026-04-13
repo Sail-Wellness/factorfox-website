@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import intelligenceImg from '@/assets/images/intelligence.png'
 import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
+import controlImg from '@/assets/images/control.png'
+import controlDarkImg from '@/assets/images/control_dark.png'
 
 type TabConfig = {
   id: string
@@ -13,7 +15,7 @@ const TABS: TabConfig[] = [
   // TODO: replace lightImg/darkImg with real per-tab screenshots when available
   { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
   { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
-  { id: 'control',      label: 'Control',      lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
+  { id: 'control',      label: 'Control',      lightImg: controlImg,      darkImg: controlDarkImg },
   { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
 ]
 
