@@ -1,6 +1,5 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
-import intelligenceImg from '@/assets/images/intelligence.png'
-import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
+import { HeroDashboardTabs } from '@/components/HeroDashboardTabs'
 
 function Hero() {
   return (
@@ -70,16 +69,7 @@ function Hero() {
 
           {/* Right: dashboard screenshot */}
           <AnimatedSection delay={0.12} className="relative w-full">
-            <img
-              src={intelligenceImg}
-              alt="FactorFox Intelligence dashboard"
-              className="w-full rounded-xl shadow-2xl border border-gray-200 dark:hidden"
-            />
-            <img
-              src={intelligenceDarkImg}
-              alt="FactorFox Intelligence dashboard"
-              className="w-full rounded-xl shadow-2xl border border-gray-800 hidden dark:block"
-            />
+            <HeroDashboardTabs />
           </AnimatedSection>
 
         </div>
