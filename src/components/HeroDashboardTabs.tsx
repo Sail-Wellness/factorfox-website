@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import intelligenceImg from '@/assets/images/intelligence.png'
 import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
 
@@ -20,6 +20,16 @@ const TABS: TabConfig[] = [
 function HeroDashboardTabs() {
   const [activeIndex, setActiveIndex] = useState(0)
   const tablistRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % TABS.length)
+    }, 4000)
+
+    return () => {
+      window.clearInterval(intervalId)
+    }
+  }, [])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(e.key)) return
