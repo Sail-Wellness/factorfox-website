@@ -9,14 +9,15 @@ type TabConfig = {
   label: string
   lightImg: string
   darkImg: string
+  dotColor: string
 }
 
 const TABS: TabConfig[] = [
   // TODO: replace lightImg/darkImg with real per-tab screenshots when available
-  { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
-  { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
-  { id: 'control',      label: 'Control',      lightImg: controlImg,      darkImg: controlDarkImg },
-  { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg },
+  { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-emerald-400' },
+  { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-amber-400'   },
+  { id: 'control',      label: 'Control',      lightImg: controlImg,      darkImg: controlDarkImg,      dotColor: 'bg-blue-400'    },
+  { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-violet-400'  },
 ]
 
 function HeroDashboardTabs() {
@@ -93,7 +94,7 @@ function HeroDashboardTabs() {
         role="tablist"
         aria-label="Dashboard views"
         onKeyDown={handleKeyDown}
-        className="flex gap-1 p-1 sm:p-1.5 rounded-xl bg-muted border border-border dark:bg-white/5 dark:border-white/10"
+        className="flex gap-0.5 p-1 rounded-xl bg-gray-100 border border-gray-200 dark:bg-white/[0.04] dark:border-white/10"
       >
         {TABS.map((tab, index) => {
           const isActive = index === activeIndex
@@ -107,18 +108,15 @@ function HeroDashboardTabs() {
               onClick={() => handleTabClick(index)}
               tabIndex={isActive ? 0 : -1}
               className={[
-                'flex-1 flex items-center justify-center gap-1.5 sm:gap-2 rounded-lg px-2 sm:px-3 py-1.5 sm:py-2 text-[11px] sm:text-[13px] font-medium transition-colors whitespace-nowrap',
+                'flex-1 flex items-center justify-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] sm:text-[12px] font-medium transition-all whitespace-nowrap',
                 isActive
-                  ? 'bg-card text-foreground shadow-sm dark:bg-white/10 dark:shadow-none'
-                  : 'text-muted-foreground hover:text-foreground',
+                  ? 'bg-white text-gray-900 shadow-sm border border-gray-200/80 dark:bg-white/10 dark:text-white dark:border-white/10 dark:shadow-none'
+                  : 'text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300',
               ].join(' ')}
             >
               <span
                 aria-hidden="true"
-                className={[
-                  'h-2 w-2 rounded-full',
-                  isActive ? 'bg-primary' : 'bg-muted-foreground/50',
-                ].join(' ')}
+                className={`h-2 w-2 rounded-full shrink-0 ${tab.dotColor}`}
               />
               <span>{tab.label}</span>
             </button>
