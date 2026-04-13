@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import intelligenceImg from '@/assets/images/intelligence.png'
 import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
 
@@ -23,25 +23,25 @@ function HeroDashboardTabs() {
   const hasInteractedRef = useRef(false)
   const intervalRef = useRef<number | null>(null)
 
-  const startRotation = () => {
+  const stopRotation = useCallback(() => {
+    if (intervalRef.current !== null) {
+      window.clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+  }, [])
+
+  const startRotation = useCallback(() => {
     if (hasInteractedRef.current) return
     if (intervalRef.current !== null) return
     intervalRef.current = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % TABS.length)
     }, 4000)
-  }
-
-  const stopRotation = () => {
-    if (intervalRef.current !== null) {
-      window.clearInterval(intervalRef.current)
-      intervalRef.current = null
-    }
-  }
+  }, [])
 
   useEffect(() => {
     startRotation()
     return stopRotation
-  }, [])
+  }, [startRotation, stopRotation])
 
   const handleTabClick = (index: number) => {
     hasInteractedRef.current = true
@@ -138,12 +138,14 @@ function HeroDashboardTabs() {
           <img
             src={tab.lightImg}
             alt={`FactorFox ${tab.label} view`}
+            loading={index === 0 ? 'eager' : 'lazy'}
             className="absolute inset-0 w-full h-full object-cover dark:hidden"
           />
           {/* Dark mode */}
           <img
             src={tab.darkImg}
             alt={`FactorFox ${tab.label} view`}
+            loading={index === 0 ? 'eager' : 'lazy'}
             className="absolute inset-0 w-full h-full object-cover hidden dark:block"
           />
         </div>
