@@ -14,8 +14,6 @@ const navLinks = [
 
 // Replace with actual Nimbus URL
 const LOGIN_URL = 'https://app.factorfox.com'
-// Replace with actual demo booking URL
-const DEMO_URL = '#'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -79,17 +77,15 @@ function Navbar() {
           >
             Login
           </a>
-          <a
-            href={DEMO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact-sales"
             className={cn(
               'px-5 py-2 text-sm font-semibold rounded-[8px] transition-colors',
               'bg-primary text-primary-foreground hover:bg-primary/90'
             )}
           >
             Request Demo
-          </a>
+          </Link>
         </div>
 
         {/* Mobile: theme toggle + hamburger */}
@@ -133,14 +129,12 @@ function Navbar() {
             >
               Login
             </a>
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact-sales"
               className="flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >
               Request Demo
-            </a>
+            </Link>
           </div>
         </div>
       )}

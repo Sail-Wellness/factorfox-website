@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { HeroDashboardTabs } from '@/components/HeroDashboardTabs'
 
@@ -52,12 +53,12 @@ function Hero() {
 
             {/* CTAs */}
             <div className="flex items-center gap-4 flex-wrap">
-              <a
-                href="#"
+              <Link
+                to="/contact-sales"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary/90 transition-colors shadow-sm"
               >
                 Request Demo
-              </a>
+              </Link>
               <a
                 href="#"
                 className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 dark:bg-gray-800 font-semibold text-[15px] hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
