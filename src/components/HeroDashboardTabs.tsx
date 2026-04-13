@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import intelligenceImg from '@/assets/images/intelligence.png'
 import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
 
@@ -18,17 +18,42 @@ const TABS: TabConfig[] = [
 
 function HeroDashboardTabs() {
   const [activeIndex, setActiveIndex] = useState(0)
+  const tablistRef = useRef<HTMLDivElement>(null)
 
-  const handleTabClick = (index: number) => {
-    setActiveIndex(index)
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    const tabs = tablistRef.current?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
+    if (!tabs) return
+    const count = tabs.length
+
+    if (e.key === 'ArrowRight') {
+      e.preventDefault()
+      const next = (activeIndex + 1) % count
+      setActiveIndex(next)
+      tabs[next].focus()
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault()
+      const prev = (activeIndex - 1 + count) % count
+      setActiveIndex(prev)
+      tabs[prev].focus()
+    } else if (e.key === 'Home') {
+      e.preventDefault()
+      setActiveIndex(0)
+      tabs[0].focus()
+    } else if (e.key === 'End') {
+      e.preventDefault()
+      setActiveIndex(count - 1)
+      tabs[count - 1].focus()
+    }
   }
 
   return (
     <div className="flex flex-col gap-4 w-full">
       {/* Tab bar */}
       <div
+        ref={tablistRef}
         role="tablist"
         aria-label="Dashboard views"
+        onKeyDown={handleKeyDown}
         className="flex gap-1 p-1.5 rounded-xl bg-muted border border-border dark:bg-white/5 dark:border-white/10"
       >
         {TABS.map((tab, index) => {
@@ -40,7 +65,7 @@ function HeroDashboardTabs() {
               role="tab"
               aria-selected={isActive}
               aria-controls={`hero-tabpanel-${tab.id}`}
-              onClick={() => handleTabClick(index)}
+              onClick={() => setActiveIndex(index)}
               className={[
                 'flex-1 flex items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium transition-colors',
                 isActive
@@ -61,42 +86,30 @@ function HeroDashboardTabs() {
         })}
       </div>
 
-      {/* Screenshot area */}
-      <div
-        role="tabpanel"
-        id={`hero-tabpanel-${TABS[activeIndex].id}`}
-        aria-labelledby={`hero-tab-${TABS[activeIndex].id}`}
-        className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800"
-      >
-        {/* Light mode images */}
-        <div className="absolute inset-0 dark:hidden">
-          {TABS.map((tab, index) => (
-            <img
-              key={`light-${tab.id}`}
-              src={tab.lightImg}
-              alt={`FactorFox ${tab.label} view`}
-              className={[
-                'absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-out',
-                index === activeIndex ? 'opacity-100' : 'opacity-0',
-              ].join(' ')}
-            />
-          ))}
+      {/* Screenshot area — all panels rendered, inactive ones hidden */}
+      {TABS.map((tab, index) => (
+        <div
+          key={tab.id}
+          role="tabpanel"
+          id={`hero-tabpanel-${tab.id}`}
+          aria-labelledby={`hero-tab-${tab.id}`}
+          hidden={index !== activeIndex}
+          className="relative w-full aspect-[16/10] rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800"
+        >
+          {/* Light mode */}
+          <img
+            src={tab.lightImg}
+            alt={`FactorFox ${tab.label} view`}
+            className="absolute inset-0 w-full h-full object-cover dark:hidden"
+          />
+          {/* Dark mode */}
+          <img
+            src={tab.darkImg}
+            alt={`FactorFox ${tab.label} view`}
+            className="absolute inset-0 w-full h-full object-cover hidden dark:block"
+          />
         </div>
-        {/* Dark mode images */}
-        <div className="absolute inset-0 hidden dark:block">
-          {TABS.map((tab, index) => (
-            <img
-              key={`dark-${tab.id}`}
-              src={tab.darkImg}
-              alt={`FactorFox ${tab.label} view`}
-              className={[
-                'absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ease-out',
-                index === activeIndex ? 'opacity-100' : 'opacity-0',
-              ].join(' ')}
-            />
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   )
 }
