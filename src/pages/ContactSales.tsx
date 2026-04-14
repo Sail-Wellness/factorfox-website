@@ -1,42 +1,42 @@
-import { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ShieldCheck, Zap, CheckCircle2 } from 'lucide-react'
-import { AnimatedSection } from '@/components/AnimatedSection'
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { ShieldCheck, Zap, CheckCircle2 } from "lucide-react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const VOLUME_OPTIONS = [
-  'Less than $1M / month',
-  '$1M – $5M / month',
-  '$5M – $20M / month',
-  '$20M – $50M / month',
-  'More than $50M / month',
-]
+  "Less than $1M / month",
+  "$1M – $5M / month",
+  "$5M – $20M / month",
+  "$20M – $50M / month",
+  "More than $50M / month",
+];
 
 interface FormState {
-  fullName: string
-  workEmail: string
-  companyName: string
-  monthlyVolume: string
-  website: string // honeypot — hidden from users
+  fullName: string;
+  workEmail: string;
+  companyName: string;
+  monthlyVolume: string;
+  website: string; // honeypot — hidden from users
 }
 
 const initialForm: FormState = {
-  fullName: '',
-  workEmail: '',
-  companyName: '',
-  monthlyVolume: '',
-  website: '',
-}
+  fullName: "",
+  workEmail: "",
+  companyName: "",
+  monthlyVolume: "",
+  website: "",
+};
 
 function ContactSales() {
-  const [form, setForm] = useState<FormState>(initialForm)
-  const [submitted, setSubmitted] = useState(false)
+  const [form, setForm] = useState<FormState>(initialForm);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
-    const { name, value } = e.target
-    setForm(prev => ({ ...prev, [name]: value }))
-  }
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
 
   return (
     <>
@@ -48,32 +48,16 @@ function ContactSales() {
         />
       </Helmet>
 
-      <main className="relative overflow-hidden bg-white dark:bg-[#0b1120] min-h-[calc(100vh-4rem)]">
-        {/* Light mode gradient */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 dark:hidden"
-          style={{
-            background:
-              'radial-gradient(ellipse 60% 70% at 85% 20%, rgba(186, 230, 253, 0.45) 0%, rgba(255,255,255,0) 70%)',
-          }}
-        />
-        {/* Dark mode gradient */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 hidden dark:block"
-          style={{
-            background:
-              'radial-gradient(ellipse 55% 60% at 85% 15%, rgba(0, 144, 255, 0.10) 0%, transparent 70%)',
-          }}
-        />
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
-            {/* Left: copy */}
-            <AnimatedSection delay={0} className="flex flex-col">
+      <main className="bg-white dark:bg-[#040a15]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-4rem)]">
+          {/* Left half — white, content aligned to where max-w-7xl px-8 starts */}
+          <div className="flex flex-col justify-center px-4 sm:px-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-16 md:py-20">
+            <AnimatedSection delay={0} className="max-w-[560px]">
               <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
-                <ShieldCheck className="h-3 w-3 text-primary" strokeWidth={2.5} />
+                <ShieldCheck
+                  className="h-3 w-3 text-primary"
+                  strokeWidth={2.5}
+                />
                 <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
                   Efficient Onboarding for Efficient Operators
                 </span>
@@ -81,27 +65,31 @@ function ContactSales() {
 
               <h1
                 className="font-black text-gray-900 dark:text-white leading-[0.95] mb-6"
-                style={{ fontSize: 'clamp(48px, 6.5vw, 80px)' }}
+                style={{ fontSize: "clamp(52px, 6.5vw, 80px)" }}
               >
-                Join in Minutes<br />not Months.
+                Join in Minutes
+                <br />
+                not Months.
               </h1>
 
               <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[460px]">
-                FactorFox is the only platform to migrate data in{' '}
+                FactorFox is the only platform to migrate data in{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">
                   under 60 minutes
                 </span>
-                . Eclipsing the industry standard of{' '}
+                . Eclipsing the industry standard of{" "}
                 <span className="font-semibold text-gray-900 dark:text-white">
                   6&ndash;12 months
                 </span>
                 .
               </p>
             </AnimatedSection>
+          </div>
 
-            {/* Right: form card */}
-            <AnimatedSection delay={0.12}>
-              <div className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#111827] shadow-xl shadow-gray-900/5 dark:shadow-black/30 p-7 md:p-8">
+          {/* Right half — soft bg, extends to viewport right edge */}
+          <div className="bg-surface-soft flex items-center justify-center px-4 sm:px-6 lg:px-12 py-12 md:py-16">
+            <AnimatedSection delay={0.12} className="w-full max-w-md">
+              <div className="rounded-2xl border border-gray-200/60 dark:border-white/10 bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-7 md:p-8">
                 {submitted ? (
                   <div
                     role="status"
@@ -120,32 +108,31 @@ function ContactSales() {
                     <p className="text-[14px] text-gray-500 dark:text-gray-400 max-w-[280px]">
                       Thanks
                       {form.fullName.trim()
-                        ? `, ${form.fullName.trim().split(' ')[0]}`
-                        : ''}
+                        ? `, ${form.fullName.trim().split(" ")[0]}`
+                        : ""}
                       . Our team will reach out within 24 hours.
                     </p>
                   </div>
                 ) : (
                   <form
-                    noValidate
-                    onSubmit={e => {
-                      e.preventDefault()
-                      if (form.website) return // bot caught by honeypot
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      if (form.website) return; // bot caught by honeypot
                       // TODO: wire to backend / CRM endpoint
                       // eslint-disable-next-line no-console
-                      console.log('[Request Access]', {
+                      console.log("[Request Access]", {
                         fullName: form.fullName,
                         workEmail: form.workEmail,
                         companyName: form.companyName,
                         monthlyVolume: form.monthlyVolume,
-                      })
-                      setSubmitted(true)
+                      });
+                      setSubmitted(true);
                     }}
                   >
                     <h2 className="text-[24px] font-bold text-gray-900 dark:text-white mb-1">
                       Initialize Account
                     </h2>
-                    <p className="text-[13.5px] text-gray-500 dark:text-gray-400 mb-6">
+                    <p className="text-[14px] text-gray-500 dark:text-gray-400 mb-6">
                       Fill in the details below to request platform access.
                     </p>
 
@@ -180,7 +167,7 @@ function ContactSales() {
                     <div className="mb-5">
                       <label
                         htmlFor="monthlyVolume"
-                        className="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500 dark:text-gray-400"
+                        className="text-label mb-1.5 block text-gray-500 dark:text-gray-400"
                       >
                         Monthly Volume
                       </label>
@@ -190,12 +177,12 @@ function ContactSales() {
                         value={form.monthlyVolume}
                         onChange={handleChange}
                         required
-                        className="w-full appearance-none rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0f172a] px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
+                        className="w-full appearance-none rounded-lg border border-transparent dark:border-white/10 bg-input-soft px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
                       >
                         <option value="" disabled>
                           Select volume range
                         </option>
-                        {VOLUME_OPTIONS.map(opt => (
+                        {VOLUME_OPTIONS.map((opt) => (
                           <option key={opt} value={opt}>
                             {opt}
                           </option>
@@ -222,7 +209,11 @@ function ContactSales() {
 
                     <button
                       type="submit"
-                      className="mt-2 w-full rounded-xl bg-primary text-white font-semibold text-[15px] py-3.5 hover:bg-primary/90 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-[#111827]"
+                      style={{
+                        background:
+                          "linear-gradient(180deg, #4ba6ff 0%, #0085ef 100%)",
+                      }}
+                      className="mt-2 w-full rounded-xl text-white font-semibold text-[15px] py-3.5 transition-opacity hover:opacity-95 shadow-md shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-surface-soft"
                     >
                       Request Access
                     </button>
@@ -243,17 +234,17 @@ function ContactSales() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 interface FieldProps {
-  label: string
-  name: keyof FormState
-  type: string
-  placeholder: string
-  value: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  autoComplete?: string
+  label: string;
+  name: keyof FormState;
+  type: string;
+  placeholder: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  autoComplete?: string;
 }
 
 function Field({
@@ -269,7 +260,7 @@ function Field({
     <div className="mb-5">
       <label
         htmlFor={name}
-        className="mb-1.5 block text-[10px] font-bold uppercase tracking-[0.1em] text-gray-500 dark:text-gray-400"
+        className="text-label mb-1.5 block text-gray-500 dark:text-gray-400"
       >
         {label}
       </label>
@@ -282,10 +273,10 @@ function Field({
         onChange={onChange}
         required
         autoComplete={autoComplete}
-        className="w-full rounded-lg border border-gray-200 dark:border-white/10 bg-white dark:bg-[#0f172a] px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
+        className="w-full rounded-lg border border-transparent dark:border-white/10 bg-input-soft px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white placeholder:text-slate-500/70 dark:placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
       />
     </div>
-  )
+  );
 }
 
-export { ContactSales }
+export { ContactSales };
