@@ -3,13 +3,16 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 function AboutHero() {
   return (
     <section className="relative overflow-hidden bg-white dark:bg-[#040811]">
-      {/* Light mode vignette (white center → soft blue-grey edges) */}
+      {/* Light mode overlay + blur glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 dark:hidden"
+        className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 dark:hidden"
         style={{
-          background:
-            'radial-gradient(ellipse 60% 55% at 50% 50%, transparent 0%, rgba(210, 220, 235, 0.55) 95%)',
+          width: '75%',
+          height: '70%',
+          background: '#EBF6FF',
+          borderRadius: '50%',
+          filter: 'blur(90px)',
         }}
       />
       {/* Dark mode overlay + blur glow */}
