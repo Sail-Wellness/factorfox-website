@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async'
+import { AboutHero } from '@/sections/AboutHero'
 
 function About() {
   return (
@@ -12,9 +13,8 @@ function About() {
       </Helmet>
 
       <main>
-        <div className="flex min-h-[80vh] items-center justify-center">
-          <p className="text-muted-foreground text-sm">About page — coming soon.</p>
-        </div>
+        <AboutHero />
+        {/* More sections will be added here as Figma designs are shared */}
       </main>
     </>
   )
