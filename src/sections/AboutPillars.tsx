@@ -44,7 +44,7 @@ function AboutPillars() {
             <AnimatedSection
               key={title}
               delay={0.1 + i * 0.08}
-              className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161c2a] p-8 flex flex-col"
+              className="rounded-2xl border border-gray-200 dark:border-white/10 bg-[#F6FBFF] dark:bg-[#161c2a] p-8 flex flex-col"
             >
               <Icon
                 className="h-7 w-7 text-primary mb-8"

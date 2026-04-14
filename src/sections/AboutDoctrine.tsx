@@ -5,7 +5,7 @@ import authorImg from '@/assets/images/author.svg'
 
 function AboutDoctrine() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#0C121D]">
+    <section className="relative overflow-hidden bg-[#F6FBFF] dark:bg-[#0C121D]">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 

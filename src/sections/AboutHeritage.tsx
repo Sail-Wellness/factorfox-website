@@ -9,7 +9,7 @@ const STATS = [
 
 function AboutHeritage() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#0C121D]">
+    <section className="relative overflow-hidden bg-[#F6FBFF] dark:bg-[#0C121D]">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 
         <AnimatedSection delay={0} className="flex flex-col items-center text-center">
