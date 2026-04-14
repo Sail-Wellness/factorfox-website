@@ -41,6 +41,8 @@
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-surface-soft: var(--surface-soft);
+  --color-input-soft: var(--input-soft);
 }
 
 /* ─── Light Mode ─────────────────────────────────────── */
@@ -52,6 +54,10 @@
   /* Cards / surfaces */
   --card: #ffffff;
   --card-foreground: #0f172a;
+
+  /* Soft surfaces — pale-blue zones used in onboarding/contact card */
+  --surface-soft: #f6fbff;
+  --input-soft: #dfe8ff;
 
   /* Muted (secondary text, placeholders) */
   --muted: #f1f5f9;
@@ -93,9 +99,13 @@
   --background: #0b1120;
   --foreground: #f8fafc;
 
-  /* Cards / surfaces — slightly lighter than background */
-  --card: #111827;
+  /* Cards / surfaces */
+  --card: #0c121d;
   --card-foreground: #f8fafc;
+
+  /* Soft surfaces — onboarding right panel sits below the card in dark mode */
+  --surface-soft: #050a14;
+  --input-soft: #0f172a;
 
   /* Muted */
   --muted: #1e293b;
@@ -193,9 +203,9 @@
   }
 
   .text-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
 }
