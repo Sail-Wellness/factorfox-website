@@ -4,6 +4,7 @@ import { AboutDoctrine } from '@/sections/AboutDoctrine'
 import { AboutMission } from '@/sections/AboutMission'
 import { AboutHeritage } from '@/sections/AboutHeritage'
 import { AboutPillars } from '@/sections/AboutPillars'
+import { AboutMoreThanSoftware } from '@/sections/AboutMoreThanSoftware'
 
 function About() {
   return (
@@ -22,6 +23,7 @@ function About() {
         <AboutMission />
         <AboutHeritage />
         <AboutPillars />
+        <AboutMoreThanSoftware />
         {/* More sections will be added here as Figma designs are shared */}
       </main>
     </>
