@@ -85,7 +85,7 @@ function IntegrationsSection() {
     <SectionWrapper className="bg-[var(--set2-bg)]">
       {/* Label */}
       <AnimatedSection delay={0} className="text-center mb-12">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
           Unifying Systems Under 1 Workflow
         </p>
       </AnimatedSection>

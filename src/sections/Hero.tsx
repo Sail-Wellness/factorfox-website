@@ -39,14 +39,14 @@ function Hero() {
 
             {/* Heading */}
             <h1
-              className="font-black text-gray-900 dark:text-white uppercase leading-[0.95] mb-6"
+              className="font-black text-foreground uppercase leading-[0.95] mb-6"
               style={{ fontSize: 'clamp(52px, 6.5vw, 80px)' }}
             >
               Just Deploy<br />Capital
             </h1>
 
             {/* Subtitle */}
-            <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[430px] mb-10">
+            <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[430px] mb-10">
               We automate the entire factoring life-cycle so you reduce cost,
               eliminate fraud, and maximize turnover on every dollar deployed.
             </p>
@@ -61,7 +61,7 @@ function Hero() {
               </Link>
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-200 dark:bg-gray-800 font-semibold text-[15px] hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-border text-foreground hover:bg-muted font-semibold text-[15px] transition-colors"
               >
                 View Platform
               </a>

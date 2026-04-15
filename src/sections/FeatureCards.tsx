@@ -31,13 +31,13 @@ function FeatureCards() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {cards.map(({ icon: Icon, title, description }, i) => (
             <AnimatedSection key={title} delay={i * 0.07}>
-              <div className="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[var(--set2-stroke)] bg-[var(--set2-box)] p-6 h-full">
+              <div className="flex flex-col gap-4 rounded-xl border border-[var(--set2-stroke)] bg-[var(--set2-box)] p-6 h-full">
                 <Icon className="h-6 w-6 text-primary" strokeWidth={1.75} />
                 <div>
-                  <h3 className="text-[15px] font-bold text-gray-900 dark:text-white mb-1.5">
+                  <h3 className="text-[15px] font-bold text-foreground mb-1.5">
                     {title}
                   </h3>
-                  <p className="text-[13.5px] leading-snug text-gray-500 dark:text-gray-400">
+                  <p className="text-[13.5px] leading-snug text-muted-foreground">
                     {description}
                   </p>
                 </div>

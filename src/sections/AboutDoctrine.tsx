@@ -11,7 +11,7 @@ function AboutDoctrine() {
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
             <h2
-              className="font-black text-gray-900 dark:text-white leading-[1.05] mb-6"
+              className="font-black text-foreground leading-[1.05] mb-6"
               style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
             >
               The Doctrine for
@@ -19,7 +19,7 @@ function AboutDoctrine() {
               Modern Factoring
             </h2>
 
-            <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[460px] mb-8">
+            <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[460px] mb-8">
               25+ years of operator experience, distilled into a system for
               faster capital, lower risk, and higher returns.
             </p>
@@ -32,10 +32,10 @@ function AboutDoctrine() {
                 className="h-11 w-11 rounded-full object-cover flex-shrink-0"
               />
               <div className="flex flex-col">
-                <span className="text-[14px] font-semibold text-gray-900 dark:text-white">
+                <span className="text-[14px] font-semibold text-foreground">
                   Written by Roberto Vasquez
                 </span>
-                <span className="text-[12px] text-gray-500 dark:text-gray-400">
+                <span className="text-[12px] text-muted-foreground">
                   Founder &amp; Architect of FactorFox
                 </span>
               </div>

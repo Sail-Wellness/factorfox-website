@@ -94,7 +94,7 @@ function HeroDashboardTabs() {
         role="tablist"
         aria-label="Dashboard views"
         onKeyDown={handleKeyDown}
-        className="flex gap-0.5 p-1 rounded-xl bg-gray-100 border border-gray-200 dark:bg-white/[0.04] dark:border-white/10"
+        className="flex gap-0.5 p-1 rounded-xl bg-muted border border-border"
       >
         {TABS.map((tab, index) => {
           const isActive = index === activeIndex
@@ -110,8 +110,8 @@ function HeroDashboardTabs() {
               className={[
                 'flex-1 flex items-center justify-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] sm:text-[12px] font-medium transition-all whitespace-nowrap',
                 isActive
-                  ? 'bg-white text-gray-900 shadow-sm border border-gray-200/80 dark:bg-white/10 dark:text-white dark:border-white/10 dark:shadow-none'
-                  : 'text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300',
+                  ? 'bg-background text-foreground shadow-sm border border-border dark:shadow-none'
+                  : 'text-muted-foreground hover:text-foreground',
               ].join(' ')}
             >
               <span
@@ -132,7 +132,7 @@ function HeroDashboardTabs() {
           id={`hero-tabpanel-${tab.id}`}
           aria-labelledby={`hero-tab-${tab.id}`}
           hidden={index !== activeIndex}
-          className="rounded-xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800"
+          className="rounded-xl overflow-hidden shadow-2xl border border-border"
         >
           {/* Light mode */}
           <img

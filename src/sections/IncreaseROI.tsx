@@ -35,8 +35,8 @@ function IncreaseROI() {
 
         {/* Tag pill */}
         <AnimatedSection delay={0}>
-          <div className="inline-flex items-center rounded-full border border-gray-200 dark:border-gray-700 bg-white dark:bg-transparent px-4 py-1.5 mb-6">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400">
+          <div className="inline-flex items-center rounded-full border border-border bg-white dark:bg-transparent px-4 py-1.5 mb-6">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
               Operational Excellence
             </span>
           </div>
@@ -45,7 +45,7 @@ function IncreaseROI() {
         {/* Heading */}
         <AnimatedSection delay={0.05}>
           <h2
-            className="font-black text-gray-900 dark:text-white leading-[1.05] mb-6"
+            className="font-black text-foreground leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px, 5.5vw, 68px)' }}
           >
             Increase ROI by <span className="text-primary">3x</span>
@@ -54,7 +54,7 @@ function IncreaseROI() {
 
         {/* Subtitle */}
         <AnimatedSection delay={0.1}>
-          <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[620px] mb-12">
+          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[620px] mb-12">
             Achieved through 3 levers: more capital per operator, faster turns through AI
             automation, and near-zero fraud through centralized, cross-system intelligence.
           </p>
@@ -69,10 +69,10 @@ function IncreaseROI() {
                   <Icon className="h-4 w-4 text-primary" strokeWidth={2} />
                 </div>
                 <div className="text-left">
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-gray-400 dark:text-gray-500 mb-0.5">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground mb-0.5">
                     {label}
                   </p>
-                  <p className="text-[14px] font-bold text-gray-900 dark:text-white">{value}</p>
+                  <p className="text-[14px] font-bold text-foreground">{value}</p>
                 </div>
               </div>
             ))}

@@ -29,12 +29,12 @@ function AboutPillars() {
 
         <AnimatedSection delay={0} className="flex flex-col mb-14 md:mb-16">
           <h2
-            className="font-black text-gray-900 dark:text-white leading-[1.05] mb-5"
+            className="font-black text-foreground leading-[1.05] mb-5"
             style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}
           >
             Now Rebuilt for an AI World
           </h2>
-          <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[560px]">
+          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[560px]">
             The three pillars of our next-generation core infrastructure.
           </p>
         </AnimatedSection>
@@ -50,10 +50,10 @@ function AboutPillars() {
                 className="h-7 w-7 text-primary mb-8"
                 strokeWidth={2}
               />
-              <h3 className="text-[22px] font-bold text-gray-900 dark:text-white mb-4">
+              <h3 className="text-[22px] font-bold text-foreground mb-4">
                 {title}
               </h3>
-              <p className="text-[15px] leading-relaxed text-gray-500 dark:text-gray-400">
+              <p className="text-[15px] leading-relaxed text-muted-foreground">
                 {description}
               </p>
             </AnimatedSection>

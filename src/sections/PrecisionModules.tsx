@@ -47,12 +47,12 @@ function PrecisionModules() {
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-12">
         <h2
-          className="font-black text-gray-900 dark:text-white leading-[1.05] mb-3"
+          className="font-black text-foreground leading-[1.05] mb-3"
           style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}
         >
           Precision Modules
         </h2>
-        <p className="text-[16px] text-gray-400">
+        <p className="text-[16px] text-muted-foreground">
           Scalable building blocks designed for specialized finance workflows.
         </p>
       </AnimatedSection>
@@ -61,11 +61,11 @@ function PrecisionModules() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {modules.map(({ icon: Icon, title, description }, i) => (
           <AnimatedSection key={title} delay={i * 0.06}>
-            <div className="flex flex-col gap-10 bg-[var(--set1-box)] rounded-2xl border border-gray-200/80 dark:border-[var(--set1-stroke)] p-8 h-full">
+            <div className="flex flex-col gap-10 bg-[var(--set1-box)] rounded-2xl border border-[var(--set1-stroke)] p-8 h-full">
               <Icon className="h-7 w-7 text-primary" strokeWidth={2} />
               <div>
-                <h3 className="text-[20px] font-bold text-gray-900 dark:text-white mb-3 tracking-tight">{title}</h3>
-                <p className="text-[15px] leading-relaxed text-gray-500 dark:text-gray-400">{description}</p>
+                <h3 className="text-[20px] font-bold text-foreground mb-3 tracking-tight">{title}</h3>
+                <p className="text-[15px] leading-relaxed text-muted-foreground">{description}</p>
               </div>
             </div>
           </AnimatedSection>

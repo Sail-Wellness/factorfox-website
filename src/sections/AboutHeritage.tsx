@@ -23,14 +23,14 @@ function AboutHeritage() {
 
           {/* Heading */}
           <h2
-            className="font-black text-gray-900 dark:text-white leading-[1.05] mb-6"
+            className="font-black text-foreground leading-[1.05] mb-6"
             style={{ fontSize: 'clamp(40px, 5.5vw, 72px)' }}
           >
             Founded by Factors
           </h2>
 
           {/* Subtitle */}
-          <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[640px]">
+          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[640px]">
             Founded in 2002, FactorFox has been the silent engine behind
             billions in financing. We are moving beyond legacy systems to define
             the next quarter-century of working capital.
@@ -45,10 +45,10 @@ function AboutHeritage() {
                 key={label}
                 className="rounded-2xl border border-[var(--set2-stroke)] bg-[var(--set2-box)] py-10 px-6 flex flex-col items-center text-center"
               >
-                <span className="text-[42px] md:text-[48px] font-black text-gray-900 dark:text-white leading-none mb-3">
+                <span className="text-[42px] md:text-[48px] font-black text-foreground leading-none mb-3">
                   {value}
                 </span>
-                <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-gray-500 dark:text-gray-500">
+                <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted-foreground">
                   {label}
                 </span>
               </div>

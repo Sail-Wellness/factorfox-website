@@ -48,7 +48,7 @@ function ContactSales() {
         />
       </Helmet>
 
-      <main className="bg-white dark:bg-[#040a15]">
+      <main className="bg-[var(--set1-bg)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-4rem)]">
           {/* Left half — white, content aligned to where max-w-7xl px-8 starts */}
           <div className="flex flex-col justify-center px-4 sm:px-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-16 md:py-20">
@@ -64,7 +64,7 @@ function ContactSales() {
               </div> */}
 
               <h1
-                className="font-black text-gray-900 dark:text-white leading-[0.95] mb-6"
+                className="font-black text-foreground leading-[0.95] mb-6"
                 style={{ fontSize: "clamp(52px, 6.5vw, 80px)" }}
               >
                 Join in Minutes
@@ -72,13 +72,13 @@ function ContactSales() {
                 not Months.
               </h1>
 
-              <p className="text-[16.5px] leading-relaxed text-gray-500 dark:text-gray-400 max-w-[460px]">
+              <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[460px]">
                 FactorFox is the only platform to migrate data in{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">
+                <span className="font-semibold text-foreground">
                   under 60 minutes
                 </span>
                 . Eclipsing the industry standard of{" "}
-                <span className="font-semibold text-gray-900 dark:text-white">
+                <span className="font-semibold text-foreground">
                   6&ndash;12 months
                 </span>
                 .
@@ -89,7 +89,7 @@ function ContactSales() {
           {/* Right half — soft bg, extends to viewport right edge */}
           <div className="bg-surface-soft flex items-center justify-center px-4 sm:px-6 lg:px-12 py-12 md:py-16">
             <AnimatedSection delay={0.12} className="w-full max-w-md">
-              <div className="rounded-2xl border border-gray-200/60 dark:border-white/10 bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-7 md:p-8">
+              <div className="rounded-2xl border border-border bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-7 md:p-8">
                 {submitted ? (
                   <div
                     role="status"
@@ -102,10 +102,10 @@ function ContactSales() {
                         strokeWidth={2}
                       />
                     </div>
-                    <h2 className="text-[22px] font-bold text-gray-900 dark:text-white">
+                    <h2 className="text-[22px] font-bold text-foreground">
                       Request received
                     </h2>
-                    <p className="text-[14px] text-gray-500 dark:text-gray-400 max-w-[280px]">
+                    <p className="text-[14px] text-muted-foreground max-w-[280px]">
                       Thanks
                       {form.fullName.trim()
                         ? `, ${form.fullName.trim().split(" ")[0]}`
@@ -129,10 +129,10 @@ function ContactSales() {
                       setSubmitted(true);
                     }}
                   >
-                    <h2 className="text-[24px] font-bold text-gray-900 dark:text-white mb-1">
+                    <h2 className="text-[24px] font-bold text-foreground mb-1">
                       Initialize Account
                     </h2>
-                    <p className="text-[14px] text-gray-500 dark:text-gray-400 mb-6">
+                    <p className="text-[14px] text-muted-foreground mb-6">
                       Fill in the details below to request platform access.
                     </p>
 
@@ -167,7 +167,7 @@ function ContactSales() {
                     <div className="mb-5">
                       <label
                         htmlFor="monthlyVolume"
-                        className="text-label mb-1.5 block text-gray-500 dark:text-gray-400"
+                        className="text-label mb-1.5 block text-muted-foreground"
                       >
                         Monthly Volume
                       </label>
@@ -177,7 +177,7 @@ function ContactSales() {
                         value={form.monthlyVolume}
                         onChange={handleChange}
                         required
-                        className="w-full appearance-none rounded-lg border border-transparent dark:border-white/10 bg-input-soft px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
+                        className="w-full appearance-none rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
                       >
                         <option value="" disabled>
                           Select volume range
@@ -218,7 +218,7 @@ function ContactSales() {
                       Request Access
                     </button>
 
-                    <div className="mt-4 flex items-center justify-center gap-1.5 text-[12px] text-gray-500 dark:text-gray-400">
+                    <div className="mt-4 flex items-center justify-center gap-1.5 text-[12px] text-muted-foreground">
                       <Zap
                         className="h-3 w-3 text-primary"
                         strokeWidth={2.5}
@@ -260,7 +260,7 @@ function Field({
     <div className="mb-5">
       <label
         htmlFor={name}
-        className="text-label mb-1.5 block text-gray-500 dark:text-gray-400"
+        className="text-label mb-1.5 block text-muted-foreground"
       >
         {label}
       </label>
@@ -273,7 +273,7 @@ function Field({
         onChange={onChange}
         required
         autoComplete={autoComplete}
-        className="w-full rounded-lg border border-transparent dark:border-white/10 bg-input-soft px-3.5 py-2.5 text-[14px] text-gray-900 dark:text-white placeholder:text-slate-500/70 dark:placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
+        className="w-full rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
       />
     </div>
   );
