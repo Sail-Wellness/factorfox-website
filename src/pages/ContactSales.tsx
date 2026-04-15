@@ -114,13 +114,15 @@ function ContactSales() {
                       e.preventDefault();
                       if (form.website) return; // bot caught by honeypot
                       // TODO: wire to backend / CRM endpoint
-                      // eslint-disable-next-line no-console
-                      console.log("[Request Access]", {
-                        fullName: form.fullName,
-                        workEmail: form.workEmail,
-                        companyName: form.companyName,
-                        monthlyVolume: form.monthlyVolume,
-                      });
+                      if (import.meta.env.DEV) {
+                        // eslint-disable-next-line no-console
+                        console.log("[Request Access]", {
+                          fullName: form.fullName,
+                          workEmail: form.workEmail,
+                          companyName: form.companyName,
+                          monthlyVolume: form.monthlyVolume,
+                        });
+                      }
                       setSubmitted(true);
                     }}
                   >
