@@ -16,7 +16,7 @@ function DocumentsToDecisions() {
     <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-16">
-        <h2 className="text-section-lg text-foreground mb-4 whitespace-nowrap">
+        <h2 className="text-section-lg text-foreground mb-4">
           From Documents to Decisions—Automatically
         </h2>
         <p className="text-body-lg text-muted-foreground max-w-xl mx-auto">

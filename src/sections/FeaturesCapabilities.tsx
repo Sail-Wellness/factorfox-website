@@ -26,9 +26,9 @@ function FeaturesCapabilities() {
   return (
     <section className="relative overflow-hidden bg-[var(--set1-bg)]">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 md:gap-8">
+        <div className="flex flex-col items-center md:flex-row md:justify-between md:items-start gap-12 md:gap-8">
           {capabilities.map(({ icon: Icon, title, description }, i) => (
-            <AnimatedSection key={title} delay={i * 0.08} className="flex flex-col max-w-[260px]">
+            <AnimatedSection key={title} delay={i * 0.08} className="flex flex-col max-w-[260px] w-full md:w-auto">
               <Icon
                 className="h-8 w-8 text-primary mb-6"
                 strokeWidth={2.25}

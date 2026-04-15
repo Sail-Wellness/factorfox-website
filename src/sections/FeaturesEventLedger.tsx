@@ -54,12 +54,12 @@ function FeaturesEventLedger() {
             {events.map((event, i) => (
               <div
                 key={event.timestamp}
-                className={`flex items-center gap-4 px-6 py-5 ${
+                className={`flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-5 ${
                   i < events.length - 1 ? 'border-b border-border' : ''
                 }`}
               >
-                {/* Timestamp */}
-                <span className="text-[11px] font-mono text-muted-foreground shrink-0 w-[60px]">
+                {/* Timestamp — hidden on mobile to give title room */}
+                <span className="hidden sm:inline-block text-[11px] font-mono text-muted-foreground shrink-0 w-[60px]">
                   {event.timestamp}
                 </span>
 
