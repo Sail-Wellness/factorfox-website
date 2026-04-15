@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Helmet } from "react-helmet-async";
 import { ShieldCheck, Zap, CheckCircle2 } from "lucide-react";
+import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 const VOLUME_OPTIONS = [
@@ -40,13 +40,11 @@ function ContactSales() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Sales — FactorFox</title>
-        <meta
-          name="description"
-          content="Request access to FactorFox — the only platform that migrates factoring data in under 60 minutes."
-        />
-      </Helmet>
+      <SEO
+        title="Contact Sales — FactorFox"
+        description="Request access to FactorFox — the only platform that migrates factoring data in under 60 minutes. Join in minutes, not months."
+        path="/contact-sales"
+      />
 
       <main className="bg-[var(--set1-bg)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-4rem)]">

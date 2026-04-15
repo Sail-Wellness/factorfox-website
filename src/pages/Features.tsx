@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async'
+import { SEO } from '@/components/SEO'
 import { FeaturesHero } from '@/sections/FeaturesHero'
 import { FeaturesQuickbooksXero } from '@/sections/FeaturesQuickbooksXero'
 import { FeaturesLiveRiskEngine } from '@/sections/FeaturesLiveRiskEngine'
@@ -11,13 +11,11 @@ import { FeaturesCta } from '@/sections/FeaturesCta'
 function Features() {
   return (
     <>
-      <Helmet>
-        <title>Features — FactorFox</title>
-        <meta
-          name="description"
-          content="Explore FactorFox's AI-powered features: Document Intelligence, Collections Engine, Credit & Risk Intelligence, and more."
-        />
-      </Helmet>
+      <SEO
+        title="Features — FactorFox | AI Factoring Software"
+        description="Automate everything: Document Intelligence, QuickBooks & Xero integration, Live Risk Engine, Portfolio Monitoring, and Event Ledger. Built for modern factoring operators."
+        path="/features"
+      />
 
       <main>
         <FeaturesHero />
