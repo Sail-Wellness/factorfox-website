@@ -10,7 +10,7 @@ const features = [
 
 function ComparisonCard() {
   return (
-    <div className="rounded-2xl bg-white dark:bg-[#111827] border border-gray-100 dark:border-gray-700 shadow-lg p-5 flex flex-col gap-3 w-full max-w-sm">
+    <div className="rounded-2xl bg-[var(--set1-box)] border border-gray-100 dark:border-[var(--set1-stroke)] shadow-lg p-5 flex flex-col gap-3 w-full max-w-sm">
       {/* Manual Process */}
       <div className="flex items-center justify-between rounded-xl px-4 py-3 bg-[#fff1f2] dark:bg-white/[0.04]">
         <span className="text-[14px] font-medium text-gray-700 dark:text-gray-300">
@@ -45,7 +45,7 @@ function ComparisonCard() {
 
 function OperatingSystemSection() {
   return (
-    <SectionWrapper className="bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="bg-[var(--set1-bg)]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: text */}
         <AnimatedSection delay={0} className="flex flex-col">

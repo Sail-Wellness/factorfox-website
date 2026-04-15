@@ -8,7 +8,7 @@ const stats = [
 
 function MobileSection() {
   return (
-    <section className="w-full overflow-hidden" style={{ backgroundColor: '#0090ff' }}>
+    <section className="w-full overflow-hidden" style={{ backgroundColor: 'var(--brand)' }}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 

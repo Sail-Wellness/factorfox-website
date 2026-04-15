@@ -40,7 +40,7 @@ interface FooterProps {
 
 function Footer({ className }: FooterProps) {
   return (
-    <footer className={cn('border-t border-border bg-background', className)}>
+    <footer className={cn('border-t border-border bg-[var(--footer)]', className)}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
           {/* Brand */}

@@ -9,7 +9,7 @@ const STATS = [
 
 function AboutHeritage() {
   return (
-    <section className="relative overflow-hidden bg-[#F6FBFF] dark:bg-[#0C121D]">
+    <section className="relative overflow-hidden bg-[var(--set2-bg)]">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 
         <AnimatedSection delay={0} className="flex flex-col items-center text-center">
@@ -43,7 +43,7 @@ function AboutHeritage() {
             {STATS.map(({ value, label }) => (
               <div
                 key={label}
-                className="rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-[#161c2a] py-10 px-6 flex flex-col items-center text-center"
+                className="rounded-2xl border border-[var(--set2-stroke)] bg-[var(--set2-box)] py-10 px-6 flex flex-col items-center text-center"
               >
                 <span className="text-[42px] md:text-[48px] font-black text-gray-900 dark:text-white leading-none mb-3">
                   {value}

@@ -13,7 +13,7 @@ const steps = [
 
 function DocumentsToDecisions() {
   return (
-    <SectionWrapper className="bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-16">
         <h2
@@ -36,7 +36,7 @@ function DocumentsToDecisions() {
               <div className={`flex h-14 w-14 items-center justify-center rounded-3xl mb-4 ${
                 title === 'Action'
                   ? 'bg-blue-50 dark:bg-primary'
-                  : 'bg-slate-100 dark:bg-[#1a2235]'
+                  : 'bg-slate-100 dark:bg-[var(--set1-box)]'
               }`}>
                 <Icon
                   className={`h-6 w-6 ${

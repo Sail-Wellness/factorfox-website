@@ -4,7 +4,7 @@ import { HeroDashboardTabs } from '@/components/HeroDashboardTabs'
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#0d0d0f]">
+    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
       {/* Light mode gradient */}
       <div
         aria-hidden="true"

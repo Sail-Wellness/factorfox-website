@@ -10,7 +10,7 @@ const members = [
 
 function EcosystemSection() {
   return (
-    <SectionWrapper className="bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-14">
         <h2
@@ -30,7 +30,7 @@ function EcosystemSection() {
           <AnimatedSection key={initials} delay={i * 0.08} className="flex flex-col items-center text-center">
             {/* Circle */}
             <div
-              className="flex items-center justify-center rounded-full mb-4 bg-[#f1f3f5] dark:bg-[#1e2535]"
+              className="flex items-center justify-center rounded-full mb-4 bg-[var(--set1-box)]"
               style={{ width: 100, height: 100 }}
             >
               <span

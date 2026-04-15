@@ -43,7 +43,7 @@ const modules = [
 
 function PrecisionModules() {
   return (
-    <SectionWrapper className="bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-12">
         <h2
@@ -61,7 +61,7 @@ function PrecisionModules() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {modules.map(({ icon: Icon, title, description }, i) => (
           <AnimatedSection key={title} delay={i * 0.06}>
-            <div className="flex flex-col gap-10 bg-white dark:bg-[#111827] rounded-2xl border border-gray-200/80 dark:border-gray-800 p-8 h-full">
+            <div className="flex flex-col gap-10 bg-[var(--set1-box)] rounded-2xl border border-gray-200/80 dark:border-[var(--set1-stroke)] p-8 h-full">
               <Icon className="h-7 w-7 text-primary" strokeWidth={2} />
               <div>
                 <h3 className="text-[20px] font-bold text-gray-900 dark:text-white mb-3 tracking-tight">{title}</h3>

@@ -38,8 +38,8 @@ function Navbar() {
       className={cn(
         'fixed top-0 z-50 w-full transition-all duration-300',
         scrolled
-          ? 'bg-white/95 dark:bg-[#090f19]/95 shadow-sm backdrop-blur-md border-b border-border'
-          : 'bg-white dark:bg-[#090f19]'
+          ? 'bg-[var(--nav)]/95 shadow-sm backdrop-blur-md border-b border-border'
+          : 'bg-[var(--nav)]'
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">

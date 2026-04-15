@@ -31,12 +31,12 @@ const features = [
 
 function IntelligenceCore() {
   return (
-    <SectionWrapper className="relative overflow-hidden bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set1-bg)]">
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
         {/* Left: activity feed card */}
         <AnimatedSection delay={0}>
-          <div className="relative rounded-3xl p-8 flex flex-col gap-4 bg-white dark:bg-[#0f1520] border border-gray-100 dark:border-gray-800 shadow-sm overflow-hidden">
+          <div className="relative rounded-3xl p-8 flex flex-col gap-4 bg-[var(--set1-box)] border border-gray-100 dark:border-[var(--set1-stroke)] shadow-sm overflow-hidden">
             {/* Gradient centered on card */}
             <div
               aria-hidden="true"
@@ -49,7 +49,7 @@ function IntelligenceCore() {
             {activities.map(({ icon: Icon, bg, text, offset }) => (
               <div
                 key={text}
-                className={`relative flex items-center gap-4 rounded-2xl bg-white dark:bg-[#1a2235] px-5 py-4 shadow-sm border border-gray-100 dark:border-gray-800 ${offset}`}
+                className={`relative flex items-center gap-4 rounded-2xl bg-[var(--set2-box)] px-5 py-4 shadow-sm border border-gray-100 dark:border-[var(--set2-stroke)] ${offset}`}
               >
                 <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${bg}`}>
                   <Icon className="h-4 w-4 text-white" strokeWidth={2} />

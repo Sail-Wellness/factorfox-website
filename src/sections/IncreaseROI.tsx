@@ -9,7 +9,7 @@ const stats = [
 
 function IncreaseROI() {
   return (
-    <section className="relative w-full py-20 md:py-28 overflow-hidden bg-white dark:bg-[#0d0d0f]">
+    <section className="relative w-full py-20 md:py-28 overflow-hidden bg-[var(--set1-bg)]">
       {/* Light mode — dual edge gradients */}
       <div
         aria-hidden="true"

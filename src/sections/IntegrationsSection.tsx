@@ -82,7 +82,7 @@ function LogoRow({ logos }: { logos: Logo[] }) {
 
 function IntegrationsSection() {
   return (
-    <SectionWrapper className="bg-[#f1f5f9] dark:bg-[#0A0F19]">
+    <SectionWrapper className="bg-[var(--set2-bg)]">
       {/* Label */}
       <AnimatedSection delay={0} className="text-center mb-12">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">

@@ -24,7 +24,7 @@ const PILLARS = [
 
 function AboutPillars() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#040811]">
+    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 
         <AnimatedSection delay={0} className="flex flex-col mb-14 md:mb-16">
@@ -44,7 +44,7 @@ function AboutPillars() {
             <AnimatedSection
               key={title}
               delay={0.1 + i * 0.08}
-              className="rounded-2xl border border-gray-200 dark:border-white/10 bg-[#F6FBFF] dark:bg-[#161c2a] p-8 flex flex-col"
+              className="rounded-2xl border border-[var(--set1-stroke)] bg-[var(--set1-box)] p-8 flex flex-col"
             >
               <Icon
                 className="h-7 w-7 text-primary mb-8"

@@ -31,7 +31,7 @@ const stats = [
 
 function OnboardSection() {
   return (
-    <SectionWrapper className="bg-white dark:bg-[#0d0d0f]">
+    <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Header */}
       <AnimatedSection delay={0} className="mb-10">
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary mb-3">
@@ -55,7 +55,7 @@ function OnboardSection() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-[15px]">
         {features.map(({ icon: Icon, title, description }, i) => (
           <AnimatedSection key={title} delay={i * 0.07}>
-            <div className="h-full rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0C121D] p-6 shadow-sm flex flex-col gap-[15px]">
+            <div className="h-full rounded-xl border border-gray-100 dark:border-[var(--set1-stroke)] bg-[var(--set1-box)] p-6 shadow-sm flex flex-col gap-[15px]">
               {/* Light mode: icon in circle */}
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-50 dark:hidden">
                 <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
@@ -77,7 +77,7 @@ function OnboardSection() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {stats.map(({ label, value, delta, bar, darkBarWhite }, i) => (
           <AnimatedSection key={label} delay={0.2 + i * 0.07}>
-            <div className="h-full rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#0C121D] p-8 shadow-sm flex flex-col gap-3">
+            <div className="h-full rounded-xl border border-gray-100 dark:border-[var(--set1-stroke)] bg-[var(--set1-box)] p-8 shadow-sm flex flex-col gap-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-gray-400 dark:text-white">
                   {label}
                 </p>

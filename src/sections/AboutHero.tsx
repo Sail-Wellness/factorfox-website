@@ -2,7 +2,7 @@ import { AnimatedSection } from '@/components/AnimatedSection'
 
 function AboutHero() {
   return (
-    <section className="relative overflow-hidden bg-white dark:bg-[#040811]">
+    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
       {/* Light mode overlay + blur glow */}
       <div
         aria-hidden="true"
