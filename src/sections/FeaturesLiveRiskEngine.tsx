@@ -1,6 +1,6 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
-import screenshotImg from '@/assets/images/risk_engine.png'
-import screenshotDarkImg from '@/assets/images/risk_engine_dark.png'
+import screenshotImg from '@/assets/images/risk_engine.svg'
+import screenshotDarkImg from '@/assets/images/risk_engine_dark.svg'
 
 function FeaturesLiveRiskEngine() {
   return (

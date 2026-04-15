@@ -1,6 +1,6 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
-import screenshotImg from "@/assets/images/qb_stream.png";
-import screenshotDarkImg from "@/assets/images/qb_stream_dark.png";
+import screenshotImg from "@/assets/images/qb_stream.svg";
+import screenshotDarkImg from "@/assets/images/qb_stream_dark.svg";
 
 function FeaturesQuickbooksXero() {
   return (
