@@ -1,7 +1,7 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
-import screenshotImg from '@/assets/images/intelligence.png'
-import screenshotDarkImg from '@/assets/images/intelligence_dark.png'
+import screenshotImg from '@/assets/images/demo_canvas.svg'
+import screenshotDarkImg from '@/assets/images/demo_canvas_dark.svg'
 
 function FeaturesHero() {
   return (
@@ -22,21 +22,19 @@ function FeaturesHero() {
 
         {/* Screenshot */}
         <AnimatedSection delay={0.12} className="relative max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl">
-            <img
-              src={screenshotImg}
-              alt="FactorFox dashboard"
-              loading="eager"
-              className="w-full h-auto block dark:hidden"
-            />
-            <img
-              src={screenshotDarkImg}
-              alt="FactorFox dashboard"
-              loading="eager"
-              aria-hidden="true"
-              className="w-full h-auto hidden dark:block"
-            />
-          </div>
+          <img
+            src={screenshotImg}
+            alt="FactorFox dashboard"
+            loading="eager"
+            className="w-full h-auto block dark:hidden"
+          />
+          <img
+            src={screenshotDarkImg}
+            alt="FactorFox dashboard"
+            loading="eager"
+            aria-hidden="true"
+            className="w-full h-auto hidden dark:block"
+          />
         </AnimatedSection>
 
     </SectionWrapper>
