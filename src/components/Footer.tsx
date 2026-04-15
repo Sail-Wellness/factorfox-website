@@ -3,6 +3,12 @@ import { Globe, AtSign, Share2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import logoSrc from '@/assets/logo.svg'
 
+const LOGIN_URL = 'https://app.factorfox.com'
+
+// TODO: replace placeholder hrefs with real URLs when available
+// - Product links: deep links to feature subsections
+// - Legal links: real policy page URLs
+// - Social links: real company profile URLs
 const footerLinks = {
   Product: [
     { label: 'Intake Engine', href: '#' },
@@ -29,9 +35,9 @@ const socialLinks = [
 ]
 
 const bottomLinks = [
-  { label: 'Status', href: '#' },
-  { label: 'Support', href: '#' },
-  { label: 'Login', href: '#' },
+  { label: 'Status', href: '#', external: false },
+  { label: 'Support', href: '#', external: false },
+  { label: 'Login', href: LOGIN_URL, external: true },
 ]
 
 interface FooterProps {
@@ -104,10 +110,11 @@ function Footer({ className }: FooterProps) {
             &copy; {new Date().getFullYear()} FactorFox. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            {bottomLinks.map(({ label, href }) => (
+            {bottomLinks.map(({ label, href, external }) => (
               <a
                 key={label}
                 href={href}
+                {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {label}

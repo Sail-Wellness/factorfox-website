@@ -45,12 +45,12 @@ function AboutMoreThanSoftware() {
             <Link to="/contact-sales" className="btn-primary shadow-sm">
               Experience FactorFox
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/features"
               className="px-7 py-3 text-body font-semibold text-foreground hover:text-primary transition-colors"
             >
               View Platform
-            </a>
+            </Link>
           </div>
         </AnimatedSection>
       </div>

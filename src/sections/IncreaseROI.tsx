@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { DollarSign, TrendingUp, ShieldCheck } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 
@@ -78,9 +79,9 @@ function IncreaseROI() {
 
         {/* CTA */}
         <AnimatedSection delay={0.2}>
-          <a href="#" className="btn-primary">
+          <Link to="/features" className="btn-primary">
             Learn More
-          </a>
+          </Link>
         </AnimatedSection>
 
       </div>

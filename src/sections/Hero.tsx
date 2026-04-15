@@ -53,9 +53,9 @@ function Hero() {
               <Link to="/contact-sales" className="btn-primary shadow-sm">
                 Request Demo
               </Link>
-              <a href="#" className="btn-secondary">
+              <Link to="/features" className="btn-secondary">
                 View Platform
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
 

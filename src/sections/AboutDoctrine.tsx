@@ -38,7 +38,7 @@ function AboutDoctrine() {
               </div>
             </div>
 
-            {/* CTA */}
+            {/* CTA — TODO: replace href with real PDF URL when available */}
             <a
               href="#"
               className="self-start inline-flex items-center gap-2 text-primary font-semibold text-[15px] hover:opacity-75 transition-opacity"
