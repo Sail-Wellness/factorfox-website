@@ -50,7 +50,7 @@ function FeaturesEventLedger() {
 
         {/* Event log card */}
         <AnimatedSection delay={0.12} className="max-w-2xl mx-auto">
-          <div className="rounded-2xl bg-[var(--set1-box)] border border-border shadow-2xl overflow-hidden">
+          <div className="rounded-2xl bg-[var(--set1-box)] border border-[var(--set2-stroke)] shadow-2xl overflow-hidden">
             {events.map((event, i) => (
               <div
                 key={event.timestamp}

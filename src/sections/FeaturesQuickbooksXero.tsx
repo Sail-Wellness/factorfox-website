@@ -21,7 +21,7 @@ function FeaturesQuickbooksXero() {
 
           {/* Right: screenshot */}
           <AnimatedSection delay={0.12} className="relative w-full">
-            <div className="rounded-2xl overflow-hidden border border-border shadow-2xl">
+            <div className="rounded-2xl overflow-hidden border border-[var(--set2-stroke)] shadow-2xl">
               <img
                 src={screenshotImg}
                 alt="QuickBooks &amp; Xero integration"

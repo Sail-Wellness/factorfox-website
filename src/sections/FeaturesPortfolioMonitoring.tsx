@@ -22,7 +22,7 @@ function FeaturesPortfolioMonitoring() {
 
           {/* Left: screenshot */}
           <AnimatedSection delay={0} className="relative w-full order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden border border-border shadow-2xl">
+            <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl">
               <img
                 src={screenshotImg}
                 alt="Portfolio Monitoring"

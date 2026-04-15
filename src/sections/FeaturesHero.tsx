@@ -19,7 +19,7 @@ function FeaturesHero() {
 
         {/* Screenshot */}
         <AnimatedSection delay={0.12} className="relative max-w-5xl mx-auto">
-          <div className="rounded-2xl overflow-hidden border border-border shadow-2xl">
+          <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl">
             <img
               src={screenshotImg}
               alt="FactorFox dashboard"
