@@ -14,10 +14,7 @@ function FeaturesCta() {
             Join the institutions re-vitalizing their operations with FactorFox.
           </p>
 
-          <Link
-            to="/contact-sales"
-            className="mt-6 px-10 py-4 text-[15px] font-bold rounded-full bg-primary text-white hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30"
-          >
+          <Link to="/contact-sales" className="btn-primary-lg mt-6">
             Experience the Platform
           </Link>
         </AnimatedSection>

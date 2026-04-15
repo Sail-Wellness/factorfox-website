@@ -203,8 +203,12 @@
 }
 
 /* ─── Typography scale ───────────────────────────────── */
-/* Single source of truth for every text size on the site. */
-/* Tier names match design intent, not HTML element. */
+/* Single source of truth for every text size on the site.
+ * Tier names match design intent, not HTML element.
+ *
+ * RULE: No inline font-size, line-height, or hardcoded text-[Xpx] in components.
+ * If a size doesn't exist in this scale, add a tier here — don't bypass it.
+ * Decorative one-offs (stat values, badges, monospace) are the only exception. */
 @layer utilities {
   /* Display — the biggest possible heading (e.g. "automate everything") */
   .text-display {
@@ -321,10 +325,18 @@
     border-radius: 0.75rem;
     background-color: var(--primary);
     color: #fff;
-    transition: opacity 200ms;
+    transition: opacity 200ms, transform 100ms;
     white-space: nowrap;
+    cursor: pointer;
   }
   .btn-primary:hover { opacity: 0.92; }
+  .btn-primary:active { transform: translateY(1px); opacity: 0.88; }
+  .btn-primary:disabled,
+  .btn-primary[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 
   /* Primary lg — larger, for hero/closing CTAs */
   .btn-primary-lg {
@@ -338,10 +350,18 @@
     border-radius: 0.75rem;
     background-color: var(--primary);
     color: #fff;
-    transition: opacity 200ms;
+    transition: opacity 200ms, transform 100ms;
     white-space: nowrap;
+    cursor: pointer;
   }
   .btn-primary-lg:hover { opacity: 0.92; }
+  .btn-primary-lg:active { transform: translateY(1px); opacity: 0.88; }
+  .btn-primary-lg:disabled,
+  .btn-primary-lg[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 
   /* Secondary — outlined, default size */
   .btn-secondary {
@@ -356,10 +376,18 @@
     border: 1px solid var(--border);
     color: var(--foreground);
     background-color: transparent;
-    transition: background-color 200ms;
+    transition: background-color 200ms, transform 100ms;
     white-space: nowrap;
+    cursor: pointer;
   }
   .btn-secondary:hover { background-color: var(--muted); }
+  .btn-secondary:active { transform: translateY(1px); background-color: var(--muted); }
+  .btn-secondary:disabled,
+  .btn-secondary[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 
   /* Secondary lg — outlined, larger */
   .btn-secondary-lg {
@@ -374,8 +402,16 @@
     border: 1px solid var(--border);
     color: var(--foreground);
     background-color: transparent;
-    transition: background-color 200ms;
+    transition: background-color 200ms, transform 100ms;
     white-space: nowrap;
+    cursor: pointer;
   }
   .btn-secondary-lg:hover { background-color: var(--muted); }
+  .btn-secondary-lg:active { transform: translateY(1px); background-color: var(--muted); }
+  .btn-secondary-lg:disabled,
+  .btn-secondary-lg[aria-disabled='true'] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
 }
