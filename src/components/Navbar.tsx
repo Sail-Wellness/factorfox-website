@@ -94,7 +94,8 @@ function Navbar() {
           <button
             onClick={() => setMenuOpen(prev => !prev)}
             aria-label="Toggle menu"
-            className="flex h-9 w-9 items-center justify-center rounded-lg text-foreground hover:bg-muted transition-colors"
+            aria-expanded={menuOpen}
+            className="flex h-9 w-9 items-center justify-center rounded-lg text-foreground hover:bg-muted transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>

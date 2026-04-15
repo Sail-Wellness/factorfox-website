@@ -331,6 +331,10 @@
   }
   .btn-primary:hover { opacity: 0.92; }
   .btn-primary:active { transform: translateY(1px); opacity: 0.88; }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
   .btn-primary:disabled,
   .btn-primary[aria-disabled='true'] {
     opacity: 0.5;
@@ -356,6 +360,10 @@
   }
   .btn-primary-lg:hover { opacity: 0.92; }
   .btn-primary-lg:active { transform: translateY(1px); opacity: 0.88; }
+  .btn-primary-lg:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
   .btn-primary-lg:disabled,
   .btn-primary-lg[aria-disabled='true'] {
     opacity: 0.5;
@@ -382,6 +390,10 @@
   }
   .btn-secondary:hover { background-color: var(--muted); }
   .btn-secondary:active { transform: translateY(1px); background-color: var(--muted); }
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
   .btn-secondary:disabled,
   .btn-secondary[aria-disabled='true'] {
     opacity: 0.5;
@@ -408,6 +420,10 @@
   }
   .btn-secondary-lg:hover { background-color: var(--muted); }
   .btn-secondary-lg:active { transform: translateY(1px); background-color: var(--muted); }
+  .btn-secondary-lg:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
   .btn-secondary-lg:disabled,
   .btn-secondary-lg[aria-disabled='true'] {
     opacity: 0.5;

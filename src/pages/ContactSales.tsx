@@ -166,7 +166,7 @@ function ContactSales() {
                         htmlFor="monthlyVolume"
                         className="text-label mb-1.5 block text-muted-foreground"
                       >
-                        Monthly Volume
+                        Monthly Volume <span className="text-primary" aria-hidden="true">*</span>
                       </label>
                       <select
                         id="monthlyVolume"
@@ -174,6 +174,7 @@ function ContactSales() {
                         value={form.monthlyVolume}
                         onChange={handleChange}
                         required
+                        aria-required="true"
                         className="w-full appearance-none rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
                       >
                         <option value="" disabled>
@@ -259,7 +260,7 @@ function Field({
         htmlFor={name}
         className="text-label mb-1.5 block text-muted-foreground"
       >
-        {label}
+        {label} <span className="text-primary" aria-hidden="true">*</span>
       </label>
       <input
         id={name}
@@ -269,6 +270,7 @@ function Field({
         value={value}
         onChange={onChange}
         required
+        aria-required="true"
         autoComplete={autoComplete}
         className="w-full rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
       />

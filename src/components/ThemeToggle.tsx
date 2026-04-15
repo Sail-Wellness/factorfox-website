@@ -16,6 +16,7 @@ function ThemeToggle({ className }: ThemeToggleProps) {
       className={cn(
         'flex h-9 w-9 items-center justify-center rounded-full',
         'text-foreground/70 transition-colors hover:bg-muted hover:text-foreground',
+        'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring',
         className
       )}
     >
