@@ -50,11 +50,10 @@ function OperatingSystemSection() {
         {/* Left: text */}
         <AnimatedSection delay={0} className="flex flex-col">
           <h2 className="text-section-lg mb-5">
-            <span className="text-foreground">
+            <span className="block text-foreground">
               Not Just Software
             </span>
-            <br />
-            <span className="text-primary">An Operating System</span>
+            <span className="block text-primary">An Operating System</span>
           </h2>
 
           <p className="text-body text-muted-foreground mb-8">

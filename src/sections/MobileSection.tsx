@@ -18,7 +18,8 @@ function MobileSection() {
               className="font-black text-white leading-[1.1] mb-6"
               style={{ fontSize: 'clamp(28px, 3.8vw, 52px)' }}
             >
-              Built for the Field<br />and the Back Office
+              <span className="block">Built for the Field</span>
+              <span className="block">and the Back Office</span>
             </h2>
 
             <p className="text-[16px] leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.82)' }}>

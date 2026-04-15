@@ -32,7 +32,8 @@ function AboutHero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[88vh] flex items-center justify-center py-24 md:py-32">
         <AnimatedSection delay={0} className="flex flex-col items-center text-center gap-6">
           <h1 className="text-hero text-foreground">
-            25+ Years of<br />Factoring Experience
+            <span className="block">25+ Years of</span>
+            <span className="block">Factoring Experience</span>
           </h1>
 
           <p className="text-body-lg text-muted-foreground max-w-md">

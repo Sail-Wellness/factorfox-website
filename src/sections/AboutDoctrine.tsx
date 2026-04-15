@@ -11,9 +11,8 @@ function AboutDoctrine() {
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
             <h2 className="text-section-xl text-foreground mb-6">
-              The Doctrine for
-              <br />
-              Modern Factoring
+              <span className="block">The Doctrine for</span>
+              <span className="block">Modern Factoring</span>
             </h2>
 
             <p className="text-body-lg text-muted-foreground max-w-[460px] mb-8">

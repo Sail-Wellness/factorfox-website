@@ -62,9 +62,8 @@ function ContactSales() {
               </div> */}
 
               <h1 className="text-hero text-foreground mb-6">
-                Join in Minutes
-                <br />
-                not Months.
+                <span className="block">Join in Minutes</span>
+                <span className="block">not Months.</span>
               </h1>
 
               <p className="text-body-lg text-muted-foreground max-w-[460px]">

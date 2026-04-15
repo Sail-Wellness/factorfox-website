@@ -39,7 +39,8 @@ function Hero() {
 
             {/* Heading */}
             <h1 className="text-hero text-foreground uppercase mb-6">
-              Just Deploy<br />Capital
+              <span className="block">Just Deploy</span>
+              <span className="block">Capital</span>
             </h1>
 
             {/* Subtitle */}
