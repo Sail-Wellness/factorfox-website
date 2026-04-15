@@ -10,6 +10,7 @@ function FeaturesLiveRiskEngine() {
 
           {/* Left: screenshot */}
           <AnimatedSection delay={0} className="relative w-full order-2 lg:order-1">
+            <div className="max-w-[80%] mx-auto">
             <img
               src={screenshotImg}
               alt="Live Risk Engine"
@@ -23,6 +24,7 @@ function FeaturesLiveRiskEngine() {
               aria-hidden="true"
               className="w-full h-auto hidden dark:block"
             />
+            </div>
           </AnimatedSection>
 
           {/* Right: text */}

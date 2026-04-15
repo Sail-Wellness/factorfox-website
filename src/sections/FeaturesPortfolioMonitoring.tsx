@@ -1,8 +1,8 @@
 import { CheckCircle2 } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
-import screenshotImg from '@/assets/images/control.png'
-import screenshotDarkImg from '@/assets/images/control_dark.png'
+import screenshotImg from '@/assets/images/portfolio_monitoring.svg'
+import screenshotDarkImg from '@/assets/images/portfolio_monitoring_dark.svg'
 
 const checklist = [
   {
@@ -22,7 +22,7 @@ function FeaturesPortfolioMonitoring() {
 
           {/* Left: screenshot */}
           <AnimatedSection delay={0} className="relative w-full order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl">
+            <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl max-w-[80%] mx-auto">
               <img
                 src={screenshotImg}
                 alt="Portfolio Monitoring"
