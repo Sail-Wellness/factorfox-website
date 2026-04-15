@@ -1,6 +1,6 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
-import screenshotImg from '@/assets/images/intelligence.png'
-import screenshotDarkImg from '@/assets/images/intelligence_dark.png'
+import screenshotImg from '@/assets/images/risk_engine.png'
+import screenshotDarkImg from '@/assets/images/risk_engine_dark.png'
 
 function FeaturesLiveRiskEngine() {
   return (
@@ -10,18 +10,16 @@ function FeaturesLiveRiskEngine() {
 
           {/* Left: screenshot */}
           <AnimatedSection delay={0} className="relative w-full order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden border border-[var(--set1-stroke)] shadow-2xl">
-              <img
-                src={screenshotImg}
-                alt="Live Risk Engine"
-                className="w-full h-auto block dark:hidden"
-              />
-              <img
-                src={screenshotDarkImg}
-                alt="Live Risk Engine"
-                className="w-full h-auto hidden dark:block"
-              />
-            </div>
+            <img
+              src={screenshotImg}
+              alt="Live Risk Engine"
+              className="w-full h-auto block dark:hidden"
+            />
+            <img
+              src={screenshotDarkImg}
+              alt="Live Risk Engine"
+              className="w-full h-auto hidden dark:block"
+            />
           </AnimatedSection>
 
           {/* Right: text */}
