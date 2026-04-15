@@ -44,17 +44,14 @@ function IncreaseROI() {
 
         {/* Heading */}
         <AnimatedSection delay={0.05}>
-          <h2
-            className="font-black text-foreground leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(40px, 5.5vw, 68px)' }}
-          >
+          <h2 className="text-section-xl text-foreground mb-6">
             Increase ROI by <span className="text-primary">3x</span>
           </h2>
         </AnimatedSection>
 
         {/* Subtitle */}
         <AnimatedSection delay={0.1}>
-          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[620px] mb-12">
+          <p className="text-body-lg text-muted-foreground max-w-[620px] mb-12">
             Achieved through 3 levers: more capital per operator, faster turns through AI
             automation, and near-zero fraud through centralized, cross-system intelligence.
           </p>
@@ -81,10 +78,7 @@ function IncreaseROI() {
 
         {/* CTA */}
         <AnimatedSection delay={0.2}>
-          <a
-            href="#"
-            className="inline-flex items-center justify-center px-8 py-3 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary/90 transition-colors"
-          >
+          <a href="#" className="btn-primary">
             Learn More
           </a>
         </AnimatedSection>

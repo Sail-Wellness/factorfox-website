@@ -16,13 +16,10 @@ function DocumentsToDecisions() {
     <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-16">
-        <h2
-          className="font-black text-foreground leading-[1.05] mb-4 whitespace-nowrap"
-          style={{ fontSize: 'clamp(22px, 3.8vw, 52px)' }}
-        >
+        <h2 className="text-section-lg text-foreground mb-4 whitespace-nowrap">
           From Documents to Decisions—Automatically
         </h2>
-        <p className="text-[16.5px] text-muted-foreground max-w-xl mx-auto">
+        <p className="text-body-lg text-muted-foreground max-w-xl mx-auto">
           The end-to-end pipeline that powers high-velocity factoring operations.
         </p>
       </AnimatedSection>
@@ -47,8 +44,8 @@ function DocumentsToDecisions() {
                   strokeWidth={1.5}
                 />
               </div>
-              <p className="text-[15px] font-bold text-foreground mb-1">{title}</p>
-              <p className="text-[13px] text-muted-foreground leading-snug">{description}</p>
+              <p className="text-card-title-sm text-foreground mb-1">{title}</p>
+              <p className="text-body-xs text-muted-foreground">{description}</p>
             </div>
 
             {/* Arrow between steps */}

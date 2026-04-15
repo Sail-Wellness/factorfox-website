@@ -62,10 +62,7 @@ function IntelligenceCore() {
 
         {/* Right: heading + features */}
         <AnimatedSection delay={0.1} className="flex flex-col">
-          <h2
-            className="font-bold text-foreground leading-[1.1] mb-8"
-            style={{ fontSize: 'clamp(28px, 3.2vw, 44px)' }}
-          >
+          <h2 className="text-section-lg text-foreground mb-8">
             The FactorFox Intelligence Core
           </h2>
 
@@ -76,8 +73,8 @@ function IntelligenceCore() {
                   <Icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <p className="text-[15px] font-semibold text-foreground mb-1">{title}</p>
-                  <p className="text-[14px] leading-relaxed text-muted-foreground">{description}</p>
+                  <p className="text-card-title-sm text-foreground mb-1">{title}</p>
+                  <p className="text-body-sm text-muted-foreground">{description}</p>
                 </div>
               </div>
             ))}

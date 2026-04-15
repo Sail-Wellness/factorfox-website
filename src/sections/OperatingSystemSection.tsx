@@ -49,10 +49,7 @@ function OperatingSystemSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: text */}
         <AnimatedSection delay={0} className="flex flex-col">
-          <h2
-            className="font-black leading-[1.1] mb-5"
-            style={{ fontSize: "clamp(28px, 3.6vw, 48px)" }}
-          >
+          <h2 className="text-section-lg mb-5">
             <span className="text-foreground">
               Not Just Software
             </span>
@@ -60,7 +57,7 @@ function OperatingSystemSection() {
             <span className="text-primary">An Operating System</span>
           </h2>
 
-          <p className="text-[15px] leading-relaxed text-muted-foreground mb-8">
+          <p className="text-body text-muted-foreground mb-8">
             Generic factoring software manages records. FactorFox manages your
             entire business. We provide a centralized brain that connects your
             front-office origination with your back-office funding and risk

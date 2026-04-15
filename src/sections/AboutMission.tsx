@@ -30,13 +30,10 @@ function AboutMission() {
 
           {/* Left: heading */}
           <AnimatedSection delay={0} className="flex flex-col">
-            <h2
-              className="font-black text-foreground leading-[1.05] mb-6"
-              style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}
-            >
+            <h2 className="text-section-xl text-foreground mb-6">
               Our Mission
             </h2>
-            <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[440px]">
+            <p className="text-body-lg text-muted-foreground max-w-[440px]">
               Turn factoring from a fragmented, fraud-exposed operation into a
               scalable, trusted asset class.
             </p>
@@ -51,10 +48,10 @@ function AboutMission() {
                   strokeWidth={2}
                 />
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-[18px] font-bold text-foreground">
+                  <h3 className="text-card-title text-foreground">
                     {title}
                   </h3>
-                  <p className="text-[15px] leading-relaxed text-muted-foreground max-w-[440px]">
+                  <p className="text-body text-muted-foreground max-w-[440px]">
                     {description}
                   </p>
                 </div>

@@ -33,27 +33,21 @@ function AboutMoreThanSoftware() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[70vh] flex items-center justify-center py-24 md:py-32">
         <AnimatedSection delay={0} className="flex flex-col items-center text-center gap-6">
-          <h2
-            className="font-black text-foreground leading-[1.05]"
-            style={{ fontSize: 'clamp(40px, 5.5vw, 72px)' }}
-          >
+          <h2 className="text-section-xl text-foreground">
             More than Software
           </h2>
 
-          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-md">
+          <p className="text-body-lg text-muted-foreground max-w-md">
             Join the institutions re-engineering their core with FactorFox.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mt-4">
-            <Link
-              to="/contact-sales"
-              className="px-7 py-3 text-[15px] font-semibold rounded-xl bg-primary text-white hover:bg-primary/90 transition-colors shadow-sm"
-            >
+            <Link to="/contact-sales" className="btn-primary shadow-sm">
               Experience FactorFox
             </Link>
             <a
               href="#"
-              className="px-7 py-3 text-[15px] font-semibold text-foreground hover:text-primary transition-colors"
+              className="px-7 py-3 text-body font-semibold text-foreground hover:text-primary transition-colors"
             >
               View Platform
             </a>

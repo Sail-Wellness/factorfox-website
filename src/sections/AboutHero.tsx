@@ -31,14 +31,11 @@ function AboutHero() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[88vh] flex items-center justify-center py-24 md:py-32">
         <AnimatedSection delay={0} className="flex flex-col items-center text-center gap-6">
-          <h1
-            className="font-black text-foreground leading-[1.05]"
-            style={{ fontSize: 'clamp(44px, 6vw, 76px)' }}
-          >
+          <h1 className="text-hero text-foreground">
             25+ Years of<br />Factoring Experience
           </h1>
 
-          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-md">
+          <p className="text-body-lg text-muted-foreground max-w-md">
             Turned into faster capital, lower risk, and higher returns.
           </p>
         </AnimatedSection>

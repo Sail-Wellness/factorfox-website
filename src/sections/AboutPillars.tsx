@@ -28,13 +28,10 @@ function AboutPillars() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
 
         <AnimatedSection delay={0} className="flex flex-col mb-14 md:mb-16">
-          <h2
-            className="font-black text-foreground leading-[1.05] mb-5"
-            style={{ fontSize: 'clamp(40px, 5vw, 64px)' }}
-          >
+          <h2 className="text-section-xl text-foreground mb-5">
             Now Rebuilt for an AI World
           </h2>
-          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[560px]">
+          <p className="text-body-lg text-muted-foreground max-w-[560px]">
             The three pillars of our next-generation core infrastructure.
           </p>
         </AnimatedSection>
@@ -50,10 +47,10 @@ function AboutPillars() {
                 className="h-7 w-7 text-primary mb-8"
                 strokeWidth={2}
               />
-              <h3 className="text-[22px] font-bold text-foreground mb-4">
+              <h3 className="text-section-md text-foreground mb-4">
                 {title}
               </h3>
-              <p className="text-[15px] leading-relaxed text-muted-foreground">
+              <p className="text-body text-muted-foreground">
                 {description}
               </p>
             </AnimatedSection>

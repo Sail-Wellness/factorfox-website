@@ -63,16 +63,13 @@ function ContactSales() {
                 </span>
               </div> */}
 
-              <h1
-                className="font-black text-foreground leading-[0.95] mb-6"
-                style={{ fontSize: "clamp(52px, 6.5vw, 80px)" }}
-              >
+              <h1 className="text-hero text-foreground mb-6">
                 Join in Minutes
                 <br />
                 not Months.
               </h1>
 
-              <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[460px]">
+              <p className="text-body-lg text-muted-foreground max-w-[460px]">
                 FactorFox is the only platform to migrate data in{" "}
                 <span className="font-semibold text-foreground">
                   under 60 minutes
@@ -102,10 +99,10 @@ function ContactSales() {
                         strokeWidth={2}
                       />
                     </div>
-                    <h2 className="text-[22px] font-bold text-foreground">
+                    <h2 className="text-section-md text-foreground">
                       Request received
                     </h2>
-                    <p className="text-[14px] text-muted-foreground max-w-[280px]">
+                    <p className="text-body-sm text-muted-foreground max-w-[280px]">
                       Thanks
                       {form.fullName.trim()
                         ? `, ${form.fullName.trim().split(" ")[0]}`
@@ -129,10 +126,10 @@ function ContactSales() {
                       setSubmitted(true);
                     }}
                   >
-                    <h2 className="text-[24px] font-bold text-foreground mb-1">
+                    <h2 className="text-section-md text-foreground mb-1">
                       Initialize Account
                     </h2>
-                    <p className="text-[14px] text-muted-foreground mb-6">
+                    <p className="text-body-sm text-muted-foreground mb-6">
                       Fill in the details below to request platform access.
                     </p>
 

@@ -38,31 +38,22 @@ function Hero() {
             </div>
 
             {/* Heading */}
-            <h1
-              className="font-black text-foreground uppercase leading-[0.95] mb-6"
-              style={{ fontSize: 'clamp(52px, 6.5vw, 80px)' }}
-            >
+            <h1 className="text-hero text-foreground uppercase mb-6">
               Just Deploy<br />Capital
             </h1>
 
             {/* Subtitle */}
-            <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[430px] mb-10">
+            <p className="text-body-lg text-muted-foreground max-w-[430px] mb-10">
               We automate the entire factoring life-cycle so you reduce cost,
               eliminate fraud, and maximize turnover on every dollar deployed.
             </p>
 
             {/* CTAs */}
             <div className="flex items-center gap-4 flex-wrap">
-              <Link
-                to="/contact-sales"
-                className="inline-flex items-center justify-center px-7 py-3 rounded-xl bg-primary text-white font-semibold text-[15px] hover:bg-primary/90 transition-colors shadow-sm"
-              >
+              <Link to="/contact-sales" className="btn-primary shadow-sm">
                 Request Demo
               </Link>
-              <a
-                href="#"
-                className="inline-flex items-center justify-center px-7 py-3 rounded-xl border border-border text-foreground hover:bg-muted font-semibold text-[15px] transition-colors"
-              >
+              <a href="#" className="btn-secondary">
                 View Platform
               </a>
             </div>

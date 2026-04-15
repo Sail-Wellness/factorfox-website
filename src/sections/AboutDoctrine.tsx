@@ -10,16 +10,13 @@ function AboutDoctrine() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
-            <h2
-              className="font-black text-foreground leading-[1.05] mb-6"
-              style={{ fontSize: "clamp(36px, 4.5vw, 56px)" }}
-            >
+            <h2 className="text-section-xl text-foreground mb-6">
               The Doctrine for
               <br />
               Modern Factoring
             </h2>
 
-            <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[460px] mb-8">
+            <p className="text-body-lg text-muted-foreground max-w-[460px] mb-8">
               25+ years of operator experience, distilled into a system for
               faster capital, lower risk, and higher returns.
             </p>

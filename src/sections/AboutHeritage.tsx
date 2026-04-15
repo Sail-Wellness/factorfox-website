@@ -22,15 +22,12 @@ function AboutHeritage() {
           </div>
 
           {/* Heading */}
-          <h2
-            className="font-black text-foreground leading-[1.05] mb-6"
-            style={{ fontSize: 'clamp(40px, 5.5vw, 72px)' }}
-          >
+          <h2 className="text-section-xl text-foreground mb-6">
             Founded by Factors
           </h2>
 
           {/* Subtitle */}
-          <p className="text-[16.5px] leading-relaxed text-muted-foreground max-w-[640px]">
+          <p className="text-body-lg text-muted-foreground max-w-[640px]">
             Founded in 2002, FactorFox has been the silent engine behind
             billions in financing. We are moving beyond legacy systems to define
             the next quarter-century of working capital.

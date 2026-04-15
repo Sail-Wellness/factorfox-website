@@ -13,13 +13,10 @@ function EcosystemSection() {
     <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-14">
-        <h2
-          className="font-black text-foreground leading-[1.05] mb-3"
-          style={{ fontSize: 'clamp(26px, 3.6vw, 48px)' }}
-        >
+        <h2 className="text-section-lg text-foreground mb-3">
           Part of a Larger Intelligence Ecosystem
         </h2>
-        <p className="text-[16px] text-muted-foreground">
+        <p className="text-body-lg text-muted-foreground">
           Integrated synergy across the FactorEvo network.
         </p>
       </AnimatedSection>
@@ -40,8 +37,8 @@ function EcosystemSection() {
                 {initials}
               </span>
             </div>
-            <p className="text-[15px] font-bold text-foreground mb-1">{name}</p>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+            <p className="text-card-title-sm text-foreground mb-1">{name}</p>
+            <p className="text-eyebrow text-muted-foreground">
               {role}
             </p>
           </AnimatedSection>

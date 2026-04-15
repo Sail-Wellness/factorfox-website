@@ -34,10 +34,10 @@ function FeatureCards() {
               <div className="flex flex-col gap-4 rounded-xl border border-[var(--set2-stroke)] bg-[var(--set2-box)] p-6 h-full">
                 <Icon className="h-6 w-6 text-primary" strokeWidth={1.75} />
                 <div>
-                  <h3 className="text-[15px] font-bold text-foreground mb-1.5">
+                  <h3 className="text-card-title-sm text-foreground mb-1.5">
                     {title}
                   </h3>
-                  <p className="text-[13.5px] leading-snug text-muted-foreground">
+                  <p className="text-body-xs text-muted-foreground">
                     {description}
                   </p>
                 </div>

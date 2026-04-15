@@ -46,13 +46,10 @@ function PrecisionModules() {
     <SectionWrapper className="bg-[var(--set1-bg)]">
       {/* Heading */}
       <AnimatedSection delay={0} className="text-center mb-12">
-        <h2
-          className="font-black text-foreground leading-[1.05] mb-3"
-          style={{ fontSize: 'clamp(28px, 4vw, 52px)' }}
-        >
+        <h2 className="text-section-lg text-foreground mb-3">
           Precision Modules
         </h2>
-        <p className="text-[16px] text-muted-foreground">
+        <p className="text-body-lg text-muted-foreground">
           Scalable building blocks designed for specialized finance workflows.
         </p>
       </AnimatedSection>
@@ -64,8 +61,8 @@ function PrecisionModules() {
             <div className="flex flex-col gap-10 bg-[var(--set1-box)] rounded-2xl border border-[var(--set1-stroke)] p-8 h-full">
               <Icon className="h-7 w-7 text-primary" strokeWidth={2} />
               <div>
-                <h3 className="text-[20px] font-bold text-foreground mb-3 tracking-tight">{title}</h3>
-                <p className="text-[15px] leading-relaxed text-muted-foreground">{description}</p>
+                <h3 className="text-section-sm text-foreground mb-3 tracking-tight">{title}</h3>
+                <p className="text-body text-muted-foreground">{description}</p>
               </div>
             </div>
           </AnimatedSection>

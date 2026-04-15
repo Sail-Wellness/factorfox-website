@@ -37,13 +37,10 @@ function OnboardSection() {
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-primary mb-3">
           Why Wait Months?
         </p>
-        <h2
-          className="font-black text-foreground leading-[1.05] mb-4"
-          style={{ fontSize: 'clamp(32px, 4.5vw, 56px)' }}
-        >
+        <h2 className="text-section-xl text-foreground mb-4">
           Onboard Instantly
         </h2>
-        <p className="text-[15px] text-muted-foreground leading-relaxed max-w-2xl">
+        <p className="text-body text-muted-foreground max-w-2xl">
           Factor Fox is the only platform to migrate data in{' '}
           <strong className="text-foreground">under 20 minutes</strong>. Eclipsing the industry
           standard of <strong className="text-foreground">6-12 months</strong>.
@@ -63,8 +60,8 @@ function OnboardSection() {
               {/* Dark mode: raw icon, left-aligned */}
               <Icon className="hidden dark:block h-6 w-6 text-primary" strokeWidth={1.75} />
               <div>
-                <p className="text-[14px] font-bold text-foreground mb-2">{title}</p>
-                <p className="text-[13px] leading-relaxed text-muted-foreground">{description}</p>
+                <p className="text-card-title-sm text-foreground mb-2">{title}</p>
+                <p className="text-body-xs text-muted-foreground">{description}</p>
               </div>
             </div>
           </AnimatedSection>
