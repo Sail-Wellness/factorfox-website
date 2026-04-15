@@ -24,9 +24,9 @@ const features = [
 ]
 
 const stats = [
-  { label: 'Migration Time',   value: '20 Min', delta: '-99%',   bar: true, darkBarWhite: true },
-  { label: 'Manual Effort',    value: '0%',     delta: '-100%',  bar: true, darkBarWhite: true },
-  { label: 'Resource Savings', value: '100%',   delta: '+100%',  bar: true, darkBarWhite: false },
+  { label: 'Migration Time',   value: '20 Min', delta: '-99%',   barClassName: 'bg-muted dark:bg-foreground' },
+  { label: 'Manual Effort',    value: '0%',     delta: '-100%',  barClassName: 'bg-muted dark:bg-foreground' },
+  { label: 'Resource Savings', value: '100%',   delta: '+100%',  barClassName: 'bg-primary' },
 ]
 
 function OnboardSection() {
@@ -72,7 +72,7 @@ function OnboardSection() {
       {/* Stat cards */}
       <div className="max-w-[942px] mx-auto w-full">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        {stats.map(({ label, value, delta, bar, darkBarWhite }, i) => (
+        {stats.map(({ label, value, delta, barClassName }, i) => (
           <AnimatedSection key={label} delay={0.2 + i * 0.07}>
             <div className="h-full rounded-xl border border-[var(--set1-stroke)] bg-[var(--set1-box)] p-8 shadow-sm flex flex-col gap-3">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
@@ -89,9 +89,7 @@ function OnboardSection() {
                     {delta}
                   </span>
                 </div>
-                {bar && (
-                  <div className={`h-1.5 rounded-full w-full mt-1 ${darkBarWhite ? 'bg-muted dark:bg-foreground' : 'bg-primary'}`} />
-                )}
+                <div className={`h-1.5 rounded-full w-full mt-1 ${barClassName}`} />
               </div>
             </AnimatedSection>
         ))}
