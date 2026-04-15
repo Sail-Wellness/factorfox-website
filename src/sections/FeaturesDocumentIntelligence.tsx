@@ -1,7 +1,7 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
-import screenshotImg from '@/assets/images/control.png'
-import screenshotDarkImg from '@/assets/images/control_dark.png'
+import screenshotImg from '@/assets/images/document_Intelligence.svg'
+import screenshotDarkImg from '@/assets/images/document_Intelligence_dark.svg'
 
 function FeaturesDocumentIntelligence() {
   return (
@@ -23,21 +23,19 @@ function FeaturesDocumentIntelligence() {
 
           {/* Right: screenshot */}
           <AnimatedSection delay={0.12} className="relative w-full">
-            <div className="rounded-2xl overflow-hidden border border-[var(--set2-stroke)] shadow-2xl">
-              <img
-                src={screenshotImg}
-                alt="Document Intelligence"
-                loading="lazy"
-                className="w-full h-auto block dark:hidden"
-              />
-              <img
-                src={screenshotDarkImg}
-                alt="Document Intelligence"
-                loading="lazy"
-                aria-hidden="true"
-                className="w-full h-auto hidden dark:block"
-              />
-            </div>
+            <img
+              src={screenshotImg}
+              alt="Document Intelligence"
+              loading="lazy"
+              className="w-full h-auto block dark:hidden"
+            />
+            <img
+              src={screenshotDarkImg}
+              alt="Document Intelligence"
+              loading="lazy"
+              aria-hidden="true"
+              className="w-full h-auto hidden dark:block"
+            />
           </AnimatedSection>
 
         </div>
