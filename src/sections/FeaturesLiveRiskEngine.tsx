@@ -13,11 +13,14 @@ function FeaturesLiveRiskEngine() {
             <img
               src={screenshotImg}
               alt="Live Risk Engine"
+              loading="lazy"
               className="w-full h-auto block dark:hidden"
             />
             <img
               src={screenshotDarkImg}
               alt="Live Risk Engine"
+              loading="lazy"
+              aria-hidden="true"
               className="w-full h-auto hidden dark:block"
             />
           </AnimatedSection>

@@ -26,11 +26,14 @@ function FeaturesPortfolioMonitoring() {
               <img
                 src={screenshotImg}
                 alt="Portfolio Monitoring"
+                loading="lazy"
                 className="w-full h-auto block dark:hidden"
               />
               <img
                 src={screenshotDarkImg}
                 alt="Portfolio Monitoring"
+                loading="lazy"
+                aria-hidden="true"
                 className="w-full h-auto hidden dark:block"
               />
             </div>

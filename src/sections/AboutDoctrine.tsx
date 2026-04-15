@@ -26,6 +26,7 @@ function AboutDoctrine() {
               <img
                 src={authorImg}
                 alt="Roberto Vasquez"
+                loading="lazy"
                 className="h-11 w-11 rounded-full object-cover flex-shrink-0"
               />
               <div className="flex flex-col">
@@ -56,6 +57,7 @@ function AboutDoctrine() {
             <img
               src={bookCover}
               alt="Signals — The Doctrine of Transportation Factoring"
+              loading="lazy"
               className="w-full max-w-[340px] h-auto"
             />
           </AnimatedSection>

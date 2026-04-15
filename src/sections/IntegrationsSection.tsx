@@ -63,6 +63,7 @@ function LogoRow({ logos }: { logos: Logo[] }) {
           <img
             src={src}
             alt={alt}
+            loading="lazy"
             style={{ height: h }}
             className={`w-auto object-contain ${darkSrc ? "dark:hidden" : ""}`}
           />
@@ -70,6 +71,8 @@ function LogoRow({ logos }: { logos: Logo[] }) {
             <img
               src={darkSrc}
               alt={alt}
+              loading="lazy"
+              aria-hidden="true"
               style={{ height: h }}
               className="w-auto object-contain hidden dark:block"
             />

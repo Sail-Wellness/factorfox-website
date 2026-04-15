@@ -26,11 +26,14 @@ function FeaturesDocumentIntelligence() {
               <img
                 src={screenshotImg}
                 alt="Document Intelligence"
+                loading="lazy"
                 className="w-full h-auto block dark:hidden"
               />
               <img
                 src={screenshotDarkImg}
                 alt="Document Intelligence"
+                loading="lazy"
+                aria-hidden="true"
                 className="w-full h-auto hidden dark:block"
               />
             </div>

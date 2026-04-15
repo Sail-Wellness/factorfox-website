@@ -23,11 +23,14 @@ function FeaturesHero() {
             <img
               src={screenshotImg}
               alt="FactorFox dashboard"
+              loading="eager"
               className="w-full h-auto block dark:hidden"
             />
             <img
               src={screenshotDarkImg}
               alt="FactorFox dashboard"
+              loading="eager"
+              aria-hidden="true"
               className="w-full h-auto hidden dark:block"
             />
           </div>

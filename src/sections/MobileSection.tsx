@@ -70,6 +70,7 @@ function MobileSection() {
                 <img
                   src={mobileSrc}
                   alt="FactorFox mobile app — Credit Check screen"
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                 />
               </div>

@@ -52,7 +52,7 @@ function Footer({ className }: FooterProps) {
           {/* Brand */}
           <div className="md:col-span-5">
             <Link to="/" className="inline-block">
-              <img src={logoSrc} alt="FactorFox" className="h-8 w-auto" />
+              <img src={logoSrc} alt="FactorFox" loading="lazy" className="h-8 w-auto" />
             </Link>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
               The leading operating system for the modern factoring industry. Built by finance experts for high-velocity growth.

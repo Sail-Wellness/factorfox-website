@@ -23,11 +23,14 @@ function FeaturesQuickbooksXero() {
             <img
               src={screenshotImg}
               alt="QuickBooks &amp; Xero integration"
+              loading="lazy"
               className="w-full h-auto block dark:hidden"
             />
             <img
               src={screenshotDarkImg}
               alt="QuickBooks &amp; Xero integration"
+              loading="lazy"
+              aria-hidden="true"
               className="w-full h-auto hidden dark:block"
             />
           </AnimatedSection>
