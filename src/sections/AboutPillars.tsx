@@ -1,5 +1,6 @@
 import { Brain, Gauge, Layers } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 
 const PILLARS = [
   {
@@ -24,8 +25,7 @@ const PILLARS = [
 
 function AboutPillars() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set1-bg)]" innerClassName="relative">
 
         <AnimatedSection delay={0} className="flex flex-col mb-14 md:mb-16">
           <h2 className="text-section-xl text-foreground mb-5">
@@ -57,8 +57,7 @@ function AboutPillars() {
           ))}
         </div>
 
-      </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

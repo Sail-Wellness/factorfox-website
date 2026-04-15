@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 
 function FeaturesCta() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set2-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <SectionWrapper
+      className="relative overflow-hidden bg-[var(--set2-bg)] py-24 md:py-32"
+      innerClassName="relative"
+    >
         <AnimatedSection delay={0} className="flex flex-col items-center text-center gap-5">
           <h2 className="text-section-xl text-foreground">
             Factoring Infrastructure for the AI Era
@@ -18,8 +21,7 @@ function FeaturesCta() {
             Experience the Platform
           </Link>
         </AnimatedSection>
-      </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

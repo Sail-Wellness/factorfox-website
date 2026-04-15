@@ -1,5 +1,6 @@
 import { DraftingCompass, Bot, Shield } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 
 const MISSION_ITEMS = [
   {
@@ -24,9 +25,8 @@ const MISSION_ITEMS = [
 
 function AboutMission() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set1-bg)]" innerClassName="relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
           {/* Left: heading */}
           <AnimatedSection delay={0} className="flex flex-col">
@@ -59,9 +59,8 @@ function AboutMission() {
             ))}
           </AnimatedSection>
 
-        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

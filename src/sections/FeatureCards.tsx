@@ -1,5 +1,6 @@
 import { Zap, FileText, ShieldAlert, LayoutGrid } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 
 const cards = [
   {
@@ -26,9 +27,8 @@ const cards = [
 
 function FeatureCards() {
   return (
-    <section className="w-full py-8 md:py-10 bg-[var(--set2-bg)]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <SectionWrapper className="py-8 md:py-10 bg-[var(--set2-bg)]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {cards.map(({ icon: Icon, title, description }, i) => (
             <AnimatedSection key={title} delay={i * 0.07}>
               <div className="flex flex-col gap-4 rounded-xl border border-[var(--set2-stroke)] bg-[var(--set2-box)] p-6 h-full">
@@ -44,9 +44,8 @@ function FeatureCards() {
               </div>
             </AnimatedSection>
           ))}
-        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

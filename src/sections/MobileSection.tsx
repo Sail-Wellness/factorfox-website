@@ -1,4 +1,5 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 import mobileSrc from '@/assets/mobile_ss.svg'
 
 const stats = [
@@ -8,9 +9,8 @@ const stats = [
 
 function MobileSection() {
   return (
-    <section className="w-full overflow-hidden bg-[var(--brand)]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <SectionWrapper className="overflow-hidden bg-[var(--brand)]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
@@ -82,9 +82,8 @@ function MobileSection() {
             </div>
           </AnimatedSection>
 
-        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

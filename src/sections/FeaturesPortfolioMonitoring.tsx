@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 import screenshotImg from '@/assets/images/control.png'
 import screenshotDarkImg from '@/assets/images/control_dark.png'
 
@@ -16,9 +17,8 @@ const checklist = [
 
 function FeaturesPortfolioMonitoring() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set1-bg)]" innerClassName="relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: screenshot */}
           <AnimatedSection delay={0} className="relative w-full order-2 lg:order-1">
@@ -70,9 +70,8 @@ function FeaturesPortfolioMonitoring() {
             </ul>
           </AnimatedSection>
 
-        </div>
       </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

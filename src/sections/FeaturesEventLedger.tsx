@@ -1,4 +1,5 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 
 type EventEntry = {
   timestamp: string
@@ -34,8 +35,7 @@ const events: EventEntry[] = [
 
 function FeaturesEventLedger() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set2-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set2-bg)]" innerClassName="relative">
 
         {/* Heading + subtitle */}
         <AnimatedSection delay={0} className="text-center mb-12 md:mb-14">
@@ -90,8 +90,7 @@ function FeaturesEventLedger() {
           </div>
         </AnimatedSection>
 
-      </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

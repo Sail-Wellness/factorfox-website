@@ -1,13 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { SectionWrapper } from "@/components/SectionWrapper";
 import bookCover from "@/assets/images/book_cover.svg";
 import authorImg from "@/assets/images/author.svg";
 
 function AboutDoctrine() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set2-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set2-bg)]" innerClassName="relative">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left: text */}
           <AnimatedSection delay={0} className="flex flex-col">
             <h2 className="text-section-xl text-foreground mb-6">
@@ -61,9 +61,8 @@ function AboutDoctrine() {
               className="w-full max-w-[340px] h-auto"
             />
           </AnimatedSection>
-        </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
 

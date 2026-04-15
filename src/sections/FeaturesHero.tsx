@@ -1,11 +1,14 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 import screenshotImg from '@/assets/images/intelligence.png'
 import screenshotDarkImg from '@/assets/images/intelligence_dark.png'
 
 function FeaturesHero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-16 md:pb-20">
+    <SectionWrapper
+      className="relative overflow-hidden bg-[var(--set1-bg)] pt-24 md:pt-32 pb-16 md:pb-20"
+      innerClassName="relative"
+    >
 
         {/* Heading + subtitle */}
         <AnimatedSection delay={0} className="text-center mb-12 md:mb-16">
@@ -36,8 +39,7 @@ function FeaturesHero() {
           </div>
         </AnimatedSection>
 
-      </div>
-    </section>
+    </SectionWrapper>
   )
 }
 

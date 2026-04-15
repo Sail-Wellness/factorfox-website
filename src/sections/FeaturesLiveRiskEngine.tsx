@@ -1,11 +1,11 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
+import { SectionWrapper } from '@/components/SectionWrapper'
 import screenshotImg from '@/assets/images/risk_engine.svg'
 import screenshotDarkImg from '@/assets/images/risk_engine_dark.svg'
 
 function FeaturesLiveRiskEngine() {
   return (
-    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <SectionWrapper className="relative overflow-hidden bg-[var(--set1-bg)]" innerClassName="relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: screenshot */}
@@ -38,8 +38,7 @@ function FeaturesLiveRiskEngine() {
           </AnimatedSection>
 
         </div>
-      </div>
-    </section>
+    </SectionWrapper>
   )
 }
 
