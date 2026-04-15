@@ -1,5 +1,5 @@
-/* Inter font from Google Fonts — must come first */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Manrope + Inter from Google Fonts — must come first */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -11,7 +11,7 @@
 @theme inline {
   /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
-  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Manrope', system-ui, sans-serif;
 
   /* Radius scale */
   --radius-sm: calc(var(--radius) * 0.6);
@@ -41,8 +41,19 @@
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-brand-orange: var(--brand-orange);
   --color-surface-soft: var(--surface-soft);
   --color-input-soft: var(--input-soft);
+  --color-nav: var(--nav);
+  --color-footer: var(--footer);
+
+  /* Section color sets */
+  --color-set1-bg: var(--set1-bg);
+  --color-set1-box: var(--set1-box);
+  --color-set1-stroke: var(--set1-stroke);
+  --color-set2-bg: var(--set2-bg);
+  --color-set2-box: var(--set2-box);
+  --color-set2-stroke: var(--set2-stroke);
 }
 
 /* ─── Light Mode ─────────────────────────────────────── */
@@ -59,15 +70,28 @@
   --surface-soft: #f6fbff;
   --input-soft: #dfe8ff;
 
+  /* Nav / Footer */
+  --nav: #f6fbff;
+  --footer: #f6fbff;
+
+  /* Section color sets */
+  --set1-bg: #ffffff;
+  --set1-box: #f6fbff;
+  --set1-stroke: #e2e8f0;
+  --set2-bg: #f6fbff;
+  --set2-box: #ffffff;
+  --set2-stroke: #e2e8f0;
+
   /* Muted (secondary text, placeholders) */
   --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted-foreground: #404753;
 
-  /* Brand blue — confirmed from Figma */
+  /* Brand */
   --primary: #0090ff;
   --primary-foreground: #ffffff;
   --brand: #0090ff;
   --brand-foreground: #ffffff;
+  --brand-orange: #f0522e;
 
   /* Secondary actions */
   --secondary: #f1f5f9;
@@ -95,9 +119,9 @@
 
 /* ─── Dark Mode ──────────────────────────────────────── */
 .dark {
-  /* Base — deep navy, approximate from Figma */
-  --background: #0b1120;
-  --foreground: #f8fafc;
+  /* Base */
+  --background: #040811;
+  --foreground: #ffffff;
 
   /* Cards / surfaces */
   --card: #0c121d;
@@ -107,15 +131,28 @@
   --surface-soft: #050a14;
   --input-soft: #0f172a;
 
+  /* Nav / Footer */
+  --nav: #0a0f1a;
+  --footer: #0a0f1a;
+
+  /* Section color sets */
+  --set1-bg: #040811;
+  --set1-box: #0c121d;
+  --set1-stroke: #1e293b;
+  --set2-bg: #0c121d;
+  --set2-box: #111827;
+  --set2-stroke: #1e293b;
+
   /* Muted */
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
 
-  /* Brand blue — confirmed from Figma */
+  /* Brand */
   --primary: #0090ff;
   --primary-foreground: #ffffff;
   --brand: #0090ff;
   --brand-foreground: #ffffff;
+  --brand-orange: #f0522e;
 
   /* Secondary */
   --secondary: #1e293b;
@@ -158,6 +195,10 @@
   body {
     @apply bg-background text-foreground;
     margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
   }
 }
 

@@ -53,7 +53,7 @@ function ContactSales() {
           {/* Left half — white, content aligned to where max-w-7xl px-8 starts */}
           <div className="flex flex-col justify-center px-4 sm:px-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-16 md:py-20">
             <AnimatedSection delay={0} className="max-w-[560px]">
-              <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
+              {/* <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
                 <ShieldCheck
                   className="h-3 w-3 text-primary"
                   strokeWidth={2.5}
@@ -61,7 +61,7 @@ function ContactSales() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
                   Efficient Onboarding for Efficient Operators
                 </span>
-              </div>
+              </div> */}
 
               <h1
                 className="font-black text-gray-900 dark:text-white leading-[0.95] mb-6"
