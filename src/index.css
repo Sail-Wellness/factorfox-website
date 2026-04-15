@@ -210,14 +210,6 @@
  * If a size doesn't exist in this scale, add a tier here — don't bypass it.
  * Decorative one-offs (stat values, badges, monospace) are the only exception. */
 @layer utilities {
-  /* Display — the biggest possible heading (e.g. "automate everything") */
-  .text-display {
-    font-size: clamp(56px, 8vw, 112px);
-    font-weight: 800;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-  }
-
   /* Hero — page-opening h1 (e.g. "Just Deploy Capital", "25+ Years…") */
   .text-hero {
     font-size: clamp(52px, 6.5vw, 80px);
@@ -322,7 +314,7 @@
     padding: 0.75rem 1.75rem;
     font-size: 15px;
     font-weight: 600;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background-color: var(--primary);
     color: #fff;
     transition: opacity 200ms, transform 100ms;
@@ -351,7 +343,7 @@
     padding: 1rem 2.5rem;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     background-color: var(--primary);
     color: #fff;
     transition: opacity 200ms, transform 100ms;
@@ -380,7 +372,7 @@
     padding: 0.75rem 1.75rem;
     font-size: 15px;
     font-weight: 600;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     border: 1px solid var(--border);
     color: var(--foreground);
     background-color: transparent;
@@ -410,7 +402,7 @@
     padding: 1rem 2.5rem;
     font-size: 15px;
     font-weight: 700;
-    border-radius: 0.75rem;
+    border-radius: 12px;
     border: 1px solid var(--border);
     color: var(--foreground);
     background-color: transparent;
