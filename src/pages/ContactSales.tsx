@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InlineWidget, useCalendlyEventListener } from "react-calendly";
-import { Calendar, Clock, ShieldCheck, Sparkles } from "lucide-react";
+import { Calendar, Clock, ShieldCheck } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
@@ -101,25 +101,18 @@ function ContactSales() {
 
 function Scheduler() {
   return (
-    <div>
-      <h2 className="text-section-md text-foreground mb-4 px-1">
-        Select a Date & Time
-      </h2>
-      <div className="-mx-2">
-        <InlineWidget
-          url={CALENDLY_URL}
-          styles={{ height: "700px", width: "100%" }}
-          pageSettings={{
-            primaryColor: "0085ef",
-            textColor: "0f172a",
-            backgroundColor: "ffffff",
-            hideEventTypeDetails: true,
-            hideGdprBanner: true,
-            hideLandingPageDetails: true,
-          }}
-        />
-      </div>
-    </div>
+    <InlineWidget
+      url={CALENDLY_URL}
+      styles={{ height: "630px", width: "100%" }}
+      pageSettings={{
+        primaryColor: "0085ef",
+        textColor: "0f172a",
+        backgroundColor: "ffffff",
+        hideEventTypeDetails: true,
+        hideGdprBanner: true,
+        hideLandingPageDetails: true,
+      }}
+    />
   );
 }
 
@@ -133,42 +126,39 @@ function BookedConfirmation({ info }: { info: BookingInfo }) {
         : null;
 
   return (
-    <div role="status" aria-live="polite" className="flex flex-col gap-5">
+    <div role="status" aria-live="polite" className="flex flex-col gap-6">
       <div>
-        <h2 className="text-section-md text-foreground">
+        <h2 className="text-section-md text-foreground whitespace-nowrap">
           Your Demo Is Booked.
         </h2>
-        <p className="text-body-sm text-muted-foreground mt-2">
+        <p className="text-body text-muted-foreground mt-2">
           We&apos;ll show you exactly how your factoring firm can operate
           effortlessly.
         </p>
       </div>
 
       <div>
-        <h3 className="text-[15px] font-semibold text-foreground mb-3">
+        <h3 className="text-card-title text-foreground mb-4">
           Meeting Details
         </h3>
 
         <DetailRow
-          icon={<Calendar className="h-4 w-4 text-primary" strokeWidth={2} />}
+          icon={<Calendar className="h-5 w-5 text-primary" strokeWidth={2} />}
           label="Date"
           value={dateLabel ?? "Confirmation sent to your email"}
         />
         <DetailRow
-          icon={<Clock className="h-4 w-4 text-primary" strokeWidth={2} />}
+          icon={<Clock className="h-5 w-5 text-primary" strokeWidth={2} />}
           label="Time"
           value={timeLabel ?? "Confirmation sent to your email"}
         />
       </div>
 
-      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
-        <div className="flex items-center gap-1.5 mb-1.5">
-          <Sparkles className="h-3 w-3 text-primary" strokeWidth={2.5} />
-          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
-            What Happens Next
-          </span>
+      <div className="rounded-xl border border-primary/25 bg-primary/[0.06] p-4">
+        <div className="text-eyebrow text-primary mb-2">
+          What Happens Next?
         </div>
-        <p className="text-body-sm text-foreground">
+        <p className="text-body text-foreground">
           A calendar invite has been sent to your email with the meeting link.
         </p>
       </div>
@@ -178,12 +168,9 @@ function BookedConfirmation({ info }: { info: BookingInfo }) {
           href={googleCalendarUrl(info.startTime, info.endTime)}
           target="_blank"
           rel="noreferrer noopener"
-          style={{
-            background: "linear-gradient(180deg, #4ba6ff 0%, #0085ef 100%)",
-          }}
-          className="inline-flex items-center justify-center gap-2 w-full rounded-xl text-white font-semibold text-[15px] py-3.5 transition-opacity hover:opacity-95 shadow-md shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-surface-soft"
+          className="btn-primary w-full justify-center gap-2 py-4"
         >
-          <Calendar className="h-4 w-4" strokeWidth={2.5} />
+          <Calendar className="h-5 w-5" strokeWidth={2.5} />
           Add to Calendar
         </a>
       )}
@@ -201,15 +188,13 @@ function DetailRow({
   value: string;
 }) {
   return (
-    <div className="mb-2.5 flex items-center gap-3 rounded-lg bg-input-soft px-3.5 py-2.5">
-      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10">
+    <div className="mb-3 flex items-center gap-4 rounded-xl bg-input-soft px-4 py-3.5">
+      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-card shadow-sm">
         {icon}
       </div>
       <div className="min-w-0">
-        <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-foreground">
-          {label}
-        </div>
-        <div className="text-[14px] font-semibold text-foreground truncate">
+        <div className="text-label text-muted-foreground">{label}</div>
+        <div className="text-body font-semibold text-foreground truncate mt-0.5">
           {value}
         </div>
       </div>
