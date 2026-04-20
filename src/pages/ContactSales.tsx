@@ -3,6 +3,7 @@ import { InlineWidget, useCalendlyEventListener } from "react-calendly";
 import { Calendar, Clock, ShieldCheck } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import { useTheme } from "@/hooks/useTheme";
 
 const CALENDLY_URL = "https://calendly.com/rob-sailwellness/factorfox-demo";
 
@@ -100,14 +101,19 @@ function ContactSales() {
 }
 
 function Scheduler() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
   return (
     <InlineWidget
+      // Force remount when theme flips; Calendly reads pageSettings once at mount.
+      key={theme}
       url={CALENDLY_URL}
       styles={{ height: "630px", width: "100%" }}
       pageSettings={{
         primaryColor: "0085ef",
-        textColor: "0f172a",
-        backgroundColor: "ffffff",
+        textColor: isDark ? "f8fafc" : "0f172a",
+        backgroundColor: isDark ? "0c121d" : "ffffff",
         hideEventTypeDetails: true,
         hideGdprBanner: true,
         hideLandingPageDetails: true,
