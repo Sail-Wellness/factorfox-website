@@ -1,57 +1,62 @@
 import { useState } from "react";
-import { Zap, CheckCircle2 } from "lucide-react";
+import { InlineWidget, useCalendlyEventListener } from "react-calendly";
+import { Calendar, Clock, ShieldCheck, Sparkles } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-const VOLUME_OPTIONS = [
-  "Less than $1M / month",
-  "$1M – $5M / month",
-  "$5M – $20M / month",
-  "$20M – $50M / month",
-  "More than $50M / month",
-];
+const CALENDLY_URL = "https://calendly.com/rob-sailwellness/factorfox-demo";
 
-interface FormState {
-  fullName: string;
-  workEmail: string;
-  companyName: string;
-  monthlyVolume: string;
-  website: string; // honeypot — hidden from users
+interface BookingInfo {
+  startTime?: string;
+  endTime?: string;
 }
 
-const initialForm: FormState = {
-  fullName: "",
-  workEmail: "",
-  companyName: "",
-  monthlyVolume: "",
-  website: "",
-};
-
 function ContactSales() {
-  const [form, setForm] = useState<FormState>(initialForm);
-  const [submitted, setSubmitted] = useState(false);
+  const [booked, setBooked] = useState(false);
+  const [info, setInfo] = useState<BookingInfo>({});
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-  ) => {
-    const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
-  };
+  useCalendlyEventListener({
+    onDateAndTimeSelected: (e) => {
+      // Calendly's payload shape varies; capture opportunistically.
+      const payload = (
+        e as unknown as { data?: { payload?: Record<string, unknown> } }
+      ).data?.payload;
+      const start =
+        payload && typeof payload === "object"
+          ? (payload as { event?: { start_time?: string } }).event?.start_time
+          : undefined;
+      if (typeof start === "string")
+        setInfo((p) => ({ ...p, startTime: start }));
+    },
+    onEventScheduled: (e) => {
+      const payload = (
+        e as unknown as { data?: { payload?: Record<string, unknown> } }
+      ).data?.payload;
+      const ev =
+        payload && typeof payload === "object"
+          ? (payload as { event?: { start_time?: string; end_time?: string } })
+              .event
+          : undefined;
+      if (ev?.start_time) setInfo((p) => ({ ...p, startTime: ev.start_time }));
+      if (ev?.end_time) setInfo((p) => ({ ...p, endTime: ev.end_time }));
+      setBooked(true);
+    },
+  });
 
   return (
     <>
       <SEO
         title="Contact Sales — FactorFox"
-        description="Request access to FactorFox — the only platform that migrates factoring data in under 60 minutes. Join in minutes, not months."
+        description="Book a demo with FactorFox — the only platform that migrates factoring data in under 60 minutes. Join in minutes, not months."
         path="/contact-sales"
       />
 
       <main className="bg-[var(--set1-bg)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:min-h-[calc(100vh-4rem)]">
-          {/* Left half — white, content aligned to where max-w-7xl px-8 starts */}
+          {/* Left — brand messaging */}
           <div className="flex flex-col justify-center px-4 sm:px-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-16 md:py-20">
             <AnimatedSection delay={0} className="max-w-[560px]">
-              {/* <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
+              <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
                 <ShieldCheck
                   className="h-3 w-3 text-primary"
                   strokeWidth={2.5}
@@ -59,7 +64,7 @@ function ContactSales() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
                   Efficient Onboarding for Efficient Operators
                 </span>
-              </div> */}
+              </div>
 
               <h1 className="text-hero text-foreground mb-6">
                 <span className="block">Join in Minutes</span>
@@ -80,151 +85,11 @@ function ContactSales() {
             </AnimatedSection>
           </div>
 
-          {/* Right half — soft bg, extends to viewport right edge */}
+          {/* Right — scheduler ↔ confirmation */}
           <div className="bg-surface-soft flex items-center justify-center px-4 sm:px-6 lg:px-12 py-12 md:py-16">
             <AnimatedSection delay={0.12} className="w-full max-w-md">
-              <div className="rounded-2xl border border-border bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-7 md:p-8">
-                {submitted ? (
-                  <div
-                    role="status"
-                    aria-live="polite"
-                    className="flex flex-col items-center text-center gap-4 py-8"
-                  >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                      <CheckCircle2
-                        className="h-7 w-7 text-primary"
-                        strokeWidth={2}
-                      />
-                    </div>
-                    <h2 className="text-section-md text-foreground">
-                      Request received
-                    </h2>
-                    <p className="text-body-sm text-muted-foreground max-w-[280px]">
-                      Thanks
-                      {form.fullName.trim()
-                        ? `, ${form.fullName.trim().split(" ")[0]}`
-                        : ""}
-                      . Our team will reach out within 24 hours.
-                    </p>
-                  </div>
-                ) : (
-                  <form
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      if (form.website) return; // bot caught by honeypot
-                      // TODO: wire to backend / CRM endpoint
-                      if (import.meta.env.DEV) {
-                        // eslint-disable-next-line no-console
-                        console.log("[Request Access]", {
-                          fullName: form.fullName,
-                          workEmail: form.workEmail,
-                          companyName: form.companyName,
-                          monthlyVolume: form.monthlyVolume,
-                        });
-                      }
-                      setSubmitted(true);
-                    }}
-                  >
-                    <h2 className="text-section-md text-foreground mb-1">
-                      Initialize Account
-                    </h2>
-                    <p className="text-body-sm text-muted-foreground mb-6">
-                      Fill in the details below to request platform access.
-                    </p>
-
-                    <Field
-                      label="Full Name"
-                      name="fullName"
-                      type="text"
-                      placeholder="e.g. Marcus Aurelius"
-                      value={form.fullName}
-                      onChange={handleChange}
-                      autoComplete="name"
-                    />
-                    <Field
-                      label="Work Email"
-                      name="workEmail"
-                      type="email"
-                      placeholder="m.aurelius@firm.com"
-                      value={form.workEmail}
-                      onChange={handleChange}
-                      autoComplete="email"
-                    />
-                    <Field
-                      label="Company Name"
-                      name="companyName"
-                      type="text"
-                      placeholder="Capital Partners Inc."
-                      value={form.companyName}
-                      onChange={handleChange}
-                      autoComplete="organization"
-                    />
-
-                    <div className="mb-5">
-                      <label
-                        htmlFor="monthlyVolume"
-                        className="text-label mb-1.5 block text-muted-foreground"
-                      >
-                        Monthly Volume <span className="text-primary" aria-hidden="true">*</span>
-                      </label>
-                      <select
-                        id="monthlyVolume"
-                        name="monthlyVolume"
-                        value={form.monthlyVolume}
-                        onChange={handleChange}
-                        required
-                        aria-required="true"
-                        className="w-full appearance-none rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20stroke=%22%2394a3b8%22%20stroke-width=%222%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%3E%3Cpolyline%20points=%226%209%2012%2015%2018%209%22/%3E%3C/svg%3E')] bg-no-repeat bg-[length:16px_16px] bg-[right_12px_center] pr-10"
-                      >
-                        <option value="" disabled>
-                          Select volume range
-                        </option>
-                        {VOLUME_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* Honeypot — hidden from users, filled by bots */}
-                    <div
-                      className="absolute left-[-9999px] top-[-9999px]"
-                      aria-hidden="true"
-                    >
-                      <label htmlFor="website">Website</label>
-                      <input
-                        id="website"
-                        name="website"
-                        type="text"
-                        value={form.website}
-                        onChange={handleChange}
-                        tabIndex={-1}
-                        autoComplete="off"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      style={{
-                        background:
-                          "linear-gradient(180deg, #4ba6ff 0%, #0085ef 100%)",
-                      }}
-                      className="mt-2 w-full rounded-xl text-white font-semibold text-[15px] py-3.5 transition-opacity hover:opacity-95 shadow-md shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-surface-soft"
-                    >
-                      Request Access
-                    </button>
-
-                    <div className="mt-4 flex items-center justify-center gap-1.5 text-[12px] text-muted-foreground">
-                      <Zap
-                        className="h-3 w-3 text-primary"
-                        strokeWidth={2.5}
-                        fill="currentColor"
-                      />
-                      <span>We&apos;ll reach out within 24 hours</span>
-                    </div>
-                  </form>
-                )}
+              <div className="rounded-2xl border border-border bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-6 md:p-7">
+                {booked ? <BookedConfirmation info={info} /> : <Scheduler />}
               </div>
             </AnimatedSection>
           </div>
@@ -234,47 +99,166 @@ function ContactSales() {
   );
 }
 
-interface FieldProps {
-  label: string;
-  name: keyof FormState;
-  type: string;
-  placeholder: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  autoComplete?: string;
-}
-
-function Field({
-  label,
-  name,
-  type,
-  placeholder,
-  value,
-  onChange,
-  autoComplete,
-}: FieldProps) {
+function Scheduler() {
   return (
-    <div className="mb-5">
-      <label
-        htmlFor={name}
-        className="text-label mb-1.5 block text-muted-foreground"
-      >
-        {label} <span className="text-primary" aria-hidden="true">*</span>
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        required
-        aria-required="true"
-        autoComplete={autoComplete}
-        className="w-full rounded-lg border border-border bg-input-soft px-3.5 py-2.5 text-[14px] text-foreground placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/30 transition"
-      />
+    <div>
+      <h2 className="text-section-md text-foreground mb-4 px-1">
+        Select a Date & Time
+      </h2>
+      <div className="-mx-2">
+        <InlineWidget
+          url={CALENDLY_URL}
+          styles={{ height: "700px", width: "100%" }}
+          pageSettings={{
+            primaryColor: "0085ef",
+            textColor: "0f172a",
+            backgroundColor: "ffffff",
+            hideEventTypeDetails: true,
+            hideGdprBanner: true,
+            hideLandingPageDetails: true,
+          }}
+        />
+      </div>
     </div>
   );
+}
+
+function BookedConfirmation({ info }: { info: BookingInfo }) {
+  const dateLabel = info.startTime ? formatDate(info.startTime) : null;
+  const timeLabel =
+    info.startTime && info.endTime
+      ? formatTimeRange(info.startTime, info.endTime)
+      : info.startTime
+        ? formatTime(info.startTime)
+        : null;
+
+  return (
+    <div role="status" aria-live="polite" className="flex flex-col gap-5">
+      <div>
+        <h2 className="text-section-md text-foreground">
+          Your Demo Is Booked.
+        </h2>
+        <p className="text-body-sm text-muted-foreground mt-2">
+          We&apos;ll show you exactly how your factoring firm can operate
+          effortlessly.
+        </p>
+      </div>
+
+      <div>
+        <h3 className="text-[15px] font-semibold text-foreground mb-3">
+          Meeting Details
+        </h3>
+
+        <DetailRow
+          icon={<Calendar className="h-4 w-4 text-primary" strokeWidth={2} />}
+          label="Date"
+          value={dateLabel ?? "Confirmation sent to your email"}
+        />
+        <DetailRow
+          icon={<Clock className="h-4 w-4 text-primary" strokeWidth={2} />}
+          label="Time"
+          value={timeLabel ?? "Confirmation sent to your email"}
+        />
+      </div>
+
+      <div className="rounded-lg border border-primary/20 bg-primary/5 p-4">
+        <div className="flex items-center gap-1.5 mb-1.5">
+          <Sparkles className="h-3 w-3 text-primary" strokeWidth={2.5} />
+          <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
+            What Happens Next
+          </span>
+        </div>
+        <p className="text-body-sm text-foreground">
+          A calendar invite has been sent to your email with the meeting link.
+        </p>
+      </div>
+
+      {info.startTime && info.endTime && (
+        <a
+          href={googleCalendarUrl(info.startTime, info.endTime)}
+          target="_blank"
+          rel="noreferrer noopener"
+          style={{
+            background: "linear-gradient(180deg, #4ba6ff 0%, #0085ef 100%)",
+          }}
+          className="inline-flex items-center justify-center gap-2 w-full rounded-xl text-white font-semibold text-[15px] py-3.5 transition-opacity hover:opacity-95 shadow-md shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-surface-soft"
+        >
+          <Calendar className="h-4 w-4" strokeWidth={2.5} />
+          Add to Calendar
+        </a>
+      )}
+    </div>
+  );
+}
+
+function DetailRow({
+  icon,
+  label,
+  value,
+}: {
+  icon: React.ReactNode;
+  label: string;
+  value: string;
+}) {
+  return (
+    <div className="mb-2.5 flex items-center gap-3 rounded-lg bg-input-soft px-3.5 py-2.5">
+      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10">
+        {icon}
+      </div>
+      <div className="min-w-0">
+        <div className="text-[10px] font-bold uppercase tracking-[0.12em] text-muted-foreground">
+          {label}
+        </div>
+        <div className="text-[14px] font-semibold text-foreground truncate">
+          {value}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return d.toLocaleDateString(undefined, {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function formatTime(iso: string): string {
+  return new Date(iso).toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+}
+
+function formatTimeRange(startIso: string, endIso: string): string {
+  const start = new Date(startIso).toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+  const end = new Date(endIso).toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZoneName: "short",
+  });
+  return `${start} — ${end}`;
+}
+
+function googleCalendarUrl(startIso: string, endIso: string): string {
+  const fmt = (iso: string) =>
+    new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, "");
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: "FactorFox Demo",
+    dates: `${fmt(startIso)}/${fmt(endIso)}`,
+    details:
+      "Your FactorFox demo. See the calendar invite in your inbox for the meeting link.",
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
 export { ContactSales };
