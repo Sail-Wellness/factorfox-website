@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, Zap, CheckCircle2 } from "lucide-react";
+import { Zap, CheckCircle2 } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 

@@ -1,6 +1,6 @@
 import { ErrorBoundary as ReactErrorBoundary, type FallbackProps } from 'react-error-boundary'
 import { useLocation } from 'react-router-dom'
-import type { ReactNode } from 'react'
+import type { ErrorInfo, ReactNode } from 'react'
 
 function Fallback({ resetErrorBoundary }: FallbackProps) {
   return (
@@ -36,7 +36,7 @@ function Fallback({ resetErrorBoundary }: FallbackProps) {
   )
 }
 
-function logError(error: Error, info: { componentStack?: string | null }) {
+function logError(error: unknown, info: ErrorInfo) {
   // TODO: forward to Sentry / LogRocket / etc. when error tracking is set up
   console.error('ErrorBoundary caught an error:', error, info.componentStack)
 }
