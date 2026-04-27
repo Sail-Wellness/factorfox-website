@@ -23,8 +23,8 @@ function Home() {
 
       <main>
         <Hero />
-        <FeatureCards />
         <IncreaseROI />
+        <FeatureCards />
         <DocumentsToDecisions />
         <IntelligenceCore />
         <PrecisionModules />
