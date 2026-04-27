@@ -48,7 +48,7 @@ function OnboardSection() {
       </AnimatedSection>
 
       {/* Feature cards */}
-      <div className="max-w-[942px] mx-auto w-full mb-[15px]">
+      <div className="mb-[15px]">
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-[15px]">
         {features.map(({ icon: Icon, title, description }, i) => (
           <AnimatedSection key={title} delay={i * 0.07}>
@@ -70,7 +70,7 @@ function OnboardSection() {
       </div>
 
       {/* Stat cards */}
-      <div className="max-w-[942px] mx-auto w-full">
+      <div>
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {stats.map(({ label, value, delta, barClassName }, i) => (
           <AnimatedSection key={label} delay={0.2 + i * 0.07}>
