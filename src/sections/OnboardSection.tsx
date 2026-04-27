@@ -40,7 +40,7 @@ function OnboardSection() {
         <h2 className="text-section-xl text-foreground mb-4">
           Onboard Instantly
         </h2>
-        <p className="text-body text-muted-foreground max-w-2xl">
+        <p className="text-body text-muted-foreground max-w-3xl">
           Factor Fox is the only platform to migrate data in{' '}
           <strong className="text-foreground">under 20 minutes</strong>. Eclipsing the industry
           standard of <strong className="text-foreground">6-12 months</strong>.
