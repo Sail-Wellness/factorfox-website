@@ -9,7 +9,7 @@ const stats = [
 
 function MobileSection() {
   return (
-    <SectionWrapper className="overflow-hidden bg-[var(--brand)]">
+    <SectionWrapper className="overflow-hidden bg-[#0065B3] dark:bg-[#051527]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* Left: text */}
