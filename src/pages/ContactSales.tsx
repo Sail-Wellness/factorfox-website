@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InlineWidget, useCalendlyEventListener } from "react-calendly";
-import { Calendar, Clock, ShieldCheck } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { useTheme } from "@/hooks/useTheme";
@@ -57,19 +57,8 @@ function ContactSales() {
           {/* Left — brand messaging */}
           <div className="flex flex-col justify-center px-4 sm:px-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-12 py-16 md:py-20">
             <AnimatedSection delay={0} className="max-w-[560px]">
-              <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
-                <ShieldCheck
-                  className="h-3 w-3 text-primary"
-                  strokeWidth={2.5}
-                />
-                <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
-                  Efficient Onboarding for Efficient Operators
-                </span>
-              </div>
-
               <h1 className="text-hero text-foreground mb-6">
-                <span className="block">Join in Minutes</span>
-                <span className="block">not Months.</span>
+Join in Minutes not Months.
               </h1>
 
               <p className="text-body-lg text-muted-foreground max-w-[460px]">
