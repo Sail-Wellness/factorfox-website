@@ -10,7 +10,7 @@ const features = [
 
 function ComparisonCard() {
   return (
-    <div className="rounded-2xl bg-[var(--set1-box)] border border-[var(--set1-stroke)] shadow-lg p-5 flex flex-col gap-3 w-full max-w-sm">
+    <div className="rounded-2xl bg-white dark:bg-white/5 border border-blue-100 dark:border-white/10 shadow-[0_8px_40px_rgba(59,130,246,0.18)] p-5 flex flex-col gap-3 w-full max-w-sm">
       {/* Manual Process */}
       <div className="flex items-center justify-between rounded-xl px-4 py-3 bg-[#fff1f2] dark:bg-white/[0.04]">
         <span className="text-[14px] font-medium text-foreground/80">
