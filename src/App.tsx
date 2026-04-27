@@ -8,11 +8,13 @@ import { Features } from '@/pages/Features'
 import { About } from '@/pages/About'
 import { ContactSales } from '@/pages/ContactSales'
 import { NotFound } from '@/pages/NotFound'
+import { ScrollToTop } from '@/components/ScrollToTop'
 
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Navbar />
         <div className="pt-16">{/* offset for fixed navbar (h-16 = 64px) */}
           <ErrorBoundary>
