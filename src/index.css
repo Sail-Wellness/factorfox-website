@@ -71,8 +71,8 @@
   --input-soft: #dfe8ff;
 
   /* Nav / Footer */
-  --nav: #f6fbff;
-  --footer: #f6fbff;
+  --nav: #f5fafe;
+  --footer: #f5fafe;
 
   /* Section color sets */
   --set1-bg: #ffffff;
@@ -132,14 +132,14 @@
   --input-soft: #0f172a;
 
   /* Nav / Footer */
-  --nav: #0a0f1a;
-  --footer: #0a0f1a;
+  --nav: #0a0f19;
+  --footer: #0a0f19;
 
   /* Section color sets */
   --set1-bg: #040811;
-  --set1-box: #0c121d;
+  --set1-box: #0a0f19;
   --set1-stroke: #1e293b;
-  --set2-bg: #0c121d;
+  --set2-bg: #0a0f19;
   --set2-box: #111827;
   --set2-stroke: #1e293b;
 
