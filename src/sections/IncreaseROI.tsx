@@ -46,7 +46,7 @@ function IncreaseROI() {
         {/* Heading */}
         <AnimatedSection delay={0.05}>
           <h2 className="text-section-xl text-foreground mb-6">
-            Increase ROI by <span className="text-primary">3x</span>
+            Increase ROI by <span className="text-primary">50%</span>
           </h2>
         </AnimatedSection>
 
