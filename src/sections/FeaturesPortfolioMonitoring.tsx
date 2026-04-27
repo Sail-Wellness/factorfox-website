@@ -40,10 +40,9 @@ function FeaturesPortfolioMonitoring() {
           </AnimatedSection>
 
           {/* Right: text + checklist */}
-          <AnimatedSection delay={0.12} className="flex flex-col max-w-md order-1 lg:order-2">
-            <h2 className="text-section-xl text-foreground mb-6">
-              <span className="block">Portfolio</span>
-              <span className="block">Monitoring</span>
+          <AnimatedSection delay={0.12} className="flex flex-col max-w-lg order-1 lg:order-2">
+            <h2 className="text-section-lg text-foreground mb-5">
+Portfolio Monitoring
             </h2>
             <p className="text-body text-muted-foreground mb-8">
               See performance and exposure in real time. FactorFox tracks

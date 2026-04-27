@@ -12,7 +12,7 @@ function FeaturesHero() {
 
         {/* Heading + subtitle */}
         <AnimatedSection delay={0} className="text-center mb-12 md:mb-16">
-          <h1 className="text-hero text-foreground mb-5">
+          <h1 className="text-section-xl text-foreground mb-5">
             automate everything
           </h1>
           <p className="text-body-lg text-muted-foreground">

@@ -39,10 +39,10 @@ function FeaturesEventLedger() {
 
         {/* Heading + subtitle */}
         <AnimatedSection delay={0} className="text-center mb-12 md:mb-14">
-          <h2 className="text-section-xl text-foreground mb-4">
+          <h2 className="text-section-lg text-foreground mb-5">
             Event Ledger
           </h2>
-          <p className="text-body-lg text-muted-foreground max-w-md mx-auto">
+          <p className="text-body text-muted-foreground max-w-md mx-auto">
             Every transaction becomes a traceable event. Immutable, high-fidelity
             audit trails for institutional compliance.
           </p>

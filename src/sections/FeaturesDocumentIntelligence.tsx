@@ -9,10 +9,9 @@ function FeaturesDocumentIntelligence() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* Left: text */}
-          <AnimatedSection delay={0} className="flex flex-col max-w-md">
-            <h2 className="text-section-xl text-foreground mb-6">
-              <span className="block">Document</span>
-              <span className="block">Intelligence</span>
+          <AnimatedSection delay={0} className="flex flex-col max-w-lg">
+            <h2 className="text-section-lg text-foreground mb-5">
+Document Intelligence
             </h2>
             <p className="text-body text-muted-foreground">
               Extract, verify, and structure every document instantly. Our

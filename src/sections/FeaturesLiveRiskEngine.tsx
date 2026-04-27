@@ -28,10 +28,9 @@ function FeaturesLiveRiskEngine() {
           </AnimatedSection>
 
           {/* Right: text */}
-          <AnimatedSection delay={0.12} className="flex flex-col max-w-md order-1 lg:order-2">
-            <h2 className="text-section-xl text-foreground mb-5">
-              <span className="block">Live Risk</span>
-              <span className="block">Engine</span>
+          <AnimatedSection delay={0.12} className="flex flex-col max-w-lg order-1 lg:order-2">
+            <h2 className="text-section-lg text-foreground mb-5">
+Live Risk Engine
             </h2>
             <p className="text-body text-muted-foreground">
               Every transaction is continuously monitored and risk-scored in
