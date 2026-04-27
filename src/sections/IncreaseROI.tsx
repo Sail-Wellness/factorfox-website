@@ -37,7 +37,7 @@ function IncreaseROI() {
         {/* Tag pill */}
         <AnimatedSection delay={0}>
           <div className="inline-flex items-center rounded-full border border-border bg-white dark:bg-transparent px-4 py-1.5 mb-6">
-            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
               Operational Excellence
             </span>
           </div>
