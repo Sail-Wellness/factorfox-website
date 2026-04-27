@@ -45,7 +45,13 @@ function ComparisonCard() {
 
 function OperatingSystemSection() {
   return (
-    <SectionWrapper className="bg-[var(--set1-bg)]">
+    <SectionWrapper
+      className="relative z-10 rounded-b-[32px] bg-[var(--set1-bg)]"
+      style={{
+        boxShadow: '0 8px 32px rgba(147,197,253,0.45), 0 2px 8px rgba(147,197,253,0.3)',
+        clipPath: 'inset(0 0 -40px 0)',
+      }}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: text */}
         <AnimatedSection delay={0} className="flex flex-col">
