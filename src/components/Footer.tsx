@@ -46,7 +46,7 @@ interface FooterProps {
 
 function Footer({ className }: FooterProps) {
   return (
-    <footer className={cn('border-t border-border bg-[var(--footer)]', className)}>
+    <footer className={cn('bg-[var(--footer)]', className)}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
           {/* Brand */}
@@ -104,7 +104,7 @@ function Footer({ className }: FooterProps) {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-border">
+      <div>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} FactorFox. All rights reserved.
