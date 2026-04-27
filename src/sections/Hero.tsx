@@ -44,7 +44,7 @@ function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-body-lg text-muted-foreground max-w-[430px] mb-10">
+            <p className="text-body-lg text-muted-foreground max-w-[560px] mb-10">
               We automate the entire factoring life-cycle so you reduce cost,
               eliminate fraud, and maximize turnover on every dollar deployed.
             </p>
