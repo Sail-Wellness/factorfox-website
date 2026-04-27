@@ -53,12 +53,17 @@ function AboutDoctrine() {
             delay={0.12}
             className="relative w-full flex justify-center lg:justify-end"
           >
-            <img
-              src={bookCover}
-              alt="Signals — The Doctrine of Transportation Factoring"
-              loading="lazy"
-              className="w-full max-w-[340px] h-auto"
-            />
+            <div
+              className="max-w-[340px] overflow-hidden rounded-2xl rotate-3"
+              style={{ boxShadow: '0 4px 80px rgba(0, 144, 255, 0.18), 0 0 40px rgba(0, 144, 255, 0.08)' }}
+            >
+              <img
+                src={bookCover}
+                alt="Signals — The Doctrine of Transportation Factoring"
+                loading="lazy"
+                className="w-full h-auto scale-110"
+              />
+            </div>
           </AnimatedSection>
       </div>
     </SectionWrapper>
