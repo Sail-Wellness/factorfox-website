@@ -12,8 +12,7 @@ const navLinks = [
   { label: 'Contact Sales', to: '/contact-sales' },
 ]
 
-// Replace with actual Nimbus URL
-const LOGIN_URL = 'https://app.factorfox.com'
+const LOGIN_URL = 'https://nimbus.factorfox.net/'
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)

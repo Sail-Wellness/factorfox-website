@@ -3,7 +3,7 @@ import linkedinIcon from '@/assets/logos/linkedin-svg.svg'
 import { cn } from '@/lib/utils'
 import logoSrc from '@/assets/logo.svg'
 
-const LOGIN_URL = 'https://app.factorfox.com'
+const LOGIN_URL = 'https://nimbus.factorfox.net/'
 
 // TODO: replace placeholder hrefs with real URLs when available
 // - Product links: deep links to feature subsections
