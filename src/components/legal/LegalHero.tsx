@@ -59,7 +59,7 @@ function LegalHero({ eyebrow, title, lede, meta, contacts }: LegalHeroProps) {
                   </span>
                   <span className="flex flex-col leading-[1.15] min-w-0">
                     <span
-                      className={`text-eyebrow font-mono font-medium mb-1 ${
+                      className={`text-[11px] tracking-[0.14em] uppercase font-normal font-mono mb-1 ${
                         contact.type === 'phone' ? 'text-white/75' : 'text-muted-foreground'
                       }`}
                     >
