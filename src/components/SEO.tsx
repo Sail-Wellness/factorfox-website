@@ -1,7 +1,5 @@
 import { Helmet } from 'react-helmet-async'
 
-// TODO: drop a real 1200x630 social banner at public/og-image.png
-// Should include FactorFox logo + tagline on brand blue background
 const SITE_URL = 'https://factorfox.com'
 const SITE_NAME = 'FactorFox'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.png`
@@ -34,6 +32,8 @@ function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={SITE_NAME} />
 
