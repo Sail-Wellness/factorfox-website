@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Globe, AtSign, Share2 } from 'lucide-react'
+import linkedinIcon from '@/assets/logos/linkedin-svg.svg'
 import { cn } from '@/lib/utils'
 import logoSrc from '@/assets/logo.svg'
 
@@ -7,8 +7,6 @@ const LOGIN_URL = 'https://app.factorfox.com'
 
 // TODO: replace placeholder hrefs with real URLs when available
 // - Product links: deep links to feature subsections
-// - Legal links: real policy page URLs
-// - Social links: real company profile URLs
 const footerLinks = {
   Product: [
     { label: 'Intake Engine', href: '#' },
@@ -28,11 +26,7 @@ const footerLinks = {
   ],
 }
 
-const socialLinks = [
-  { icon: Globe, href: '#', label: 'Website' },
-  { icon: AtSign, href: '#', label: 'Email' },
-  { icon: Share2, href: '#', label: 'Share' },
-]
+const LINKEDIN_URL = 'https://www.linkedin.com/company/factorfox-software-llc/posts/?feedView=all'
 
 const bottomLinks = [
   { label: 'Status', href: '#', external: false },
@@ -58,16 +52,15 @@ function Footer({ className }: FooterProps) {
               The leading operating system for the modern factoring industry. Built by finance experts for high-velocity growth.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+              >
+                <img src={linkedinIcon} alt="" className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
