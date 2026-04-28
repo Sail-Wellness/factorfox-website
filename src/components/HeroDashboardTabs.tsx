@@ -3,6 +3,8 @@ import intelligenceImg from '@/assets/images/intelligence.png'
 import intelligenceDarkImg from '@/assets/images/intelligence_dark.png'
 import controlImg from '@/assets/images/control.png'
 import controlDarkImg from '@/assets/images/control_dark.png'
+import recoveryImg from '@/assets/images/recovery.png'
+import recoveryDarkImg from '@/assets/images/recovery_dark.png'
 
 type TabConfig = {
   id: string
@@ -13,8 +15,7 @@ type TabConfig = {
 }
 
 const TABS: TabConfig[] = [
-  // TODO: replace lightImg/darkImg with real per-tab screenshots when available
-  { id: 'recovery',     label: 'Recovery',     lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-emerald-400' },
+  { id: 'recovery',     label: 'Recovery',     lightImg: recoveryImg,     darkImg: recoveryDarkImg,     dotColor: 'bg-emerald-400' },
   { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-amber-400'   },
   { id: 'control',      label: 'Control',      lightImg: controlImg,      darkImg: controlDarkImg,      dotColor: 'bg-blue-400'    },
   { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-violet-400'  },
