@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import { AnimatedSection } from '@/components/AnimatedSection'
 
 interface TocItem {
   id: string
@@ -47,34 +46,32 @@ function LegalLayout({ tocItems, children }: LegalLayoutProps) {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-20 md:pb-28">
       <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
-        <AnimatedSection>
-          <aside className="hidden lg:block">
-            <nav className="sticky top-24">
-              <p className="text-eyebrow text-primary/70 mb-4">
-                Contents
-              </p>
-              <ul className="space-y-0 border-l border-[var(--set1-stroke)]">
-                {tocItems.map((item) => (
-                  <li key={item.id}>
-                    <button
-                      onClick={() => scrollTo(item.id)}
-                      className={`flex items-baseline gap-3 w-full text-left py-2.5 pl-5 -ml-px border-l-2 text-body-sm transition-colors duration-200 ${
-                        activeId === item.id
-                          ? 'text-foreground font-semibold border-l-primary'
-                          : 'text-muted-foreground border-l-transparent hover:text-foreground'
-                      }`}
-                    >
-                      <span className="text-eyebrow font-mono opacity-60 w-6 shrink-0">
-                        {item.num}
-                      </span>
-                      <span>{item.label}</span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </aside>
-        </AnimatedSection>
+        <aside className="hidden lg:block">
+          <nav className="sticky top-24">
+            <p className="text-eyebrow text-primary/70 mb-4">
+              Contents
+            </p>
+            <ul className="space-y-0 border-l border-[var(--set1-stroke)]">
+              {tocItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollTo(item.id)}
+                    className={`flex items-baseline gap-3 w-full text-left py-2.5 pl-5 -ml-px border-l-2 text-body-sm transition-colors duration-200 ${
+                      activeId === item.id
+                        ? 'text-foreground font-semibold border-l-primary'
+                        : 'text-muted-foreground border-l-transparent hover:text-foreground'
+                    }`}
+                  >
+                    <span className="text-eyebrow font-mono opacity-60 w-6 shrink-0">
+                      {item.num}
+                    </span>
+                    <span>{item.label}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </aside>
 
         <article className="min-w-0">{children}</article>
       </div>
