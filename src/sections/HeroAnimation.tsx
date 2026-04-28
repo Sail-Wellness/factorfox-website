@@ -1,4 +1,4 @@
-import { useEffect, useRef, useCallback } from 'react'
+import React, { useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './HeroAnimation.css'
 
@@ -14,7 +14,7 @@ function fmt(n: number) {
 function HeroAnimation() {
   const deployRef = useRef<HTMLDivElement>(null)
   const rafRef = useRef<number>(0)
-  const barsResetRef = useRef(false)
+
 
   const animateDeploy = useCallback(() => {
     cancelAnimationFrame(rafRef.current)
@@ -326,7 +326,7 @@ function CheckItem({ label }: { label: string }) {
 }
 
 function StatCard({ icon, value, label }: { icon: string; value: string; label: string }) {
-  const icons: Record<string, JSX.Element> = {
+  const icons: Record<string, React.ReactNode> = {
     time: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
