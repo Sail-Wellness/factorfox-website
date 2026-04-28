@@ -127,32 +127,38 @@ function HeroDashboardTabs() {
         })}
       </div>
 
-      {/* Screenshot area — all panels rendered, inactive ones hidden */}
-      {TABS.map((tab, index) => (
-        <div
-          key={tab.id}
-          role="tabpanel"
-          id={`hero-tabpanel-${tab.id}`}
-          aria-labelledby={`hero-tab-${tab.id}`}
-          hidden={index !== activeIndex}
-          className="rounded-xl overflow-hidden shadow-2xl border border-border"
-        >
-          {/* Light mode */}
-          <img
-            src={tab.lightImg}
-            alt={`FactorFox ${tab.label} view`}
-            loading={index === 0 ? 'eager' : 'lazy'}
-            className="w-full h-auto block dark:hidden"
-          />
-          {/* Dark mode */}
-          <img
-            src={tab.darkImg}
-            alt={`FactorFox ${tab.label} view`}
-            loading={index === 0 ? 'eager' : 'lazy'}
-            className="w-full h-auto block hidden dark:block"
-          />
-        </div>
-      ))}
+      {/* Screenshot area — all panels stacked so images preload */}
+      <div className="relative">
+        {TABS.map((tab, index) => {
+          const isActive = index === activeIndex
+          return (
+            <div
+              key={tab.id}
+              role="tabpanel"
+              id={`hero-tabpanel-${tab.id}`}
+              aria-labelledby={`hero-tab-${tab.id}`}
+              aria-hidden={!isActive}
+              className={[
+                'rounded-xl overflow-hidden shadow-2xl border border-border',
+                isActive ? 'relative z-10' : 'absolute inset-0 invisible',
+              ].join(' ')}
+            >
+              <img
+                src={tab.lightImg}
+                alt={`FactorFox ${tab.label} view`}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                className="w-full h-auto block dark:hidden"
+              />
+              <img
+                src={tab.darkImg}
+                alt={`FactorFox ${tab.label} view`}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                className="w-full h-auto block hidden dark:block"
+              />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
