@@ -50,7 +50,7 @@ function Terms() {
 
       <LegalLayout tocItems={tocItems}>
         <LegalSection id="agreement" num="01" title="Agreement to terms">
-          <p className="text-body-lg text-muted-foreground">
+          <p className="text-body-lg font-semibold text-foreground">
             If you reside outside of the United States, the party with whom you are contracting is FactorFox Software, LLC. This Agreement describes the terms and conditions applicable to your use of our FactorFox services available under the domain and sub-domains of factorfox.com and the general principles for the websites of our subsidiaries and international affiliates.
           </p>
           <p>
@@ -90,6 +90,7 @@ function Terms() {
           </p>
           <LegalDataTable
             headers={['License', 'Factor module users', 'Other modules']}
+            columnWidths="1fr 1.4fr 1fr"
             rows={[
               [
                 { main: 'One user', sub: 'Solo' },
@@ -249,7 +250,7 @@ function Terms() {
         </LegalSection>
 
         <LegalSection id="disputes" num="16" title="Resolution of disputes">
-          <p className="text-body-lg text-muted-foreground">
+          <p className="text-body-lg font-semibold text-foreground">
             In the event a dispute arises between you and FactorFox Software, LLC, our goal is to provide you with a neutral and cost effective means of resolving the dispute quickly.
           </p>
           <p>

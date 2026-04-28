@@ -42,7 +42,7 @@ function Refund() {
 
       <div className="mx-auto max-w-[760px] px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
         <LegalSection id="cancel" num="01" title="How to cancel">
-          <p>
+          <p className="text-body-lg font-semibold text-foreground">
             We hope that you love using FactorFox.com (the &ldquo;Site&rdquo;), provided by FactorFox Software LLC (&ldquo;we&rdquo; or &ldquo;us&rdquo;). If for any reason you wish to cancel, please contact us through our customer support number at{' '}
             <a href="tel:18006163897">1-800-616-3897</a> or by email at{' '}
             <a href="mailto:support@factorfox.com">support@factorfox.com</a>.

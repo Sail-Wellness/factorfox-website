@@ -76,7 +76,7 @@ function LegalHero({ eyebrow, title, lede, meta, contacts }: LegalHeroProps) {
                     </span>
                   </span>
                   <span
-                    className={`font-heading font-bold text-[22px] transition-transform duration-200 group-hover:translate-x-1 ${
+                    className={`font-heading font-bold text-section-sm transition-transform duration-200 group-hover:translate-x-1 ${
                       contact.type === 'phone' ? 'text-white' : 'text-primary'
                     }`}
                   >

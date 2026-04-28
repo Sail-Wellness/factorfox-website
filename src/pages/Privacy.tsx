@@ -45,7 +45,7 @@ function Privacy() {
 
       <LegalLayout tocItems={tocItems}>
         <LegalSection id="application" num="01" title="Application">
-          <p className="text-body-lg text-muted-foreground">
+          <p className="text-body-lg font-semibold text-foreground">
             FactorFox Software, LLC (&ldquo;Company,&rdquo; &ldquo;We,&rdquo; &ldquo;Us,&rdquo; or &ldquo;Our&rdquo;) collects some personal data (&ldquo;Personal Information&rdquo;) from its Users when they view, access, use or register through the Company&rsquo;s websites, mobile applications, and products and services (collectively, &ldquo;Services&rdquo;).
           </p>
           <p>
@@ -73,6 +73,7 @@ function Privacy() {
           </p>
           <LegalDataTable
             headers={['Category', 'Examples', 'Source']}
+            columnWidths="1fr 1.4fr 1fr"
             rows={[
               [
                 { main: 'Automatically collected', sub: 'Cookies & analytics' },
