@@ -18,7 +18,7 @@ function LegalCallout({ variant = 'info', title, children }: LegalCalloutProps) 
   const Icon = iconMap[variant]
 
   return (
-    <div className="grid grid-cols-[40px_1fr] gap-[18px] items-start rounded-2xl border border-border bg-[var(--surface-soft)] p-7 mt-8">
+    <div className="grid grid-cols-[40px_1fr] gap-[18px] items-start rounded-2xl border border-[var(--set1-stroke)] bg-[var(--set1-box)] p-7 mt-8">
       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--radius)] bg-primary/10 text-primary">
         <Icon className="h-[18px] w-[18px]" />
       </span>

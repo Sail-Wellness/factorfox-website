@@ -11,7 +11,7 @@ function LegalSection({ id, num, title, children }: LegalSectionProps) {
   return (
     <section id={id} className="scroll-mt-24 [&+&]:mt-14">
       <AnimatedSection>
-        <header className="grid grid-cols-[64px_1fr] gap-4 items-baseline pb-6 mb-8 border-b border-border">
+        <header className="grid grid-cols-[64px_1fr] gap-4 items-baseline pb-6 mb-8 border-b border-[var(--set1-stroke)]">
           <span className="text-eyebrow font-mono text-primary pt-2">{num}</span>
           <h2 className="text-section-md">{title}</h2>
         </header>

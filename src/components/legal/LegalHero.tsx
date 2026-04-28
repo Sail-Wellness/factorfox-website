@@ -23,7 +23,7 @@ interface LegalHeroProps {
 
 function LegalHero({ eyebrow, title, lede, meta, contacts }: LegalHeroProps) {
   return (
-    <section className="bg-[var(--surface-soft)] border-b border-border pt-16 pb-20 md:pt-24 md:pb-24">
+    <section className="bg-[var(--set1-bg)] border-b border-[var(--set1-stroke)] pt-16 pb-20 md:pt-24 md:pb-24">
       <div className={`mx-auto px-4 sm:px-6 lg:px-8 ${contacts ? 'max-w-[880px]' : 'max-w-7xl'}`}>
         <AnimatedSection>
           <p className="text-eyebrow text-primary/70 mb-8">{eyebrow}</p>
@@ -41,7 +41,7 @@ function LegalHero({ eyebrow, title, lede, meta, contacts }: LegalHeroProps) {
                   className={`group grid grid-cols-[auto_1fr_auto] items-center gap-[18px] rounded-2xl no-underline transition-all duration-200 min-w-0 ${
                     contact.type === 'phone'
                       ? 'bg-primary text-white shadow-[0_18px_40px_-22px] shadow-primary/65 px-5 py-5 hover:-translate-y-0.5 hover:brightness-[1.04]'
-                      : 'bg-[var(--card)] text-foreground border border-border px-5 py-5 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_18px_40px_-28px] hover:shadow-primary/60'
+                      : 'bg-[var(--set1-box)] text-foreground border border-[var(--set1-stroke)] px-5 py-5 hover:-translate-y-0.5 hover:border-primary hover:shadow-[0_18px_40px_-28px] hover:shadow-primary/60'
                   }`}
                 >
                   <span
@@ -89,7 +89,7 @@ function LegalHero({ eyebrow, title, lede, meta, contacts }: LegalHeroProps) {
         )}
 
         <AnimatedSection delay={contacts ? 0.2 : 0.1}>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-16 pt-8 border-t border-border">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 sm:gap-16 pt-8 border-t border-[var(--set1-stroke)]">
             {meta.map((item) => (
               <div key={item.label} className="flex flex-col">
                 <span className="text-[11px] tracking-[0.14em] uppercase font-normal font-mono text-muted-foreground">{item.label}</span>

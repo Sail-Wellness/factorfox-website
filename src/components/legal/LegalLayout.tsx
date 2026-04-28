@@ -50,7 +50,7 @@ function LegalLayout({ tocItems, children }: LegalLayoutProps) {
         <AnimatedSection>
           <aside className="hidden lg:block">
             <nav className="sticky top-24">
-              <p className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-4">
+              <p className="text-eyebrow text-muted-foreground mb-4">
                 Contents
               </p>
               <ul className="space-y-1">
@@ -58,13 +58,13 @@ function LegalLayout({ tocItems, children }: LegalLayoutProps) {
                   <li key={item.id}>
                     <button
                       onClick={() => scrollTo(item.id)}
-                      className={`flex items-center gap-3 w-full text-left px-3 py-2 rounded-lg text-[14px] transition-colors duration-200 ${
+                      className={`flex items-center gap-3 w-full text-left px-3 py-2 rounded-lg text-body-sm transition-colors duration-200 ${
                         activeId === item.id
                           ? 'text-primary font-semibold bg-primary/5'
                           : 'text-muted-foreground hover:text-foreground hover:bg-[var(--muted)]/50'
                       }`}
                     >
-                      <span className="text-[11px] font-mono font-bold tracking-wider opacity-60">
+                      <span className="text-eyebrow font-mono opacity-60">
                         {item.num}
                       </span>
                       <span>{item.label}</span>
