@@ -30,7 +30,7 @@ const LINKEDIN_URL = 'https://www.linkedin.com/company/factorfox-software-llc/po
 
 const bottomLinks = [
   { label: 'Status', href: '#', external: false },
-  { label: 'Support', href: '#', external: false },
+  { label: 'Support', href: '/refund', external: false },
   { label: 'Login', href: LOGIN_URL, external: true },
 ]
 
