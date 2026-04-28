@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import './HeroAnimation.css'
 
-const PHASE_DURATION = 5000
+const PHASE_DURATION = 3500
 const TOTAL_PHASES = 3
 const DEPLOY_TARGET = 2847500
 const DEPLOY_ANIM_MS = 1800

@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
 
-const PLATFORM_URL = '#'
-
 function CtaSection() {
   return (
     <SectionWrapper className="bg-[var(--set2-bg)]">
@@ -20,9 +18,9 @@ function CtaSection() {
           <Link to="/contact-sales" className="btn-primary-lg">
             Request Demo
           </Link>
-          <a href={PLATFORM_URL} className="btn-secondary-lg">
+          <Link to="/features" className="btn-secondary-lg">
             View Platform
-          </a>
+          </Link>
         </div>
       </AnimatedSection>
     </SectionWrapper>

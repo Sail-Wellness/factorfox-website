@@ -2,18 +2,11 @@ import { Link } from 'react-router-dom'
 import linkedinIcon from '@/assets/logos/linkedin-svg.svg'
 import { cn } from '@/lib/utils'
 import logoSrc from '@/assets/logo.svg'
+import ifaBadge from '@/assets/images/ifa_prefvendor.png'
 
 const LOGIN_URL = 'https://nimbus.factorfox.net/'
 
-// TODO: replace placeholder hrefs with real URLs when available
-// - Product links: deep links to feature subsections
 const footerLinks = {
-  Product: [
-    { label: 'Intake Engine', href: '#' },
-    { label: 'Risk Scoring', href: '#' },
-    { label: 'Workflow Automation', href: '#' },
-    { label: 'Client Portal', href: '#' },
-  ],
   Company: [
     { label: 'About Us', to: '/about' },
     { label: 'Features', to: '/features' },
@@ -29,7 +22,6 @@ const footerLinks = {
 const LINKEDIN_URL = 'https://www.linkedin.com/company/factorfox-software-llc/posts/?feedView=all'
 
 const bottomLinks = [
-  { label: 'Status', href: '#', external: false },
   { label: 'Support', href: '/refund', external: false },
   { label: 'Login', href: LOGIN_URL, external: true },
 ]
@@ -51,7 +43,7 @@ function Footer({ className }: FooterProps) {
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
               The leading operating system for the modern factoring industry. Built by finance experts for high-velocity growth.
             </p>
-            <div className="mt-6 flex items-center gap-3">
+            <div className="mt-6 flex items-center gap-4">
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
@@ -61,32 +53,24 @@ function Footer({ className }: FooterProps) {
               >
                 <img src={linkedinIcon} alt="" className="h-4 w-4" />
               </a>
+              <img src={ifaBadge} alt="IFA Preferred Vendor" loading="lazy" className="h-9 w-auto" />
             </div>
           </div>
 
           {/* Link columns */}
-          <div className="md:col-span-7 grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="md:col-span-7 grid grid-cols-2 gap-8">
             {Object.entries(footerLinks).map(([group, links]) => (
               <div key={group}>
                 <h4 className="text-sm font-bold text-foreground mb-4">{group}</h4>
                 <ul className="space-y-3">
                   {links.map(link => (
                     <li key={link.label}>
-                      {'to' in link ? (
-                        <Link
-                          to={link.to as string}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                          {link.label}
-                        </Link>
-                      ) : (
-                        <a
-                          href={link.href}
-                          className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                        >
-                          {link.label}
-                        </a>
-                      )}
+                      <Link
+                        to={link.to}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
