@@ -45,26 +45,26 @@ function LegalLayout({ tocItems, children }: LegalLayoutProps) {
   }
 
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-20 md:pb-28">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 pb-20 md:pb-28">
       <div className="grid grid-cols-1 lg:grid-cols-[240px_1fr] gap-12 lg:gap-16">
         <AnimatedSection>
           <aside className="hidden lg:block">
             <nav className="sticky top-24">
-              <p className="text-eyebrow text-muted-foreground mb-4">
+              <p className="text-eyebrow text-primary/70 mb-4">
                 Contents
               </p>
-              <ul className="space-y-1">
+              <ul className="space-y-0 border-l border-[var(--set1-stroke)]">
                 {tocItems.map((item) => (
                   <li key={item.id}>
                     <button
                       onClick={() => scrollTo(item.id)}
-                      className={`flex items-center gap-3 w-full text-left px-3 py-2 rounded-lg text-body-sm transition-colors duration-200 ${
+                      className={`flex items-baseline gap-3 w-full text-left py-2.5 pl-5 -ml-px border-l-2 text-body-sm transition-colors duration-200 ${
                         activeId === item.id
-                          ? 'text-primary font-semibold bg-primary/5'
-                          : 'text-muted-foreground hover:text-foreground hover:bg-[var(--muted)]/50'
+                          ? 'text-foreground font-semibold border-l-primary'
+                          : 'text-muted-foreground border-l-transparent hover:text-foreground'
                       }`}
                     >
-                      <span className="text-eyebrow font-mono opacity-60">
+                      <span className="text-eyebrow font-mono opacity-60 w-6 shrink-0">
                         {item.num}
                       </span>
                       <span>{item.label}</span>
