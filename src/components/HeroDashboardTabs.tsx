@@ -5,6 +5,8 @@ import controlImg from '@/assets/images/control.png'
 import controlDarkImg from '@/assets/images/control_dark.png'
 import recoveryImg from '@/assets/images/recovery.png'
 import recoveryDarkImg from '@/assets/images/recovery_dark.png'
+import certaintyImg from '@/assets/images/certainity.png'
+import certaintyDarkImg from '@/assets/images/certainity_dark.png'
 
 type TabConfig = {
   id: string
@@ -18,7 +20,7 @@ const TABS: TabConfig[] = [
   { id: 'recovery',     label: 'Recovery',     lightImg: recoveryImg,     darkImg: recoveryDarkImg,     dotColor: 'bg-emerald-400' },
   { id: 'intelligence', label: 'Intelligence', lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-amber-400'   },
   { id: 'control',      label: 'Control',      lightImg: controlImg,      darkImg: controlDarkImg,      dotColor: 'bg-blue-400'    },
-  { id: 'certainty',    label: 'Certainty',    lightImg: intelligenceImg, darkImg: intelligenceDarkImg, dotColor: 'bg-violet-400'  },
+  { id: 'certainty',    label: 'Certainty',    lightImg: certaintyImg,      darkImg: certaintyDarkImg,      dotColor: 'bg-violet-400'  },
 ]
 
 function HeroDashboardTabs() {
