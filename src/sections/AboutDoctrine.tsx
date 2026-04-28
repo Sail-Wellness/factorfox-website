@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
 import bookCover from "@/assets/images/book_cover.svg";
@@ -37,15 +36,6 @@ function AboutDoctrine() {
                 </span>
               </div>
             </div>
-
-            {/* CTA — TODO: replace href with real PDF URL when available */}
-            <a
-              href="#"
-              className="self-start inline-flex items-center gap-2 text-primary font-semibold text-[15px] hover:opacity-75 transition-opacity"
-            >
-              Get the Doctrine
-              <ArrowRight className="h-4 w-4" strokeWidth={2.5} />
-            </a>
           </AnimatedSection>
 
           {/* Right: book cover */}
