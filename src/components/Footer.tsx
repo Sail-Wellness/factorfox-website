@@ -22,9 +22,9 @@ const footerLinks = {
     { label: 'Contact', to: '/contact-sales' },
   ],
   Legal: [
-    { label: 'Privacy Policy', href: '#' },
-    { label: 'Terms of Service', href: '#' },
-    { label: 'Security', href: '#' },
+    { label: 'Privacy Policy', to: '/privacy' },
+    { label: 'Terms of Service', to: '/terms' },
+    { label: 'Refund Policy', to: '/refund' },
   ],
 }
 
