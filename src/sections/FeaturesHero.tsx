@@ -1,43 +1,70 @@
+import { Link } from 'react-router-dom'
 import { AnimatedSection } from '@/components/AnimatedSection'
-import { SectionWrapper } from '@/components/SectionWrapper'
-import screenshotImg from '@/assets/images/demo_canvas.svg'
-import screenshotDarkImg from '@/assets/images/demo_canvas_dark.svg'
+import { HeroDashboardTabs } from '@/components/HeroDashboardTabs'
 
 function FeaturesHero() {
   return (
-    <SectionWrapper
-      className="relative overflow-hidden bg-[var(--set1-bg)] pt-24 md:pt-32 pb-16 md:pb-20"
-      innerClassName="relative"
-    >
+    <section className="relative overflow-hidden bg-[var(--set1-bg)]">
+      {/* Light mode gradient */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 dark:hidden"
+        style={{
+          background:
+            'radial-gradient(ellipse 65% 75% at 82% 35%, rgba(186, 230, 253, 0.45) 0%, rgba(255,255,255,0) 70%)',
+        }}
+      />
+      {/* Dark mode gradient */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 hidden dark:block"
+        style={{
+          background:
+            'radial-gradient(ellipse 60% 55% at 55% 0%, rgba(99, 102, 241, 0.12) 0%, transparent 70%)',
+        }}
+      />
 
-        {/* Heading + subtitle */}
-        <AnimatedSection delay={0} className="text-center mb-12 md:mb-16">
-          <h1 className="text-hero text-foreground mb-5">
-            automate everything
-          </h1>
-          <p className="text-body-lg text-muted-foreground">
-            Operate less. Increase returns. Focus on what matters.
-          </p>
-        </AnimatedSection>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
 
-        {/* Screenshot */}
-        <AnimatedSection delay={0.12} className="relative max-w-5xl mx-auto">
-          <img
-            src={screenshotImg}
-            alt="FactorFox dashboard"
-            loading="eager"
-            className="w-full h-auto block dark:hidden"
-          />
-          <img
-            src={screenshotDarkImg}
-            alt="FactorFox dashboard"
-            loading="eager"
-            aria-hidden="true"
-            className="w-full h-auto hidden dark:block"
-          />
-        </AnimatedSection>
+          {/* Left: text */}
+          <AnimatedSection delay={0} className="flex flex-col">
+            {/* Tag */}
+            <div className="mb-6 self-start inline-flex items-center gap-2 rounded-full border border-primary/25 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 px-3 py-1">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.12em] text-primary">
+                AI Automated Factoring
+              </span>
+            </div>
 
-    </SectionWrapper>
+            {/* Heading */}
+            <h1 className="text-hero text-foreground uppercase mb-6">
+              <span className="block">Just Deploy</span>
+              <span className="block">Capital</span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-body-lg text-muted-foreground max-w-[560px] mb-10">
+              We automate the entire factoring life-cycle so you reduce cost,
+              eliminate fraud, and maximize turnover on every dollar deployed.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link to="/contact-sales" className="btn-primary shadow-sm">
+                Request Demo
+              </Link>
+            </div>
+          </AnimatedSection>
+
+          {/* Right: dashboard screenshot */}
+          <AnimatedSection delay={0.12} className="relative w-full">
+            <HeroDashboardTabs />
+          </AnimatedSection>
+
+        </div>
+      </div>
+    </section>
   )
 }
 

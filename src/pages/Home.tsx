@@ -1,5 +1,5 @@
 import { SEO } from '@/components/SEO'
-import { Hero } from '@/sections/Hero'
+import { HeroAnimation } from '@/sections/HeroAnimation'
 import { FeatureCards } from '@/sections/FeatureCards'
 import { IncreaseROI } from '@/sections/IncreaseROI'
 import { DocumentsToDecisions } from '@/sections/DocumentsToDecisions'
@@ -22,7 +22,7 @@ function Home() {
       />
 
       <main>
-        <Hero />
+        <HeroAnimation />
         <IncreaseROI />
         <FeatureCards />
         <DocumentsToDecisions />
