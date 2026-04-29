@@ -18,6 +18,12 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const [prevPath, setPrevPath] = useState(location.pathname)
+
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname)
+    if (menuOpen) setMenuOpen(false)
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -26,11 +32,6 @@ function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMenuOpen(false)
-  }, [location.pathname])
 
   return (
     <header
