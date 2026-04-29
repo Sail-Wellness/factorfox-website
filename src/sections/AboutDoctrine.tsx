@@ -1,7 +1,7 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
-import bookCover from "@/assets/images/book_cover.svg";
-import authorImg from "@/assets/images/author.svg";
+import bookCover from "@/assets/images/book_cover.webp";
+import authorImg from "@/assets/images/author.webp";
 
 function AboutDoctrine() {
   return (

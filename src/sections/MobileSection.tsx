@@ -1,6 +1,6 @@
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { SectionWrapper } from '@/components/SectionWrapper'
-import mobileSrc from '@/assets/mobile_ss.svg'
+import mobileSrc from '@/assets/mobile_ss.webp'
 
 const stats = [
   { value: '90%',  label: 'Reduced Intake Errors' },
