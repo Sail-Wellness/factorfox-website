@@ -53,7 +53,13 @@ function Footer({ className }: FooterProps) {
               >
                 <img src={linkedinIcon} alt="" className="h-4 w-4" />
               </a>
-              <img src={ifaBadge} alt="IFA Preferred Vendor" loading="lazy" className="h-9 w-auto" />
+              <a
+                href="https://connect.factoring.org/events/event-description?CalendarEventKey=3f6e416a-7bc0-456c-af66-019b271d36e0&Home=%2fevents%2fcalendar"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={ifaBadge} alt="IFA Preferred Vendor" loading="lazy" className="h-9 w-auto" />
+              </a>
             </div>
           </div>
 
