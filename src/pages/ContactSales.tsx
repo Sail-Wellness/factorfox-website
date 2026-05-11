@@ -1,18 +1,10 @@
-import { useState } from "react";
-import { InlineWidget, useCalendlyEventListener } from "react-calendly";
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { useTheme } from "@/hooks/useTheme";
 
-const CALENDLY_URL = "https://calendly.com/rob-sailwellness/factorfox-demo";
+const BOOKING_URL =
+  "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/";
 
 function ContactSales() {
-  const [booked, setBooked] = useState(false);
-
-  useCalendlyEventListener({
-    onEventScheduled: () => setBooked(true),
-  });
-
   return (
     <>
       <SEO
@@ -45,64 +37,41 @@ function ContactSales() {
             </AnimatedSection>
           </div>
 
-          {/* Right — scheduler ↔ confirmation */}
+          {/* Right — booking card */}
           <div className="bg-surface-soft flex items-center justify-center px-4 sm:px-6 lg:px-12 py-12 md:py-16">
             <AnimatedSection delay={0.12} className="w-full max-w-md">
-              <div className="rounded-2xl border border-border bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-6 md:p-7">
-                {booked ? <BookedConfirmation /> : <Scheduler />}
+              <div className="rounded-2xl border border-border bg-card shadow-[0_12px_40px_-12px_rgba(99,102,241,0.18)] dark:shadow-black/30 p-6 md:p-7 flex flex-col items-center text-center">
+                <span className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-border bg-primary/[0.06] text-lg font-semibold leading-none text-foreground">
+                  <span>
+                    30
+                    <br />
+                    min
+                  </span>
+                </span>
+
+                <h2 className="text-section-md text-foreground mt-6">
+                  Pick a time that works.
+                </h2>
+
+                <p className="text-body text-muted-foreground mt-3 max-w-sm">
+                  Open the calendar, choose 30&nbsp;minutes, and we&apos;ll walk
+                  you through a live demo of FactorFox on your data.
+                </p>
+
+                <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 font-semibold text-primary-foreground transition hover:bg-primary/90"
+                >
+                  Schedule my demo
+                </a>
               </div>
             </AnimatedSection>
           </div>
         </div>
       </main>
     </>
-  );
-}
-
-function Scheduler() {
-  const { theme } = useTheme();
-  const isDark = theme === "dark";
-
-  return (
-    <InlineWidget
-      // Force remount when theme flips; Calendly reads pageSettings once at mount.
-      key={theme}
-      url={CALENDLY_URL}
-      styles={{ height: "630px", width: "100%" }}
-      pageSettings={{
-        primaryColor: "0085ef",
-        textColor: isDark ? "f8fafc" : "0f172a",
-        backgroundColor: isDark ? "0c121d" : "ffffff",
-        hideEventTypeDetails: true,
-        hideGdprBanner: true,
-        hideLandingPageDetails: true,
-      }}
-    />
-  );
-}
-
-function BookedConfirmation() {
-  return (
-    <div role="status" aria-live="polite" className="flex flex-col gap-6">
-      <div>
-        <h2 className="text-section-md text-foreground whitespace-nowrap">
-          Your Demo Is Booked.
-        </h2>
-        <p className="text-body text-muted-foreground mt-2">
-          We&apos;ll show you exactly how your factoring firm can operate
-          effortlessly.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-primary/25 bg-primary/[0.06] p-4">
-        <div className="text-eyebrow text-primary mb-2">
-          What Happens Next?
-        </div>
-        <p className="text-body text-foreground">
-          A calendar invite has been sent to your email with the meeting link.
-        </p>
-      </div>
-    </div>
   );
 }
 
