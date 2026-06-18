@@ -1,10 +1,30 @@
+import { Link } from 'react-router-dom'
 import { SectionWrapper } from '@/components/SectionWrapper'
 import { AnimatedSection } from '@/components/AnimatedSection'
 import { CapitalHeading } from './CapitalHeading'
 
 const cards = [
   { label: 'Entity', value: 'FactorFox Capital', mono: false },
-  { label: 'Network', value: 'FactorFox / FactorEvo', mono: false },
+  {
+    label: 'Network',
+    value: (
+      <>
+        <Link to="/" className="transition-colors hover:text-primary">
+          FactorFox
+        </Link>{' '}
+        /{' '}
+        <a
+          href="https://www.factorevo.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary"
+        >
+          FactorEvo
+        </a>
+      </>
+    ),
+    mono: false,
+  },
 ]
 
 function CapitalContact() {
