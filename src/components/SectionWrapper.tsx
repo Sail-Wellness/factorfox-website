@@ -33,6 +33,7 @@ interface SectionWrapperProps {
   innerClassName?: string
   style?: React.CSSProperties
   as?: React.ElementType
+  id?: string
 }
 
 function SectionWrapper({
@@ -41,9 +42,10 @@ function SectionWrapper({
   innerClassName,
   style,
   as: Tag = 'section',
+  id,
 }: SectionWrapperProps) {
   return (
-    <Tag className={cn('py-20 md:py-28', className)} style={style}>
+    <Tag id={id} className={cn('py-20 md:py-28', className)} style={style}>
       <div className={cn('mx-auto max-w-7xl px-4 sm:px-6 lg:px-8', innerClassName)}>
         {children}
       </div>

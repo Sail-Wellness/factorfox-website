@@ -6,6 +6,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { Home } from '@/pages/Home'
 import { Features } from '@/pages/Features'
 import { About } from '@/pages/About'
+import { Capital } from '@/pages/Capital'
 import { ContactSales } from '@/pages/ContactSales'
 import { Privacy } from '@/pages/Privacy'
 import { Terms } from '@/pages/Terms'
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/features" element={<Features />} />
               <Route path="/about" element={<About />} />
+              <Route path="/capital" element={<Capital />} />
               <Route path="/contact-sales" element={<ContactSales />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />

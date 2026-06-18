@@ -8,6 +8,7 @@ import logoSrc from '@/assets/logo.svg'
 const navLinks = [
   { label: 'Home', to: '/' },
   { label: 'Features', to: '/features' },
+  { label: 'Capital', to: '/capital' },
   { label: 'About', to: '/about' },
   { label: 'Contact Sales', to: '/contact-sales' },
 ]

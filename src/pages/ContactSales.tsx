@@ -1,8 +1,6 @@
 import { SEO } from "@/components/SEO";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
-const BOOKING_URL =
-  "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/";
+import { BOOKING_URL } from "@/lib/booking";
 
 function ContactSales() {
   return (
