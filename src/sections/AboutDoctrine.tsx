@@ -36,6 +36,16 @@ function AboutDoctrine() {
                 </span>
               </div>
             </div>
+
+            {/* Book CTA */}
+            <a
+              href="https://www.amazon.com/Signals-Transportation-Factoring-Roberto-Vasquez/dp/B0H4D6SQXK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary self-start shadow-sm"
+            >
+              Get the book on Amazon
+            </a>
           </AnimatedSection>
 
           {/* Right: book cover */}
