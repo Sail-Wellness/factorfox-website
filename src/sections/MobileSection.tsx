@@ -3,8 +3,8 @@ import { SectionWrapper } from '@/components/SectionWrapper'
 import mobileSrc from '@/assets/mobile_ss.webp'
 
 const stats = [
-  { value: '90%',  label: 'Reduced Intake Errors' },
-  { value: '2min', label: 'Avg. Mobile Upload Time' },
+  { value: 'Fewer', label: 'Intake Errors' },
+  { value: 'Minutes', label: 'From Phone To Schedule' },
 ]
 
 function MobileSection() {

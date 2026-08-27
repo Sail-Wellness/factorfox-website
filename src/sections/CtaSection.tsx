@@ -11,7 +11,7 @@ function CtaSection() {
         </h2>
 
         <p className="text-body-lg text-muted-foreground max-w-md">
-          Join hundreds of modern factors who have automated their growth.
+          Join the factors and asset based lenders running their operation on FactorFox.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4 mt-2">

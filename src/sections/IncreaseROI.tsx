@@ -3,9 +3,9 @@ import { DollarSign, TrendingUp, ShieldCheck } from 'lucide-react'
 import { AnimatedSection } from '@/components/AnimatedSection'
 
 const stats = [
-  { icon: DollarSign, label: 'Operational Efficiency', value: '$8M+ Per Staff Member' },
-  { icon: TrendingUp, label: 'Capital Velocity',       value: '11.5x Annual Turns' },
-  { icon: ShieldCheck, label: 'Fraud Control',         value: 'Lower Loss Rates' },
+  { icon: DollarSign, label: 'Operational Efficiency', value: 'More Book Per Operator' },
+  { icon: TrendingUp, label: 'Capital Velocity',       value: 'Faster Turns' },
+  { icon: ShieldCheck, label: 'Fraud Control',         value: 'Fewer Losses' },
 ]
 
 function IncreaseROI() {

@@ -3,9 +3,9 @@ import { SectionWrapper } from '@/components/SectionWrapper'
 
 const STATS = [
   { value: '2002', label: 'Founded' },
-  { value: '$40B+', label: 'Funded' },
-  { value: '2k+', label: 'Operators' },
-  { value: '99.9%', label: 'Uptime' },
+  { value: '5', label: 'Continents' },
+  { value: '6', label: 'Briefing questions' },
+  { value: '0', label: 'Conclusions without evidence' },
 ]
 
 function AboutHeritage() {
