@@ -140,14 +140,14 @@ function ConsentBanner({ onDecide }: { onDecide: (c: "granted" | "denied") => vo
           <button
             type="button"
             onClick={() => onDecide("denied")}
-            className="rounded-[3px] border border-[var(--line-strong)] px-4 py-2.5 text-[0.875rem] font-semibold hover:border-[var(--fg)]"
+            className="rounded-lg border border-[var(--line-strong)] px-4 py-2.5 text-[0.875rem] font-semibold hover:border-[var(--fg)]"
           >
             No thanks
           </button>
           <button
             type="button"
             onClick={() => onDecide("granted")}
-            className="rounded-[3px] bg-[var(--accent)] px-4 py-2.5 text-[0.875rem] font-semibold text-[var(--accent-fg)] hover:bg-[var(--color-navy-800)] dark:hover:bg-[var(--color-navy-300)]"
+            className="rounded-lg bg-[var(--accent)] px-4 py-2.5 text-[0.875rem] font-semibold text-[var(--accent-fg)] hover:bg-[var(--color-navy-800)] dark:hover:bg-[var(--color-navy-300)]"
           >
             Allow analytics
           </button>

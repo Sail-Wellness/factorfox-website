@@ -36,15 +36,15 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg)_88%,transparent)] backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg-nav)_88%,transparent)] backdrop-blur-md">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-[3px] focus:bg-[var(--accent)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[var(--accent-fg)]"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-[var(--accent)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[var(--accent-fg)]"
       >
         Skip to content
       </a>
 
-      <div className="mx-auto flex max-w-[1320px] items-center gap-6 px-5 py-3 sm:px-8">
+      <div className="mx-auto flex max-w-[1320px] items-center gap-6 px-5 py-3.5 sm:px-8">
         <Link href="/" className="flex shrink-0 items-center gap-2.5" aria-label="FactorFox home">
           <Image src="/brand/factorfox-mark.svg" alt="" width={30} height={28} priority className="h-7 w-auto" />
           <Image
@@ -69,28 +69,28 @@ export function SiteHeader() {
                     aria-expanded={isOpen}
                     aria-haspopup="true"
                     onClick={() => setOpenGroup(isOpen ? null : group.label)}
-                    className={`rounded-[3px] px-3 py-2 text-[0.9375rem] font-medium transition-colors hover:bg-[var(--bg-sunken)] ${
-                      active ? "text-[var(--fg)]" : "text-[var(--fg-muted)]"
+                    className={`rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
+                      active ? "bg-[var(--accent-soft)] text-[var(--fg)]" : "text-[var(--fg-muted)]"
                     }`}
                   >
                     {group.label}
-                    <span aria-hidden="true" className="ml-1.5 inline-block text-[0.6rem] align-middle opacity-60">
-                      {isOpen ? "▲" : "▼"}
+                    <span aria-hidden="true" className={`ml-1.5 inline-block align-middle text-[0.6rem] opacity-60 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>
+                      ▾
                     </span>
                   </button>
 
                   {isOpen && group.children ? (
-                    <div className="absolute left-0 top-[calc(100%+9px)] w-[min(30rem,88vw)] border border-[var(--line)] bg-[var(--bg-raised)] p-2" style={{ boxShadow: "var(--shadow-card)" }}>
+                    <div className="absolute left-0 top-[calc(100%+10px)] w-[min(30rem,88vw)] rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-2" style={{ boxShadow: "var(--shadow-card)" }}>
                       <ul className="grid gap-0.5">
                         {group.children.map((child) => (
                           <li key={child.href}>
                             <Link
                               href={child.href}
-                              className="block rounded-[3px] px-3 py-2.5 transition-colors hover:bg-[var(--bg-sunken)]"
+                              className="block rounded-lg px-3 py-2.5 transition-colors hover:bg-[var(--accent-soft)]"
                             >
-                              <span className="block text-[0.9375rem] font-semibold text-[var(--fg)]">{child.label}</span>
+                              <span className="block text-[15px] font-semibold text-[var(--fg)]">{child.label}</span>
                               {child.note ? (
-                                <span className="mt-0.5 block text-[0.8125rem] leading-[1.45] text-[var(--fg-subtle)]">
+                                <span className="mt-0.5 block text-[13px] leading-[1.45] text-[var(--fg-subtle)]">
                                   {child.note}
                                 </span>
                               ) : null}
@@ -101,7 +101,7 @@ export function SiteHeader() {
                       {group.href ? (
                         <Link
                           href={group.href}
-                          className="mt-1 block border-t border-[var(--line)] px-3 pb-1 pt-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-[var(--accent)]"
+                          className="u-label mt-1 block border-t border-[var(--line)] px-3 pb-1 pt-3 text-[var(--accent)]"
                         >
                           All {group.label.toLowerCase()}
                         </Link>
@@ -117,20 +117,20 @@ export function SiteHeader() {
         <div className="ml-auto flex items-center gap-3 lg:ml-4">
           <a
             href={SITE.appUrl}
-            className="hidden text-[0.9375rem] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] sm:block"
+            className="hidden text-[15px] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] sm:block"
             rel="noopener"
           >
             Sign in
           </a>
           <Link
             href="/demo"
-            className="hidden rounded-[3px] bg-[var(--accent)] px-4 py-2.5 text-[0.875rem] font-semibold text-[var(--accent-fg)] transition-colors hover:bg-[var(--color-navy-800)] sm:inline-block dark:hover:bg-[var(--color-navy-300)]"
+            className="btn-primary hidden !px-5 !py-2.5 !text-[14px] sm:inline-flex"
           >
             Request a demonstration
           </Link>
           <button
             type="button"
-            className="lg:hidden rounded-[3px] border border-[var(--line-strong)] px-3 py-2 text-[0.8125rem] font-semibold"
+            className="rounded-lg border border-[var(--line-strong)] px-3.5 py-2 text-[13.5px] font-semibold lg:hidden"
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((v) => !v)}
@@ -145,13 +145,13 @@ export function SiteHeader() {
           <div className="mx-auto max-w-[1320px] px-5 py-4 sm:px-8">
             {NAV.map((group) => (
               <details key={group.label} className="border-b border-[var(--line)] py-1">
-                <summary className="cursor-pointer list-none py-3 text-[0.9375rem] font-semibold">
+                <summary className="cursor-pointer list-none py-3 text-[15px] font-semibold">
                   {group.label}
                 </summary>
                 <ul className="pb-3">
                   {group.children?.map((child) => (
                     <li key={child.href}>
-                      <Link href={child.href} className="block py-2 text-[0.9375rem] text-[var(--fg-muted)]">
+                      <Link href={child.href} className="block py-2 text-[15px] text-[var(--fg-muted)]">
                         {child.label}
                       </Link>
                     </li>
@@ -162,11 +162,11 @@ export function SiteHeader() {
             <div className="flex flex-col gap-3 pt-5">
               <Link
                 href="/demo"
-                className="rounded-[3px] bg-[var(--accent)] px-4 py-3 text-center text-[0.9375rem] font-semibold text-[var(--accent-fg)]"
+                className="btn-primary w-full"
               >
                 Request a demonstration
               </Link>
-              <a href={SITE.appUrl} className="text-center text-[0.9375rem] font-medium text-[var(--fg-muted)]" rel="noopener">
+              <a href={SITE.appUrl} className="text-center text-[15px] font-medium text-[var(--fg-muted)]" rel="noopener">
                 Sign in
               </a>
             </div>

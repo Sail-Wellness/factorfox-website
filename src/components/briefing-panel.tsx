@@ -13,7 +13,7 @@ function SeverityDot({ severity }: { severity: keyof typeof SEVERITY_META }) {
 
 function EvidenceChip({ kind, label }: { kind: string; label: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-[2px] border border-[var(--line)] bg-[var(--bg)] px-2 py-1">
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--line)] bg-[var(--bg)] px-2 py-1">
       <span className="font-mono text-[0.5625rem] uppercase tracking-[0.1em] text-[var(--fg-subtle)]">{kind}</span>
       <span className="text-[0.75rem] text-[var(--fg-muted)]">{label}</span>
     </span>
@@ -26,7 +26,7 @@ function Item({ item }: { item: BriefItem }) {
     <div className="border-t border-[var(--line)] pt-4">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
         <span
-          className="rounded-[2px] px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.11em]"
+          className="rounded-full px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.11em]"
           style={{ background: s.bg, color: s.color }}
         >
           {s.label}
@@ -52,7 +52,7 @@ function Item({ item }: { item: BriefItem }) {
         {item.actions.map((a) => (
           <span
             key={a.label}
-            className="inline-flex items-center gap-2 rounded-[2px] border border-[var(--line-strong)] px-2.5 py-1.5 text-[0.75rem] font-semibold text-[var(--fg)]"
+            className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] px-2.5 py-1.5 text-[0.75rem] font-semibold text-[var(--fg)]"
           >
             {a.label}
             <span className="font-mono text-[0.5625rem] uppercase tracking-[0.09em] text-[var(--fg-subtle)]">
@@ -77,7 +77,7 @@ export function BriefingPanel({ compact = false }: { compact?: boolean }) {
   return (
     <figure className="m-0">
       <div
-        className="overflow-hidden border border-[var(--line-strong)] bg-[var(--bg-raised)]"
+        className="overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]"
         style={{ boxShadow: "var(--shadow-card)" }}
       >
         {/* header */}
@@ -91,7 +91,7 @@ export function BriefingPanel({ compact = false }: { compact?: boolean }) {
             </p>
           </div>
           <span
-            className="rounded-[2px] px-2 py-1 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.11em]"
+            className="rounded-full px-2 py-1 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.11em]"
             style={{ background: "var(--color-crit-100)", color: "var(--color-crit-600)" }}
           >
             2 require you

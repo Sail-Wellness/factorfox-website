@@ -392,10 +392,10 @@ function CovenantPositionScene() {
               </div>
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
                 <span
-                  className="rounded-[2px] px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.1em]"
+                  className="rounded-full px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.1em]"
                   style={
                     t.source === "Credit agreement"
-                      ? { background: "var(--color-navy-100)", color: "var(--color-navy-700)" }
+                      ? { background: "var(--color-navy-100)", color: "var(--color-navy-800)" }
                       : { background: "var(--color-ink-100)", color: "var(--color-ink-500)" }
                   }
                 >

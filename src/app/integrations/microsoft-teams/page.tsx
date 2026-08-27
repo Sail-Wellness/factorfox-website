@@ -322,13 +322,13 @@ function TeamsScene() {
             </dl>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              <span className="inline-flex items-center rounded-[2px] bg-[var(--color-ink-100)] px-3 py-1.5 text-[0.75rem] font-semibold text-[var(--color-ink-500)] dark:bg-[var(--color-ink-800)] dark:text-[var(--color-ink-300)]">
+              <span className="inline-flex items-center rounded-full bg-[var(--color-ink-100)] px-3 py-1.5 text-[0.75rem] font-semibold text-[var(--color-ink-500)] dark:bg-[var(--color-ink-800)] dark:text-[var(--color-ink-300)]">
                 Approve
               </span>
-              <span className="inline-flex items-center rounded-[2px] border border-[var(--line-strong)] px-3 py-1.5 text-[0.75rem] font-semibold">
+              <span className="inline-flex items-center rounded-full border border-[var(--line-strong)] px-3 py-1.5 text-[0.75rem] font-semibold">
                 Open evidence
               </span>
-              <span className="inline-flex items-center rounded-[2px] border border-[var(--line-strong)] px-3 py-1.5 text-[0.75rem] font-semibold">
+              <span className="inline-flex items-center rounded-full border border-[var(--line-strong)] px-3 py-1.5 text-[0.75rem] font-semibold">
                 Refuse
               </span>
             </div>

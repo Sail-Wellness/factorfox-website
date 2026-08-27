@@ -76,8 +76,8 @@ function slugFor(route) {
   return route === "/" ? "home" : route.replace(/^\//, "").replace(/\/$/, "").replace(/\//g, "-");
 }
 
-const fontFile = path.join(ROOT, "src", "app", "fonts", "archivo-latin-wght-normal.woff2");
-const monoFile = path.join(ROOT, "src", "app", "fonts", "ibm-plex-mono-latin-500-normal.woff2");
+const fontFile = path.join(ROOT, "src", "app", "fonts", "manrope-latin-wght-normal.woff2");
+const monoFile = path.join(ROOT, "src", "app", "fonts", "inter-latin-wght-normal.woff2");
 const font = fs.readFileSync(fontFile).toString("base64");
 const mono = fs.readFileSync(monoFile).toString("base64");
 
@@ -85,19 +85,25 @@ function html({ title, eyebrow }) {
   const size = title.length > 62 ? 62 : title.length > 44 ? 70 : 78;
   const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   return `<!doctype html><html><head><meta charset="utf-8"><style>
-@font-face{font-family:Archivo;src:url(data:font/woff2;base64,${font}) format('woff2');font-weight:100 900}
-@font-face{font-family:Plex;src:url(data:font/woff2;base64,${mono}) format('woff2');font-weight:500}
+@font-face{font-family:Manrope;src:url(data:font/woff2;base64,${font}) format('woff2');font-weight:200 800}
+@font-face{font-family:Inter;src:url(data:font/woff2;base64,${mono}) format('woff2');font-weight:100 900}
 *{margin:0;box-sizing:border-box}
-body{width:1200px;height:630px;background:#070B11;color:#F0F3F6;font-family:Archivo,sans-serif;
-  padding:72px 80px;display:flex;flex-direction:column;justify-content:space-between}
-.eyebrow{display:flex;align-items:center;gap:16px;font-family:Plex;font-size:19px;
-  letter-spacing:4px;color:#8C99AB;text-transform:uppercase}
-.dot{width:10px;height:10px;background:#C2352A}
-h1{font-size:${size}px;line-height:1.06;letter-spacing:-2px;font-weight:600;max-width:1000px}
+body{width:1200px;height:630px;background:#040811;color:#F1F5F9;font-family:Inter,sans-serif;
+  padding:72px 80px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+body::before{content:'';position:absolute;top:-260px;right:-180px;width:820px;height:820px;
+  background:radial-gradient(circle,rgba(0,144,255,0.28),transparent 62%)}
+body::after{content:'';position:absolute;bottom:-300px;left:-160px;width:700px;height:700px;
+  background:radial-gradient(circle,rgba(240,82,46,0.16),transparent 62%)}
+.eyebrow,h1,footer{position:relative;z-index:1}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:17px;font-weight:700;
+  letter-spacing:3.4px;color:#94A3B8;text-transform:uppercase}
+.dot{width:10px;height:10px;border-radius:50%;background:#F0522E}
+h1{font-family:Manrope,sans-serif;font-size:${size}px;line-height:1.04;letter-spacing:-2.4px;
+  font-weight:800;max-width:1000px}
 footer{display:flex;align-items:center;justify-content:space-between;
-  border-top:1px solid #1E2836;padding-top:28px}
-.brand{font-size:30px;font-weight:600;letter-spacing:-0.5px}
-.url{font-family:Plex;font-size:18px;color:#5A6879;letter-spacing:2px}
+  border-top:1px solid #1E293B;padding-top:28px}
+.brand{font-family:Manrope,sans-serif;font-size:30px;font-weight:800;letter-spacing:-0.6px}
+.url{font-size:17px;font-weight:600;color:#6CB8E8;letter-spacing:2px}
 </style></head><body>
 <div class="eyebrow"><span class="dot"></span><span>${esc(eyebrow).slice(0, 52)}</span></div>
 <h1>${esc(title)}</h1>
@@ -105,7 +111,8 @@ footer{display:flex;align-items:center;justify-content:space-between;
 </body></html>`;
 }
 
-const { chromium } = await import("playwright");
+const PW = process.env.PLAYWRIGHT_MODULE ?? "playwright";
+const { chromium } = await import(PW);
 const EXEC = process.env.PLAYWRIGHT_CHROMIUM;
 const browser = await chromium.launch(EXEC ? { executablePath: EXEC, args: ["--no-sandbox"] } : { args: ["--no-sandbox"] });
 const ctx = await browser.newContext({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
@@ -120,6 +127,19 @@ for (const p of pages) {
 }
 
 await browser.close();
+
+// Flat brand colour over a wide gradient dithers badly as full colour PNG.
+// Quantising takes the set from roughly ten megabytes to one and a half with
+// no visible difference at the size these are ever displayed.
+try {
+  const { execFileSync } = await import("node:child_process");
+  execFileSync("pngquant", ["--force", "--quality", "60-88", "--speed", "1", "--ext", ".png", ...fs.readdirSync(OUT)], {
+    cwd: OUT,
+    stdio: "ignore",
+  });
+} catch {
+  console.warn("pngquant not available, cards left unquantised");
+}
 
 const total = fs.readdirSync(OUT).length;
 const bytes = fs.readdirSync(OUT).reduce((a, f) => a + fs.statSync(path.join(OUT, f)).size, 0);

@@ -158,7 +158,7 @@ export function DemoForm() {
   }
 
   const field =
-    "mt-1.5 w-full rounded-[3px] border border-[var(--line-strong)] bg-[var(--bg-raised)] px-3.5 py-2.5 text-[0.9375rem] text-[var(--fg)] placeholder:text-[var(--fg-subtle)] focus:border-[var(--accent)]";
+    "mt-1.5 w-full rounded-lg border border-[var(--line-strong)] bg-[var(--bg-raised)] px-3.5 py-2.5 text-[0.9375rem] text-[var(--fg)] placeholder:text-[var(--fg-subtle)] focus:border-[var(--accent)]";
   const label = "block text-[0.8125rem] font-semibold text-[var(--fg)]";
 
   return (
@@ -284,7 +284,7 @@ export function DemoForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded-[3px] bg-[var(--accent)] px-6 py-3 text-[0.9375rem] font-semibold text-[var(--accent-fg)] transition-colors hover:bg-[var(--color-navy-800)] disabled:opacity-60 dark:hover:bg-[var(--color-navy-300)]"
+          className="rounded-lg bg-[var(--accent)] px-6 py-3 text-[0.9375rem] font-semibold text-[var(--accent-fg)] transition-colors hover:bg-[var(--color-navy-800)] disabled:opacity-60 dark:hover:bg-[var(--color-navy-300)]"
         >
           {status === "sending" ? "Sending" : "Request a demonstration"}
         </button>

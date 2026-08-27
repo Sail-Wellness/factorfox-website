@@ -75,7 +75,7 @@ const mdxComponents = {
     <td {...props} className="border-b border-[var(--line)] px-4 py-2.5 align-top text-[var(--fg-muted)]" />
   ),
   code: (props: React.ComponentProps<"code">) => (
-    <code {...props} className="rounded-[2px] bg-[var(--bg-sunken)] px-1.5 py-0.5 font-mono text-[0.875em]" />
+    <code {...props} className="rounded-full bg-[var(--bg-sunken)] px-1.5 py-0.5 font-mono text-[0.875em]" />
   ),
 };
 

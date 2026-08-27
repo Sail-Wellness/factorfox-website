@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Container, Section, SectionHead, Eyebrow, CTA, Card, JsonLd, Status, type StatusKind } from "./primitives";
+import { Reveal } from "./animate";
 import { breadcrumbSchema, faqSchema } from "@/lib/seo";
 
 /* ------------------------------------------------------------------ crumbs */
@@ -10,21 +11,23 @@ export function Breadcrumbs({ trail }: { trail: { name: string; path: string }[]
     <>
       <JsonLd data={breadcrumbSchema([{ name: "FactorFox", path: "/" }, ...trail])} />
       <nav aria-label="Breadcrumb" className="mb-7">
-        <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[0.6875rem] uppercase tracking-[0.11em] text-[var(--fg-subtle)]">
+        <ol className="u-label flex flex-wrap items-center gap-x-2 gap-y-1 text-[var(--fg-subtle)]">
           <li>
-            <Link href="/" className="hover:text-[var(--fg)]">
+            <Link href="/" className="hover:text-[var(--accent)]">
               FactorFox
             </Link>
           </li>
           {trail.map((t, i) => (
             <li key={t.path} className="flex items-center gap-2">
-              <span aria-hidden="true">/</span>
+              <span aria-hidden="true" className="opacity-50">
+                /
+              </span>
               {i === trail.length - 1 ? (
                 <span className="text-[var(--fg-muted)]" aria-current="page">
                   {t.name}
                 </span>
               ) : (
-                <Link href={t.path} className="hover:text-[var(--fg)]">
+                <Link href={t.path} className="hover:text-[var(--accent)]">
                   {t.name}
                 </Link>
               )}
@@ -60,21 +63,20 @@ export function PageHero({
   trail: { name: string; path: string }[];
 }) {
   return (
-    <section className="border-b border-[var(--line)] pb-14 pt-10 sm:pb-18 sm:pt-14">
-      <Container width={aside ? "wide" : "default"}>
+    <section className="relative overflow-hidden border-b border-[var(--line)] pb-16 pt-10 sm:pb-20 sm:pt-14">
+      <span className="u-glow-edges pointer-events-none absolute inset-0" aria-hidden="true" />
+      <Container width={aside ? "wide" : "default"} className="relative">
         <Breadcrumbs trail={trail} />
         <div className={aside ? "grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] lg:gap-20" : ""}>
-          <div className="max-w-[38rem]">
+          <div className="max-w-[40rem]">
             <div className="flex flex-wrap items-center gap-3">
               <Eyebrow tone="signal">{eyebrow}</Eyebrow>
               {status ? <Status kind={status} label={statusLabel} /> : null}
             </div>
-            <h1 className="mt-4 text-[clamp(2.1rem,4.6vw,3.25rem)]">{title}</h1>
-            <div className="mt-6 space-y-4 text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)] sm:text-[1.125rem]">
-              {lede}
-            </div>
+            <h1 className="text-section-xl mt-5">{title}</h1>
+            <div className="mt-6 space-y-4 text-[17px] leading-[1.7] text-[var(--fg-muted)] sm:text-[18px]">{lede}</div>
             {primaryCta ? (
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-9 flex flex-wrap gap-3">
                 <CTA href={primaryCta.href}>{primaryCta.label}</CTA>
                 {secondaryCta ? (
                   <CTA href={secondaryCta.href} variant="secondary">
@@ -108,28 +110,32 @@ export function ProblemSolution({
     <Section tone="sunken" bordered>
       <Container>
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
-        <div className="mt-11 overflow-hidden border border-[var(--line)]">
-          <div className="hidden grid-cols-2 gap-px bg-[var(--line)] sm:grid">
-            <div className="bg-[var(--bg-sunken)] px-6 py-3">
-              <span className="u-eyebrow">What happens today</span>
-            </div>
-            <div className="bg-[var(--bg-sunken)] px-6 py-3">
-              <span className="u-eyebrow">What FactorFox does instead</span>
-            </div>
-          </div>
-          <div className="grid gap-px bg-[var(--line)] sm:grid-cols-2">
-            {rows.map((r) => (
-              <div key={r.problem} className="contents">
-                <div className="bg-[var(--bg-raised)] px-6 py-5 text-[0.9375rem] leading-[1.6] text-[var(--fg-muted)]">
-                  {r.problem}
-                </div>
-                <div className="bg-[var(--bg-raised)] px-6 py-5 text-[0.9375rem] leading-[1.6] text-[var(--fg)]">
-                  {r.response}
-                </div>
+        <Reveal>
+          <div className="mt-12 overflow-hidden rounded-xl border border-[var(--line)]">
+            <div className="hidden grid-cols-2 gap-px bg-[var(--line)] sm:grid">
+              <div className="bg-[var(--bg-sunken)] px-6 py-3.5">
+                <span className="u-eyebrow">What happens today</span>
               </div>
-            ))}
+              <div className="bg-[var(--bg-sunken)] px-6 py-3.5">
+                <span className="u-eyebrow" style={{ color: "var(--accent)" }}>
+                  What FactorFox does instead
+                </span>
+              </div>
+            </div>
+            <div className="grid gap-px bg-[var(--line)] sm:grid-cols-2">
+              {rows.map((r) => (
+                <div key={r.problem} className="contents">
+                  <div className="bg-[var(--bg-raised)] px-6 py-5 text-[15px] leading-[1.6] text-[var(--fg-muted)]">
+                    {r.problem}
+                  </div>
+                  <div className="bg-[var(--bg-raised)] px-6 py-5 text-[15px] leading-[1.6] text-[var(--fg)]">
+                    {r.response}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </Reveal>
       </Container>
     </Section>
   );
@@ -152,20 +158,27 @@ export function FeatureGrid({
   columns?: 2 | 3 | 4;
   tone?: "default" | "sunken";
 }) {
-  const cols = columns === 2 ? "sm:grid-cols-2" : columns === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "sm:grid-cols-2 lg:grid-cols-3";
+  const cols =
+    columns === 2
+      ? "sm:grid-cols-2"
+      : columns === 4
+        ? "sm:grid-cols-2 lg:grid-cols-4"
+        : "sm:grid-cols-2 lg:grid-cols-3";
   return (
     <Section tone={tone}>
       <Container>
         {title ? <SectionHead eyebrow={eyebrow} title={title} lede={lede} /> : null}
-        <div className={`${title ? "mt-11" : ""} grid gap-px overflow-hidden border border-[var(--line)] bg-[var(--line)] ${cols}`}>
-          {items.map((i) => (
-            <div key={i.title} className="bg-[var(--bg-raised)] p-6">
-              <div className="flex flex-wrap items-center gap-2">
-                <h3 className="text-[1rem]">{i.title}</h3>
-                {i.status ? <Status kind={i.status} /> : null}
+        <div className={`${title ? "mt-12" : ""} grid gap-4 ${cols}`}>
+          {items.map((i, n) => (
+            <Reveal key={i.title} delay={Math.min(n, 5) * 0.06} className="h-full">
+              <div className="h-full rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 transition-shadow duration-200 hover:shadow-[var(--shadow-lift)]">
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-card-title">{i.title}</h3>
+                  {i.status ? <Status kind={i.status} /> : null}
+                </div>
+                <p className="mt-3 text-[14px] leading-[1.6] text-[var(--fg-muted)]">{i.body}</p>
               </div>
-              <p className="mt-2.5 text-[0.875rem] leading-[1.6] text-[var(--fg-muted)]">{i.body}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </Container>
@@ -190,17 +203,25 @@ export function StepList({
     <Section>
       <Container>
         <SectionHead eyebrow={eyebrow} title={title} lede={lede} />
-        <ol className="mt-11 border-t border-[var(--line-strong)]">
+        <ol className="mt-12 space-y-3">
           {steps.map((s, i) => (
-            <li key={s.title} className="grid gap-3 border-b border-[var(--line)] py-6 sm:grid-cols-[5rem_minmax(0,1fr)] sm:gap-8">
-              <div className="u-eyebrow pt-1">
-                <span className="u-tabular">{String(i + 1).padStart(2, "0")}</span> &middot; {s.label}
+            <Reveal key={s.title} delay={Math.min(i, 5) * 0.05} as="li">
+              <div className="grid gap-4 rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 sm:grid-cols-[auto_minmax(0,1fr)] sm:gap-7">
+                <div className="flex items-start gap-3">
+                  <span
+                    aria-hidden="true"
+                    className="u-tabular grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] font-display text-[14px] font-extrabold text-[var(--accent-strong)]"
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="u-eyebrow pt-2.5 sm:w-[7.5rem]">{s.label}</span>
+                </div>
+                <div>
+                  <h3 className="text-card-title">{s.title}</h3>
+                  <p className="mt-2.5 max-w-[62ch] text-[15px] leading-[1.65] text-[var(--fg-muted)]">{s.body}</p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-[1.0625rem]">{s.title}</h3>
-                <p className="mt-2 max-w-[62ch] text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">{s.body}</p>
-              </div>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </Container>
@@ -229,8 +250,8 @@ export function ProseSection({
         <div className={aside ? "grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-16" : ""}>
           <div>
             {eyebrow ? <Eyebrow tone="signal">{eyebrow}</Eyebrow> : null}
-            {title ? <h2 className="mt-3 max-w-[24ch] text-[clamp(1.7rem,3.2vw,2.4rem)]">{title}</h2> : null}
-            <div className="mt-6 space-y-4 text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)] [&_p]:max-w-[68ch] [&_strong]:text-[var(--fg)] [&_strong]:font-semibold">
+            {title ? <h2 className="text-section-lg mt-4 max-w-[24ch]">{title}</h2> : null}
+            <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)] [&_p]:max-w-[68ch] [&_strong]:font-semibold [&_strong]:text-[var(--fg)]">
               {children}
             </div>
           </div>
@@ -243,20 +264,31 @@ export function ProseSection({
 
 /* --------------------------------------------------------------------- faq */
 
-export function FaqBlock({ items, title = "Questions we get asked" }: { items: { q: string; a: string }[]; title?: string }) {
+export function FaqBlock({
+  items,
+  title = "Questions we get asked",
+}: {
+  items: { q: string; a: string }[];
+  title?: string;
+}) {
   return (
     <Section tone="sunken" bordered>
       <Container width="narrow">
         <JsonLd data={faqSchema(items)} />
         <SectionHead eyebrow="Straight answers" title={title} />
-        <div className="mt-10 border-t border-[var(--line-strong)]">
-          {items.map((f) => (
-            <details key={f.q} className="group border-b border-[var(--line)] py-5">
-              <summary className="cursor-pointer list-none text-[1.0625rem] font-semibold leading-[1.4]">
-                <span className="mr-3 font-mono text-[0.75rem] text-[var(--signal)] group-open:opacity-40">+</span>
+        <div className="mt-10 overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]">
+          {items.map((f, i) => (
+            <details key={f.q} className={`group px-6 py-5 ${i > 0 ? "border-t border-[var(--line)]" : ""}`}>
+              <summary className="flex cursor-pointer list-none items-start gap-3 text-[17px] font-semibold leading-[1.45]">
+                <span
+                  aria-hidden="true"
+                  className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] text-[13px] font-bold text-[var(--accent-strong)] transition-transform duration-200 group-open:rotate-45"
+                >
+                  +
+                </span>
                 {f.q}
               </summary>
-              <p className="mt-3 pl-7 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">{f.a}</p>
+              <p className="mt-3 pl-8 text-[15px] leading-[1.65] text-[var(--fg-muted)]">{f.a}</p>
             </details>
           ))}
         </div>
@@ -267,17 +299,34 @@ export function FaqBlock({ items, title = "Questions we get asked" }: { items: {
 
 /* ----------------------------------------------------------------- related */
 
-export function RelatedPages({ links, title = "Related" }: { links: { href: string; label: string; note: string }[]; title?: string }) {
+export function RelatedPages({
+  links,
+  title = "Related",
+}: {
+  links: { href: string; label: string; note: string }[];
+  title?: string;
+}) {
   return (
     <Section>
       <Container>
         <Eyebrow>{title}</Eyebrow>
-        <div className="mt-6 grid gap-px overflow-hidden border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">
-          {links.map((l) => (
-            <Link key={l.href} href={l.href} className="group bg-[var(--bg-raised)] p-6 transition-colors hover:bg-[var(--bg-sunken)]">
-              <h3 className="text-[1rem] group-hover:text-[var(--accent)]">{l.label}</h3>
-              <p className="mt-2 text-[0.8125rem] leading-[1.55] text-[var(--fg-muted)]">{l.note}</p>
-            </Link>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {links.map((l, i) => (
+            <Reveal key={l.href} delay={Math.min(i, 5) * 0.05} className="h-full">
+              <Link
+                href={l.href}
+                className="group flex h-full flex-col rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 transition-all duration-200 hover:border-[var(--line-strong)] hover:shadow-[var(--shadow-lift)]"
+              >
+                <h3 className="text-card-title-sm group-hover:text-[var(--accent)]">{l.label}</h3>
+                <p className="mt-2.5 text-[13.5px] leading-[1.55] text-[var(--fg-muted)]">{l.note}</p>
+                <span
+                  aria-hidden="true"
+                  className="u-label mt-4 inline-flex items-center gap-1.5 text-[var(--accent)] transition-transform duration-200 group-hover:translate-x-0.5"
+                >
+                  Read <span>&rarr;</span>
+                </span>
+              </Link>
+            </Reveal>
           ))}
         </div>
       </Container>
@@ -299,19 +348,17 @@ export function CtaBand({
   secondary?: { href: string; label: string };
 }) {
   return (
-    <Section tone="deep">
-      <Container width="narrow">
+    <Section tone="deep" className="u-glow-edges relative overflow-hidden">
+      <Container width="narrow" className="relative">
         <div className="text-center">
-          <h2 className="text-[clamp(1.8rem,3.6vw,2.5rem)] text-[var(--color-ink-50)]">{title}</h2>
-          <p className="mx-auto mt-5 max-w-[54ch] text-[1.0625rem] leading-[1.65] text-[var(--color-ink-300)]">{body}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <CTA href={primary.href}>{primary.label}</CTA>
+          <h2 className="text-section-lg text-[var(--color-ink-50)]">{title}</h2>
+          <p className="mx-auto mt-5 max-w-[54ch] text-[16.5px] leading-[1.65] text-[var(--fg-muted)]">{body}</p>
+          <div className="mt-9 flex flex-wrap justify-center gap-3">
+            <CTA href={primary.href} size="lg">
+              {primary.label}
+            </CTA>
             {secondary ? (
-              <CTA
-                href={secondary.href}
-                variant="secondary"
-                className="border-[var(--color-ink-700)] text-[var(--color-ink-50)] hover:border-[var(--color-ink-400)] hover:bg-[var(--color-ink-900)]"
-              >
+              <CTA href={secondary.href} variant="secondary" size="lg">
                 {secondary.label}
               </CTA>
             ) : null}
@@ -335,12 +382,12 @@ export function DataTable({
 }) {
   return (
     <div
-      className="u-scroll-x border border-[var(--line)] bg-[var(--bg-raised)]"
+      className="u-scroll-x rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]"
       tabIndex={0}
       role="region"
       aria-label={caption ?? "Data table"}
     >
-      <table className="w-full min-w-[36rem] text-[0.875rem]">
+      <table className="w-full min-w-[36rem] text-[14px]">
         {caption ? <caption className="sr-only">{caption}</caption> : null}
         <thead>
           <tr>
@@ -348,7 +395,7 @@ export function DataTable({
               <th
                 key={h}
                 scope="col"
-                className="whitespace-nowrap border-b border-[var(--line-strong)] bg-[var(--bg-sunken)] px-4 py-3 text-left font-mono text-[0.625rem] font-semibold uppercase tracking-[0.12em] text-[var(--fg-subtle)]"
+                className="u-label whitespace-nowrap border-b border-[var(--line-strong)] bg-[var(--bg-sunken)] px-4 py-3.5 text-left text-[var(--fg-subtle)]"
               >
                 {h}
               </th>
@@ -361,7 +408,7 @@ export function DataTable({
               {r.map((cell, j) => (
                 <td
                   key={j}
-                  className={`border-b border-[var(--line)] px-4 py-3 align-top leading-[1.55] ${
+                  className={`border-b border-[var(--line)] px-4 py-3.5 align-top leading-[1.55] ${
                     j === 0 ? "font-medium text-[var(--fg)]" : "text-[var(--fg-muted)]"
                   }`}
                 >
