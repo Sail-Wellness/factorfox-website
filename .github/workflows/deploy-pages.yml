@@ -1,28 +1,52 @@
+# Builds the site and publishes it to GitHub Pages, which is where
+# factorfox.com already points. Nothing about DNS or hosting changes.
+#
+# The build runs the verification scripts first. A commit that would advertise
+# a URL with no route behind it, break an internal link, point a redirect at
+# nothing, or ship a duplicate title does not reach the deploy job.
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
-      - run: npm ci || npm install
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Types, routes, internal links, redirect targets, titles, descriptions.
+      - run: npm run verify
+
+      # next build writes out/, then postbuild writes the redirect layer and
+      # .nojekyll and refuses to finish if the App Store legal PDFs are missing.
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+        env:
+          NEXT_PUBLIC_GA_ID: ${{ vars.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_LEAD_ENDPOINT: ${{ vars.NEXT_PUBLIC_LEAD_ENDPOINT }}
+
+      - uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: out
+
   deploy:
     needs: build
     runs-on: ubuntu-latest

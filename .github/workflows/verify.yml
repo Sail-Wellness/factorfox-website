@@ -1,0 +1,22 @@
+# Runs on every pull request. This is the review gate the CMO's publishing
+# workflow depends on: open a pull request, this proves nothing broke, the
+# preview deployment shows the change, merging publishes it.
+name: Verify
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - run: npm run build
