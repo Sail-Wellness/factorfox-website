@@ -1,21 +1,10 @@
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { SectionWrapper } from "@/components/SectionWrapper";
 
-import tLogo from "@/assets/logos/t.svg";
 import quickbooksLogo from "@/assets/logos/quickbooks.svg";
 import qbDarkLogo from "@/assets/logos/qb_dark.svg";
 import xeroLogo from "@/assets/logos/xero.svg";
 import creditsafeLogo from "@/assets/logos/creditsafe.svg";
-import decipherLogo from "@/assets/logos/decipher.svg";
-import ansoniaLogo from "@/assets/logos/ansonia.svg";
-import loadconnexLogo from "@/assets/logos/loadconnex.svg";
-import farelanesLogo from "@/assets/logos/farelanes.svg";
-import farelanesDarkLogo from "@/assets/logos/farelanes_dark.svg";
-import atobLogo from "@/assets/logos/atob.svg";
-import atobDarkLogo from "@/assets/logos/atob_dark.svg";
-import netsuitLogo from "@/assets/logos/netsuit.svg";
-import netsuitDarkLogo from "@/assets/logos/netsuite_dark.svg";
-
 interface Logo {
   src: string;
   darkSrc?: string;
@@ -23,37 +12,22 @@ interface Logo {
   h: number;
 }
 
-// Light mode: 5 + 5
+// Only what the platform repository actually supports. Six other logos were
+// removed here because no code behind them could be found. They go back the day
+// the integration is real, and not a day earlier.
 const lightRow1: Logo[] = [
-  { src: tLogo, alt: "Transflo", h: 64 },
-  { src: creditsafeLogo, alt: "CreditSafe", h: 44 },
-  { src: quickbooksLogo, alt: "QuickBooks", h: 76 },
-  { src: loadconnexLogo, alt: "LoadConnex", h: 48 },
-  { src: farelanesLogo, alt: "Farelanes", h: 60 },
-];
-const lightRow2: Logo[] = [
-  { src: netsuitLogo, alt: "NetSuite", h: 64 },
-  { src: decipherLogo, alt: "Decipher", h: 44 },
+  { src: quickbooksLogo, alt: "QuickBooks Online", h: 68 },
   { src: xeroLogo, alt: "Xero", h: 56 },
-  { src: ansoniaLogo, alt: "Ansonia", h: 52 },
-  { src: atobLogo, alt: "AtoB", h: 48 },
+  { src: creditsafeLogo, alt: "Creditsafe", h: 44 },
 ];
+const lightRow2: Logo[] = [];
 
-// Dark mode: 5 + 5
 const darkRow1: Logo[] = [
-  { src: tLogo, alt: "Transflo", h: 64 },
-  { src: creditsafeLogo, alt: "CreditSafe", h: 44 },
-  { src: quickbooksLogo, darkSrc: qbDarkLogo, alt: "QuickBooks", h: 44 },
-  { src: loadconnexLogo, alt: "LoadConnex", h: 48 },
-  { src: farelanesLogo, darkSrc: farelanesDarkLogo, alt: "Farelanes", h: 60 },
-];
-const darkRow2: Logo[] = [
-  { src: netsuitLogo, darkSrc: netsuitDarkLogo, alt: "NetSuite", h: 64 },
-  { src: decipherLogo, alt: "Decipher", h: 44 },
+  { src: quickbooksLogo, darkSrc: qbDarkLogo, alt: "QuickBooks Online", h: 44 },
   { src: xeroLogo, alt: "Xero", h: 56 },
-  { src: ansoniaLogo, alt: "Ansonia", h: 52 },
-  { src: atobLogo, darkSrc: atobDarkLogo, alt: "AtoB", h: 56 },
+  { src: creditsafeLogo, alt: "Creditsafe", h: 44 },
 ];
+const darkRow2: Logo[] = [];
 
 function LogoRow({ logos }: { logos: Logo[] }) {
   return (

@@ -37,7 +37,7 @@ const modules = [
     icon: Network,
     title: 'Integrations',
     description:
-      'Robust API and pre-built connectors for QuickBooks, NetSuite, Sage, and more.',
+      'Open API, plus connectors for QuickBooks Online and Xero that propose into the intake rail rather than posting to your book.',
   },
 ]
 

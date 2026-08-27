@@ -164,7 +164,7 @@ function HeroAnimation() {
                 </span>
                 <span className="pill pill-3">
                   <span className="pill-dot" />
-                  Live
+                  Demonstration book
                 </span>
               </div>
             </header>
@@ -226,7 +226,7 @@ function HeroAnimation() {
                         $0
                       </div>
                       <div className="deploy-meta">
-                        <span className="deploy-meta-up">▲ 18.4%</span>
+                        <span className="deploy-meta-up">seeded</span>
                         <span>vs. yesterday</span>
                       </div>
                     </div>
@@ -246,9 +246,9 @@ function HeroAnimation() {
                     </div>
                   </div>
                   <div className="deploy-stats">
-                    <StatCard icon="time" value="4.2 min" label="avg. time to fund" />
-                    <StatCard icon="rate" value="98.7%" label="approval rate" />
-                    <StatCard icon="fraud" value="$0" label="fraud loss this quarter" />
+                    <StatCard icon="time" value="Minutes" label="submission to funding" />
+                    <StatCard icon="rate" value="8 gates" label="every invoice, every time" />
+                    <StatCard icon="fraud" value="Evidence" label="behind every decision" />
                   </div>
                 </div>
               </div>

@@ -13,7 +13,7 @@ const features = [
     icon: Sparkles,
     title: 'AI Extraction',
     description:
-      'Industry-leading LLM-powered extraction for BOLs, Invoices, and Rate Conforms with 99.9% accuracy.',
+      'Model based extraction for bills of lading, invoices and rate confirmations, with every output re validated deterministically before it touches the book.',
   },
   {
     icon: CheckCircle2,
