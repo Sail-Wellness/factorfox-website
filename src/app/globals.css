@@ -2,125 +2,237 @@
 
 /* ============================================================
    FactorFox design system
-   Institutional, evidence-first. Deep navy ground, controlled
-   fox red reserved for signal and emphasis, never decoration.
+
+   The palette is taken from the logo. The blue gradient in the
+   mark runs #0955a2 to #42a6dd, the flame runs #8f191c to
+   #f0522e, and the grey is #a1b0c1. Everything below is built
+   out of those three families so the site and the mark read as
+   one thing.
+
+   Two families of blue are in play on purpose. #0090ff is the
+   signature, used for glows, borders, chart fills and icons,
+   where a 3:1 ratio is the requirement. #0d74cf carries text
+   and button grounds, where 4.5:1 is the requirement. Using the
+   bright one for text is the single easiest way to fail an
+   accessibility audit, so it is kept out of text.
    ============================================================ */
 
 @theme {
-  /* --- neutrals: cool, blue-biased, chosen not inherited --- */
-  --color-ink-950: #070B11;
-  --color-ink-900: #0B1017;
-  --color-ink-800: #141B25;
-  --color-ink-700: #1E2836;
-  --color-ink-600: #2C3849;
-  --color-ink-500: #47566B;
-  --color-ink-400: #5A6879;
-  --color-ink-300: #8C99AB;
-  --color-ink-200: #C3CBD6;
-  --color-ink-100: #DFE4EB;
-  --color-ink-50:  #F0F3F6;
-  --color-paper:   #FAFBFC;
-  --color-white:   #FFFFFF;
+  /* --- neutrals: the slate ramp the original site was built on --- */
+  --color-ink-950: #040811;
+  --color-ink-900: #0a0f19;
+  --color-ink-850: #0c121d;
+  --color-ink-800: #1e293b;
+  --color-ink-700: #334155;
+  --color-ink-600: #475569;
+  --color-ink-500: #51607a;
+  --color-ink-400: #5b6a80;
+  --color-ink-300: #94a3b8;
+  --color-ink-200: #cbd5e1;
+  --color-ink-100: #e2e8f0;
+  --color-ink-50:  #f1f5f9;
+  --color-paper:   #ffffff;
+  --color-mist:    #f6fbff;
+  --color-white:   #ffffff;
 
-  /* --- brand --- */
-  --color-navy-900: #06203E;
-  --color-navy-800: #0A2E56;
-  --color-navy-700: #0E3B6F;
-  --color-navy-600: #14508F;
-  --color-navy-500: #2E6FB8;
-  --color-navy-400: #5A93D4;
-  --color-navy-300: #93BCE8;
-  --color-navy-100: #DCE9F7;
-  --color-navy-50:  #EFF5FC;
+  /* --- brand blue, from the mark --- */
+  --color-navy-900: #06305c;
+  --color-navy-800: #0955a2;
+  --color-navy-700: #0d74cf;
+  --color-navy-600: #0090ff;
+  --color-navy-500: #2fa3ff;
+  --color-navy-400: #6cb8e8;
+  --color-navy-300: #a8d5f5;
+  --color-navy-100: #dfeeff;
+  --color-navy-50:  #eff6ff;
 
-  --color-fox-700: #97281F;
-  --color-fox-600: #B22F25;
-  --color-fox-500: #C2352A;
-  --color-fox-400: #DC6A5F;
-  --color-fox-100: #FADFDC;
-  --color-fox-50:  #FDF0EE;
+  /* --- brand flame, from the mark --- */
+  --color-fox-700: #8f191c;
+  --color-fox-600: #b83a18;
+  --color-fox-500: #c43c19;
+  --color-fox-400: #f0522e;
+  --color-fox-300: #ff8a66;
+  --color-fox-100: #fde4dc;
+  --color-fox-50:  #fef3ef;
 
-  /* --- semantic status, separate from the accent --- */
-  --color-ok-600:   #12665A;
-  --color-ok-500:   #17806F;
-  --color-ok-100:   #D8EEE9;
-  --color-warn-600: #8A5A06;
-  --color-warn-500: #A97108;
-  --color-warn-100: #F8EBD3;
-  --color-crit-600: #A82118;
-  --color-crit-100: #FBE1DE;
+  /* --- semantic status, deliberately not the brand accent --- */
+  --color-ok-600:   #12665a;
+  --color-ok-500:   #17806f;
+  --color-ok-400:   #10b981;
+  --color-ok-100:   #d8eee9;
+  --color-warn-600: #8a5a06;
+  --color-warn-500: #a97108;
+  --color-warn-100: #f8ebd3;
+  --color-crit-600: #a82118;
+  --color-crit-100: #fbe1de;
 
   /* --- type --- */
-  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
-  --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
-  --font-serif: var(--font-newsreader), Georgia, "Times New Roman", serif;
-  --font-mono: var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-display: var(--font-manrope), "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Segoe UI", system-ui, sans-serif;
+  --font-serif: var(--font-manrope), "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  /* --- scale --- */
-  --text-2xs: 0.6875rem;
+  --text-2xs: 0.625rem;
   --text-2xs--line-height: 1.4;
 
+  --radius-brand: 0.625rem;
   --spacing-section: 6.5rem;
+}
+
+/* ============================================================
+   Semantic tokens
+   ============================================================ */
+
+:root {
+  --bg: #ffffff;
+  --bg-raised: #ffffff;
+  --bg-sunken: #f6fbff;
+  --bg-nav: #f5fafe;
+  --fg: #0f172a;
+  --fg-muted: #475467;
+  --fg-subtle: #51607a;
+  --line: #e2e8f0;
+  --line-strong: #cbd5e1;
+
+  --accent: var(--color-navy-700);   /* text and button grounds */
+  --accent-fg: #ffffff;
+  --accent-soft: #eff6ff;            /* tinted ground for accent marks */
+  --accent-strong: var(--color-navy-800); /* small text on accent-soft */
+  --accent-vivid: var(--color-navy-600); /* graphics only */
+  --signal: var(--color-fox-500);    /* text safe flame */
+  --signal-vivid: var(--color-fox-400);  /* graphics only */
+  --ring: var(--color-navy-600);
+
+  --radius: 0.625rem;
+
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 12px 28px -18px rgba(15, 23, 42, 0.22);
+  --shadow-lift: 0 2px 4px rgba(15, 23, 42, 0.05), 0 22px 48px -26px rgba(15, 23, 42, 0.3);
+  --shadow-deck: 0 30px 60px -25px rgba(15, 23, 42, 0.18), 0 12px 24px -12px rgba(15, 23, 42, 0.08);
+
+  /* Compatibility aliases. The hero animation and a few pieces of
+     ported markup speak the original site's token names. */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--bg-raised);
+  --border: var(--line);
+  --muted: var(--color-ink-50);
+  --muted-foreground: var(--fg-muted);
+  --primary: var(--accent-vivid);
+  --brand-orange: var(--signal-vivid);
+  --set1-bg: #ffffff;
+  --set1-box: #f6fbff;
+  --set2-bg: #f6fbff;
+  --set2-box: #ffffff;
+  --font-heading: var(--font-display);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #040811;
+    --bg-raised: #0c121d;
+    --bg-sunken: #0a0f19;
+    --bg-nav: #0a0f19;
+    --fg: #f1f5f9;
+    --fg-muted: #b6c2d1;
+    --fg-subtle: #94a3b8;
+    --line: #1e293b;
+    --line-strong: #334155;
+
+    --accent: var(--color-navy-400);
+    --accent-fg: #04101c;
+    --accent-soft: rgba(108, 184, 232, 0.16);
+    --accent-strong: var(--color-navy-400);
+    --accent-vivid: var(--color-navy-600);
+    --signal: var(--color-fox-300);
+    --signal-vivid: var(--color-fox-400);
+    --ring: var(--color-navy-400);
+
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 28px -18px rgba(0, 0, 0, 0.9);
+    --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 22px 48px -26px rgba(0, 0, 0, 0.95);
+    --shadow-deck: 0 30px 60px -25px rgba(0, 0, 0, 0.6), 0 12px 24px -12px rgba(0, 0, 0, 0.4);
+
+    --muted: #1e293b;
+    --set1-bg: #040811;
+    --set1-box: #0a0f19;
+    --set2-bg: #0a0f19;
+    --set2-box: #111827;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #040811;
+  --bg-raised: #0c121d;
+  --bg-sunken: #0a0f19;
+  --bg-nav: #0a0f19;
+  --fg: #f1f5f9;
+  --fg-muted: #b6c2d1;
+  --fg-subtle: #94a3b8;
+  --line: #1e293b;
+  --line-strong: #334155;
+  --accent: var(--color-navy-400);
+  --accent-fg: #04101c;
+  --accent-soft: rgba(108, 184, 232, 0.16);
+  --accent-strong: var(--color-navy-400);
+  --accent-vivid: var(--color-navy-600);
+  --signal: var(--color-fox-300);
+  --signal-vivid: var(--color-fox-400);
+  --ring: var(--color-navy-400);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 28px -18px rgba(0, 0, 0, 0.9);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.55), 0 22px 48px -26px rgba(0, 0, 0, 0.95);
+  --shadow-deck: 0 30px 60px -25px rgba(0, 0, 0, 0.6), 0 12px 24px -12px rgba(0, 0, 0, 0.4);
+  --muted: #1e293b;
+  --set1-bg: #040811;
+  --set1-box: #0a0f19;
+  --set2-bg: #0a0f19;
+  --set2-box: #111827;
+}
+
+/* ------------------------------------------------------------------
+   Deep sections put a near black ground inside a page that may be in
+   light mode. Redefining the tokens locally means every child element
+   resolves against the ground it is actually sitting on instead of
+   each one having to remember to override its own colour.
+   ------------------------------------------------------------------ */
+.on-deep {
+  --bg: #040811;
+  --bg-raised: #0c121d;
+  --bg-sunken: #0a0f19;
+  --fg: #f1f5f9;
+  --fg-muted: #b6c2d1;
+  --fg-subtle: #94a3b8;
+  --line: #1e293b;
+  --line-strong: #334155;
+  --accent: var(--color-navy-400);
+  --accent-fg: #04101c;
+  --accent-soft: rgba(108, 184, 232, 0.16);
+  --accent-strong: var(--color-navy-400);
+  --accent-vivid: var(--color-navy-600);
+  --signal: var(--color-fox-300);
+  --signal-vivid: var(--color-fox-400);
+  --ring: var(--color-navy-400);
+  --muted: #1e293b;
+  --card: #0c121d;
+  --border: #1e293b;
+  --foreground: #f1f5f9;
+  --muted-foreground: #b6c2d1;
 }
 
 /* ============================================================
    Base
    ============================================================ */
 
-:root {
-  --bg: var(--color-paper);
-  --bg-raised: var(--color-white);
-  --bg-sunken: var(--color-ink-50);
-  --fg: var(--color-ink-900);
-  --fg-muted: var(--color-ink-500);
-  --fg-subtle: var(--color-ink-400);
-  --line: var(--color-ink-100);
-  --line-strong: var(--color-ink-200);
-  --accent: var(--color-navy-700);
-  --accent-fg: var(--color-white);
-  --signal: var(--color-fox-500);
-  --ring: var(--color-fox-500);
-  --shadow-card: 0 1px 2px rgba(7, 11, 17, 0.04), 0 12px 32px -20px rgba(7, 11, 17, 0.24);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: var(--color-ink-950);
-    --bg-raised: var(--color-ink-900);
-    --bg-sunken: var(--color-ink-800);
-    --fg: var(--color-ink-50);
-    --fg-muted: var(--color-ink-200);
-    --fg-subtle: var(--color-ink-300);
-    --line: var(--color-ink-800);
-    --line-strong: var(--color-ink-700);
-    --accent: var(--color-navy-400);
-    --accent-fg: var(--color-ink-950);
-    --signal: var(--color-fox-400);
-    --ring: var(--color-fox-400);
-    --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -20px rgba(0, 0, 0, 0.9);
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: var(--color-ink-950);
-  --bg-raised: var(--color-ink-900);
-  --bg-sunken: var(--color-ink-800);
-  --fg: var(--color-ink-50);
-  --fg-muted: var(--color-ink-200);
-  --fg-subtle: var(--color-ink-300);
-  --line: var(--color-ink-800);
-  --line-strong: var(--color-ink-700);
-  --accent: var(--color-navy-400);
-  --accent-fg: var(--color-ink-950);
-  --signal: var(--color-fox-400);
-  --ring: var(--color-fox-400);
-  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.5), 0 12px 32px -20px rgba(0, 0, 0, 0.9);
-}
-
 @layer base {
   html {
+    font-size: 18px;
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+  }
+
+  /* A phone is holding a column about half as wide, so the same rem
+     spacing reads as twice the gap. One step down on the root keeps the
+     rhythm rather than reproducing the desktop measure at phone size. */
+  @media (max-width: 640px) {
+    html { font-size: 17px; }
   }
 
   body {
@@ -128,17 +240,17 @@
     color: var(--fg);
     font-family: var(--font-sans);
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.625;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.022em;
+    font-weight: 800;
+    letter-spacing: -0.025em;
     text-wrap: balance;
-    line-height: 1.08;
+    line-height: 1.1;
   }
 
   a { color: inherit; }
@@ -146,7 +258,7 @@
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 3px;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   ::selection {
@@ -157,53 +269,198 @@
   table { border-collapse: collapse; }
 }
 
-/* ------------------------------------------------------------------
-   The deep sections put a near black ground inside a page that may be
-   in light mode. Redefining the tokens locally means every child element
-   resolves against the ground it is actually sitting on, instead of each
-   one having to remember to override its own colour.
-   ------------------------------------------------------------------ */
-.on-deep {
-  --bg: var(--color-ink-950);
-  --bg-raised: var(--color-ink-900);
-  --bg-sunken: var(--color-ink-800);
-  --fg: var(--color-ink-50);
-  --fg-muted: var(--color-ink-200);
-  --fg-subtle: var(--color-ink-300);
-  --line: var(--color-ink-800);
-  --line-strong: var(--color-ink-700);
-  --accent: var(--color-navy-400);
-  --accent-fg: var(--color-ink-950);
-  --signal: var(--color-fox-400);
-  --ring: var(--color-fox-400);
+/* ============================================================
+   Typography scale, carried over from the original site
+   ============================================================ */
+
+@layer components {
+  .text-hero {
+    font-family: var(--font-display);
+    font-size: clamp(31px, 5.1vw, 63px);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+  }
+  .text-section-xl {
+    font-family: var(--font-display);
+    font-size: clamp(27px, 3.7vw, 47px);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.028em;
+  }
+  .text-section-lg {
+    font-family: var(--font-display);
+    font-size: clamp(23px, 2.9vw, 37px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+  .text-section-md {
+    font-family: var(--font-display);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+  .text-section-sm {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+  .text-card-title {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
+  }
+  .text-card-title-sm {
+    font-family: var(--font-display);
+    font-size: 15.5px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+  .text-body-lg { font-size: 16.5px; line-height: 1.625; }
+  .text-body    { font-size: 15px;   line-height: 1.6; }
+  .text-body-sm { font-size: 14px;   line-height: 1.55; }
+  .text-body-xs { font-size: 13px;   line-height: 1.5; }
+
+  /* ---------------------------------------------------- buttons */
+
+  .btn-primary,
+  .btn-primary-lg,
+  .btn-secondary,
+  .btn-secondary-lg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    white-space: nowrap;
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+      color 0.18s ease, box-shadow 0.18s ease, transform 0.12s ease;
+  }
+  .btn-primary:active,
+  .btn-primary-lg:active,
+  .btn-secondary:active,
+  .btn-secondary-lg:active { transform: translateY(1px); }
+
+  .btn-primary,
+  .btn-primary-lg {
+    background: var(--accent);
+    color: var(--accent-fg);
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(9, 85, 162, 0.16), 0 8px 20px -12px rgba(13, 116, 207, 0.55);
+  }
+  .btn-primary:hover,
+  .btn-primary-lg:hover {
+    background: var(--color-navy-800);
+    box-shadow: 0 2px 6px rgba(9, 85, 162, 0.2), 0 14px 28px -14px rgba(13, 116, 207, 0.6);
+  }
+  :root[data-theme="dark"] .btn-primary:hover,
+  :root[data-theme="dark"] .btn-primary-lg:hover,
+  .on-deep .btn-primary:hover,
+  .on-deep .btn-primary-lg:hover { background: var(--color-navy-300); }
+
+  .btn-primary { padding: 0.7rem 1.6rem; font-size: 15px; }
+  .btn-primary-lg { padding: 0.95rem 2.2rem; font-size: 15.5px; font-weight: 700; }
+
+  .btn-secondary,
+  .btn-secondary-lg {
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: inherit;
+    font-weight: 600;
+  }
+  .btn-secondary:hover,
+  .btn-secondary-lg:hover {
+    border-color: currentColor;
+    background: color-mix(in srgb, currentColor 7%, transparent);
+  }
+  .btn-secondary { padding: 0.7rem 1.5rem; font-size: 15px; }
+  .btn-secondary-lg { padding: 0.95rem 2.1rem; font-size: 15.5px; font-weight: 700; }
 }
+
+/* ============================================================
+   Utilities
+   ============================================================ */
 
 @layer utilities {
   .u-tabular { font-variant-numeric: tabular-nums; }
 
   .u-eyebrow {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
+    font-family: var(--font-sans);
+    font-size: 11.5px;
     line-height: 1.3;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     color: var(--fg-subtle);
+  }
+  @media (max-width: 640px) {
+    .u-eyebrow { font-size: 10.5px; letter-spacing: 0.12em; }
+  }
+
+  .u-label {
+    font-family: var(--font-sans);
+    font-size: 10.5px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   .u-rule { border-color: var(--line); }
 
+  /* Scroll reveal. The hidden state lives here rather than in the
+     component so a visitor without JavaScript can be given the visible
+     state by one noscript rule in the layout. */
+  .u-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  .u-reveal.is-in {
+    opacity: 1;
+    transform: none;
+  }
+
   .u-prose p { max-width: 68ch; }
 
-  /* Wide content never pushes the page sideways */
   .u-scroll-x {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  /* A soft field of brand light. Used behind hero and closing
+     sections so a white page has some depth without gradients
+     smeared over the content. */
+  .u-glow-edges::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 46% 90% at 0% 45%, rgba(0, 144, 255, 0.1), transparent 70%),
+      radial-gradient(ellipse 46% 90% at 100% 55%, rgba(0, 144, 255, 0.09), transparent 70%);
+  }
+  :root[data-theme="dark"] .u-glow-edges::before,
+  .on-deep.u-glow-edges::before {
+    background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0, 144, 255, 0.14), transparent 70%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .u-glow-edges::before {
+      background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0, 144, 255, 0.14), transparent 70%);
+    }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .u-reveal { opacity: 1; transform: none; }
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;

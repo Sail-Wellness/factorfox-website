@@ -57,7 +57,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={`${toneClass} ${bordered ? "border-t border-[var(--line)]" : ""} py-16 sm:py-20 lg:py-24 ${className}`}
+      className={`${toneClass} ${bordered ? "border-t border-[var(--line)]" : ""} py-16 md:py-24 ${className}`}
     >
       {children}
     </section>
@@ -87,14 +87,10 @@ export function SectionHead({
   align?: "left" | "center";
 }) {
   return (
-    <div className={`${align === "center" ? "mx-auto text-center" : ""} max-w-[46rem]`}>
+    <div className={`${align === "center" ? "mx-auto text-center" : ""} max-w-[48rem]`}>
       {eyebrow ? <Eyebrow tone="signal">{eyebrow}</Eyebrow> : null}
-      <h2 className="mt-3 text-[clamp(1.75rem,3.4vw,2.6rem)]">{title}</h2>
-      {lede ? (
-        <p className="mt-5 text-[1.0625rem] sm:text-[1.15rem] leading-[1.6] text-[var(--fg-muted)]">
-          {lede}
-        </p>
-      ) : null}
+      <h2 className="text-section-lg mt-4">{title}</h2>
+      {lede ? <p className="text-body-lg mt-5 text-[var(--fg-muted)]">{lede}</p> : null}
     </div>
   );
 }
@@ -105,39 +101,49 @@ type CTAProps = {
   href: string;
   children: ReactNode;
   variant?: "primary" | "secondary" | "quiet";
+  size?: "default" | "lg";
   external?: boolean;
   className?: string;
 };
 
-export function CTA({ href, children, variant = "primary", external, className = "" }: CTAProps) {
-  const base =
-    "inline-flex items-center justify-center gap-2 rounded-[3px] px-5 py-3 text-[0.9375rem] font-semibold tracking-[-0.005em] transition-colors duration-150";
-  const styles =
-    variant === "primary"
-      ? "bg-[var(--accent)] text-[var(--accent-fg)] hover:bg-[var(--color-navy-800)] dark:hover:bg-[var(--color-navy-300)]"
+export function CTA({
+  href,
+  children,
+  variant = "primary",
+  size = "default",
+  external,
+  className = "",
+}: CTAProps) {
+  // The button shapes live in globals.css because the hero markup and the
+  // MDX articles use them directly, and there should be one definition of
+  // what a FactorFox button looks like rather than two that drift.
+  const cls =
+    variant === "quiet"
+      ? "inline-flex items-center gap-1.5 font-semibold text-[var(--accent)] underline-offset-4 hover:underline text-[15px]"
       : variant === "secondary"
-        // text-inherit, not text-[var(--fg)]: this button also sits on the deep
-        // sections, where the ground is ink-950 and --fg is still the light
-        // theme's near black. Inheriting keeps it legible on both grounds.
-        ? "border border-[var(--line-strong)] text-inherit hover:border-current hover:bg-[color-mix(in_srgb,currentColor_8%,transparent)]"
-        : "text-[var(--accent)] px-0 py-1 hover:underline underline-offset-4";
+        ? size === "lg"
+          ? "btn-secondary-lg"
+          : "btn-secondary"
+        : size === "lg"
+          ? "btn-primary-lg"
+          : "btn-primary";
 
   const content = (
     <>
       {children}
-      {variant !== "quiet" ? null : <span aria-hidden="true">&rsaquo;</span>}
+      {variant === "quiet" ? <span aria-hidden="true">&rsaquo;</span> : null}
     </>
   );
 
   if (external) {
     return (
-      <a href={href} className={`${base} ${styles} ${className}`} rel="noopener">
+      <a href={href} className={`${cls} ${className}`} rel="noopener">
         {content}
       </a>
     );
   }
   return (
-    <Link href={href} className={`${base} ${styles} ${className}`}>
+    <Link href={href} className={`${cls} ${className}`}>
       {content}
     </Link>
   );
@@ -158,9 +164,9 @@ export type StatusKind =
 const STATUS_STYLE: Record<StatusKind, { bg: string; fg: string; label: string }> = {
   available: { bg: "var(--color-ok-100)", fg: "var(--color-ok-600)", label: "Available" },
   controlled: { bg: "var(--color-warn-100)", fg: "var(--color-warn-600)", label: "Controlled release" },
-  contract: { bg: "var(--color-navy-100)", fg: "var(--color-navy-700)", label: "Contract required" },
+  contract: { bg: "var(--color-navy-100)", fg: "var(--color-navy-800)", label: "Contract required" },
   planned: { bg: "var(--color-ink-100)", fg: "var(--color-ink-500)", label: "Planned" },
-  ecosystem: { bg: "var(--color-navy-50)", fg: "var(--color-navy-600)", label: "Ecosystem" },
+  ecosystem: { bg: "var(--color-navy-50)", fg: "var(--color-navy-800)", label: "Ecosystem" },
   critical: { bg: "var(--color-crit-100)", fg: "var(--color-crit-600)", label: "Critical" },
   attention: { bg: "var(--color-warn-100)", fg: "var(--color-warn-600)", label: "Attention" },
   info: { bg: "var(--color-ink-100)", fg: "var(--color-ink-600)", label: "Info" },
@@ -170,7 +176,7 @@ export function Status({ kind, label }: { kind: StatusKind; label?: string }) {
   const s = STATUS_STYLE[kind];
   return (
     <span
-      className="inline-flex items-center whitespace-nowrap rounded-[2px] px-2 py-[3px] font-mono text-[0.625rem] font-semibold uppercase tracking-[0.11em]"
+      className="inline-flex items-center whitespace-nowrap rounded-full px-2.5 py-[3px] text-[10.5px] font-bold uppercase tracking-[0.1em]"
       style={{ background: s.bg, color: s.fg }}
     >
       {label ?? s.label}
@@ -191,13 +197,13 @@ export function Card({
 }) {
   const top =
     accent === "signal"
-      ? "border-t-[3px] border-t-[var(--signal)]"
+      ? "border-t-[3px] border-t-[var(--signal-vivid)]"
       : accent === "accent"
-        ? "border-t-[3px] border-t-[var(--accent)]"
+        ? "border-t-[3px] border-t-[var(--accent-vivid)]"
         : "";
   return (
     <div
-      className={`border border-[var(--line)] ${top} bg-[var(--bg-raised)] p-6 sm:p-7 ${className}`}
+      className={`rounded-xl border border-[var(--line)] ${top} bg-[var(--bg-raised)] p-6 transition-shadow duration-200 hover:shadow-[var(--shadow-lift)] sm:p-7 ${className}`}
       style={{ boxShadow: "var(--shadow-card)" }}
     >
       {children}
@@ -209,14 +215,14 @@ export function Card({
 
 export function Lede({ children }: { children: ReactNode }) {
   return (
-    <p className="max-w-[42ch] font-serif text-[1.25rem] leading-[1.5] text-[var(--fg-muted)] sm:text-[1.4rem]">
+    <p className="text-section-md max-w-[26ch] font-normal text-[var(--fg-muted)] sm:text-[26px]">
       {children}
     </p>
   );
 }
 
 export function Prose({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`u-prose space-y-4 text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)] ${className}`}>{children}</div>;
+  return <div className={`u-prose space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)] ${className}`}>{children}</div>;
 }
 
 /* ---------------------------------------------------------------- misc */
@@ -229,7 +235,7 @@ export function KeyLine({ term, children }: { term: string; children: ReactNode 
   return (
     <div className="grid gap-1 border-t border-[var(--line)] py-4 sm:grid-cols-[minmax(0,13rem)_1fr] sm:gap-8">
       <dt className="u-eyebrow pt-1">{term}</dt>
-      <dd className="m-0 text-[0.9375rem] leading-[1.6] text-[var(--fg-muted)]">{children}</dd>
+      <dd className="m-0 text-[15px] leading-[1.6] text-[var(--fg-muted)]">{children}</dd>
     </div>
   );
 }

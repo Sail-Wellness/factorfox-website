@@ -386,7 +386,7 @@ function AvailabilityScene() {
                 </span>
               </div>
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
-                <span className="rounded-[2px] bg-[var(--color-navy-100)] px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.1em] text-[var(--color-navy-700)]">
+                <span className="rounded-full bg-[var(--color-navy-100)] px-1.5 py-0.5 font-mono text-[0.5625rem] font-semibold uppercase tracking-[0.1em] text-[var(--color-navy-800)]">
                   Advance {c.rate}
                 </span>
                 <Status kind={c.kind} label={c.kind === "attention" ? "Rule fired" : "Evidence age"} />

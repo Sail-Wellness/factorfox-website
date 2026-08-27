@@ -367,7 +367,7 @@ function Clause({ n, title, children }: { n: string; title: string; children: Re
 
 function Mono({ children }: { children: ReactNode }) {
   return (
-    <code className="rounded-[2px] bg-[var(--bg-sunken)] px-1.5 py-0.5 font-mono text-[0.8125rem] text-[var(--fg)]">
+    <code className="rounded-full bg-[var(--bg-sunken)] px-1.5 py-0.5 font-mono text-[0.8125rem] text-[var(--fg)]">
       {children}
     </code>
   );

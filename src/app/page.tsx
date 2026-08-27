@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Container, Section, SectionHead, Eyebrow, CTA, Card, JsonLd, Status } from "@/components/primitives";
 import { BriefingPanel } from "@/components/briefing-panel";
 import { ProductShot } from "@/components/product-shot";
+import { HeroDeck } from "@/components/hero-animation";
 import { pageMeta, softwareSchema, faqSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
 
@@ -54,51 +55,74 @@ export default function HomePage() {
       />
 
       {/* ============================================ HERO */}
-      <section className="border-b border-[var(--line)] bg-[var(--bg)] pb-16 pt-14 sm:pb-20 sm:pt-20">
-        <Container width="wide">
-          <div className="grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] lg:gap-20">
-            <div className="max-w-[36rem]">
-              <Eyebrow tone="signal">
-                Factoring &middot; Asset based lending &middot; Purchase order funding &middot; Reverse factoring
-              </Eyebrow>
+      <section className="relative overflow-hidden border-b border-[var(--line)] bg-[var(--bg)] pb-20 pt-14 sm:pt-20">
+        <span className="u-glow-edges pointer-events-none absolute inset-0" aria-hidden="true" />
+        <Container width="wide" className="relative">
+          <div className="mx-auto max-w-[52rem] text-center">
+            <Eyebrow tone="signal">
+              Factoring &middot; Asset based lending &middot; Purchase order funding &middot; Reverse factoring
+            </Eyebrow>
 
-              <h1 className="mt-5 text-[clamp(2.4rem,5.6vw,4rem)] leading-[1.02]">
-                Your business does not need another dashboard. It needs a briefing.
-              </h1>
+            <h1 className="text-hero mt-6">
+              Your business does not need another dashboard. It needs a{" "}
+              <span className="text-[var(--accent)]">briefing</span>.
+            </h1>
 
-              <p className="mt-6 max-w-[46ch] text-[1.125rem] leading-[1.6] text-[var(--fg-muted)] sm:text-[1.25rem]">
-                Legacy systems record what already happened, then leave you to find it. FactorFox tells
-                each person on your team what changed, what it means, what proves it, and what to do next.
-              </p>
+            <p className="text-body-lg mx-auto mt-7 max-w-[46rem] text-[var(--fg-muted)] sm:text-[19px]">
+              Legacy systems record what already happened, then leave you to find it. FactorFox tells
+              each person on your team what changed, what it means, what proves it, and what to do next.
+            </p>
 
-              <div className="mt-9 flex flex-wrap gap-3">
-                <CTA href="/demo">Request a FactorFox AI demonstration</CTA>
-                <CTA href="/platform/briefings" variant="secondary">
-                  See how briefings work
-                </CTA>
-              </div>
-
-              <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-6 border-t border-[var(--line)] pt-8 sm:grid-cols-4">
-                {[
-                  ["2002", "Building for this industry since"],
-                  ["6", "Questions every briefing answers"],
-                  ["5", "Continents where customers run"],
-                  ["0", "Conclusions without evidence"],
-                ].map(([n, l]) => (
-                  <div key={l}>
-                    <dt className="u-tabular font-mono text-[1.6rem] font-semibold leading-none">{n}</dt>
-                    <dd className="u-eyebrow mt-2">{l}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-
-            <div className="lg:pt-6">
-              <BriefingPanel />
+            <div className="mt-9 flex flex-wrap justify-center gap-3">
+              <CTA href="/demo" size="lg">Request a FactorFox AI demonstration</CTA>
+              <CTA href="/platform/briefings" variant="secondary" size="lg">
+                See how briefings work
+              </CTA>
             </div>
           </div>
+
+          <div className="mx-auto mt-16 max-w-[1000px]">
+            <HeroDeck />
+          </div>
+
+          <dl className="mx-auto mt-16 grid max-w-[1000px] grid-cols-2 gap-x-6 gap-y-8 border-t border-[var(--line)] pt-10 sm:grid-cols-4">
+            {[
+              ["2002", "Building for this industry since"],
+              ["6", "Questions every briefing answers"],
+              ["5", "Continents where customers run"],
+              ["0", "Conclusions without evidence"],
+            ].map(([n, l]) => (
+              <div key={l}>
+                <dt className="u-tabular font-display text-[2rem] font-extrabold leading-none tracking-[-0.03em] text-[var(--accent)]">
+                  {n}
+                </dt>
+                <dd className="u-eyebrow mt-2.5">{l}</dd>
+              </div>
+            ))}
+          </dl>
         </Container>
       </section>
+
+      {/* ============================================ WHAT A BRIEFING IS */}
+      <Section tone="sunken" bordered>
+        <Container width="wide">
+          <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1fr)] lg:gap-16">
+            <div className="lg:sticky lg:top-28">
+              <SectionHead
+                eyebrow="The briefing"
+                title="Six questions, answered for your job, every morning."
+                lede="The same six questions every time, so the shape of the answer is familiar and only the content changes. Each answer carries the evidence that produced it and only the actions your permissions allow."
+              />
+              <div className="mt-8">
+                <CTA href="/platform/briefings" variant="secondary">
+                  How the briefing is assembled
+                </CTA>
+              </div>
+            </div>
+            <BriefingPanel />
+          </div>
+        </Container>
+      </Section>
 
       {/* ============================================ THE SHIFT */}
       <Section tone="sunken">

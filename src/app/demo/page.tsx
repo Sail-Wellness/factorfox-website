@@ -70,7 +70,7 @@ export default function DemoPage() {
                 <a
                   href={SITE.bookingUrl}
                   rel="noopener"
-                  className="mt-4 inline-block rounded-[3px] border border-[var(--line-strong)] px-4 py-2.5 text-[0.875rem] font-semibold hover:border-[var(--fg)]"
+                  className="mt-4 inline-block rounded-lg border border-[var(--line-strong)] px-4 py-2.5 text-[0.875rem] font-semibold hover:border-[var(--fg)]"
                 >
                   Open the scheduler
                 </a>
