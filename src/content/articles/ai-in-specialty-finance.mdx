@@ -1,0 +1,70 @@
+---
+title: "AI in specialty finance is mostly automation"
+description: "Tell automation and intelligence apart before you buy either, and see why evidence is what decides whether an intelligence layer is usable at all."
+published: "2026-02-17"
+modified: "2026-06-30"
+audience: "Owners, credit officers and risk managers"
+cluster: "Intelligence with evidence"
+related: ["/platform/evidence", "/platform/fraud-detection", "/platform/continuous-underwriting", "/platform/briefings"]
+legacyPath: "/post/ai-in-specialty-finance"
+---
+
+Automation does a known task faster. Intelligence forms a view about something nobody thought to ask a question about. Almost everything sold into specialty finance under the second name is the first thing with a language model doing the string handling, and the confusion is costing buyers real money because the two things fail in completely different ways.
+
+Written for the person who has now sat through several presentations that all sounded similar and is trying to work out what actually differs underneath.
+
+## Three layers, and only one of them is new
+
+**Mechanisation** is the oldest layer. Posting, calculating, routing, generating a file, sending a notice. The task is fully specified, the correct answer is knowable in advance, and the only question is throughput. This is valuable, it is not intelligence, and software has been doing it in this industry for decades.
+
+**Extraction** turns unstructured material into structured facts. A photograph of a bill of lading becomes fields. A remittance advice becomes an application proposal. This layer genuinely improved with modern models, and it is where most of the visible benefit in the last few years has come from. It is still not intelligence, because the answer exists in the document and the job is to read it. What matters here is not accuracy in the abstract but what happens to a value the model is unsure about, which is a subject in its own right.
+
+**Inference** is the new layer, and it is the only one worth arguing about. Inference concludes something that is not stated in any single record: that this client's dilution is moving in a way its own history does not explain, that exposure to one obligor has assembled itself across four clients under three spellings, that a submission pattern changed shape before anything went past due, that availability will compress to zero in a knowable number of days if nothing changes.
+
+None of those are in a record. They are in the relationship between records, over time, which is why the third layer needs data the first two never had to capture.
+
+## Why the third layer needs different foundations
+
+A mechanisation system needs current state and a posting history. That is all it has ever needed, and it is why systems built for that purpose store exactly that.
+
+An inference system needs something harder. It needs observations stored as append only facts, so that what was believed yesterday is still recoverable today. It needs each conclusion versioned with the evidence it rested on, so a decision can be examined as it was rather than as it would be recomputed now. And it needs an explicit record of what it could not see, because an inference drawn from partial data and an inference drawn from complete data are different objects and presenting them identically is a lie of omission.
+
+This is the reason intelligence cannot be added to a recording platform from outside. The layer on top can compute anything you like from current state. What it cannot do is recover a history that was never written down, and history is most of what inference runs on.
+
+## The evidence argument
+
+Here is the part that decides whether any of this is worth buying.
+
+An inference that cannot be opened is an opinion with a confident font. In an operation where credit officers answer to a bank, an auditor, a participant and occasionally a court, an opinion that cannot be defended will be ignored the first time it is inconvenient. And it will be inconvenient exactly when it matters, because the moment a signal recommends declining a large funding for a valuable client is the moment somebody asks how sure the machine is.
+
+So the practical value of intelligence in this market is bounded not by how good the inference is, but by how well it can be defended. That inverts the usual engineering priority. The evidence is not a reporting feature bolted on afterwards. It is the thing that makes the conclusion usable at all.
+
+Concretely, a conclusion needs to arrive carrying its severity, the reason it was reached, references into the actual records that produced it, and the recommended action together with the permission that action requires. Observations need to be append only at the database level rather than by convention. A verification run needs to capture its evidence at the time it runs and never re fetch it, because re fetching means a later change can silently rewrite what was true when somebody relied on it. Certifications need to sign over the state as it stood. Audit packets need to be sealed so that nobody, including the vendor, can revise them afterwards.
+
+Every one of those is a constraint that makes a system slower to build and less impressive in a side by side demonstration. They are also the entire difference between a signal an operation acts on and a signal it learns to close.
+
+## Honest degradation is part of the same argument
+
+The other half of defensibility is what a system does when it does not know.
+
+A platform that cannot prove yesterday's observation should refuse to show a change and offer to take a first reading instead. A covenant that depends on data the platform does not hold should say it is awaiting a live source and name the source, rather than reporting compliance against nothing. Information that was captured but never verified, such as an operating authority number or an insurance certificate, should be presented as captured and never asserted as checked, and the gate that guards funding should be forbidden from claiming otherwise.
+
+Every one of those refusals makes a screen look emptier. All of them make the screen true. An operation cannot calibrate its trust in a system that never admits to a gap, because every output looks equally confident and the officer has no way to tell the difference.
+
+## An example
+
+A fraud signal fires on a client. The score is not the useful part and never was.
+
+The useful part is the enumeration: invoice size deviating from this client's own median, submission at an unusual hour relative to their pattern, a near duplicate of a document submitted under a different number six weeks ago, and a debtor whose payment velocity has slowed across two other clients in the book. Four weak behaviours, none of which would justify anything on its own, arriving together.
+
+A credit officer can act on that. They can also disagree with it, and the disagreement matters: the dismissal should be recorded with a written reason and the name of the person who made it. That record is worth more than the alert, because it is the raw material a calibration loop needs later.
+
+Which brings us to the honest limit. In our own platform, every weight is a pinned constant today. There is no confirmed outcome label and no threshold tuning, and we do not claim the models learn from your outcomes, because they do not yet. What is true is that every dismissal is captured with its reason and its author, which is exactly what calibration requires, and calibration is the next build. Any vendor telling you their model is already learning from your book should be asked what the label is, who confirms it, and how false positives are tracked. The answers are informative.
+
+## Three tests for any claim in this category
+
+1. **Can the conclusion be opened?** One movement from the assertion to the records that produced it, without losing the assertion on the way. If the evidence is a separate report, it is not evidence, it is a reconciliation exercise.
+2. **What does it do when it is blind?** Ask to see the screen with a source disabled. A named absence is a working system. A zero is a hazard.
+3. **Can it move money on its own?** The correct answer is no. Automation in lending is not symmetric: stopping funds while a question is open is cheap and reversible, releasing them is neither. A system may halt, hold and refuse by itself. Only a named person should be able to let something through, with a second name required by default.
+
+The implementation of all of this is described on [intelligence with evidence](/platform/evidence), the signal side on [fraud detection](/platform/fraud-detection) and [continuous underwriting](/platform/continuous-underwriting), and the form the output takes for an operator on [briefings](/platform/briefings).

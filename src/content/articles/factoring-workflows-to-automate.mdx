@@ -1,0 +1,84 @@
+---
+title: "Which factoring workflows repay automation"
+description: "Sort the work in your operation into three piles, apply the test that decides which pile each workflow lands in, and avoid the half automated trap."
+published: "2026-06-24"
+modified: "2026-08-19"
+audience: "Operations managers and principals"
+cluster: "Operations automation"
+related: ["/platform/accounting", "/platform/collections", "/platform/treasury", "/platform/document-intelligence"]
+legacyPath: "/post/factoring-workflows-to-automate"
+---
+
+Most automation programmes in factoring operations fail in the same way. They automate the parts that were easy to automate rather than the parts that were consuming people, they leave the exception path untouched, and eighteen months later the team is the same size and now maintains a system as well as doing the work.
+
+The fix is not more automation. It is sorting the work correctly before anything gets built.
+
+## The test
+
+A workflow repays automation when three things are true at once.
+
+**The correct answer is knowable from data the system already holds.** Not knowable in principle. Knowable from what is actually in the record, without a person supplying context from memory or from a conversation that happened elsewhere.
+
+**The cost of a wrong answer is bounded and reversible.** Recomputing an aging bucket incorrectly is embarrassing and fixable. Releasing funds incorrectly is neither.
+
+**It happens often enough that consistency beats judgement.** A decision made twice a year benefits from a person thinking about it. A decision made four hundred times a day benefits from being made the same way every time, and a person making it four hundred times is not exercising judgement by the afternoon anyway.
+
+Fail any one of the three and the workflow belongs in a different pile.
+
+## Pile one: automate completely
+
+These meet all three tests and there is no good argument for a person in the middle.
+
+Document intake, classification and routing. Extraction of structured facts from invoices, proofs of delivery, rate confirmations and timesheets. Aging computation and bucket assignment. Borrowing base recalculation and availability, including the ineligible categories that most operations still rebuild by hand every morning. Schedule assembly. Notice and statement generation. Duplicate and near duplicate detection within a client and across the portfolio. Reconciling a returned bank file against what was sent. Assembling an audit packet. Projecting a collections contact into an officer's calendar. Assembling the numbers that go into a report, as distinct from deciding what the report means.
+
+The common thread is that every one of them is a computation or a retrieval. None of them requires anybody to form a view. Any operation still doing these with people is paying salaries for arithmetic, and those are the same salaries you need for the work in pile three.
+
+## Pile two: automate the preparation, adjudicate the decision
+
+This is the largest pile and the one that gets designed badly, because it is tempting to push it into pile one and call the project a success.
+
+**Cash application.** Exact matches on invoice number and amount can post without a person. Everything else should arrive as a proposal with the remittance evidence attached and the alternatives shown. A short payment is a decision, not a rounding difference, and auto applying it hides dilution inside the cash process where nobody looks for it.
+
+**Verification.** Which invoices to verify, in what order, by which method, prepared automatically from exposure, debtor history and prior exceptions. Whether a specific verification result is acceptable is a judgement, and the evidence of what was confirmed and when has to be captured at the moment it happens.
+
+**Collections prioritisation.** The queue order, the exposure at stake, the promise history and the suggested contact can all be assembled. Which conversation to have with a debtor who is a large client's largest customer is a person's call. [Collections](/platform/collections) is the clearest example in the whole operation of preparation being worth more than decision support.
+
+**Chargeback identification.** Identifying every invoice that has reached the end of its recourse period is arithmetic. Deciding whether to charge back a specific invoice this week, for a client who has been reliable for six years and has told you the debtor is paying on Friday, is not.
+
+**Credit limit changes.** A proposal assembled from utilisation, payment behaviour and concentration is genuinely useful and should be automatic. Approving it is a credit decision with a name attached.
+
+**Exception triage.** Sorting exceptions by exposure and by likely cause is mechanical. Working them is not.
+
+## Pile three: keep it adjudicated, permanently
+
+These fail the second test badly enough that no efficiency argument should be allowed to reach them.
+
+Releasing funds. Changing a beneficiary bank account. Granting an overadvance. Waiving a gate or an eligibility rule. Taking a non recourse credit decision. First funding for a new client. Terminating a relationship. Settling a dispute. Anything at all once a debtor's insolvency is in play.
+
+The reason is asymmetry rather than difficulty. Declining to release money while a question is open costs a delay and can be undone in minutes. Releasing money that should not have moved cannot be undone at all, and the loss is not bounded by the size of the mistake, because payment redirection and fraudulent submission both scale. A sensible operation lets the machine stop money on its own authority and requires a named human, with a second name by default, to let anything through.
+
+That asymmetry is what makes the rest of the automation acceptable. Teams adopt automation at the speed they trust the refusals, which is why building the gates before the intelligence is the correct order and not the cautious one.
+
+## The half automated trap
+
+Here is the failure that produces no benefit and a great deal of maintenance.
+
+A step gets automated for the clean case. The exception path is left as it was, which usually means an email to a person who was already busy. Nobody measures the exception rate, because the project was scoped around the automation rate. Volume grows, the exception count grows with it, and the exceptions are now the only work a human sees, arriving with no context because the automated part did not record why it could not proceed.
+
+The operation is now slower than before in the only place that matters, and the automation dashboard is green.
+
+Two rules avoid this. Design the exception path first, and make it carry the reason the automated path declined. Then measure the exception rate rather than the automation rate, because the exception rate is the only number that tells you whether the work moved or merely changed shape.
+
+## An example worth copying
+
+Cash application in an operation funding freight. Payments arrive from many debtors, frequently covering many invoices, often short by an accessorial charge that was disputed weeks earlier.
+
+The version that works: exact matches post automatically and silently. Partial and multiple invoice payments arrive as proposals with the remittance evidence attached, the invoices ranked by likelihood, and the shortfall stated as a figure rather than absorbed. A payment that cannot be matched at all becomes unapplied cash with a visible age, because unapplied cash that nobody can see is how a book quietly stops tying. A message that looks like a request to change bank details is classified as requiring human verification and is never applied, whatever it claims to be.
+
+The version that fails: everything auto applies with a tolerance, short payments disappear into a suspense account, and dilution becomes invisible until a quarterly review finds it.
+
+Same automation, opposite outcome, and the difference is entirely in what the system refuses to do by itself. [Accounting](/platform/accounting) covers the cash application and ledger side, [treasury](/platform/treasury) covers release control, and [document intelligence](/platform/document-intelligence) covers turning the remittance into a proposal in the first place.
+
+## Where to start
+
+Sort your own work into the three piles before you talk to anybody about tooling. Then start with pile one, because it is unambiguous and it frees the people you need for pile three. Take pile two second and design each one as preparation plus adjudication rather than as a decision to be handed over. Leave pile three alone, permanently, and be suspicious of anyone who offers to automate it for you.

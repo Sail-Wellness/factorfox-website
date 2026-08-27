@@ -1,0 +1,140 @@
+export const SITE = {
+  name: "FactorFox",
+  legalName: "FactorFox Software LLC",
+  url: "https://factorfox.com",
+  founded: "2002",
+  tagline: "The intelligence and operating platform for specialty finance.",
+  appUrl: "https://nimbus.factorfox.net/",
+  bookingUrl: "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/",
+  contactEmail: "sales@factorfox.com",
+  linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
+} as const;
+
+export type NavChild = { href: string; label: string; note?: string };
+export type NavGroup = { label: string; href?: string; children?: NavChild[] };
+
+export const NAV: NavGroup[] = [
+  {
+    label: "Platform",
+    href: "/platform",
+    children: [
+      { href: "/platform/briefings", label: "Briefings", note: "Six questions, answered for your responsibility" },
+      { href: "/platform/evidence", label: "Intelligence with evidence", note: "Every conclusion opens onto what proves it" },
+      { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwrite on every material event" },
+      { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Debtor behaviour, concentration, dilution" },
+      { href: "/platform/covenant-monitoring", label: "Covenant monitoring", note: "See pressure before it is a breach" },
+      { href: "/platform/borrowing-base", label: "Borrowing base", note: "Availability, ineligibles, reserves" },
+      { href: "/platform/document-intelligence", label: "Document intelligence", note: "Extraction, verification, near duplicates" },
+      { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioural combinations, not single flags" },
+      { href: "/platform/collections", label: "Collections", note: "Prioritised by exposure and promise history" },
+      { href: "/platform/client-onboarding", label: "Client onboarding", note: "Intake, checks, gates, first funding" },
+      { href: "/platform/treasury", label: "Treasury", note: "Payment files, release control, reconciliation" },
+      { href: "/platform/accounting", label: "Accounting", note: "Cash application, ledger, audit packets" },
+    ],
+  },
+  {
+    label: "Solutions",
+    href: "/solutions",
+    children: [
+      { href: "/solutions/factoring", label: "Factoring", note: "Recourse, non recourse, non notification" },
+      { href: "/solutions/asset-based-lending", label: "Asset based lending", note: "Borrowing base, collateral, field exams" },
+      { href: "/solutions/purchase-order-funding", label: "Purchase order funding", note: "For funders, not for procurement teams" },
+      { href: "/solutions/reverse-factoring", label: "Reverse factoring", note: "Payables finance and confirming" },
+      { href: "/solutions/transportation", label: "Transportation", note: "Carriers, brokers, rate confirmations" },
+      { href: "/solutions/healthcare", label: "Healthcare" },
+      { href: "/solutions/construction", label: "Construction" },
+      { href: "/solutions/staffing", label: "Staffing and payroll funding" },
+      { href: "/solutions/manufacturing", label: "Manufacturing and distribution" },
+    ],
+  },
+  {
+    label: "Integrations",
+    href: "/integrations",
+    children: [
+      { href: "/integrations/microsoft-teams", label: "Microsoft Teams", note: "Briefings, signals and approvals where you already work" },
+      { href: "/integrations/microsoft-365", label: "Microsoft 365", note: "Outlook, Calendar, Bookings, Entra ID" },
+      { href: "/integrations/quickbooks", label: "QuickBooks Online" },
+      { href: "/integrations/xero", label: "Xero" },
+      { href: "/integrations/credit-and-risk", label: "Credit and risk sources" },
+      { href: "/integrations/banking-and-payments", label: "Banking and payments" },
+      { href: "/integrations/transportation", label: "Transportation sources" },
+    ],
+  },
+  {
+    label: "Switch",
+    href: "/migrate",
+    children: [
+      { href: "/migrate", label: "Migrating to FactorFox", note: "What moves, what breaks, how long it takes" },
+      { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "The data model, in detail" },
+      { href: "/compare", label: "How we compare", note: "Recording systems against decision systems" },
+      { href: "/platform/pricing", label: "Pricing", note: "What factoring software actually costs" },
+    ],
+  },
+  {
+    label: "Resources",
+    href: "/resources",
+    children: [
+      { href: "/resources", label: "Writing", note: "For operators, credit officers and owners" },
+      { href: "/resources/glossary", label: "Operator glossary", note: "Ineligibles, dilution, reserve release, and the rest" },
+      { href: "/platform/security", label: "Security and controls" },
+      { href: "/company", label: "Company" },
+    ],
+  },
+];
+
+export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
+  {
+    title: "Platform",
+    links: [
+      { href: "/platform", label: "Overview" },
+      { href: "/platform/briefings", label: "Briefings" },
+      { href: "/platform/evidence", label: "Intelligence with evidence" },
+      { href: "/platform/continuous-underwriting", label: "Continuous underwriting" },
+      { href: "/platform/covenant-monitoring", label: "Covenant monitoring" },
+      { href: "/platform/borrowing-base", label: "Borrowing base" },
+      { href: "/platform/fraud-detection", label: "Fraud detection" },
+      { href: "/platform/security", label: "Security and controls" },
+      { href: "/platform/pricing", label: "Pricing" },
+    ],
+  },
+  {
+    title: "Solutions",
+    links: [
+      { href: "/solutions/factoring", label: "Factoring" },
+      { href: "/solutions/asset-based-lending", label: "Asset based lending" },
+      { href: "/solutions/purchase-order-funding", label: "Purchase order funding" },
+      { href: "/solutions/reverse-factoring", label: "Reverse factoring" },
+      { href: "/solutions/transportation", label: "Transportation" },
+      { href: "/solutions/healthcare", label: "Healthcare" },
+      { href: "/solutions/construction", label: "Construction" },
+      { href: "/solutions/staffing", label: "Staffing" },
+      { href: "/solutions/manufacturing", label: "Manufacturing" },
+    ],
+  },
+  {
+    title: "Integrations",
+    links: [
+      { href: "/integrations", label: "Directory" },
+      { href: "/integrations/microsoft-teams", label: "Microsoft Teams" },
+      { href: "/integrations/microsoft-365", label: "Microsoft 365" },
+      { href: "/integrations/quickbooks", label: "QuickBooks Online" },
+      { href: "/integrations/xero", label: "Xero" },
+      { href: "/integrations/credit-and-risk", label: "Credit and risk" },
+      { href: "/integrations/banking-and-payments", label: "Banking and payments" },
+      { href: "/integrations/transportation", label: "Transportation" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { href: "/company", label: "About FactorFox" },
+      { href: "/resources", label: "Writing" },
+      { href: "/resources/glossary", label: "Glossary" },
+      { href: "/migrate", label: "Migration" },
+      { href: "/compare", label: "How we compare" },
+      { href: "/demo", label: "Request a demonstration" },
+      { href: "/legal/privacy", label: "Privacy" },
+      { href: "/legal/terms", label: "Terms" },
+    ],
+  },
+];
