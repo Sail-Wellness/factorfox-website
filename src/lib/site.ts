@@ -81,11 +81,13 @@ export const NAV: NavGroup[] = [
     label: "Switch",
     href: "/migrate",
     children: [
+      // The per system conversion guides are deliberately absent from this menu.
+      // They exist for somebody arriving from a search on the incumbent's name,
+      // and they are linked from /migrate, from each other and from the sitemap,
+      // which is everything a crawler needs. Putting them here would hand four
+      // competitors a permanent slot in our own navigation for the benefit of
+      // nobody who is browsing. Findable, not featured.
       { href: "/migrate", label: "Migrating to FactorFox", note: "What moves, what breaks, how long it takes" },
-      { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "The data model, in detail" },
-      { href: "/migrate/winfactor", label: "Moving off WinFactor", note: "Where the book sits, and what comes back" },
-      { href: "/migrate/factorcloud", label: "Moving off FactorCloud", note: "Which plan tier holds your export" },
-      { href: "/migrate/factorview", label: "Moving off FactorView", note: "Ownership, delivery and the accounting boundary" },
       { href: "/compare", label: "How we compare", note: "Recording systems against decision systems" },
       { href: "/compare/how-to-choose", label: "How to choose", note: "Running the selection, start to signature" },
       { href: "/platform/pricing", label: "Pricing", note: "What factoring software actually costs" },
