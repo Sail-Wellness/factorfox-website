@@ -78,6 +78,13 @@ export const NAV: NavGroup[] = [
       { href: "/integrations/transportation", label: "Transportation sources" },
     ],
   },
+  // A plain link rather than a group. The header renders any entry with no
+  // children as a direct link, which is what this needs: a partner arriving
+  // from an email should reach the page in one click, not open a menu.
+  {
+    label: "Partners",
+    href: "/partners",
+  },
   {
     label: "Switch",
     href: "/migrate",
@@ -152,6 +159,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
     title: "Company",
     links: [
       { href: "/company", label: "About FactorFox" },
+      { href: "/partners", label: "Partners" },
       { href: "/resources", label: "Writing" },
       { href: "/resources/glossary", label: "Glossary" },
       { href: "/migrate", label: "Migration" },

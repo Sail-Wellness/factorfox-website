@@ -62,6 +62,22 @@ export function SiteHeader() {
             {NAV.map((group) => {
               const isOpen = openGroup === group.label;
               const active = group.href && pathname.startsWith(group.href);
+              // A group with no children is a destination, not a menu.
+              if (!group.children) {
+                return (
+                  <li key={group.label}>
+                    <Link
+                      href={group.href ?? "/"}
+                      className={`block rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
+                        active ? "bg-[var(--accent-soft)] text-[var(--fg)]" : "text-[var(--fg-muted)]"
+                      }`}
+                    >
+                      {group.label}
+                    </Link>
+                  </li>
+                );
+              }
+
               return (
                 <li key={group.label} className="relative">
                   <button
@@ -143,7 +159,14 @@ export function SiteHeader() {
       {mobileOpen ? (
         <div id="mobile-nav" className="border-t border-[var(--line)] bg-[var(--bg-raised)] lg:hidden">
           <div className="mx-auto max-w-[1320px] px-5 py-4 sm:px-8">
-            {NAV.map((group) => (
+            {NAV.map((group) =>
+              !group.children ? (
+                <div key={group.label} className="border-b border-[var(--line)] py-1">
+                  <Link href={group.href ?? "/"} className="block py-3 text-[15px] font-semibold">
+                    {group.label}
+                  </Link>
+                </div>
+              ) : (
               <details key={group.label} className="border-b border-[var(--line)] py-1">
                 <summary className="cursor-pointer list-none py-3 text-[15px] font-semibold">
                   {group.label}
@@ -158,7 +181,8 @@ export function SiteHeader() {
                   ))}
                 </ul>
               </details>
-            ))}
+              ),
+            )}
             <div className="flex flex-col gap-3 pt-5">
               <Link
                 href="/demo"
