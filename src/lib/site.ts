@@ -66,6 +66,9 @@ export const NAV: NavGroup[] = [
     children: [
       { href: "/migrate", label: "Migrating to FactorFox", note: "What moves, what breaks, how long it takes" },
       { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "The data model, in detail" },
+      { href: "/migrate/winfactor", label: "Moving off WinFactor", note: "Where the book sits, and what comes back" },
+      { href: "/migrate/factorcloud", label: "Moving off FactorCloud", note: "Which plan tier holds your export" },
+      { href: "/migrate/factorview", label: "Moving off FactorView", note: "Ownership, delivery and the accounting boundary" },
       { href: "/compare", label: "How we compare", note: "Recording systems against decision systems" },
       { href: "/platform/pricing", label: "Pricing", note: "What factoring software actually costs" },
     ],
