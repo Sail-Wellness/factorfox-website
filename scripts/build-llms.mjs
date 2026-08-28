@@ -57,6 +57,19 @@ for (const { route, file } of walk(APP)) {
   if (m) pages.push({ route, ...m });
 }
 
+/* Partner spotlights come from the register, since the route is dynamic and
+   carries no literal pageMeta call for the walk above to read. */
+const PARTNERS_FILE = path.join(ROOT, "src", "content", "partners.ts");
+const partners = [];
+if (fs.existsSync(PARTNERS_FILE)) {
+  const src = fs.readFileSync(PARTNERS_FILE, "utf8");
+  for (const m of src.matchAll(
+    /slug:\s*"([^"]+)",\s*\n\s*metaTitle:\s*"((?:[^"\\]|\\.)*)",\s*\n\s*metaDescription:\s*\n?\s*"((?:[^"\\]|\\.)*)",/g,
+  )) {
+    partners.push({ route: `/partners/${m[1]}`, title: m[2], description: m[3] });
+  }
+}
+
 const articles = [];
 if (fs.existsSync(ARTICLES)) {
   for (const f of fs.readdirSync(ARTICLES).filter((x) => x.endsWith(".mdx"))) {
@@ -94,6 +107,7 @@ for (const [heading, test] of GROUPS) {
   if (rows.length) sections.push([heading, rows]);
 }
 const rest = pages.filter((p) => !used.has(p.route));
+if (partners.length) sections.push(["Partner spotlights", partners]);
 if (rest.length) sections.push(["Other", rest]);
 if (articles.length) sections.push(["Writing", articles]);
 
@@ -140,4 +154,4 @@ ${sections.map(([h, rows]) => `## ${h}\n\n${rows.map(line).join("\n")}`).join("\
 `;
 
 fs.writeFileSync(path.join(ROOT, "public", "llms.txt"), out);
-console.log(`llms.txt written: ${pages.length + articles.length} entries, ${sections.length} sections`);
+console.log(`llms.txt written: ${pages.length + partners.length + articles.length} entries, ${sections.length} sections`);

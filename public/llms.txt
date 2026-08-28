@@ -90,6 +90,19 @@ authority and insurance are captured rather than verified.
 - [Privacy policy](https://factorfox.com/legal/privacy/): Read how FactorFox Software LLC handles personal information from this website: what we collect, why, how long we keep it, and the rights you can use.
 - [Terms of use](https://factorfox.com/legal/terms/): Read the terms on which FactorFox Software LLC offers this website: acceptable use, intellectual property, liability limits, links and governing law.
 
+## Partner spotlights
+
+- [Creditsafe: the debtor credit question](https://factorfox.com/partners/creditsafe/): Business credit reports, recommended limits and monitoring alerts on the debtor who owes the invoice, and what that changes for a factoring operation.
+- [Ficoso: liens, UCC search and filing](https://factorfox.com/partners/ficoso/): Nationwide UCC search, filing and monitoring keeps a security interest perfected. What Ficoso does, why it is existential for a factor, and what moves.
+- [TaxRock: watching a client's IRS account](https://factorfox.com/partners/taxrock/): A federal tax lien can prime your position. TaxRock monitors client IRS account activity continuously, and the useful signal arrives before the filing.
+- [Decipher Credit: origination and onboarding](https://factorfox.com/partners/decipher-credit/): Origination software for commercial lenders with a product built for freight factoring. What Decipher Credit does, and where it sits next to a platform.
+- [Farelanes: lane rates as a fraud signal](https://factorfox.com/partners/farelanes/): Lane rate benchmarks built from paid freight invoices flag an invoice priced unlike the market. What Farelanes tests, and what it deliberately does not.
+- [AtoB: fuel cards and carrier payments](https://factorfox.com/partners/atob/): Fuel cards, fast carrier payment and a white label programme a factor can brand as its own. What AtoB does, and why fuel is where a factor can compete.
+- [Tank Payments: instant carrier payment](https://factorfox.com/partners/tank-payments/): Payment rails that run outside banking hours, with reversibility built in. What Tank Payments does, and why they name FactorFox on their own homepage.
+- [Load Connex: did the truck actually move](https://factorfox.com/partners/load-connex/): Independent movement data lets a funding decision rest on where the vehicle was rather than on what the paperwork says. What Load Connex does, and why.
+- [LoadBoard Network: filling a carrier board](https://factorfox.com/partners/loadboard-network/): One posting reaches many load boards. The partner furthest from a funding decision, and the honest account of what it does and does not do for a factor.
+- [Trucker Copilot: the driver's own screen](https://factorfox.com/partners/trucker-copilot/): Documents captured in the cab and funding status sent back to the driver. What Trucker Copilot is, and why it is a sibling product rather than a vendor.
+
 ## Other
 
 - [How to choose factoring software](https://factorfox.com/compare/how-to-choose/): Running a software selection for a factoring or lending book: who decides, how to write the requirements, what to test, and the clauses that matter.

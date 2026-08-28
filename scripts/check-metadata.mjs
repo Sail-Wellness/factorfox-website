@@ -107,6 +107,28 @@ if (fs.existsSync(ARTICLES)) {
   }
 }
 
+/* ------------------------------------------- partner spotlights, from the register */
+
+const PARTNERS_FILE = path.join(ROOT, "src", "content", "partners.ts");
+if (fs.existsSync(PARTNERS_FILE)) {
+  const src = fs.readFileSync(PARTNERS_FILE, "utf8");
+  const blocks = [...src.matchAll(/slug:\s*"([^"]+)",\s*\n\s*metaTitle:\s*"((?:[^"\\]|\\.)*)",\s*\n\s*metaDescription:\s*\n?\s*"((?:[^"\\]|\\.)*)",/g)];
+  const declared = [...src.matchAll(/^\s{4}slug:\s*"([^"]+)",$/gm)].length;
+  if (blocks.length !== declared) {
+    problems.push(
+      `src/content/partners.ts declares ${declared} partners but ${blocks.length} carry a metaTitle and metaDescription. Every spotlight needs its own search result.`,
+    );
+  }
+  for (const m of blocks) {
+    entries.push({
+      rel: `src/content/partners.ts (${m[1]})`,
+      title: m[2],
+      description: m[3],
+      home: false,
+    });
+  }
+}
+
 /* ------------------------------------------------------------------ checks */
 
 const titlesSeen = new Map();
