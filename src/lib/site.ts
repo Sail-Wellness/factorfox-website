@@ -7,6 +7,15 @@ export const SITE = {
   appUrl: "https://nimbus.factorfox.net/",
   bookingUrl: "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/",
   contactEmail: "sales@factorfox.com",
+  /**
+   * Owner confirmed, 28 August 2026. Published deliberately: two of the four
+   * competitors a buyer shortlists against publish a number, and the person
+   * choosing the system that will hold their whole receivables book wants to
+   * know a human answers. phoneHref is the E.164 form for the tel: link and
+   * for the Organization graph; phone is what a reader sees.
+   */
+  phone: "(800) 616-3897",
+  phoneHref: "+18006163897",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
   ifaListing: "https://www.factoring.org/vendor_details.asp?ID=1321",
   /** Owner confirmed, 28 August 2026. */
@@ -68,7 +77,6 @@ export const NAV: NavGroup[] = [
     label: "Integrations",
     href: "/integrations",
     children: [
-      { href: "/partners", label: "Partners", note: "Who we work with, and what each relationship is" },
       { href: "/integrations/microsoft-teams", label: "Microsoft Teams", note: "Briefings, signals and approvals where you already work" },
       { href: "/integrations/microsoft-365", label: "Microsoft 365", note: "Outlook, Calendar, Bookings, Entra ID" },
       { href: "/integrations/quickbooks", label: "QuickBooks Online" },

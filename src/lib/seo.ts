@@ -117,6 +117,16 @@ export function organizationSchema() {
     logo: { "@type": "ImageObject", url: absoluteUrl("/brand/factorfox-logo.svg") },
     sameAs: [...SITE.profiles],
     email: SITE.contactEmail,
+    telephone: SITE.phoneHref,
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        telephone: SITE.phoneHref,
+        email: SITE.contactEmail,
+        areaServed: "US",
+      },
+    ],
     address: {
       "@type": "PostalAddress",
       addressLocality: SITE.locality,
