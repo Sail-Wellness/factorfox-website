@@ -82,6 +82,7 @@ export const NAV: NavGroup[] = [
       { href: "/migrate/factorcloud", label: "Moving off FactorCloud", note: "Which plan tier holds your export" },
       { href: "/migrate/factorview", label: "Moving off FactorView", note: "Ownership, delivery and the accounting boundary" },
       { href: "/compare", label: "How we compare", note: "Recording systems against decision systems" },
+      { href: "/compare/how-to-choose", label: "How to choose", note: "Running the selection, start to signature" },
       { href: "/platform/pricing", label: "Pricing", note: "What factoring software actually costs" },
     ],
   },

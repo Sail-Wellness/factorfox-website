@@ -396,6 +396,7 @@ export default function ComparePage() {
 
       <RelatedPages
         links={[
+          { href: "/compare/how-to-choose", label: "How to choose", note: "Running the selection itself: the committee, the tests, the contract clauses." },
           { href: "/platform/briefings", label: "Briefings", note: "The six questions, and how scope is decided." },
           { href: "/platform/evidence", label: "Intelligence with evidence", note: "What sits behind every conclusion on a screen." },
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwriting on every material event." },

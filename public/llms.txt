@@ -90,6 +90,10 @@ authority and insurance are captured rather than verified.
 - [Privacy policy](https://factorfox.com/legal/privacy/): Read how FactorFox Software LLC handles personal information from this website: what we collect, why, how long we keep it, and the rights you can use.
 - [Terms of use](https://factorfox.com/legal/terms/): Read the terms on which FactorFox Software LLC offers this website: acceptable use, intellectual property, liability limits, links and governing law.
 
+## Other
+
+- [How to choose factoring software](https://factorfox.com/compare/how-to-choose/): Running a software selection for a factoring or lending book: who decides, how to write the requirements, what to test, and the clauses that matter.
+
 ## Writing
 
 - [AI in specialty finance is mostly automation](https://factorfox.com/resources/ai-in-specialty-finance/): Tell automation and intelligence apart before you buy either, and see why evidence is what decides whether an intelligence layer is usable at all.
