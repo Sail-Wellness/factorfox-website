@@ -15,6 +15,7 @@
  */
 
 import fs from "node:fs";
+import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 
@@ -124,5 +125,14 @@ if (missing.length) {
   process.exit(1);
 }
 console.log("App Store legal PDFs present");
+
+/* ------------------------------------------------------------------- llms.txt */
+
+// Generated from the pages that actually shipped, then copied into the export.
+// Running it here rather than writing it by hand is what stops it drifting away
+// from the site it is supposed to describe.
+execFileSync(process.execPath, [path.join(ROOT, "scripts", "build-llms.mjs")], { stdio: "inherit", cwd: ROOT });
+fs.copyFileSync(path.join(ROOT, "public", "llms.txt"), path.join(OUT, "llms.txt"));
+console.log("llms.txt copied into the export");
 
 void pathToFileURL;

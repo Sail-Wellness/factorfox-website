@@ -8,6 +8,18 @@ export const SITE = {
   bookingUrl: "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/",
   contactEmail: "sales@factorfox.com",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
+  /**
+   * Profiles that identify the same legal entity elsewhere. These are the
+   * sameAs edges in the Organization graph, and they are how a search engine
+   * decides that the FactorFox on this domain is the FactorFox in an industry
+   * directory rather than a different company with a similar name. Only add a
+   * URL here after confirming it resolves to FactorFox Software LLC.
+   */
+  profiles: [
+    "https://www.linkedin.com/company/factorfox-software-llc",
+    "https://www.factoring.org/vendor_details.asp?ID=1321",
+    "https://www.crunchbase.com/organization/factorfox",
+  ],
 } as const;
 
 export type NavChild = { href: string; label: string; note?: string };
