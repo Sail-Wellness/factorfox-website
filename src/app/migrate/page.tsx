@@ -367,35 +367,70 @@ export default function MigratePage() {
       />
 
       <Section bordered>
-        <Container width="narrow">
-          <Eyebrow tone="signal">Where you are coming from</Eyebrow>
-          <h2 className="mt-3 text-[clamp(1.7rem,3.2vw,2.4rem)]">Start with the platform you actually run.</h2>
-          <p className="mt-5 text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)]">
-            The general shape of a conversion is the same everywhere. The specifics are not, and the
-            specifics are what cost money. Where we have written the detail down, it is here.
-          </p>
-          <div className="mt-9 grid gap-px overflow-hidden border border-[var(--line)] bg-[var(--line)]">
-            <Link href="/migrate/factorsoft" className="bg-[var(--bg-raised)] p-6 transition-colors hover:bg-[var(--bg-sunken)]">
-              <div className="flex flex-wrap items-center gap-3">
-                <h3 className="text-[1.0625rem]">Moving off FactorSoft</h3>
-                <Status kind="info" label="Written in detail" />
-              </div>
-              <p className="mt-2.5 text-[0.9375rem] leading-[1.6] text-[var(--fg-muted)]">
-                What the data model carries and what it does not, what you will be asked to decide, what to
-                export before you start, and the questions to put to any vendor including us.
-              </p>
-            </Link>
-            <div className="bg-[var(--bg-raised)] p-6">
-              <div className="flex flex-wrap items-center gap-3">
-                <h3 className="text-[1.0625rem]">Spreadsheets, accounting packages and in house systems</h3>
-                <Status kind="info" label="On request" />
-              </div>
-              <p className="mt-2.5 text-[0.9375rem] leading-[1.6] text-[var(--fg-muted)]">
-                Different problem, same discipline. There is usually more undocumented rule and less
-                structured history, which moves the work from mapping into discovery. Ask us on a first call
-                and we will tell you which parts of this page apply to you and which do not.
-              </p>
+        <Container>
+          <div className="max-w-[48rem]">
+            <Eyebrow tone="signal">Where you are coming from</Eyebrow>
+            <h2 className="text-section-lg mt-4">Start with the platform you actually run.</h2>
+            <p className="text-body-lg mt-5 text-[var(--fg-muted)]">
+              The general shape of a conversion is the same everywhere. The specifics are not, and the
+              specifics are what cost money. We have converted books off each of the platforms below, and
+              where we have written the detail down it is linked here. Each page is written to be useful
+              whether or not you ever become a customer.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                href: "/migrate/factorsoft",
+                title: "Moving off FactorSoft",
+                body:
+                  "An installed platform, so the first question is which access door your deployment and your agreement give you. What the data model carries, what it does not, and what to export before you talk to anyone.",
+              },
+              {
+                href: "/migrate/winfactor",
+                title: "Moving off WinFactor",
+                body:
+                  "A vendor hosted platform with real depth in freight. Where your book actually sits, what the reporting layer will and will not hand you, and the transportation rails that have to be re established.",
+              },
+              {
+                href: "/migrate/factorcloud",
+                title: "Moving off FactorCloud",
+                body:
+                  "The route to your own records may sit on a plan tier. What the published pricing and terms establish, what the ledger structure implies, and the entitlement question to settle before anything else.",
+              },
+              {
+                href: "/migrate/factorview",
+                title: "Moving off FactorView",
+                body:
+                  "Their terms say you own your data, which is more than most say. What the same document does not say about delivery, and why the accounting boundary decides the shape of the project.",
+              },
+            ].map((c) => (
+              <Link
+                key={c.href}
+                href={c.href}
+                className="group flex h-full flex-col rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 transition-all duration-200 hover:border-[var(--line-strong)] hover:shadow-[var(--shadow-lift)]"
+              >
+                <div className="flex flex-wrap items-center gap-3">
+                  <h3 className="text-card-title group-hover:text-[var(--accent)]">{c.title}</h3>
+                  <Status kind="info" label="Written in detail" />
+                </div>
+                <p className="mt-3 text-[15px] leading-[1.6] text-[var(--fg-muted)]">{c.body}</p>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-4 rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6">
+            <div className="flex flex-wrap items-center gap-3">
+              <h3 className="text-card-title">In house platforms, spreadsheets and accounting packages</h3>
+              <Status kind="info" label="On request" />
             </div>
+            <p className="mt-3 max-w-[70ch] text-[15px] leading-[1.6] text-[var(--fg-muted)]">
+              We have converted these too, and they are a different problem with the same discipline. There
+              is usually more undocumented rule and less structured history, which moves the work out of
+              mapping and into discovery. Ask us on a first call and we will tell you which parts of this
+              page apply to you and which do not.
+            </p>
           </div>
         </Container>
       </Section>
