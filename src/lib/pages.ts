@@ -67,6 +67,7 @@ export const PAGES: PageEntry[] = [
 
   /* integrations */
   { path: "/integrations", intent: "integration", target: "factoring software integrations", priority: 0.85, changeFrequency: "monthly" },
+  { path: "/partners", intent: "commercial", target: "factoring software partners", priority: 0.8, changeFrequency: "monthly" },
   { path: "/integrations/microsoft-teams", intent: "integration", target: "Microsoft Teams approvals for financial services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/integrations/microsoft-365", intent: "integration", target: "Microsoft 365 lending integration", priority: 0.8, changeFrequency: "monthly" },
   { path: "/integrations/quickbooks", intent: "integration", target: "QuickBooks factoring integration", priority: 0.8, changeFrequency: "monthly" },

@@ -93,6 +93,7 @@ authority and insurance are captured rather than verified.
 ## Other
 
 - [How to choose factoring software](https://factorfox.com/compare/how-to-choose/): Running a software selection for a factoring or lending book: who decides, how to write the requirements, what to test, and the clauses that matter.
+- [Partners and the partner programme](https://factorfox.com/partners/): Who FactorFox works with, what each relationship actually is, and how to become a partner. Every technology row carries the status it holds in the product.
 
 ## Writing
 
