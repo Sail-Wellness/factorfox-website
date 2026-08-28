@@ -68,6 +68,7 @@ export const NAV: NavGroup[] = [
     label: "Integrations",
     href: "/integrations",
     children: [
+      { href: "/partners", label: "Partners", note: "Who we work with, and what each relationship is" },
       { href: "/integrations/microsoft-teams", label: "Microsoft Teams", note: "Briefings, signals and approvals where you already work" },
       { href: "/integrations/microsoft-365", label: "Microsoft 365", note: "Outlook, Calendar, Bookings, Entra ID" },
       { href: "/integrations/quickbooks", label: "QuickBooks Online" },
