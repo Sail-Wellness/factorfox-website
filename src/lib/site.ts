@@ -8,6 +8,23 @@ export const SITE = {
   bookingUrl: "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/",
   contactEmail: "sales@factorfox.com",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
+  ifaListing: "https://www.factoring.org/vendor_details.asp?ID=1321",
+  /** Owner confirmed, 28 August 2026. */
+  locality: "Winter Garden",
+  region: "FL",
+  country: "US",
+  /**
+   * Profiles that identify the same legal entity elsewhere. These are the
+   * sameAs edges in the Organization graph, and they are how a search engine
+   * decides that the FactorFox on this domain is the FactorFox in an industry
+   * directory rather than a different company with a similar name. Only add a
+   * URL here after confirming it resolves to FactorFox Software LLC.
+   */
+  profiles: [
+    "https://www.linkedin.com/company/factorfox-software-llc",
+    "https://www.factoring.org/vendor_details.asp?ID=1321",
+    "https://www.crunchbase.com/organization/factorfox",
+  ],
 } as const;
 
 export type NavChild = { href: string; label: string; note?: string };
@@ -70,6 +87,7 @@ export const NAV: NavGroup[] = [
       { href: "/migrate/factorcloud", label: "Moving off FactorCloud", note: "Which plan tier holds your export" },
       { href: "/migrate/factorview", label: "Moving off FactorView", note: "Ownership, delivery and the accounting boundary" },
       { href: "/compare", label: "How we compare", note: "Recording systems against decision systems" },
+      { href: "/compare/how-to-choose", label: "How to choose", note: "Running the selection, start to signature" },
       { href: "/platform/pricing", label: "Pricing", note: "What factoring software actually costs" },
     ],
   },

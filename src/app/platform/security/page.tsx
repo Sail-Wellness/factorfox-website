@@ -28,7 +28,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "Which security certifications do you hold?",
-    a: "None that we are claiming on this page. We would rather be the vendor whose trust page you can verify line by line than the one whose logos you have to take on faith. The controls described here are implemented in the platform and can be demonstrated against a running environment during your review. Where our certification position changes, this page will change with it, and the change will be dated.",
+    a: "None today. We are working toward SOC 2 with completion targeted for the end of 2026, and we will not describe ourselves as certified or compliant until a report exists. We would rather be the vendor whose trust page you can verify line by line than the one whose logos you have to take on faith. The controls described here are implemented in the platform and can be demonstrated against a running environment during your review. When the position changes, this page changes with it, and the change is dated.",
   },
   {
     q: "How is one customer's data kept away from another's?",
@@ -110,26 +110,33 @@ export default function SecurityPage() {
         }
       >
         {/*
-          ==========================================================================
-          PLACEHOLDER. MUST BE REPLACED BEFORE LAUNCH.
+          Owner approved, 28 August 2026. Two things are deliberately absent and
+          should stay absent until they are facts: the SOC 2 type, and ISO 27001.
+          Neither has been confirmed and neither may be added by anyone other than
+          the owner. The compliance tooling vendor is also deliberately unnamed. It
+          is not a control and a reviewer does not benefit from it.
 
-          The paragraph immediately below is a holding statement. The specific
-          certification programme wording, the named standard, any audit period and
-          any report availability language are PENDING OWNER APPROVAL and must not be
-          written here by anyone else.
-
-          Do not add a standard name, a framework name, a certification body, a date,
-          a status such as "in progress" or "audit underway", or a badge or logo to
-          this page until the owner has supplied the approved sentence in writing.
-          Replace this entire block, comment included, with that approved sentence.
-          ==========================================================================
+          If the target date moves, change the date. Do not remove it. A dated
+          target that slipped and was updated reads better to an assessor than a
+          page that quietly stopped saying when.
         */}
         <p>
-          FactorFox is working toward formal security certification. The specific programme wording is pending
-          owner approval and will be published here once it is confirmed, rather than described in advance. We
-          claim no certification today. What we do claim is the set of controls described on the rest of this
-          page, each of which is implemented in the platform and can be demonstrated to your reviewers against
-          a running environment.
+          <strong>FactorFox is working toward SOC 2.</strong> A formal compliance programme is under way and
+          completion is targeted for the end of 2026. That is a statement about work in progress. It is not a
+          certification claim and it should not be read as one.
+        </p>
+        <p>
+          <strong>We hold no SOC 2 report today.</strong> Until one exists we will not describe FactorFox as
+          certified, compliant, attested or audited, and you will not find a badge on this site saying
+          otherwise. When a report exists this page will name it, state the type, state the audit period and
+          say how to request it under a confidentiality agreement.
+        </p>
+        <p>
+          <strong>What we claim in the meantime is the control surface below.</strong> Each control is
+          implemented in the platform rather than described in a policy document, and each one can be
+          demonstrated to your reviewers against a running environment. A control you can watch refuse
+          something is worth more in a vendor review than a logo, which is the position this page took before
+          there was a programme to point at and the position it will keep after there is a report.
         </p>
       </ProseSection>
 
@@ -253,8 +260,8 @@ export default function SecurityPage() {
         lede="An assessor learns more from what a vendor declines to claim than from what it does. Here is our list, in the same place as everything else."
         items={[
           {
-            title: "No certifications asserted",
-            body: "We hold no certification claim on this site. See the statement above, which will be updated when there is something confirmed to say.",
+            title: "No certification held today",
+            body: "A SOC 2 programme is under way and targeted for the end of 2026. Until a report exists there is no certification claim on this site and no badge. See the dated statement above.",
           },
           {
             title: "No outcome learning",

@@ -1,0 +1,114 @@
+# FactorFox
+
+> FactorFox Software LLC builds the intelligence and operating platform used by
+> factoring companies, asset based lenders, purchase order funders and reverse
+> factoring providers. Our customers are the institutions that fund. We do not
+> fund invoices ourselves and we do not compete with our customers for their
+> clients. Building software for this industry since 2002.
+
+The platform answers six fixed questions for each person every morning, scoped
+to what that person is responsible for: where risk is and why, which decisions
+require them now, what changed since the last briefing, where cash is and what
+can move safely, what is likely to happen next, and whether the business is
+within covenant. Every answer carries the evidence that produced it and only
+the actions the person's permissions allow.
+
+Two things are worth knowing when summarising this company. First, automation
+here is deliberately asymmetric: the platform may stop money on its own, and
+only a named human may let money through. Second, the site states what is not
+true as carefully as what is. Integration rows carry an explicit status, models
+do not learn from customer outcomes today and the site says so, and carrier
+authority and insurance are captured rather than verified.
+
+## Start here
+
+- [Factoring software built on briefings, not dashboards](https://factorfox.com/): FactorFox gives factors, asset based lenders and purchase order funders role aware briefings, evidence behind every conclusion and approvals in Teams.
+- [The company behind FactorFox](https://factorfox.com/company/): Founded in 2002, sold to private equity in 2020, reacquired by the founder, and rebuilt as an AI native platform for the institutions that fund.
+- [A factoring platform for the operating day](https://factorfox.com/platform/): One platform for the operating day: briefings, evidence, underwriting, risk, covenants, borrowing base, documents, fraud, collections and treasury.
+
+## What the platform does
+
+- [Factoring accounting software with proposals](https://factorfox.com/platform/accounting/): Apply cash from mail and EDI remittance as proposals a person accepts, accrue fees daily, move reserves, and seal audit packets nobody can edit later.
+- [Borrowing base software for ABL and factoring](https://factorfox.com/platform/borrowing-base/): Compute availability from ineligibles, advance rates and reserves, watch net availability with days to zero, and hand your bank a certificate it audits.
+- [Role based operations briefings for lenders](https://factorfox.com/platform/briefings/): Answer six fixed questions for each person by the scope they carry, with severity, reasons, evidence references and actions that name the permission.
+- [Client onboarding for factoring companies](https://factorfox.com/platform/client-onboarding/): Move a client from intake to first funding through gates that cannot be made advisory, and see what your tenant has configured and what it has not.
+- [Factoring collections software by exposure](https://factorfox.com/platform/collections/): Work the queue by exposure and promise history, with cases that reopen themselves, lapsed promises tracked and contact history kept beside the debtor.
+- [Factoring underwriting software that never stops](https://factorfox.com/platform/continuous-underwriting/): Re underwrite on every material event, version each run immutably, and keep a policy where the machine stops money and only a named officer releases it.
+- [Covenant monitoring software for funders](https://factorfox.com/platform/covenant-monitoring/): Track facility limits, concentration, eligibility, advance rates and reporting duties, with the agreement clause quoted as evidence behind each test.
+- [Invoice verification software for factors](https://factorfox.com/platform/document-intelligence/): Extract invoices and rate confirmations under a strict schema, revalidate every model output in plain code, and keep the original document as evidence.
+- [Explainable AI for lenders, evidence attached](https://factorfox.com/platform/evidence/): Open any conclusion into the records behind it. Observations are append only, evidence is captured at run time, and coverage is stated apart from confidence.
+- [Factoring fraud detection across the book](https://factorfox.com/platform/fraud-detection/): Catch duplicate paper, invoice size deviation against a client median, odd submission timing and bank change holds, scored as combinations not flags.
+- [Factoring software pricing and what drives it](https://factorfox.com/platform/pricing/): Compare per seat, per invoice and funds employed pricing, count what a migration really costs, and take sharper questions into your next vendor call.
+- [Debtor risk monitoring software for factors](https://factorfox.com/platform/risk-monitoring/): Watch concentration migrate under one debtor name across clients, dilution move and payment velocity drift, with exposure counted once per account.
+- [Factoring software security and controls](https://factorfox.com/platform/security/): Give vendor reviewers the detail they ask for: tenant isolation, immutable audit, four eyes, least privilege scopes, revocation and break glass access.
+- [Factoring treasury software with release control](https://factorfox.com/platform/treasury/): Generate NACHA and APCA files and Fedwire instructions, hold bank account changes for a human, and let net availability decide what can move today.
+
+## Who it is for
+
+- [Specialty finance software in one platform](https://factorfox.com/solutions/): One platform across factoring, asset based lending, purchase order funding, reverse factoring and freight, with books for the industries you fund most.
+- [Asset based lending software for ABL teams](https://factorfox.com/solutions/asset-based-lending/): Run borrowing base, ineligibles, advance rates by collateral class, field exam findings and covenant reporting to the bank behind your asset based book.
+- [Construction factoring software and retainage](https://factorfox.com/solutions/construction/): Fund subcontractor receivables with schedules of values, retainage, lien deadlines, pay when paid clauses and joint checks held as expiring conditions.
+- [Invoice factoring software for funding companies](https://factorfox.com/solutions/factoring/): Run schedules, verification, advance and reserve, chargebacks and notice of assignment, with recourse, non recourse and non notification on one book.
+- [Medical factoring software for payer mix](https://factorfox.com/solutions/healthcare/): Fund medical receivables against payer mix, claim aging from date of service, net collectable value, remittance advice and takebacks you can trace.
+- [Manufacturing factoring software for funders](https://factorfox.com/solutions/manufacturing/): Fund producers and distributors through purchase order to invoice, chargebacks, dilution from returns, and concentration among buyers that set terms.
+- [Purchase order funding software for lenders](https://factorfox.com/solutions/purchase-order-funding/): Fund supplier payments, letters of credit and production milestones, then follow the conversion from purchase order to invoice to receivable on one file.
+- [Reverse factoring software for buyer programmes](https://factorfox.com/solutions/reverse-factoring/): Run buyer approved payables, onboard suppliers at scale, price early payment offers and settle at maturity, underwriting the buyer not the supplier.
+- [Staffing factoring software for payroll weeks](https://factorfox.com/solutions/staffing/): Fund staffing agencies on a weekly payroll clock, with timesheet verification, high invoice frequency and concentration among a few end customers.
+- [Transportation factoring software for freight](https://factorfox.com/solutions/transportation/): Fund carriers against brokers with rate confirmations, load level detail, quick pay, fuel advances and the double brokering checks a freight book needs.
+
+## Integrations
+
+- [Factoring software integrations by purpose](https://factorfox.com/integrations/): Read the FactorFox integration register by business purpose, each row carrying a published status so your team knows what is live before it plans work.
+- [ACH NACHA file generation for factors](https://factorfox.com/integrations/banking-and-payments/): Generate NACHA PPD and Australian APCA CS2 files, Fedwire instructions and EDI remittance, then certify each dialect with your originating bank first.
+- [Credit bureau integration for factoring](https://factorfox.com/integrations/credit-and-risk/): Pin every credit check to the decision it informed. Payment behaviour, bureau rails and lien position, captured at run time and never quietly re fetched.
+- [Microsoft 365 integration for lenders](https://factorfox.com/integrations/microsoft-365/): Turn Graph mail into cash application proposals, project collections work into Outlook, and let Entra ID prove identity while FactorFox grants authority.
+- [Microsoft Teams approvals for lending teams](https://factorfox.com/integrations/microsoft-teams/): Read your briefing, open the evidence, approve a release and assign work from Teams on desktop or phone, with four eyes enforced on every approval.
+- [QuickBooks factoring integration for funders](https://factorfox.com/integrations/quickbooks/): Connect a client QuickBooks Online company over OAuth, sync open receivables idempotently, and post nothing to your book without a named human first.
+- [FMCSA integration for freight factoring](https://factorfox.com/integrations/transportation/): Capture carrier and broker registration identity on both sides of the load, with a gate that refuses to assert operating authority, insurance or safety.
+- [Xero factoring integration for lenders](https://factorfox.com/integrations/xero/): Give lenders in Australia, New Zealand and the UK a read only Xero connection per client, feeding the same intake rail and never writing to a ledger.
+
+## Switching from another system
+
+- [Factoring software comparison for operators](https://factorfox.com/compare/): Compare recording systems against decision systems on capability, evidence and control, including an honest note on where FactorFox is the wrong answer.
+- [Factoring software migration and what breaks](https://factorfox.com/migrate/): A conversion is not a data transfer. Map fee schedules, open receivables, reserves and chargeback history, then reconcile on differences not on totals.
+- [FactorCloud alternative and conversion guide](https://factorfox.com/migrate/factorcloud/): Planning a move off FactorCloud: which plan tier holds your export path, what the ledger structure implies, and what to settle before you give notice.
+- [FactorSoft alternative and conversion guide](https://factorfox.com/migrate/factorsoft/): Plan a FactorSoft conversion properly: what the data model carries, what to export before any vendor call, what breaks, and what to ask every platform.
+- [FactorView alternative and conversion guide](https://factorfox.com/migrate/factorview/): Planning a move off FactorView: who holds the database, what the published terms do and do not commit to, and what to establish before you give notice.
+- [WinFactor alternative and conversion guide](https://factorfox.com/migrate/winfactor/): Planning a move off WinFactor: where your book sits, what the reporting layer gives you, what the published terms commit to, and what to establish first.
+
+## Reference
+
+- [Factoring operations writing for lenders](https://factorfox.com/resources/): Practical writing for the institution that funds: document extraction, funding conditions, evaluating operating platforms, and workflows worth automating.
+- [Factoring terms glossary for operators](https://factorfox.com/resources/glossary/): Look up factoring and asset based lending terms as operators use them, including invoice finance, debtor finance, factoraje and fomento mercantil.
+
+## Talk to us
+
+- [Request a FactorFox demonstration](https://factorfox.com/demo/): See FactorFox run against a slice of your own portfolio: briefings, evidence, underwriting, covenants and Teams approvals, on your book not a sample.
+
+## Legal
+
+- [Privacy policy](https://factorfox.com/legal/privacy/): Read how FactorFox Software LLC handles personal information from this website: what we collect, why, how long we keep it, and the rights you can use.
+- [Terms of use](https://factorfox.com/legal/terms/): Read the terms on which FactorFox Software LLC offers this website: acceptable use, intellectual property, liability limits, links and governing law.
+
+## Other
+
+- [How to choose factoring software](https://factorfox.com/compare/how-to-choose/): Running a software selection for a factoring or lending book: who decides, how to write the requirements, what to test, and the clauses that matter.
+
+## Writing
+
+- [AI in specialty finance is mostly automation](https://factorfox.com/resources/ai-in-specialty-finance/): Tell automation and intelligence apart before you buy either, and see why evidence is what decides whether an intelligence layer is usable at all.
+- [Which factoring workflows repay automation](https://factorfox.com/resources/factoring-workflows-to-automate/): Sort the work in your operation into three piles, apply the test that decides which pile each workflow lands in, and avoid the half automated trap.
+- [How to evaluate the systems a factor depends on](https://factorfox.com/resources/how-to-choose-a-factoring-company/): Assess your operating platform, funding line, credit sources, payment rails and participation partners on failure behaviour rather than feature lists.
+- [What a factor should require before advancing](https://factorfox.com/resources/invoice-factoring-requirements/): The client, debtor and invoice conditions that should be true before money leaves, sorted by what each one prevents and what it costs you to skip it.
+- [Why the OCR accuracy number misleads factors](https://factorfox.com/resources/ocr-invoice-scanning/): See what really lands in a factoring inbox, what breaks when a model reads it, and why a strict schema beats any accuracy figure a vendor will quote.
+
+## Notes for anyone quoting this site
+
+- Figures shown in product illustrations come from a seeded demonstration book,
+  never from a customer, and every illustration says so.
+- Integration availability is stated with one of five words: available,
+  controlled release, contract required, planned, ecosystem. Please carry the
+  word through rather than rounding it up to "supports".
+- FactorFox does not replace legal review, lender approval or executive
+  judgement. It monitors conditions, organises evidence and buys decision
+  makers time.

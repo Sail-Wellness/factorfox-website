@@ -15,12 +15,31 @@ export function SiteFooter() {
               The intelligence and operating platform for factoring, asset based lending, purchase order
               funding, reverse factoring and specialty finance. Building software for this industry since {SITE.founded}.
             </p>
-            <Link
-              href="/demo"
-              className="btn-secondary mt-7"
-            >
+            <Link href="/demo" className="btn-secondary mt-7">
               Request a demonstration
             </Link>
+
+            {/* Preferred Vendor and Preferred Ally Member, confirmed by the owner
+                28 August 2026. The mark links to our own listing so a reader can
+                check the designation rather than take the image on faith. */}
+            <a
+              href={SITE.ifaListing}
+              rel="noopener"
+              className="mt-8 flex items-center gap-3 no-underline"
+            >
+              <Image
+                src="/brand/ifa-preferred-vendor.png"
+                alt="International Factoring Association Preferred Vendor"
+                width={400}
+                height={124}
+                className="h-9 w-auto"
+              />
+              <span className="text-[12.5px] leading-[1.45] text-[var(--fg-subtle)]">
+                Preferred Vendor and Preferred Ally Member
+                <br />
+                of the International Factoring Association
+              </span>
+            </a>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

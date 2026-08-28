@@ -45,6 +45,11 @@ export default function CompanyPage() {
               He knew what the operator was actually doing, and he knew it was mostly clerical. That
               observation is still the whole product thesis, more than two decades later.
             </p>
+            <p>
+              FactorFox Software LLC is based in Winter Garden, Florida, and is a Preferred Vendor and
+              Preferred Ally Member of the International Factoring Association, where it also exhibits and
+              sponsors.
+            </p>
           </>
         }
         primaryCta={{ href: "/demo", label: "Meet the team behind it" }}

@@ -115,7 +115,24 @@ export function organizationSchema() {
     foundingDate: SITE.founded,
     description: SITE.tagline,
     logo: { "@type": "ImageObject", url: absoluteUrl("/brand/factorfox-logo.svg") },
-    sameAs: [SITE.linkedin],
+    sameAs: [...SITE.profiles],
+    email: SITE.contactEmail,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: SITE.locality,
+      addressRegion: SITE.region,
+      addressCountry: SITE.country,
+    },
+    knowsAbout: [
+      "Invoice factoring",
+      "Asset based lending",
+      "Purchase order funding",
+      "Reverse factoring",
+      "Transportation factoring",
+      "Borrowing base monitoring",
+      "Covenant monitoring",
+      "Commercial finance underwriting",
+    ],
   };
 }
 
@@ -126,6 +143,7 @@ export function websiteSchema() {
     "@id": `${SITE.url}/#website`,
     url: SITE.url,
     name: SITE.name,
+    inLanguage: "en",
     publisher: { "@id": `${SITE.url}/#organization` },
   };
 }
