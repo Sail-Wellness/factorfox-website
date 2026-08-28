@@ -261,6 +261,48 @@ export default function HowToChoosePage() {
       <Section bordered>
         <Container>
           <SectionHead
+            eyebrow="Claims"
+            title="Four things every vendor asserts, and how to check each one."
+            lede="Assertions in this category are cheap to make and rarely checked, so they accumulate. None of what follows is an accusation about anybody. It is the set of questions that separates a claim from a fact, and it should be put to every vendor on your list in the same words, including us."
+          />
+          <div className="mt-12">
+            <DataTable
+              caption="How to verify the four claims vendors make most often"
+              head={["The claim", "What to ask for"]}
+              rows={[
+                [
+                  "A security certification, or a badge on the website",
+                  "Ask for the report, not the logo. Then ask three questions about it: what is in scope, what period does it cover, and who signed it. A badge is a picture. A report is a document with a scope section, and the scope section is the part that matters.",
+                ],
+                [
+                  "Certification inherited from the cloud provider",
+                  "The most common misunderstanding in this category, and it is worth stating plainly: a hosting provider's certification covers the hosting provider's infrastructure. It says nothing about the application running on it, who at the vendor can reach your data, or how access is controlled. If a vendor's certification answer is the name of a cloud platform, they have answered a different question. Ask again for a report in the vendor's own name.",
+                ],
+                [
+                  "A customer count or a daily volume figure",
+                  "Ask for three references you can telephone, in your asset class and near your size, and ask to speak to the controller rather than the person who signed. A number on a website costs nothing to write. A reference who will take a call from a stranger is the only version of that claim that carries information.",
+                ],
+                [
+                  "Years of experience in the industry",
+                  "Ask two separate questions: when was the company formed, and when did this product first process a live invoice. Those are different dates and both are different from how long any individual has worked in the field. All three are legitimate things to have. Combining them into one number is where it stops being legitimate.",
+                ],
+              ]}
+            />
+          </div>
+          <p className="mt-6 max-w-[70ch] text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
+            Our own answers, so you can run the same test here. We hold no security certification today and
+            the{" "}
+            <InlineLink href="/platform/security">security page</InlineLink> says so with the programme and
+            the target date stated. We publish no customer count and no daily volume figure anywhere on this
+            site. The company was formed in 2002 and has been building software for this industry since. Ask us
+            for references and we will give you names.
+          </p>
+        </Container>
+      </Section>
+
+      <Section bordered>
+        <Container>
+          <SectionHead
             eyebrow="The contract"
             title="Six clauses that decide what your next move costs."
             lede="We read the published terms of three competitors while writing the migration pages on this site. None of them contained an export obligation, and one of them did not mention customer data at all. That is the normal state of this industry, which is exactly why these questions belong in your process rather than your lawyer's inbox in week eleven."

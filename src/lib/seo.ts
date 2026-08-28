@@ -117,6 +117,12 @@ export function organizationSchema() {
     logo: { "@type": "ImageObject", url: absoluteUrl("/brand/factorfox-logo.svg") },
     sameAs: [...SITE.profiles],
     email: SITE.contactEmail,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: SITE.locality,
+      addressRegion: SITE.region,
+      addressCountry: SITE.country,
+    },
     knowsAbout: [
       "Invoice factoring",
       "Asset based lending",
