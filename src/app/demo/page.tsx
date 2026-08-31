@@ -75,6 +75,20 @@ export default function DemoPage() {
                   Open the scheduler
                 </a>
               </div>
+
+              <div className="mt-4 border border-[var(--line)] bg-[var(--bg-sunken)] p-6">
+                <Eyebrow>Or just call</Eyebrow>
+                <p className="mt-3 text-[0.9375rem] leading-[1.6] text-[var(--fg-muted)]">
+                  A person answers, and it is somebody who can talk about how your book is actually run
+                  rather than book a call to arrange a call.
+                </p>
+                <a
+                  href={`tel:${SITE.phoneHref}`}
+                  className="mt-4 inline-block text-[1.35rem] font-semibold tracking-[-0.01em] text-[var(--accent)] hover:underline underline-offset-4"
+                >
+                  {SITE.phone}
+                </a>
+              </div>
             </div>
           </div>
 

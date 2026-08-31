@@ -19,6 +19,7 @@ import {
 import { JsonLd } from "@/components/primitives";
 import { PartnerForm } from "@/components/partner-form";
 import { INTEGRATIONS } from "@/content/integrations";
+import { PARTNERS, ROLE_LABEL, partnerIntegration } from "@/content/partners";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
@@ -96,8 +97,8 @@ export default function PartnersPage() {
             </p>
           </>
         }
-        primaryCta={{ href: "#become-a-partner", label: "Become a partner" }}
-        secondaryCta={{ href: "/integrations", label: "See the integration detail" }}
+        primaryCta={{ href: "#spotlights", label: "Read the partner spotlights" }}
+        secondaryCta={{ href: "#become-a-partner", label: "Become a partner" }}
         aside={<TwoClaimsCard />}
       />
 
@@ -141,6 +142,54 @@ export default function PartnersPage() {
           everything shown. Where a connection exists, the word for it is on the row.
         </p>
       </ProseSection>
+
+      <Section id="spotlights" bordered>
+        <Container>
+          <SectionHead
+            eyebrow="The partner group"
+            title="Ten companies, and the part of a funding decision each one sits in."
+            lede="A spotlight on each, written the way we would want a spotlight on us written. What they actually sell, why a funding business should care, what would move between the two systems, and what we could not establish about them."
+          />
+
+          <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {PARTNERS.map((p) => {
+              const row = partnerIntegration(p);
+              return (
+                <Link
+                  key={p.slug}
+                  href={`/partners/${p.slug}`}
+                  className="group flex flex-col rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 transition-shadow duration-200 hover:shadow-[var(--shadow-lift)]"
+                  style={{ boxShadow: "var(--shadow-card)" }}
+                >
+                  <p className="u-label text-[var(--signal)]">{ROLE_LABEL[p.role]}</p>
+                  <p className="text-card-title mt-2.5 group-hover:text-[var(--accent)]">{p.name}</p>
+                  {p.alsoKnownAs ? (
+                    <p className="mt-1 text-[13px] leading-[1.5] text-[var(--fg-subtle)]">
+                      Also known as {p.alsoKnownAs}
+                    </p>
+                  ) : null}
+                  <p className="mt-3 grow text-[15px] leading-[1.6] text-[var(--fg-muted)]">{p.summary}</p>
+                  <span className="mt-5 block border-t border-[var(--line)] pt-4">
+                    {row ? (
+                      <Status kind={row.status} label={row.statusLabel} />
+                    ) : (
+                      <Status kind="info" label="No connection built" />
+                    )}
+                    <span className="u-label mt-3 block text-[var(--accent)]">Read the spotlight</span>
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+
+          <p className="mt-10 max-w-[70ch] text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
+            The status on each card is read from the integration register at build time rather than typed
+            here. Where a card says no connection is built, that is the honest answer and the commercial
+            relationship is real regardless. The two claims are separated on purpose, for the reason set out
+            above.
+          </p>
+        </Container>
+      </Section>
 
       <Section tone="sunken" bordered>
         <Container>

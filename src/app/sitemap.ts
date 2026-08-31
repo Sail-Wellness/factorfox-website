@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { INDEXABLE } from "@/lib/pages";
 import { ARTICLES } from "@/content/articles";
+import { PARTNERS } from "@/content/partners";
 import { SITE } from "@/lib/site";
 import { canonicalPath } from "@/lib/seo";
 
@@ -27,5 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...pages, ...articles];
+  const partners = PARTNERS.map((p) => ({
+    url: new URL(canonicalPath(`/partners/${p.slug}`), SITE.url).toString(),
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...articles, ...partners];
 }

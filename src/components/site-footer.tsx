@@ -40,6 +40,34 @@ export function SiteFooter() {
                 of the International Factoring Association
               </span>
             </a>
+
+            {/* A published number is a statement that a person answers. It is
+                deliberately above the fold of the footer rather than buried on
+                a contact page. */}
+            <dl className="mt-8 space-y-2.5 text-[14px] leading-[1.5]">
+              <div className="flex gap-2">
+                <dt className="u-label w-[3.5rem] shrink-0 pt-[3px] text-[var(--fg-subtle)]">Call</dt>
+                <dd className="m-0">
+                  <a
+                    href={`tel:${SITE.phoneHref}`}
+                    className="font-semibold text-[var(--fg)] hover:text-[var(--accent)]"
+                  >
+                    {SITE.phone}
+                  </a>
+                </dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="u-label w-[3.5rem] shrink-0 pt-[3px] text-[var(--fg-subtle)]">Write</dt>
+                <dd className="m-0">
+                  <a
+                    href={`mailto:${SITE.contactEmail}`}
+                    className="text-[var(--fg-muted)] hover:text-[var(--accent)]"
+                  >
+                    {SITE.contactEmail}
+                  </a>
+                </dd>
+              </div>
+            </dl>
           </div>
 
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">

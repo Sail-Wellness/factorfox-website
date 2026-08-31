@@ -55,6 +55,18 @@ for (const { route, file } of walk(APP)) {
   const m = extract(file);
   if (m) pages.push({ route, ...m });
 }
+/* Partner spotlights are generated from the register rather than from a page
+   file, because the route is dynamic and carries no literal pageMeta call. */
+const PARTNERS_FILE = path.join(ROOT, "src", "content", "partners.ts");
+if (fs.existsSync(PARTNERS_FILE)) {
+  const src = fs.readFileSync(PARTNERS_FILE, "utf8");
+  for (const m of src.matchAll(
+    /slug:\s*"([^"]+)",\s*\n\s*metaTitle:\s*"((?:[^"\\]|\\.)*)",/g,
+  )) {
+    pages.push({ route: `/partners/${m[1]}`, title: m[2], eyebrow: "PARTNER SPOTLIGHT" });
+  }
+}
+
 if (fs.existsSync(ARTICLES)) {
   for (const f of fs.readdirSync(ARTICLES).filter((x) => x.endsWith(".mdx"))) {
     const raw = fs.readFileSync(path.join(ARTICLES, f), "utf8");
@@ -112,7 +124,10 @@ footer{display:flex;align-items:center;justify-content:space-between;
 }
 
 const PW = process.env.PLAYWRIGHT_MODULE ?? "playwright";
-const { chromium } = await import(PW);
+const pw = await import(PW);
+// Resolved by path this is a CommonJS module, so the namespace hangs off default.
+const chromium = pw.chromium ?? pw.default?.chromium;
+if (!chromium) throw new Error(`Could not resolve chromium from ${PW}`);
 const EXEC = process.env.PLAYWRIGHT_CHROMIUM;
 const browser = await chromium.launch(EXEC ? { executablePath: EXEC, args: ["--no-sandbox"] } : { args: ["--no-sandbox"] });
 const ctx = await browser.newContext({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });

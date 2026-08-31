@@ -36,7 +36,7 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[color-mix(in_srgb,var(--bg-nav)_88%,transparent)] backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[var(--bg-nav)]">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-lg focus:bg-[var(--accent)] focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-[var(--accent-fg)]"
@@ -57,7 +57,7 @@ export function SiteHeader() {
           />
         </Link>
 
-        <nav ref={navRef} className="ml-auto hidden lg:block" aria-label="Main">
+        <nav ref={navRef} className="ml-auto hidden min-[1300px]:block" aria-label="Main">
           <ul className="flex items-center gap-1">
             {NAV.map((group) => {
               const isOpen = openGroup === group.label;
@@ -68,7 +68,7 @@ export function SiteHeader() {
                   <li key={group.label}>
                     <Link
                       href={group.href ?? "/"}
-                      className={`block rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
+                      className={`block whitespace-nowrap rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
                         active ? "bg-[var(--accent-soft)] text-[var(--fg)]" : "text-[var(--fg-muted)]"
                       }`}
                     >
@@ -85,7 +85,7 @@ export function SiteHeader() {
                     aria-expanded={isOpen}
                     aria-haspopup="true"
                     onClick={() => setOpenGroup(isOpen ? null : group.label)}
-                    className={`rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
+                    className={`whitespace-nowrap rounded-lg px-3.5 py-2 text-[15px] font-medium transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--fg)] ${
                       active ? "bg-[var(--accent-soft)] text-[var(--fg)]" : "text-[var(--fg-muted)]"
                     }`}
                   >
@@ -130,23 +130,23 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-3 lg:ml-4">
+        <div className="ml-auto flex items-center gap-3 min-[1300px]:ml-4">
           <a
             href={SITE.appUrl}
-            className="hidden text-[15px] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] sm:block"
+            className="hidden whitespace-nowrap text-[15px] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] sm:block"
             rel="noopener"
           >
             Sign in
           </a>
           <Link
             href="/demo"
-            className="btn-primary hidden !px-5 !py-2.5 !text-[14px] sm:inline-flex"
+            className="btn-primary hidden whitespace-nowrap !px-5 !py-2.5 !text-[14px] sm:inline-flex"
           >
             Request a demonstration
           </Link>
           <button
             type="button"
-            className="rounded-lg border border-[var(--line-strong)] px-3.5 py-2 text-[13.5px] font-semibold lg:hidden"
+            className="rounded-lg border border-[var(--line-strong)] px-3.5 py-2 text-[13.5px] font-semibold min-[1300px]:hidden"
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((v) => !v)}
@@ -157,7 +157,7 @@ export function SiteHeader() {
       </div>
 
       {mobileOpen ? (
-        <div id="mobile-nav" className="border-t border-[var(--line)] bg-[var(--bg-raised)] lg:hidden">
+        <div id="mobile-nav" className="border-t border-[var(--line)] bg-[var(--bg-raised)] min-[1300px]:hidden">
           <div className="mx-auto max-w-[1320px] px-5 py-4 sm:px-8">
             {NAV.map((group) =>
               !group.children ? (
