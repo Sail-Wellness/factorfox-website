@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SITE } from "@/lib/site";
+import { buildMailto, openMailto } from "@/lib/lead-handoff";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "sent" | "handoff";
 
 const ROLES = [
   "Owner or principal",
@@ -73,7 +75,7 @@ function readAttribution() {
 
 export function DemoForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState<string>("");
+  const [mailHref, setMailHref] = useState<string>("");
   const [attribution, setAttribution] = useState<object>({});
   const [startedAt] = useState<number>(() => Date.now());
 
@@ -84,7 +86,6 @@ export function DemoForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    setError("");
 
     const form = new FormData(e.currentTarget);
     const payload = {
@@ -109,9 +110,26 @@ export function DemoForm() {
     // existing Microsoft tenant is the shortest path to one.
     const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
 
+    /* No endpoint, or an endpoint that fails, both hand off to a mail draft
+       carrying every answer. A submission never dead ends. */
+    const handOff = () => {
+      const href = buildMailto(`Demonstration request: ${payload.company || payload.name}`, [
+        ["Name", payload.name],
+        ["Company", payload.company],
+        ["Email", payload.email],
+        ["Role", payload.role],
+        ["Size of book", payload.book],
+        ["System they run today", payload.currentSystem],
+        ["Wants to see", payload.interests],
+        ["Notes", payload.message],
+      ]);
+      setMailHref(href);
+      setStatus("handoff");
+      openMailto(href);
+    };
+
     if (!endpoint) {
-      setStatus("error");
-      setError("This form is not connected to an inbox yet, so we would rather tell you than swallow it.");
+      handOff();
       return;
     }
 
@@ -121,7 +139,7 @@ export function DemoForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ kind: "demo_request", receivedAt: new Date().toISOString(), ...payload }),
       });
-      if (!res.ok) throw new Error("We could not record that request.");
+      if (!res.ok) throw new Error("Endpoint refused the request.");
       setStatus("sent");
       if (typeof window !== "undefined" && "dataLayer" in window) {
         (window as unknown as { dataLayer: unknown[] }).dataLayer.push({
@@ -131,14 +149,43 @@ export function DemoForm() {
           interests: payload.interests,
         });
       }
-    } catch (err) {
-      setStatus("error");
-      setError(
-        err instanceof Error
-          ? err.message
-          : "We could not record that request.",
-      );
+    } catch {
+      handOff();
     }
+  }
+
+  if (status === "handoff") {
+    return (
+      <div
+        className="rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-7"
+        style={{ boxShadow: "var(--shadow-card)" }}
+      >
+        <p className="text-card-title">Your answers are in a mail draft.</p>
+        <p className="mt-3 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
+          It should have opened in your mail application already, addressed to us and carrying
+          everything you filled in. Send it and we will pick it up from there.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a href={mailHref} className="btn-primary">
+            Open the draft again
+          </a>
+          <a href={SITE.bookingUrl} rel="noopener" className="btn-secondary">
+            Or take a slot in the calendar
+          </a>
+        </div>
+        <p className="mt-6 border-t border-[var(--line)] pt-5 text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
+          No mail application on this machine? Write to{" "}
+          <a href={`mailto:${SITE.contactEmail}`} className="text-[var(--accent)] underline underline-offset-4">
+            {SITE.contactEmail}
+          </a>{" "}
+          or call{" "}
+          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[var(--accent)] underline underline-offset-4">
+            {SITE.phone}
+          </a>
+          . A person answers either one.
+        </p>
+      </div>
+    );
   }
 
   if (status === "sent") {
@@ -269,16 +316,6 @@ export function DemoForm() {
         <label htmlFor="website">Leave this field empty</label>
         <input id="website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
-
-      {status === "error" ? (
-        <p role="alert" className="mt-6 border-l-2 border-[var(--color-crit-600)] bg-[var(--color-crit-100)] px-4 py-3 text-[0.875rem] text-[var(--color-crit-600)]">
-          {error} Your details were not lost. Email{" "}
-          <a href="mailto:sales@factorfox.com" className="underline">
-            sales@factorfox.com
-          </a>{" "}
-          or use the scheduler below and we will pick it up from there.
-        </p>
-      ) : null}
 
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <button
