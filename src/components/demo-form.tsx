@@ -108,7 +108,7 @@ export function DemoForm() {
     // The endpoint is configuration: any URL that accepts JSON works, and a
     // Power Automate "when an HTTP request is received" flow inside the
     // existing Microsoft tenant is the shortest path to one.
-    const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
+    const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || SITE.leadEndpoint;
 
     /* No endpoint, or an endpoint that fails, both hand off to a mail draft
        carrying every answer. A submission never dead ends. */
@@ -194,11 +194,10 @@ export function DemoForm() {
         <p className="u-eyebrow" style={{ color: "var(--color-ok-600)" }}>
           Received
         </p>
-        <h2 className="mt-3 text-[1.5rem]">We have your request.</h2>
+        <h2 className="mt-3 text-[1.5rem]">Thank you. Your demonstration request has been received.</h2>
         <p className="mt-3 max-w-[52ch] text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
-          Someone who has actually run a factoring operation will reply, usually the same business day.
-          If you would rather put time in the calendar now, use the scheduler below and pick a slot that
-          suits you.
+          Someone from FactorFox will contact you shortly, and it will be somebody who has actually run a
+          factoring operation. If you would rather put time in the calendar now, use the scheduler below.
         </p>
       </div>
     );

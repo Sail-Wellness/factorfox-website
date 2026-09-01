@@ -69,7 +69,7 @@ export function PartnerForm() {
       ...readAttribution(),
     };
 
-    const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
+    const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || SITE.leadEndpoint;
 
     /* No endpoint, or one that fails, hands off to a mail draft carrying every
        answer rather than telling somebody their work is gone. */
