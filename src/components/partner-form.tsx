@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site";
-import { buildMailto, openMailto } from "@/lib/lead-handoff";
 
-type Status = "idle" | "sending" | "sent" | "handoff";
+type Status = "idle" | "sending" | "sent" | "failed";
 
 const TRACKS = [
   "Referral or introduction",
@@ -47,7 +46,6 @@ function readAttribution() {
 
 export function PartnerForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [mailHref, setMailHref] = useState("");
   const [startedAt, setStartedAt] = useState(0);
 
   useEffect(() => setStartedAt(Date.now()), []);
@@ -71,26 +69,6 @@ export function PartnerForm() {
 
     const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || SITE.leadEndpoint;
 
-    /* No endpoint, or one that fails, hands off to a mail draft carrying every
-       answer rather than telling somebody their work is gone. */
-    const handOff = () => {
-      const href = buildMailto(`Partner enquiry: ${payload.company || payload.name}`, [
-        ["Name", payload.name],
-        ["Company", payload.company],
-        ["Email", payload.email],
-        ["Kind of partnership", payload.track],
-        ["What they have in mind", payload.detail],
-      ]);
-      setMailHref(href);
-      setStatus("handoff");
-      openMailto(href);
-    };
-
-    if (!endpoint) {
-      handOff();
-      return;
-    }
-
     try {
       const res = await fetch(endpoint, {
         method: "POST",
@@ -106,34 +84,26 @@ export function PartnerForm() {
         });
       }
     } catch {
-      handOff();
+      setStatus("failed");
     }
   }
 
-  if (status === "handoff") {
+  if (status === "failed") {
     return (
       <div className="rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-7" style={{ boxShadow: "var(--shadow-card)" }}>
-        <p className="text-card-title">Your answers are in a mail draft.</p>
+        <p className="text-card-title">We could not take that just now.</p>
         <p className="mt-3 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-          It should have opened in your mail application already, addressed to us and carrying
-          everything you filled in. Send it and a person will read it.
+          Rather than leave you wondering, write to us directly. It reaches the same person who reads
+          these, and it will not wait behind a queue.
         </p>
-        <div className="mt-6">
-          <a href={mailHref} className="btn-primary">
-            Open the draft again
-          </a>
-        </div>
-        <p className="mt-6 border-t border-[var(--line)] pt-5 text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
-          No mail application here? Write to{" "}
-          <a href={`mailto:${SITE.contactEmail}`} className="text-[var(--accent)] underline underline-offset-4">
+        <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
+          <a href={`mailto:${SITE.contactEmail}`} className="text-[1rem] font-semibold text-[var(--accent)] hover:underline underline-offset-4">
             {SITE.contactEmail}
-          </a>{" "}
-          or call{" "}
-          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[var(--accent)] underline underline-offset-4">
+          </a>
+          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[1rem] font-semibold text-[var(--accent)] hover:underline underline-offset-4">
             {SITE.phone}
           </a>
-          .
-        </p>
+        </div>
       </div>
     );
   }
