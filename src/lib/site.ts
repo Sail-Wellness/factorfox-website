@@ -16,6 +16,18 @@ export const SITE = {
    */
   phone: "(800) 616-3897",
   phoneHref: "+18006163897",
+  /**
+   * Where the demonstration and partner forms post. This is the platform API's
+   * own public door, /v1/public/lead-intake/web, which allowlists this origin,
+   * checks the honeypot and the time on form, rate limits by address, dedupes,
+   * and records the lead. It lives in the FactorFox Azure environment, so a
+   * submission never leaves infrastructure we control.
+   *
+   * NEXT_PUBLIC_LEAD_ENDPOINT overrides it. The default is here rather than
+   * only in a repository variable so that the form works from a clean clone,
+   * and so that forgetting the variable cannot quietly break lead capture.
+   */
+  leadEndpoint: "https://test.factorfox.com/v1/public/lead-intake/web",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
   ifaListing: "https://www.factoring.org/vendor_details.asp?ID=1321",
   /** Owner confirmed, 28 August 2026. */
