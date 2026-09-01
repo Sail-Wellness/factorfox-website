@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { SITE } from "@/lib/site";
-import { buildMailto, openMailto } from "@/lib/lead-handoff";
 
-type Status = "idle" | "sending" | "sent" | "handoff";
+type Status = "idle" | "sending" | "sent" | "failed";
 
 const ROLES = [
   "Owner or principal",
@@ -75,7 +74,6 @@ function readAttribution() {
 
 export function DemoForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [mailHref, setMailHref] = useState<string>("");
   const [attribution, setAttribution] = useState<object>({});
   const [startedAt] = useState<number>(() => Date.now());
 
@@ -110,29 +108,6 @@ export function DemoForm() {
     // existing Microsoft tenant is the shortest path to one.
     const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || SITE.leadEndpoint;
 
-    /* No endpoint, or an endpoint that fails, both hand off to a mail draft
-       carrying every answer. A submission never dead ends. */
-    const handOff = () => {
-      const href = buildMailto(`Demonstration request: ${payload.company || payload.name}`, [
-        ["Name", payload.name],
-        ["Company", payload.company],
-        ["Email", payload.email],
-        ["Role", payload.role],
-        ["Size of book", payload.book],
-        ["System they run today", payload.currentSystem],
-        ["Wants to see", payload.interests],
-        ["Notes", payload.message],
-      ]);
-      setMailHref(href);
-      setStatus("handoff");
-      openMailto(href);
-    };
-
-    if (!endpoint) {
-      handOff();
-      return;
-    }
-
     try {
       const res = await fetch(endpoint, {
         method: "POST",
@@ -150,40 +125,35 @@ export function DemoForm() {
         });
       }
     } catch {
-      handOff();
+      /* The prospect never sees why. A refused origin, a cold start, a network
+         drop and a bad gateway are all the same event to them: we could not
+         take it just now, and here are two ways through that always work. */
+      setStatus("failed");
     }
   }
 
-  if (status === "handoff") {
+  if (status === "failed") {
     return (
-      <div
-        className="rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-7"
-        style={{ boxShadow: "var(--shadow-card)" }}
-      >
-        <p className="text-card-title">Your answers are in a mail draft.</p>
-        <p className="mt-3 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-          It should have opened in your mail application already, addressed to us and carrying
-          everything you filled in. Send it and we will pick it up from there.
+      <div className="border border-[var(--line)] bg-[var(--bg-raised)] p-8" style={{ boxShadow: "var(--shadow-card)" }}>
+        <p className="u-eyebrow" style={{ color: "var(--signal)" }}>
+          Not received
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href={mailHref} className="btn-primary">
-            Open the draft again
+        <h2 className="mt-3 text-[1.5rem]">We could not take that just now.</h2>
+        <p className="mt-3 max-w-[52ch] text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
+          Rather than leave you wondering, here are two routes that always work. Both reach the same
+          people and neither needs this form.
+        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3">
+          <a href={`mailto:${SITE.contactEmail}`} className="text-[1.0625rem] font-semibold text-[var(--accent)] hover:underline underline-offset-4">
+            {SITE.contactEmail}
           </a>
-          <a href={SITE.bookingUrl} rel="noopener" className="btn-secondary">
+          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[1.0625rem] font-semibold text-[var(--accent)] hover:underline underline-offset-4">
+            {SITE.phone}
+          </a>
+          <a href={SITE.bookingUrl} rel="noopener" className="text-[0.9375rem] font-semibold hover:underline underline-offset-4">
             Or take a slot in the calendar
           </a>
         </div>
-        <p className="mt-6 border-t border-[var(--line)] pt-5 text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
-          No mail application on this machine? Write to{" "}
-          <a href={`mailto:${SITE.contactEmail}`} className="text-[var(--accent)] underline underline-offset-4">
-            {SITE.contactEmail}
-          </a>{" "}
-          or call{" "}
-          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[var(--accent)] underline underline-offset-4">
-            {SITE.phone}
-          </a>
-          . A person answers either one.
-        </p>
       </div>
     );
   }
