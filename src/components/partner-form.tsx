@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SITE } from "@/lib/site";
+import { buildMailto, openMailto } from "@/lib/lead-handoff";
 
-type Status = "idle" | "sending" | "sent" | "error";
+type Status = "idle" | "sending" | "sent" | "handoff";
 
 const TRACKS = [
   "Referral or introduction",
@@ -45,7 +47,7 @@ function readAttribution() {
 
 export function PartnerForm() {
   const [status, setStatus] = useState<Status>("idle");
-  const [error, setError] = useState("");
+  const [mailHref, setMailHref] = useState("");
   const [startedAt, setStartedAt] = useState(0);
 
   useEffect(() => setStartedAt(Date.now()), []);
@@ -53,7 +55,6 @@ export function PartnerForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
-    setError("");
 
     const form = new FormData(e.currentTarget);
     const payload = {
@@ -69,9 +70,24 @@ export function PartnerForm() {
     };
 
     const endpoint = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
+
+    /* No endpoint, or one that fails, hands off to a mail draft carrying every
+       answer rather than telling somebody their work is gone. */
+    const handOff = () => {
+      const href = buildMailto(`Partner enquiry: ${payload.company || payload.name}`, [
+        ["Name", payload.name],
+        ["Company", payload.company],
+        ["Email", payload.email],
+        ["Kind of partnership", payload.track],
+        ["What they have in mind", payload.detail],
+      ]);
+      setMailHref(href);
+      setStatus("handoff");
+      openMailto(href);
+    };
+
     if (!endpoint) {
-      setStatus("error");
-      setError("This form is not connected to an inbox yet, so we would rather tell you than swallow it. Write to sales@factorfox.com and it will reach the same person.");
+      handOff();
       return;
     }
 
@@ -81,7 +97,7 @@ export function PartnerForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ kind: "partner_enquiry", receivedAt: new Date().toISOString(), ...payload }),
       });
-      if (!res.ok) throw new Error("We could not record that enquiry.");
+      if (!res.ok) throw new Error("Endpoint refused the request.");
       setStatus("sent");
       if (typeof window !== "undefined" && "dataLayer" in window) {
         (window as unknown as { dataLayer: unknown[] }).dataLayer.push({
@@ -89,10 +105,37 @@ export function PartnerForm() {
           track: payload.track,
         });
       }
-    } catch (err) {
-      setStatus("error");
-      setError(err instanceof Error ? err.message : "We could not record that enquiry.");
+    } catch {
+      handOff();
     }
+  }
+
+  if (status === "handoff") {
+    return (
+      <div className="rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-7" style={{ boxShadow: "var(--shadow-card)" }}>
+        <p className="text-card-title">Your answers are in a mail draft.</p>
+        <p className="mt-3 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
+          It should have opened in your mail application already, addressed to us and carrying
+          everything you filled in. Send it and a person will read it.
+        </p>
+        <div className="mt-6">
+          <a href={mailHref} className="btn-primary">
+            Open the draft again
+          </a>
+        </div>
+        <p className="mt-6 border-t border-[var(--line)] pt-5 text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
+          No mail application here? Write to{" "}
+          <a href={`mailto:${SITE.contactEmail}`} className="text-[var(--accent)] underline underline-offset-4">
+            {SITE.contactEmail}
+          </a>{" "}
+          or call{" "}
+          <a href={`tel:${SITE.phoneHref}`} className="whitespace-nowrap text-[var(--accent)] underline underline-offset-4">
+            {SITE.phone}
+          </a>
+          .
+        </p>
+      </div>
+    );
   }
 
   if (status === "sent") {
@@ -152,12 +195,6 @@ export function PartnerForm() {
         <label htmlFor="website">Leave this field empty</label>
         <input id="website" name="website" tabIndex={-1} autoComplete="off" />
       </div>
-
-      {status === "error" ? (
-        <p role="alert" className="mt-5 rounded-lg border border-[var(--color-crit-600)] px-4 py-3 text-[14px] leading-[1.55] text-[var(--color-crit-600)]">
-          {error}
-        </p>
-      ) : null}
 
       <button type="submit" disabled={status === "sending"} className="btn-primary mt-6 w-full sm:w-auto">
         {status === "sending" ? "Sending" : "Send the enquiry"}
