@@ -29,6 +29,7 @@ authority and insurance are captured rather than verified.
 ## What the platform does
 
 - [Factoring accounting software with proposals](https://factorfox.com/platform/accounting/): Apply cash from mail and EDI remittance as proposals a person accepts, accrue fees daily, move reserves, and seal audit packets nobody can edit later.
+- [AI native, and what it actually means](https://factorfox.com/platform/ai-native/): Where the intelligence lives decides what the software can do. The architecture behind FactorFox, and why it stays independent of any one model.
 - [Borrowing base software for ABL and factoring](https://factorfox.com/platform/borrowing-base/): Compute availability from ineligibles, advance rates and reserves, watch net availability with days to zero, and hand your bank a certificate it audits.
 - [Role based operations briefings for lenders](https://factorfox.com/platform/briefings/): Answer six fixed questions for each person by the scope they carry, with severity, reasons, evidence references and actions that name the permission.
 - [Client onboarding for factoring companies](https://factorfox.com/platform/client-onboarding/): Move a client from intake to first funding through gates that cannot be made advisory, and see what your tenant has configured and what it has not.
