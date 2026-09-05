@@ -125,6 +125,59 @@ export default function HomePage() {
       </Section>
 
       {/* ============================================ THE SHIFT */}
+      {/* The architecture frame. It sits after the automation contrast because
+          that section raises the question this one answers: intelligence, yes,
+          but living where. */}
+      <Section bordered>
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
+            <div>
+              <Eyebrow tone="signal">The architecture</Eyebrow>
+              <h2 className="text-section-lg mt-4 max-w-[24ch]">
+                Almost anyone can connect a model to software.
+              </h2>
+              <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+                <p>
+                  Which is why asking whether a platform has AI no longer separates anything. The question
+                  that does is where the intelligence sits relative to the ledger. Attached to the software,
+                  it can summarise and draft. Inside the operating system, it can adjudicate, because it
+                  reads the same records, applies the policy version that was in force, and refuses to
+                  display a change it cannot prove.
+                </p>
+                <p>
+                  It also means FactorFox is not built around any one model. When the cloud arrived, the
+                  shift that mattered was that an application stopped depending on the operating system
+                  underneath it. This is the same shift, and we are making the same bet twice: the model is
+                  an engine, and it should be replaceable without replacing the vehicle.
+                </p>
+              </div>
+              <Link href="/platform/ai-native" className="btn-secondary mt-8 inline-flex">
+                Read the architecture
+              </Link>
+            </div>
+
+            <div className="rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-7 sm:p-8" style={{ boxShadow: "var(--shadow-card)" }}>
+              <Eyebrow>The difference, on an ordinary day</Eyebrow>
+              <dl className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["A model has an outage", "The platform routes, and records that it did."],
+                  ["A better model ships", "It is evaluated and adopted. Not a migration project."],
+                  ["An examiner asks why", "The conclusion opens onto the evidence that produced it."],
+                ].map(([t, d]) => (
+                  <div key={t} className="py-3.5 first:pt-0 last:pb-0">
+                    <dt className="text-[15px] font-semibold leading-[1.4]">{t}</dt>
+                    <dd className="mt-1 text-[14px] leading-[1.55] text-[var(--fg-muted)]">{d}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-6 border-t border-[var(--line)] pt-5 text-[13.5px] leading-[1.55] text-[var(--fg-subtle)]">
+                Building software for this industry since 2002, on a true double entry core.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       <Section tone="sunken">
         <Container>
           <SectionHead

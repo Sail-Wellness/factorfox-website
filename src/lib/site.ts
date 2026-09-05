@@ -56,6 +56,7 @@ export const NAV: NavGroup[] = [
     label: "Platform",
     href: "/platform",
     children: [
+      { href: "/platform/ai-native", label: "AI native", note: "Where the intelligence lives, and why it is model independent" },
       { href: "/platform/briefings", label: "Briefings", note: "Six questions, answered for your responsibility" },
       { href: "/platform/evidence", label: "Intelligence with evidence", note: "Every conclusion opens onto what proves it" },
       { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwrite on every material event" },

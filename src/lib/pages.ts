@@ -38,6 +38,7 @@ export const PAGES: PageEntry[] = [
 
   /* platform */
   { path: "/platform", intent: "product", target: "factoring platform", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/platform/ai-native", intent: "commercial", target: "AI native factoring software", priority: 0.9, changeFrequency: "monthly" },
   { path: "/platform/briefings", intent: "product", target: "role based operations briefing", priority: 0.9, changeFrequency: "monthly" },
   { path: "/platform/evidence", intent: "product", target: "explainable AI for lenders", priority: 0.9, changeFrequency: "monthly" },
   { path: "/platform/continuous-underwriting", intent: "product", target: "factoring underwriting software", priority: 0.9, changeFrequency: "monthly" },
