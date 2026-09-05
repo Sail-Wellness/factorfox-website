@@ -6,6 +6,13 @@ import { ProductShot } from "@/components/product-shot";
 import { HeroDeck } from "@/components/hero-animation";
 import { pageMeta, softwareSchema, faqSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
+import { INTEGRATIONS } from "@/content/integrations";
+
+/* Read from the register at build time so the page cannot drift from what the
+   platform actually supports. */
+const AVAILABLE_ACCOUNTING = INTEGRATIONS.filter(
+  (i) => i.category === "accounting" && i.status === "available",
+);
 
 export const metadata: Metadata = pageMeta({
   title: "Factoring software built on briefings, not dashboards",
@@ -32,6 +39,14 @@ const FAQS = [
   {
     q: "Can FactorFox monitor our bank covenants?",
     a: "It monitors facility limits, concentration, eligibility, advance rates, reserves, collateral performance and reporting obligations against the covenants you record, and reports days to breach on the current trajectory. It does not replace your lender, your counsel or your judgement. It gives you the time to use all three.",
+  },
+  {
+    q: "Is FactorFox tied to one AI model?",
+    a: "No. FactorFox is model agnostic by design. The intelligence is part of the architecture rather than a model bolted to the side of it, so a model can be evaluated, routed around during an outage or replaced with a better one without a migration project. Every conclusion records which model produced it, on which policy version, with the evidence attached.",
+  },
+  {
+    q: "Does FactorFox have real double entry accounting?",
+    a: "Yes. Fundings, fee accruals, reserve movements and releases, chargebacks, repurchases and cash application all post as balanced double entry against the client, the schedule and the obligor. The client statement is generated from that ledger, and audit packets assemble from the entries and the documents behind them. Client receivables also synchronise from QuickBooks Online and Xero.",
   },
   {
     q: "Which markets does FactorFox operate in?",
@@ -125,30 +140,33 @@ export default function HomePage() {
       </Section>
 
       {/* ============================================ THE SHIFT */}
-      {/* The architecture frame. It sits after the automation contrast because
-          that section raises the question this one answers: intelligence, yes,
-          but living where. */}
+      {/* Two sections that carry the architecture argument in the order it lands
+          in the room: the model is replaceable, and the documents are the setup. */}
       <Section bordered>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
             <div>
               <Eyebrow tone="signal">The architecture</Eyebrow>
-              <h2 className="text-section-lg mt-4 max-w-[24ch]">
-                Almost anyone can connect a model to software.
+              <h2 className="text-section-lg mt-4 max-w-[22ch]">
+                Model agnostic, and it has to be.
               </h2>
               <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
                 <p>
-                  Which is why asking whether a platform has AI no longer separates anything. The question
-                  that does is where the intelligence sits relative to the ledger. Attached to the software,
-                  it can summarise and draft. Inside the operating system, it can adjudicate, because it
-                  reads the same records, applies the policy version that was in force, and refuses to
-                  display a change it cannot prove.
+                  Almost anyone can connect a model to software now, which is why asking whether a platform
+                  has AI no longer separates anything. Two questions do. Where does the intelligence sit
+                  relative to the ledger, and what happens to you when the model underneath it changes.
                 </p>
                 <p>
-                  It also means FactorFox is not built around any one model. When the cloud arrived, the
-                  shift that mattered was that an application stopped depending on the operating system
-                  underneath it. This is the same shift, and we are making the same bet twice: the model is
-                  an engine, and it should be replaceable without replacing the vehicle.
+                  FactorFox is not built around any one model. When the cloud arrived, the shift that
+                  mattered was that an application stopped depending on the operating system underneath it.
+                  This is that shift again, one layer up. The model is an engine, and it should be
+                  replaceable without replacing the vehicle.
+                </p>
+                <p className="text-[var(--fg)]">
+                  <strong>
+                    We are not betting on which model wins. We are betting there will always be a better
+                    one.
+                  </strong>
                 </p>
               </div>
               <Link href="/platform/ai-native" className="btn-secondary mt-8 inline-flex">
@@ -173,6 +191,120 @@ export default function HomePage() {
               <p className="mt-6 border-t border-[var(--line)] pt-5 text-[13.5px] leading-[1.55] text-[var(--fg-subtle)]">
                 Building software for this industry since 2002, on a true double entry core.
               </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ============================================ DOCUMENTS AS CONFIGURATION */}
+      <Section tone="sunken" bordered>
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
+            <div>
+              <Eyebrow tone="signal">Documents as configuration</Eyebrow>
+              <h2 className="text-section-lg mt-4 max-w-[23ch]">
+                Your agreements already contain the setup. So why is anyone still typing it in?
+              </h2>
+              <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+                <p>
+                  Every client agreement you sign carries the operating rules for that relationship. The
+                  advance rate is in there. So is the fee schedule, the discount terms, the reserve, the
+                  concentration limit and what happens when an invoice ages past its window. All of it
+                  negotiated, all of it signed, and then all of it typed into a system by hand, where a
+                  transcription error becomes a funding error four months later.
+                </p>
+                <p className="text-[var(--fg)]">
+                  <strong>
+                    In a live demonstration we handed FactorFox an executed client factoring agreement and
+                    it did the setup from the document, including the fees and the discount terms.
+                  </strong>{" "}
+                  Not a summary of the agreement. The terms themselves, configured, with the clause each
+                  one came from still attached to it.
+                </p>
+                <p>
+                  The same thing is true one level up, and it is worth more. Your facility agreement carries
+                  the covenants you operate under. Your client agreements carry the ones you pass down. Read
+                  both as configuration rather than as paperwork and they connect. An advance against an
+                  invoice sits inside a chain that runs from the clause in the client agreement to the
+                  clause in the credit agreement, and the chain can be walked in either direction.
+                </p>
+                <p>
+                  A lender prices what it cannot see. The field exam, the borrowing base certificate
+                  assembled by hand, and the month it is already stale by, are all costs of that
+                  uncertainty. What your bank does about it is a negotiation rather than a feature, and we
+                  are not going to promise you a rate. We will say the negotiation is a different one when
+                  availability recomputes on every ledger event, every number opens onto the document
+                  behind it, and a covenant moving toward its limit is visible with days to spare instead
+                  of after the fact.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/platform/covenant-monitoring" className="btn-secondary inline-flex">
+                  Covenant monitoring
+                </Link>
+                <Link href="/platform/document-intelligence" className="btn-secondary inline-flex">
+                  Document intelligence
+                </Link>
+              </div>
+            </div>
+
+            <CovenantChain />
+          </div>
+        </Container>
+      </Section>
+
+      {/* ============================================ DOUBLE ENTRY CORE */}
+      <Section bordered>
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-16">
+            <div className="lg:sticky lg:top-28">
+              <Eyebrow tone="signal">The core underneath it</Eyebrow>
+              <h2 className="text-section-lg mt-4 max-w-[20ch]">
+                A real double entry general ledger, not a transaction table.
+              </h2>
+              <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+                <p>
+                  Intelligence is only worth what the record underneath it is worth. Every funding, fee
+                  accrual, reserve movement, release, chargeback, repurchase and cash application posts as
+                  balanced double entry against the client, the schedule and the obligor. Nothing is a
+                  column on a row that somebody can quietly overwrite.
+                </p>
+                <p>
+                  That is why the client statement agrees with your ledger, why an audit packet assembles
+                  from the entries themselves rather than from a report, and why a covenant chain has
+                  anything solid to stand on. It is also the part nobody demonstrates, because building it
+                  takes years rather than a quarter. We have been building it for this industry since 2002.
+                </p>
+                <p>
+                  Your own general ledger keeps doing what it does. Client receivables synchronise from{" "}
+                  {AVAILABLE_ACCOUNTING.map((i) => i.name).join(" and ")}, both available today, so your
+                  books and the operating ledger are not two versions of the truth being reconciled by hand.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/platform/accounting" className="btn-secondary inline-flex">
+                  How the ledger works
+                </Link>
+                <Link href="/integrations" className="btn-secondary inline-flex">
+                  See the integrations register
+                </Link>
+              </div>
+            </div>
+
+            <div className="grid gap-px overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
+              {[
+                ["Advance and reserve", "A funding splits into what the client receives now and what is held back, both sides recorded against the schedule and the client."],
+                ["Fee accrual", "Discount and factoring fees accrue on the facility terms, on the days they are earned, rather than being computed once at settlement."],
+                ["Reserve release", "Moved when the conditions for moving it are met, recorded with its own authority, never as an adjustment with no actor beside it."],
+                ["Chargebacks and repurchases", "An invoice that comes back is a recorded event against the schedule, the client and the obligor's history."],
+                ["Unapplied cash", "Held visibly and reducing availability rather than sitting outside it, and appearing as work rather than as a quiet balance."],
+                ["The audit packet", "Assembled from the entries and the documents behind them, which is a different exercise to producing a report and hoping it ties."],
+              ].map(([t, d]) => (
+                <div key={t} className="bg-[var(--bg-raised)] p-6">
+                  <h3 className="text-[15.5px] leading-[1.35]">{t}</h3>
+                  <p className="mt-2.5 text-[13.5px] leading-[1.6] text-[var(--fg-muted)]">{d}</p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
@@ -572,5 +704,80 @@ export default function HomePage() {
         </Container>
       </Section>
     </>
+  );
+}
+
+/* ============================================ covenant chain */
+/* One funded invoice, walked back to both agreements. The point of the visual is
+   the direction of travel: a number in the ledger resolves to a clause, and a
+   clause resolves to every number it governs. */
+
+function CovenantChain() {
+  const links: { label: string; source: string; line: string }[] = [
+    {
+      label: "Your facility agreement",
+      source: "Credit agreement, section 6.2",
+      line: "Advance rate not to exceed 85 percent of eligible receivables",
+    },
+    {
+      label: "Your client agreement",
+      source: "Factoring agreement, clause 3.1",
+      line: "Advance rate 80 percent, reserve 20 percent, single debtor cap 25 percent",
+    },
+    {
+      label: "The advance you made",
+      source: "Invoice 44192, funded 14 August",
+      line: "80 percent advanced, inside both limits, and it says which ones",
+    },
+  ];
+
+  return (
+    <figure className="m-0 lg:sticky lg:top-28">
+      <div
+        className="overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]"
+        style={{ boxShadow: "var(--shadow-card)" }}
+      >
+        <div className="flex items-center justify-between gap-3 border-b border-[var(--line)] bg-[var(--bg-sunken)] px-5 py-3.5">
+          <p className="u-label text-[var(--fg-subtle)]">The covenant chain</p>
+          <Status kind="info" label="One advance" />
+        </div>
+
+        <ol className="divide-y divide-[var(--line)]">
+          {links.map((l, i) => (
+            <li key={l.label} className="flex gap-4 px-5 py-4">
+              <span
+                aria-hidden="true"
+                className="mt-[3px] flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--bg-sunken)] text-[11px] font-bold text-[var(--fg-subtle)]"
+              >
+                {i + 1}
+              </span>
+              <div>
+                <p className="text-[14.5px] font-semibold leading-[1.4]">{l.label}</p>
+                <p className="u-label mt-1 text-[var(--fg-subtle)]">{l.source}</p>
+                <p className="mt-2 text-[13.5px] leading-[1.55] text-[var(--fg-muted)]">{l.line}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <div className="space-y-3 border-t border-[var(--line)] bg-[var(--bg-sunken)] px-5 py-4">
+          <p className="text-[13px] leading-[1.55] text-[var(--fg-subtle)]">
+            A book that can walk that chain on demand is a book that audits itself, which is a different
+            thing to present to a lender than a certificate somebody rebuilt at month end.
+          </p>
+          <p className="flex flex-wrap items-center gap-2 text-[13px] leading-[1.55] text-[var(--fg-subtle)]">
+            <Status kind="available" label="In the product" />
+            <span>Client agreements read into terms, and covenants you record monitored continuously.</span>
+          </p>
+          <p className="flex flex-wrap items-center gap-2 text-[13px] leading-[1.55] text-[var(--fg-subtle)]">
+            <Status kind="planned" label="In development" />
+            <span>Reading the facility agreement into those covenants the same way.</span>
+          </p>
+        </div>
+      </div>
+      <figcaption className="mt-3 max-w-[52ch] text-[12px] leading-[1.5] text-[var(--fg-subtle)]">
+        Clause references are illustrative of the structure. Yours are read from your own documents.
+      </figcaption>
+    </figure>
   );
 }
