@@ -100,11 +100,19 @@ export function ProblemSolution({
   title,
   lede,
   rows,
+  /* The default column headings suit the usual use, which is the state of play
+     against what the platform does about it. Pages that use the same two column
+     shape for a different argument can name the columns rather than mislabel
+     their own content. */
+  problemHeading = "What happens today",
+  responseHeading = "What FactorFox does instead",
 }: {
   eyebrow: string;
   title: string;
   lede?: string;
   rows: { problem: string; response: string }[];
+  problemHeading?: string;
+  responseHeading?: string;
 }) {
   return (
     <Section tone="sunken" bordered>
@@ -114,11 +122,11 @@ export function ProblemSolution({
           <div className="mt-12 overflow-hidden rounded-xl border border-[var(--line)]">
             <div className="hidden grid-cols-2 gap-px bg-[var(--line)] sm:grid">
               <div className="bg-[var(--bg-sunken)] px-6 py-3.5">
-                <span className="u-eyebrow">What happens today</span>
+                <span className="u-eyebrow">{problemHeading}</span>
               </div>
               <div className="bg-[var(--bg-sunken)] px-6 py-3.5">
                 <span className="u-eyebrow" style={{ color: "var(--accent)" }}>
-                  What FactorFox does instead
+                  {responseHeading}
                 </span>
               </div>
             </div>
