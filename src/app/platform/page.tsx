@@ -264,6 +264,11 @@ const GROUPS: { key: string; blurb: string; links: { href: string; label: string
     blurb: "The layer that decides what a named person needs to know today, and proves it.",
     links: [
       {
+        href: "/platform/ai-native",
+        label: "AI native, and model agnostic",
+        note: "Where the intelligence sits relative to the ledger, why the platform is not built around any one model, and what that is worth on an ordinary operating day.",
+      },
+      {
         href: "/platform/briefings",
         label: "Role based briefings",
         note: "Six fixed questions answered against the scope a person actually carries, with an escalation lane for anything material outside it.",

@@ -266,6 +266,7 @@ export default function FactorFoxAlternativePage() {
               ["WinFactor", "/migrate/winfactor", "Where your book sits, and what the published terms commit to."],
               ["FactorCloud", "/migrate/factorcloud", "Which plan tier holds your export path, and what the ledger structure implies."],
               ["FactorView", "/migrate/factorview", "Who holds the database, and what to establish before you give notice."],
+              ["FactorAvenue", "/migrate/factoravenue", "What the published terms commit to on exit, and what they leave to you."],
             ].map(([name, href, note]) => (
               <Link key={href} href={href} className="group bg-[var(--bg-raised)] p-6 transition-colors hover:bg-[var(--bg)]">
                 <h3 className="flex items-center gap-2 text-[16px] leading-[1.3]">

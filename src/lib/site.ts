@@ -139,6 +139,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
     title: "Platform",
     links: [
       { href: "/platform", label: "Overview" },
+      { href: "/platform/ai-native", label: "AI native" },
       { href: "/platform/briefings", label: "Briefings" },
       { href: "/platform/evidence", label: "Intelligence with evidence" },
       { href: "/platform/continuous-underwriting", label: "Continuous underwriting" },
@@ -185,6 +186,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
       { href: "/resources/glossary", label: "Glossary" },
       { href: "/migrate", label: "Migration" },
       { href: "/compare", label: "How we compare" },
+      { href: "/compare/factorfox-alternative", label: "FactorFox alternative" },
       { href: "/demo", label: "Request a demonstration" },
       { href: "/legal/privacy", label: "Privacy" },
       { href: "/legal/terms", label: "Terms" },
