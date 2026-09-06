@@ -85,6 +85,7 @@ export const PAGES: PageEntry[] = [
   { path: "/migrate/factorview", intent: "migration", target: "FactorView alternative", priority: 0.9, changeFrequency: "monthly" },
   { path: "/compare", intent: "comparison", target: "factoring software comparison", priority: 0.85, changeFrequency: "monthly" },
   { path: "/compare/how-to-choose", intent: "commercial", target: "how to choose factoring software", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/compare/factorfox-alternative", intent: "brand", target: "FactorFox alternative", priority: 0.9, changeFrequency: "monthly" },
 
   /* resources */
   { path: "/resources", intent: "informational", target: "factoring operations writing", priority: 0.7, changeFrequency: "weekly" },

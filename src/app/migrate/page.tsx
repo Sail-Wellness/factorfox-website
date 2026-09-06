@@ -441,6 +441,7 @@ export default function MigratePage() {
         links={[
           { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "The data model, the decisions and the export list." },
           { href: "/compare", label: "How we compare", note: "Recording systems against decision systems, by capability." },
+          { href: "/compare/factorfox-alternative", label: "FactorFox alternative", note: "The honest version, including where we are the wrong answer." },
           { href: "/platform/accounting", label: "Accounting", note: "Cash application, ledger and audit packets after cutover." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Where eligibility rules go once they leave the spreadsheet." },
           { href: "/platform/pricing", label: "Pricing", note: "What drives cost, including the cost of migration itself." },
