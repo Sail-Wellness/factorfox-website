@@ -72,6 +72,7 @@ authority and insurance are captured rather than verified.
 
 - [Factoring software comparison for operators](https://factorfox.com/compare/): Compare recording systems against decision systems on capability, evidence and control, including an honest note on where FactorFox is the wrong answer.
 - [Factoring software migration and what breaks](https://factorfox.com/migrate/): A conversion is not a data transfer. Map fee schedules, open receivables, reserves and chargeback history, then reconcile on differences not on totals.
+- [FactorAvenue alternative and conversion guide](https://factorfox.com/migrate/factoravenue/): Planning a move off FactorAvenue: what the published terms commit to on exit, what the platform claims and does not claim, and what to settle before notice.
 - [FactorCloud alternative and conversion guide](https://factorfox.com/migrate/factorcloud/): Planning a move off FactorCloud: which plan tier holds your export path, what the ledger structure implies, and what to settle before you give notice.
 - [FactorSoft alternative and conversion guide](https://factorfox.com/migrate/factorsoft/): Plan a FactorSoft conversion properly: what the data model carries, what to export before any vendor call, what breaks, and what to ask every platform.
 - [FactorView alternative and conversion guide](https://factorfox.com/migrate/factorview/): Planning a move off FactorView: who holds the database, what the published terms do and do not commit to, and what to establish before you give notice.

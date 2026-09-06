@@ -81,6 +81,7 @@ export const PAGES: PageEntry[] = [
   { path: "/migrate", intent: "migration", target: "factoring software migration", priority: 0.9, changeFrequency: "monthly" },
   { path: "/migrate/factorsoft", intent: "migration", target: "FactorSoft alternative", priority: 0.9, changeFrequency: "monthly" },
   { path: "/migrate/winfactor", intent: "migration", target: "WinFactor alternative", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/migrate/factoravenue", intent: "migration", target: "FactorAvenue alternative", priority: 0.8, changeFrequency: "monthly" },
   { path: "/migrate/factorcloud", intent: "migration", target: "FactorCloud alternative", priority: 0.9, changeFrequency: "monthly" },
   { path: "/migrate/factorview", intent: "migration", target: "FactorView alternative", priority: 0.9, changeFrequency: "monthly" },
   { path: "/compare", intent: "comparison", target: "factoring software comparison", priority: 0.85, changeFrequency: "monthly" },
