@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Container, Section, SectionHead, Eyebrow, CTA, JsonLd, Status } from "@/components/primitives";
 import { BriefingPanel } from "@/components/briefing-panel";
 import { HeroDeck } from "@/components/hero-animation";
+import { VideoModal } from "@/components/video-modal";
 import { pageMeta, softwareSchema, faqSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
 import { INTEGRATIONS } from "@/content/integrations";
@@ -105,6 +106,20 @@ export default function HomePage() {
               <CTA href="/platform/briefings" variant="secondary" size="lg">
                 See how briefings work
               </CTA>
+            </div>
+
+            {/* The film sits under the calls to action rather than beside them,
+                so it reads as the thing to do if you are not ready to book. */}
+            <div className="mt-7 flex justify-center">
+              <VideoModal
+                src="/media/factorfox-briefing.mp4"
+                poster="/media/factorfox-briefing-poster.jpg"
+                thumb="/media/factorfox-briefing-thumb.jpg"
+                title="A morning briefing, start to finish"
+                caption="Recorded on a demonstration book. Figures are seeded, not a customer's."
+                label="Watch a briefing happen"
+                sublabel="85 seconds, no form"
+              />
             </div>
           </div>
 
