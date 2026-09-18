@@ -110,7 +110,7 @@ export default function HomePage() {
 
             {/* The film sits under the calls to action rather than beside them,
                 so it reads as the thing to do if you are not ready to book. */}
-            <div className="mt-7 flex justify-center">
+            <div className="mt-7 flex flex-col items-center gap-2">
               <VideoModal
                 src="/media/factorfox-briefing.mp4"
                 poster="/media/factorfox-briefing-poster.jpg"
@@ -120,6 +120,9 @@ export default function HomePage() {
                 label="Watch a briefing happen"
                 sublabel="85 seconds, no form"
               />
+              <Link href="/ai-in-action" className="text-[13px] leading-none text-[var(--fg-subtle)] underline decoration-[var(--line-strong)] underline-offset-4 hover:text-[var(--fg-muted)]">
+                or open it on its own page
+              </Link>
             </div>
           </div>
 
