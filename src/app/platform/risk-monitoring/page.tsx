@@ -67,8 +67,8 @@ export default function RiskMonitoringPage() {
             width={2000}
             height={1168}
             priority
-            alt="FactorFox Intelligence screen showing ranked risk signals, among them a concentration breaching its threshold and a payment behaviour shift on one debtor, beside a concentration panel measuring each debtor's share of the portfolio against the policy threshold."
-            caption="The Intelligence screen. Signals are ranked with the movement written out rather than a status colour, and the concentration panel measures each debtor's share of the book against the policy threshold."
+            alt="FactorFox Intelligence screen showing ranked risk signals, among them a concentration breaching its threshold and a payment behavior shift on one debtor, beside a concentration panel measuring each debtor's share of the portfolio against the policy threshold."
+            caption="The Intelligence screen. Signals are ranked with the movement written out rather than a status color, and the concentration panel measures each debtor's share of the book against the policy threshold."
           />
         }
       />
@@ -168,7 +168,7 @@ export default function RiskMonitoringPage() {
               <div className="mt-4">
                 <DataTable
                   caption="Exposure at risk counting rules"
-                  head={["Rule", "Behaviour"]}
+                  head={["Rule", "Behavior"]}
                   rows={[
                     ["One account, one count", "An invoice contributes its balance once, however many signals flag it."],
                     ["Sides kept apart", "Client side and debtor side totals are shown separately and never added."],
@@ -231,8 +231,8 @@ export default function RiskMonitoringPage() {
         tone="sunken"
       >
         <p>
-          FactorFox does not replace your credit judgement, your counsel or your lender. It watches
-          conditions continuously, organises the evidence, identifies the exceptions and gets them in
+          FactorFox does not replace your credit judgment, your counsel or your lender. It watches
+          conditions continuously, organizes the evidence, identifies the exceptions and gets them in
           front of the person with the authority to act while there is still something to do about it.
           The decision stays where it belongs.
         </p>

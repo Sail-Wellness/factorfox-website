@@ -242,7 +242,7 @@ export default function FactorViewPage() {
               },
               {
                 q: "How much settled history arrives as live records?",
-                a: "Everything open comes across as live, always. The question is how much closed history joins it as transactional detail rather than as searchable evidence. More live history means deeper trend analysis from day one and a longer reconciliation. Less means a faster cutover and shallower behavioural comparison for a period.",
+                a: "Everything open comes across as live, always. The question is how much closed history joins it as transactional detail rather than as searchable evidence. More live history means deeper trend analysis from day one and a longer reconciliation. Less means a faster cutover and shallower behavioral comparison for a period.",
                 cost: "Trade off: analytical depth on day one against reconciliation scope.",
               },
               {

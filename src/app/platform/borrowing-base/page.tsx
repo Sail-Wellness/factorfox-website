@@ -165,7 +165,7 @@ export default function BorrowingBasePage() {
         </p>
         <p>
           <strong>Net availability.</strong> Eligible collateral at advance, less reserves, less what is
-          already outstanding. Then the part that changes behaviour: the same number projected forward, with
+          already outstanding. Then the part that changes behavior: the same number projected forward, with
           days to zero attached to it.
         </p>
       </ProseSection>
@@ -260,7 +260,7 @@ export default function BorrowingBasePage() {
             body: "The pool getting older before it gets smaller. Aging drift precedes cross age triggers, which means it precedes an availability fall you could have called a fortnight earlier.",
           },
           {
-            title: "Credit limit utilisation",
+            title: "Credit limit utilization",
             body: "How much of an approved obligor limit is in use, and how fast it filled. A limit that goes from thirty per cent to full in a week is a question, not a milestone.",
           },
           {
@@ -290,7 +290,7 @@ export default function BorrowingBasePage() {
         </p>
         <p>
           For a factor without a line yet, the same machinery builds the track record that gets one. FactorFox
-          ships a default covenant pack modelled on how bank rediscount facilities are actually written, so
+          ships a default covenant pack modeled on how bank rediscount facilities are actually written, so
           you can operate against realistic tests from the first month. Every surface states plainly that
           these are FactorFox covenants and not anyone&rsquo;s contract. When you sign a real facility, the clauses
           you actually agreed to replace them, and the agreement clause is quoted on the covenant as its

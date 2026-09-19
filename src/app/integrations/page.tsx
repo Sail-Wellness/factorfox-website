@@ -62,7 +62,7 @@ const FAQS = [
   },
   {
     q: "Which rows need us to hold our own vendor agreement?",
-    a: "QuickBooks Online and Xero, because the connection runs under your own application registered with Intuit or Xero rather than under ours. Creditsafe and Dun and Bradstreet, because bureau data is licensed to the institution that consumes it. Every one of those rows carries the note on this page. Probity network needs nothing, because it reads behaviour the network already holds.",
+    a: "QuickBooks Online and Xero, because the connection runs under your own application registered with Intuit or Xero rather than under ours. Creditsafe and Dun and Bradstreet, because bureau data is licensed to the institution that consumes it. Every one of those rows carries the note on this page. Probity network needs nothing, because it reads behavior the network already holds.",
   },
   {
     q: "Will you build a connector we need?",
@@ -94,7 +94,7 @@ export default function IntegrationsPage() {
         lede={
           <>
             <p>
-              This is the full register of what FactorFox connects to, organised by the job it does inside a
+              This is the full register of what FactorFox connects to, organized by the job it does inside a
               factoring or asset based lending operation rather than by vendor. Every row carries one of five
               statuses, in a column of its own, next to the name.
             </p>
@@ -260,8 +260,8 @@ export default function IntegrationsPage() {
           only point at which an answer is worth anything.
         </p>
         <p>
-          The same discipline applies inside the product. A check you have not bought is shown greyed with the
-          vendor named, because a greyed row teaches an operator something true and a hidden feature tells
+          The same discipline applies inside the product. A check you have not bought is shown grayed with the
+          vendor named, because a grayed row teaches an operator something true and a hidden feature tells
           them something false.
         </p>
       </ProseSection>
@@ -274,7 +274,7 @@ export default function IntegrationsPage() {
           { href: "/integrations/microsoft-365", label: "Microsoft 365", note: "Graph mail, Calendar, To Do, Bookings and Entra ID federation." },
           { href: "/integrations/quickbooks", label: "QuickBooks", note: "Client receivables into the intake rail, applied by a human." },
           { href: "/integrations/xero", label: "Xero", note: "The same rail for books kept in Australia, New Zealand and the United Kingdom." },
-          { href: "/integrations/credit-and-risk", label: "Credit and risk", note: "Network payment behaviour, bureau rails and lien position." },
+          { href: "/integrations/credit-and-risk", label: "Credit and risk", note: "Network payment behavior, bureau rails and lien position." },
           { href: "/integrations/banking-and-payments", label: "Banking and payments", note: "NACHA, APCA, Fedwire and EDI, with release control in front." },
           { href: "/integrations/transportation", label: "Transportation", note: "FMCSA on both sides, and a refusal that is worth reading." },
           { href: "/platform/security", label: "Security and controls", note: "Tenant isolation, immutable audit, scopes and revocation." },

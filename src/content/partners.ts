@@ -99,8 +99,8 @@ export const PARTNERS: Partner[] = [
     ],
     whatWouldFlow: [
       "Outbound from the platform: a debtor name, identifier or registration number.",
-      "Inbound: score, recommended limit, financials and trade payment behaviour, plus registration of that debtor for change alerts.",
-      "Creditsafe publishes a full public API catalogue covering company search, credit reports, global monitoring, know your customer screening and bank match. Of every company on this page, they and Ficoso have the strongest published developer documentation.",
+      "Inbound: score, recommended limit, financials and trade payment behavior, plus registration of that debtor for change alerts.",
+      "Creditsafe publishes a full public API catalog covering company search, credit reports, global monitoring, know your customer screening and bank match. Of every company on this page, they and Ficoso have the strongest published developer documentation.",
     ],
     registerName: "Creditsafe",
     connectionStatus:
@@ -109,7 +109,7 @@ export const PARTNERS: Partner[] = [
       "Ownership and parent entity are not disclosed on the pages we read. Their database figures, such as the number of business reports held, are their own marketing claims rather than audited numbers, so we do not repeat them.",
     sources: [
       { label: "Creditsafe, our story", href: "https://www.creditsafe.com/us/en/more/about/our-story.html" },
-      { label: "Creditsafe Connect API catalogue", href: "https://doc.creditsafe.com/connect-apis-catalog" },
+      { label: "Creditsafe Connect API catalog", href: "https://doc.creditsafe.com/connect-apis-catalog" },
     ],
     linkedin: "https://www.linkedin.com/company/creditsafe/",
   },
@@ -170,8 +170,8 @@ export const PARTNERS: Partner[] = [
       "The specific signal worth understanding is missed federal payroll deposits. When the expected deposits stop appearing, something has gone wrong in a business well before it shows up in an aging report or a covenant test.",
     ],
     whatWouldFlow: [
-      "Inbound to the platform: monitoring status, change signals and prioritised risk flags identifying which clients changed and why they were flagged.",
-      "Outbound: the taxpayer roster and, critically, the taxpayer authorisation without which no transcript can be pulled. That authorisation is a real operational step rather than a configuration detail.",
+      "Inbound to the platform: monitoring status, change signals and prioritized risk flags identifying which clients changed and why they were flagged.",
+      "Outbound: the taxpayer roster and, critically, the taxpayer authorization without which no transcript can be pulled. That authorization is a real operational step rather than a configuration detail.",
       "They state they run an integration partner track and offer an API. It is worth noting plainly that no public API documentation exists at the time of writing, and that two pages linked from their own navigation return an error.",
     ],
     registerName: "TaxRock",
@@ -258,25 +258,25 @@ export const PARTNERS: Partner[] = [
     slug: "atob",
     metaTitle: "AtoB: fuel cards and carrier payments",
     metaDescription:
-      "Fuel cards, fast carrier payment and a white label programme a factor can brand as its own. What AtoB does, and why fuel is where a factor can compete.",
+      "Fuel cards, fast carrier payment and a white label program a factor can brand as its own. What AtoB does, and why fuel is where a factor can compete.",
     name: "AtoB",
     role: "payments",
     summary:
-      "Fuel cards and fast carrier payments, with a factoring partner programme and a white label option.",
+      "Fuel cards and fast carrier payments, with a factoring partner program and a white label option.",
     whatTheyDo: [
       "AtoB sells a fuel card and payments platform to trucking fleets. Fleets buy diesel at discount at truck stops and AtoB moves money to drivers and carriers by bank transfer, debit and consumer payment networks. They also sell a business expense card and a driver payroll card.",
       "Founded in 2019, based in San Francisco. In September 2024 they announced a 130 million dollar series C led by General Catalyst and Bloomberg Beta with Mastercard participating.",
-      "They run an explicit factoring partner programme with published commercial terms, including revenue share on card spend and a payment processing fee the factor sets. That is unusually specific for this category and it means the factoring use case is documented rather than inferred.",
+      "They run an explicit factoring partner program with published commercial terms, including revenue share on card spend and a payment processing fee the factor sets. That is unusually specific for this category and it means the factoring use case is documented rather than inferred.",
     ],
     whyItMatters: [
-      "Fuel is the largest operating cost a carrier carries and the fuel advance is one of the few products where a factor competes on something other than rate. A card programme the factor brands as its own turns a commodity into a relationship.",
+      "Fuel is the largest operating cost a carrier carries and the fuel advance is one of the few products where a factor competes on something other than rate. A card program the factor brands as its own turns a commodity into a relationship.",
       "Payment speed is the other half. Their factoring page describes moving money in minutes, including nights, weekends and holidays, which matters because a freight book does not stop funding when the banking calendar does.",
       "The white label option is the strategic part. The carrier sees the factor's brand on the card and in the portal, which keeps the relationship where the factor wants it.",
     ],
     whatWouldFlow: [
       "Outbound: payment instructions and card issuance requests.",
       "Inbound: fuel transaction data and payment confirmations.",
-      "They publish no public developer documentation. Their factoring page describes a commercial partner programme and a business integration rather than developer endpoints, and it would be misleading to present it as a public API.",
+      "They publish no public developer documentation. Their factoring page describes a commercial partner program and a business integration rather than developer endpoints, and it would be misleading to present it as a public API.",
     ],
     connectionStatus:
       "A commercial relationship. No connection is recorded in the FactorFox integration register today, so nothing in the product currently connects to AtoB.",
@@ -308,10 +308,10 @@ export const PARTNERS: Partner[] = [
       "They name FactorFox on their own homepage among the factoring platforms they integrate with, alongside FactorView, FactorSoft, FactorCloud and WinFactor. That is a partner asserting the relationship on their own property rather than us asserting it on ours.",
     ],
     whatWouldFlow: [
-      "Outbound from the platform: invoice approval, payment authorisation and payee identity.",
+      "Outbound from the platform: invoice approval, payment authorization and payee identity.",
       "Inbound: payment status, settlement confirmation and fuel transaction data.",
       "Onward to the carrier: instant funding into their account, reachable by card, bill pay or a message to the driver.",
-      "They publish no public API documentation. Their help centre is written for end users rather than developers, so an integration here is a partner build rather than a self serve one.",
+      "They publish no public API documentation. Their help center is written for end users rather than developers, so an integration here is a partner build rather than a self serve one.",
     ],
     connectionStatus:
       "A commercial relationship, and the one partner who names FactorFox publicly on their own site. No row exists in the FactorFox integration register today, so the register governs and this page does not describe it as available in the product.",
@@ -333,14 +333,14 @@ export const PARTNERS: Partner[] = [
     summary:
       "Independent movement data, so a funding decision can rest on whether the truck moved rather than on paperwork.",
     whatTheyDo: [
-      "Load Connex sells a bundled operating platform for trucking: fuel cards, dispatch software, a load marketplace and tracking. It sells to carriers directly and sells a white labelled version of the whole stack to factoring companies to offer their own carrier clients.",
+      "Load Connex sells a bundled operating platform for trucking: fuel cards, dispatch software, a load marketplace and tracking. It sells to carriers directly and sells a white labeled version of the whole stack to factoring companies to offer their own carrier clients.",
       "Based in Burbank, California. Founded and led by Edwin Sahakian.",
       "Their fraud product verifies freight invoices against independent location data and scans documents for tampering, with proof of delivery collected automatically by message to the driver.",
     ],
     whyItMatters: [
       "This is the closest thing in the group to an answer for the oldest question in freight factoring, which is whether the load in front of you actually moved. Document intelligence can tell you a bill of lading is internally consistent and not a duplicate. It cannot tell you a truck went anywhere.",
       "Independent movement data changes the shape of that question. A funding decision that rests on where the vehicle was is a different kind of decision from one resting on what the paperwork says, and it is the harder one to defraud.",
-      "The fuel programme is white labelled with the rebate split configurable, which makes it a revenue line for the factor rather than a cost.",
+      "The fuel program is white labeled with the rebate split configurable, which makes it a revenue line for the factor rather than a cost.",
       "They also generate the data needed for interstate fuel tax reporting automatically, which is a real administrative burden on the carrier and therefore a retention argument for the factor.",
     ],
     whatWouldFlow: [
@@ -420,7 +420,7 @@ export const PARTNERS: Partner[] = [
     connectionStatus:
       "Part of the same group as FactorFox, under FactorEvo Group Holdings. It is not a third party integration and this page does not present it as one.",
     notEstablished:
-      "Formation date of the entity, any leadership of its own, headcount, funding, and how many finance companies participate. Note also that the application store description promises load matching and route optimisation that the current website does not describe, so we take capability statements from the website.",
+      "Formation date of the entity, any leadership of its own, headcount, funding, and how many finance companies participate. Note also that the application store description promises load matching and route optimization that the current website does not describe, so we take capability statements from the website.",
     sources: [
       { label: "Trucker Copilot", href: "https://truckercopilot.com/" },
     ],

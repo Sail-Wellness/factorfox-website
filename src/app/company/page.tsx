@@ -64,7 +64,7 @@ export default function CompanyPage() {
             label: "Origin",
             title: "A borrower who could write code",
             body:
-              "In the late 1990s the founder was running a business and using invoice factoring to fund it. He saw the process from the client side first: what a factor asks for, how long it takes, and how much of the delay is not credit judgement at all but people moving paper between each other. He built software for factoring companies because he had been on the receiving end of the version that did not exist yet.",
+              "In the late 1990s the founder was running a business and using invoice factoring to fund it. He saw the process from the client side first: what a factor asks for, how long it takes, and how much of the delay is not credit judgment at all but people moving paper between each other. He built software for factoring companies because he had been on the receiving end of the version that did not exist yet.",
           },
           {
             label: "2002",
@@ -227,7 +227,7 @@ export default function CompanyPage() {
           },
           {
             title: "The clerical layer should have been gone already",
-            body: "Keying documents, rebuilding a borrowing base by hand every morning, assembling an answer from four screens. None of it is judgement, all of it consumes the people who hold the judgement.",
+            body: "Keying documents, rebuilding a borrowing base by hand every morning, assembling an answer from four screens. None of it is judgment, all of it consumes the people who hold the judgment.",
           },
           {
             title: "Intelligence without evidence does not survive contact with a bank",

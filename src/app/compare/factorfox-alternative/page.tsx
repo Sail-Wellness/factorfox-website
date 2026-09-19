@@ -161,7 +161,7 @@ export default function FactorFoxAlternativePage() {
         items={[
           {
             title: "The intelligence is part of the architecture",
-            body: "Almost anyone can connect a model to software now. The question that separates anything is where the intelligence sits relative to the ledger. Attached to the software it can summarise and draft. Inside the operating system it can adjudicate, because it reads the same records and applies the policy version that was in force.",
+            body: "Almost anyone can connect a model to software now. The question that separates anything is where the intelligence sits relative to the ledger. Attached to the software it can summarize and draft. Inside the operating system it can adjudicate, because it reads the same records and applies the policy version that was in force.",
           },
           {
             title: "Model agnostic, on purpose",
@@ -173,7 +173,7 @@ export default function FactorFoxAlternativePage() {
           },
           {
             title: "Every conclusion carries its evidence",
-            body: "A score you cannot open is a score you cannot defend, to a credit committee, a lender or an examiner. Each briefing answer links to the invoices, documents, payment behaviour and contract clauses behind it, with the policy version and the confidence stated.",
+            body: "A score you cannot open is a score you cannot defend, to a credit committee, a lender or an examiner. Each briefing answer links to the invoices, documents, payment behavior and contract clauses behind it, with the policy version and the confidence stated.",
           },
         ]}
       />

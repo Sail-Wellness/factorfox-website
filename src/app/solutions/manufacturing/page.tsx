@@ -54,7 +54,7 @@ export default function ManufacturingPage() {
         items={[
           {
             title: "Compliance chargebacks",
-            body: "Labelling, carton marking, routing guide violations and advance shipping notice failures. Small individually, relentless in aggregate, and entirely predictable once you can see them grouped by reason.",
+            body: "Labeling, carton marking, routing guide violations and advance shipping notice failures. Small individually, relentless in aggregate, and entirely predictable once you can see them grouped by reason.",
           },
           {
             title: "Delivery performance penalties",
@@ -66,7 +66,7 @@ export default function ManufacturingPage() {
           },
           {
             title: "Trade promotions and rebates",
-            body: "Co operative advertising, volume rebates and markdown support, deducted against current invoices for programmes agreed months earlier.",
+            body: "Co operative advertising, volume rebates and markdown support, deducted against current invoices for programs agreed months earlier.",
           },
           {
             title: "Short pays and pricing disputes",
@@ -147,7 +147,7 @@ export default function ManufacturingPage() {
             problem:
               "The client's largest buyer stretches payment by two weeks, and it is read as a collections problem rather than as the buyer's new policy.",
             response:
-              "Payment velocity is measured per buyer across every client selling to them, so a change in the buyer's behaviour is attributed to the buyer.",
+              "Payment velocity is measured per buyer across every client selling to them, so a change in the buyer's behavior is attributed to the buyer.",
           },
           {
             problem:

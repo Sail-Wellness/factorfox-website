@@ -189,7 +189,7 @@ export default function PrivacyPage() {
                 to retain records, compliance with a legal obligation.
               </p>
               <p>
-                We do not sell personal information, we do not share it for cross context behavioural
+                We do not sell personal information, we do not share it for cross context behavioral
                 advertising, and we do not make decisions producing legal effects about you by automated
                 means through this website.
               </p>

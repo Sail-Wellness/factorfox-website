@@ -29,19 +29,19 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "We do not have a rediscount line yet. Is any of this useful?",
-    a: "That is the situation the default pack was built for. A factor without a facility has no covenants to monitor, so the compliance surface sits empty until the week a bank hands over a credit agreement and asks for a history nobody was keeping. FactorFox ships a covenant pack modelled on how bank rediscount facilities are actually written, so you are measuring against realistic tests from the first month and arrive at the conversation with a record instead of a promise.",
+    a: "That is the situation the default pack was built for. A factor without a facility has no covenants to monitor, so the compliance surface sits empty until the week a bank hands over a credit agreement and asks for a history nobody was keeping. FactorFox ships a covenant pack modeled on how bank rediscount facilities are actually written, so you are measuring against realistic tests from the first month and arrive at the conversation with a record instead of a promise.",
   },
   {
     q: "How does the platform keep your covenants and our lender's apart?",
-    a: "Every surface labels which is which, and the two are never blended into one compliance score. A FactorFox standard is a modelled recommendation and breaching it is a management problem you decide what to do about. A covenant recorded from your credit agreement is a contractual obligation and breaching it may be an event of default. Keeping that line bright is more important than any feature on this page.",
+    a: "Every surface labels which is which, and the two are never blended into one compliance score. A FactorFox standard is a modeled recommendation and breaching it is a management problem you decide what to do about. A covenant recorded from your credit agreement is a contractual obligation and breaching it may be an event of default. Keeping that line bright is more important than any feature on this page.",
   },
   {
     q: "What happens when a covenant depends on data FactorFox does not hold?",
-    a: "It reads awaiting a live source and names the source. It does not report zero, and it does not quietly drop the test out of the pack so the screen looks green. A missing input is a different state from a passing test, and a compliance certificate signed against a covenant nobody could actually compute is the specific accident this behaviour exists to prevent.",
+    a: "It reads awaiting a live source and names the source. It does not report zero, and it does not quietly drop the test out of the pack so the screen looks green. A missing input is a different state from a passing test, and a compliance certificate signed against a covenant nobody could actually compute is the specific accident this behavior exists to prevent.",
   },
   {
     q: "Where does the number on the screen come from?",
-    a: "From the same records the rest of the platform quotes. Eligibility, ineligibles, reserves and advance rates come out of the borrowing base. Concentration comes from the debtor side view, aggregated under one debtor name across every client that sells to it. Collateral performance comes from dilution and payment behaviour measured against your own book. Each test opens into those records, and the agreement clause is quoted alongside as the evidence for the test itself.",
+    a: "From the same records the rest of the platform quotes. Eligibility, ineligibles, reserves and advance rates come out of the borrowing base. Concentration comes from the debtor side view, aggregated under one debtor name across every client that sells to it. Collateral performance comes from dilution and payment behavior measured against your own book. Each test opens into those records, and the agreement clause is quoted alongside as the evidence for the test itself.",
   },
   {
     q: "Does this replace our compliance certificate process?",
@@ -102,11 +102,11 @@ export default function CovenantMonitoringPage() {
           different people and reconciled once a month by whoever drew the short straw.
         </p>
         <p>
-          FactorFox computes all of them from the same book. Facility limits and utilisation against the
+          FactorFox computes all of them from the same book. Facility limits and utilization against the
           line. Concentration, on the debtor side, aggregated under one debtor name across every client
           that sells to it. Eligibility criteria and the ineligibles they produce. Advance rates by
           collateral class. Reserve requirements and how much of each reserve is currently consumed.
-          Collateral performance, meaning dilution and payment behaviour measured against your own
+          Collateral performance, meaning dilution and payment behavior measured against your own
           history. Reporting obligations with their due dates. And the financial tests your agreement
           carries, computed on the schedule the agreement specifies.
         </p>
@@ -126,11 +126,11 @@ export default function CovenantMonitoringPage() {
           />
           <div className="mt-11">
             <DataTable
-              caption="Covenant families, inputs and behaviour"
-              head={["Test family", "Computed from", "Behaviour as it tightens"]}
+              caption="Covenant families, inputs and behavior"
+              head={["Test family", "Computed from", "Behavior as it tightens"]}
               rows={[
                 [
-                  "Facility limits and utilisation",
+                  "Facility limits and utilization",
                   "Outstanding advances against the committed line, by facility and by tranche",
                   "Availability compression is reported with days to zero, and treasury is warned before a release window rather than during it",
                 ],
@@ -156,7 +156,7 @@ export default function CovenantMonitoringPage() {
                 ],
                 [
                   "Collateral performance",
-                  "Dilution movement and payment behaviour measured against your own book's history",
+                  "Dilution movement and payment behavior measured against your own book's history",
                   "A performance test drifting reaches credit as a finding before it reaches the certificate as a number",
                 ],
                 [
@@ -177,12 +177,12 @@ export default function CovenantMonitoringPage() {
 
       <ProseSection
         eyebrow="The bright line"
-        title="Ours is a standard. Theirs is a contract. Never the same colour on the screen."
+        title="Ours is a standard. Theirs is a contract. Never the same color on the screen."
         aside={
           <Card accent="signal">
             <Eyebrow tone="signal">The default covenant pack</Eyebrow>
             <p className="mt-3 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
-              FactorFox ships a covenant pack modelled on how bank rediscount facilities are actually
+              FactorFox ships a covenant pack modeled on how bank rediscount facilities are actually
               written. It exists so a factor without a line is still measuring something real, and still
               accumulating the track record a lender will ask for.
             </p>
@@ -200,7 +200,7 @@ export default function CovenantMonitoringPage() {
           to get wrong, is whether the person reading it knows what breaching it costs.
         </p>
         <p>
-          <strong>A FactorFox standard is a recommendation.</strong> It is modelled, we chose it, and
+          <strong>A FactorFox standard is a recommendation.</strong> It is modeled, we chose it, and
           breaching it is a management problem. You look at it, you decide it was the right trade this
           month, you write down why, and the record of that decision sits with the finding.
         </p>
@@ -208,7 +208,7 @@ export default function CovenantMonitoringPage() {
           <strong>A covenant from your credit agreement is an obligation.</strong> You did not choose it,
           your lender did, and breaching it may be an event of default with consequences that have nothing
           to do with how reasonable the trade looked. That is a different category of fact and it is
-          labelled as one everywhere it appears, in the brief, on the covenant surface, in Microsoft Teams
+          labeled as one everywhere it appears, in the brief, on the covenant surface, in Microsoft Teams
           and in the packet.
         </p>
         <p>
@@ -226,7 +226,7 @@ export default function CovenantMonitoringPage() {
           {
             label: "Day one",
             title: "The default pack starts measuring",
-            body: "Modelled tests, clearly labelled as FactorFox standards, running against your live book from the first month. You are building a record before anybody asks you for one, and you learn how your own book behaves against realistic thresholds while the stakes are still internal.",
+            body: "Modeled tests, clearly labeled as FactorFox standards, running against your live book from the first month. You are building a record before anybody asks you for one, and you learn how your own book behaves against realistic thresholds while the stakes are still internal.",
           },
           {
             label: "On signing",
@@ -272,13 +272,13 @@ export default function CovenantMonitoringPage() {
               what they tell you it says.
             </p>
             <p>
-              <strong>It does not replace executive judgement.</strong> Deciding what to do about a
+              <strong>It does not replace executive judgment.</strong> Deciding what to do about a
               tightening test is a commercial decision involving relationships, timing and appetite that no
               platform holds. What the platform removes is the excuse that nobody knew, and what it buys
               you is the time to make the decision rather than announce it.
             </p>
             <p>
-              What it does, precisely, is monitor conditions continuously, organise the evidence,
+              What it does, precisely, is monitor conditions continuously, organize the evidence,
               identify the exceptions and put them in front of a named person while there is still
               something useful to do.
             </p>
@@ -340,7 +340,7 @@ const TESTS: {
     source: "FactorFox standard",
     position: "4.8%",
     limit: "5.0%",
-    note: "Modelled standard, not your agreement. Days to breach: 11 on the current trajectory.",
+    note: "Modeled standard, not your agreement. Days to breach: 11 on the current trajectory.",
     kind: "attention",
   },
   {
@@ -374,7 +374,7 @@ function CovenantPositionScene() {
               Covenant position &middot; rediscount facility
             </p>
             <p className="mt-0.5 text-[0.875rem] font-semibold">
-              5 tests <span className="font-normal text-[var(--fg-muted)]">&middot; source labelled on every row</span>
+              5 tests <span className="font-normal text-[var(--fg-muted)]">&middot; source labeled on every row</span>
             </p>
           </div>
           <Status kind="critical" label="1 breached" />
@@ -413,8 +413,8 @@ function CovenantPositionScene() {
         </p>
       </div>
       <figcaption className="mt-3 max-w-[52ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
-        Illustration of the covenant surface. The labelling of every test by source, the quoted clause as
-        evidence, days to breach and the awaiting a live source state are the platform&rsquo;s own behaviour.
+        Illustration of the covenant surface. The labeling of every test by source, the quoted clause as
+        evidence, days to breach and the awaiting a live source state are the platform&rsquo;s own behavior.
         Clause references and figures come from a seeded demonstration book, not from any real agreement.
       </figcaption>
     </figure>

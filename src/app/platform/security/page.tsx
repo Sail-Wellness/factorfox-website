@@ -121,7 +121,7 @@ export default function SecurityPage() {
           page that quietly stopped saying when.
         */}
         <p>
-          <strong>FactorFox is working toward SOC 2.</strong> A formal compliance programme is under way and
+          <strong>FactorFox is working toward SOC 2.</strong> A formal compliance program is under way and
           completion is targeted for the end of 2026. That is a statement about work in progress. It is not a
           certification claim and it should not be read as one.
         </p>
@@ -136,7 +136,7 @@ export default function SecurityPage() {
           implemented in the platform rather than described in a policy document, and each one can be
           demonstrated to your reviewers against a running environment. A control you can watch refuse
           something is worth more in a vendor review than a logo, which is the position this page took before
-          there was a programme to point at and the position it will keep after there is a report.
+          there was a program to point at and the position it will keep after there is a report.
         </p>
       </ProseSection>
 
@@ -194,7 +194,7 @@ export default function SecurityPage() {
                 ],
                 [
                   "The delivery wall",
-                  "No outbound message escapes it, on any channel, including Microsoft Graph mail. Non production environments carry allowlist and sink behaviour, so a test can never reach a real debtor, client or bank.",
+                  "No outbound message escapes it, on any channel, including Microsoft Graph mail. Non production environments carry allowlist and sink behavior, so a test can never reach a real debtor, client or bank.",
                 ],
                 [
                   "Revocation",
@@ -239,7 +239,7 @@ export default function SecurityPage() {
         </p>
         <p>
           <strong>Try to have an unlinked directory account do something.</strong> Being in the Teams channel
-          is not authorisation. An unlinked Microsoft account is refused by name and nothing is created for
+          is not authorization. An unlinked Microsoft account is refused by name and nothing is created for
           it: no user, no tenant, no shadow record.
         </p>
         <p>
@@ -261,7 +261,7 @@ export default function SecurityPage() {
         items={[
           {
             title: "No certification held today",
-            body: "A SOC 2 programme is under way and targeted for the end of 2026. Until a report exists there is no certification claim on this site and no badge. See the dated statement above.",
+            body: "A SOC 2 program is under way and targeted for the end of 2026. Until a report exists there is no certification claim on this site and no badge. See the dated statement above.",
           },
           {
             title: "No outcome learning",
@@ -276,8 +276,8 @@ export default function SecurityPage() {
             body: "Several external sources are declared and dark. Where one is not wired, the platform reports itself blind and names the source rather than presenting an absence as a clean result.",
           },
           {
-            title: "No replacement of judgement",
-            body: "FactorFox does not replace legal review, lender approval or executive judgement. It monitors conditions, organises evidence, identifies exceptions and buys decision makers time to act.",
+            title: "No replacement of judgment",
+            body: "FactorFox does not replace legal review, lender approval or executive judgment. It monitors conditions, organizes evidence, identifies exceptions and buys decision makers time to act.",
           },
           {
             title: "No numbers without a source",

@@ -103,7 +103,7 @@ export function VideoModal({ src, poster, title, caption, label, sublabel, thumb
         className="ff-video-dialog"
         aria-label={title}
         onClick={(e) => {
-          /* The dialog fills the viewport and centres the film inside it, so
+          /* The dialog fills the viewport and centers the film inside it, so
              anything that is not within the shell is the darkened area around
              it. Testing containment rather than comparing to the dialog itself
              is what makes this hold when the click lands on padding. */

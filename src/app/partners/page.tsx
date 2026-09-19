@@ -24,7 +24,7 @@ import { pageMeta, softwareSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Partners and the partner programme",
+  title: "Partners and the partner program",
   description:
     "Who FactorFox works with, what each relationship actually is, and how to become a partner. Every technology row carries the status it holds in the product.",
   path: "/partners",
@@ -42,7 +42,7 @@ const FAQS = [
     a: "Someone who already has the trust of operators in this industry and would rather send them somewhere good than somewhere that pays most. Consultants who run conversions, people who advise factoring companies on operations or credit, accountants and lawyers who serve this sector. What we are not looking for is volume. A single introduction from somebody a principal already trusts is worth more than a list, and the arrangement is written down rather than assumed.",
   },
   {
-    q: "Do you have a reseller or white label programme?",
+    q: "Do you have a reseller or white label program?",
     a: "Talk to us rather than reading a page about it. Arrangements of that kind depend on the market, the support model and who carries the customer relationship, and none of that survives being reduced to a tier table. If you have a specific proposition in mind, the form below reaches somebody who can discuss commercial terms rather than route you into a sequence.",
   },
   {
@@ -72,7 +72,7 @@ export default function PartnersPage() {
         data={softwareSchema({
           name: "FactorFox partners",
           description:
-            "The companies FactorFox works with, what each relationship is, and how to apply to the partner programme.",
+            "The companies FactorFox works with, what each relationship is, and how to apply to the partner program.",
           path: "/partners",
         })}
       />
@@ -268,7 +268,7 @@ export default function PartnersPage() {
               <Eyebrow>Where we are not</Eyebrow>
               <h3 className="text-card-title mt-3">No certification body, and no security badge</h3>
               <p className="mt-3 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-                A SOC 2 programme is under way with completion targeted for the end of 2026, and until a
+                A SOC 2 program is under way with completion targeted for the end of 2026, and until a
                 report exists there is no certification claim and no logo anywhere on this site. It belongs
                 on a partners page because a badge from an audit firm is the one most often mistaken for a
                 partnership.
@@ -282,7 +282,7 @@ export default function PartnersPage() {
       </Section>
 
       <FeatureGrid
-        eyebrow="The programme"
+        eyebrow="The program"
         title="Three ways to work with us"
         lede="Each one is a real arrangement with terms written down. None of them is a tier table, because the terms depend on the market and the support model and a tier table would be a guess dressed as a policy."
         tone="sunken"

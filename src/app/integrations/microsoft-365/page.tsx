@@ -350,7 +350,7 @@ export default function Microsoft365Page() {
           { href: "/platform/collections", label: "Collections", note: "The case that projects a follow up into the calendar." },
           { href: "/platform/security", label: "Security and controls", note: "Scopes, revocation, break glass and immutable audit in full." },
           { href: "/platform/fraud-detection", label: "Fraud detection", note: "Why a bank change email becomes a hold instead of an update." },
-          { href: "/integrations", label: "All integrations", note: "The register, organised by business purpose, with a status column." },
+          { href: "/integrations", label: "All integrations", note: "The register, organized by business purpose, with a status column." },
         ]}
       />
 

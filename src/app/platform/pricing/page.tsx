@@ -41,7 +41,7 @@ const FAQS = [
   },
   {
     q: "How should we budget for migration?",
-    a: "As a project with a people cost, not as a line item on a licence quote. The software side of a migration is rarely the expensive part. The expensive parts are extraction from the incumbent, reconciling balances that have to tie to the cent, the parallel period where your team runs two systems, and the historical archive nobody wants to talk about until an examiner asks for something from four years ago.",
+    a: "As a project with a people cost, not as a line item on a license quote. The software side of a migration is rarely the expensive part. The expensive parts are extraction from the incumbent, reconciling balances that have to tie to the cent, the parallel period where your team runs two systems, and the historical archive nobody wants to talk about until an examiner asks for something from four years ago.",
   },
   {
     q: "What does the system we already run cost us?",
@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     q: "Do you charge for integrations?",
-    a: "Ask us on the call, because the honest answer depends on which ones. Some rails carry no vendor cost at all: debtor payment behaviour drawn from the FactorFox network has no contract and no per check charge. Others require you to hold your own agreement and keys with the vendor, and that cost is theirs rather than ours. The register on our integrations page states which is which before you ask.",
+    a: "Ask us on the call, because the honest answer depends on which ones. Some rails carry no vendor cost at all: debtor payment behavior drawn from the FactorFox network has no contract and no per check charge. Others require you to hold your own agreement and keys with the vendor, and that cost is theirs rather than ours. The register on our integrations page states which is which before you ask.",
   },
 ];
 
@@ -172,7 +172,7 @@ export default function PricingPage() {
                 ],
                 [
                   "Tiered platform fee",
-                  "Predictability. Finance can budget it, and it does not distort behaviour inside the system.",
+                  "Predictability. Finance can budget it, and it does not distort behavior inside the system.",
                   "Anyone sitting just above a tier boundary, and anyone whose growth is uneven.",
                   "What happens at the boundary and whether you can move down again after a slow quarter, or only up.",
                 ],
@@ -191,7 +191,7 @@ export default function PricingPage() {
       <FeatureGrid
         eyebrow="Migration"
         title="What a platform change actually costs"
-        lede="The licence quote is the part of a migration budget you can read. These are the parts that decide whether the project lands."
+        lede="The license quote is the part of a migration budget you can read. These are the parts that decide whether the project lands."
         items={[
           {
             title: "Extraction from the incumbent",
@@ -214,7 +214,7 @@ export default function PricingPage() {
             body: "Twenty year operators are fast in the system they know. The productivity dip is real, it is temporary, and pretending it will not happen is how implementations lose the trust of the people who have to use them.",
           },
           {
-            title: "Configuration that carries judgement",
+            title: "Configuration that carries judgment",
             body: "Eligibility rules, advance rates, reserve policy, gates and fee structures. This is the work that determines whether the new system reflects how you actually lend, and it cannot be done by someone who does not know your credit policy.",
           },
         ]}
@@ -223,7 +223,7 @@ export default function PricingPage() {
       <ProseSection eyebrow="The incumbent" title="Your current system is not free, and the invoice is not the cost.">
         <p>
           The most common error in this comparison is treating the existing platform as the zero point. It is
-          not zero. It has a licence, it has hosting, it has support charges, it may have per user or per
+          not zero. It has a license, it has hosting, it has support charges, it may have per user or per
           transaction elements that grew quietly, and it very probably has integration and report writing
           costs that arrive as small invoices nobody aggregates.
         </p>
@@ -233,7 +233,7 @@ export default function PricingPage() {
           arrive as paper. The analyst who rebuilds the borrowing base every morning in a workbook only they
           understand. The officer who assembles an answer from four screens whenever the owner asks what
           changed overnight. The week before every field exam. Those salaries are as much a part of the cost
-          of your platform as the licence, and they never appear on the renewal.
+          of your platform as the license, and they never appear on the renewal.
         </p>
         <p>
           <strong>Then the cost of what does not get done.</strong> The client who waited two days for a
@@ -279,7 +279,7 @@ export default function PricingPage() {
           {
             label: "Absence",
             title: "What happens on screen when a check has not been configured?",
-            body: "If the answer is that it is hidden, understand what that means: an operator can believe a check ran when it did not. A greyed row teaches. A hidden feature lies.",
+            body: "If the answer is that it is hidden, understand what that means: an operator can believe a check ran when it did not. A grayed row teaches. A hidden feature lies.",
           },
           {
             label: "Learning",

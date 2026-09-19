@@ -49,7 +49,7 @@ const FAQS = [
   },
   {
     q: "Does cross portfolio detection mean you look at other lenders' data?",
-    a: "It means we look across your own portfolio, inside your own tenant. Tenant isolation is enforced at the database level. Debtor payment behaviour drawn from the FactorFox network is a separate and deliberately narrow thing: it tells you how a debtor has actually paid across the network, and nothing about your book leaves it.",
+    a: "It means we look across your own portfolio, inside your own tenant. Tenant isolation is enforced at the database level. Debtor payment behavior drawn from the FactorFox network is a separate and deliberately narrow thing: it tells you how a debtor has actually paid across the network, and nothing about your book leaves it.",
   },
 ];
 
@@ -60,7 +60,7 @@ export default function FraudDetectionPage() {
         data={softwareSchema({
           name: "FactorFox fraud detection",
           description:
-            "Behavioural fraud signals for factoring: duplicate and near duplicate documents, invoice size deviation, submission timing, bank account change holds and cross portfolio detection.",
+            "Behavioral fraud signals for factoring: duplicate and near duplicate documents, invoice size deviation, submission timing, bank account change holds and cross portfolio detection.",
           path: "/platform/fraud-detection",
         })}
       />
@@ -216,7 +216,7 @@ export default function FraudDetectionPage() {
             body: "The debtor contact for verification resolving to the same person or the same number as a party already on your book. Verification that loops back to the client is not verification.",
           },
           {
-            title: "Synchronised behaviour",
+            title: "Synchronized behavior",
             body: "Two clients whose submission patterns, invoice shapes and debtor sets move together in a way unrelated businesses do not.",
           },
           {
@@ -237,7 +237,7 @@ export default function FraudDetectionPage() {
         steps={[
           {
             label: "Detect",
-            title: "The request is recognised wherever it arrives",
+            title: "The request is recognized wherever it arrives",
             body: "Through the portal, in a mailbox, inside a document, or as an edit somebody attempts on a party record. Mail content that looks like a bank change is classified as requiring verification rather than applied, whatever channel it came through.",
           },
           {
@@ -286,7 +286,7 @@ export default function FraudDetectionPage() {
           <strong>Every dismissal is recorded with a reason and a name.</strong> An officer cannot clear a
           signal by closing a window. They write why, and the record keeps their name against it permanently.
           This is the discipline that makes the queue trustworthy today, and it is also the exact raw material
-          a calibration loop requires: a labelled corpus of what experienced people judged, and why.
+          a calibration loop requires: a labeled corpus of what experienced people judged, and why.
         </p>
         <p>
           <strong>Calibration is the next build, not a current feature.</strong> We are saying so here rather
@@ -294,9 +294,9 @@ export default function FraudDetectionPage() {
           and the change will be dated.
         </p>
         <p>
-          <strong>And the platform does not decide.</strong> It stops money, it organises evidence, it raises
+          <strong>And the platform does not decide.</strong> It stops money, it organizes evidence, it raises
           exceptions and it buys a decision maker time. Whether this client is committing a fraud is a
-          judgement a person makes, with their name on it, and no version of this product will make it for
+          judgment a person makes, with their name on it, and no version of this product will make it for
           you.
         </p>
       </ProseSection>

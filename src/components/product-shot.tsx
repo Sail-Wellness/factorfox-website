@@ -40,8 +40,8 @@ export function ProductShot({
 }: Props) {
   const light = `/product/${name}.${format}`;
   const dark = `/product/${name}-dark.${format}`;
-  // The image optimiser refuses SVG unless dangerouslyAllowSVG is set globally,
-  // and there is nothing in a vector file for it to optimise anyway. Serving
+  // The image optimizer refuses SVG unless dangerouslyAllowSVG is set globally,
+  // and there is nothing in a vector file for it to optimize anyway. Serving
   // these two straight from /public keeps that flag off for the whole site.
   const unoptimized = format === "svg";
   const shared =

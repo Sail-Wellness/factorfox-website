@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "Why does it matter which model you use if the answers look the same?",
-    a: "Because the answers do not stay the same, and neither do the models. Model families specialise, get retired, change price, change licensing terms and occasionally go down for an afternoon. Software written for one specific model inherits every one of those events. Software written to route across models treats them as supply. The test to apply to any vendor, including us, is simple: ask what happens the week a materially better model ships, and listen for whether the answer sounds like a configuration change or a project.",
+    a: "Because the answers do not stay the same, and neither do the models. Model families specialize, get retired, change price, change licensing terms and occasionally go down for an afternoon. Software written for one specific model inherits every one of those events. Software written to route across models treats them as supply. The test to apply to any vendor, including us, is simple: ask what happens the week a materially better model ships, and listen for whether the answer sounds like a configuration change or a project.",
   },
   {
     q: "How do you decide which model handles which job?",
@@ -54,7 +54,7 @@ const FAQS = [
   },
   {
     q: "How would I tell the difference from the outside?",
-    a: "Ask where the intelligence sits relative to the ledger. Software with AI connected to it can summarise, draft and answer, because it has been handed a question and some context. Software with intelligence in the architecture can adjudicate, because it reads the same records the ledger reads, applies the policy version in force at the time, and refuses to display a change it cannot prove. The second is harder to build and easier to verify: ask for the evidence behind a conclusion and see whether the system can open it.",
+    a: "Ask where the intelligence sits relative to the ledger. Software with AI connected to it can summarize, draft and answer, because it has been handed a question and some context. Software with intelligence in the architecture can adjudicate, because it reads the same records the ledger reads, applies the policy version in force at the time, and refuses to display a change it cannot prove. The second is harder to build and easier to verify: ask for the evidence behind a conclusion and see whether the system can open it.",
   },
 ];
 
@@ -117,7 +117,7 @@ export default function AiNativePage() {
         <p>
           <strong>AI enabled means a model is connected to the software.</strong> The model sits beside
           the system and is handed a question along with whatever context the integration passes it. It
-          can summarise, it can draft, it can answer. What it cannot do is see the ledger the way the
+          can summarize, it can draft, it can answer. What it cannot do is see the ledger the way the
           ledger sees itself, because it was never given that seat.
         </p>
         <p>
@@ -224,7 +224,7 @@ export default function AiNativePage() {
         <Container>
           <SectionHead
             eyebrow="The best model for the job"
-            title="Models are specialising. That is the opportunity, not the risk."
+            title="Models are specializing. That is the opportunity, not the risk."
             lede="Adjudicating a funding decision against a policy is a different task from reading a scanned proof of delivery, and neither resembles ranking a collections queue by exposure. The platform routes on the shape of the work."
           />
           <div className="mt-12">
@@ -232,9 +232,9 @@ export default function AiNativePage() {
               caption="Classes of model and the work each does inside the platform"
               head={["Class", "What it is good at", "Where it does work here"]}
               rows={[
-                ["Reasoning", "Multi step judgement, and stating why rather than only what", "Underwriting narrative, covenant interpretation, the briefing itself"],
+                ["Reasoning", "Multi step judgment, and stating why rather than only what", "Underwriting narrative, covenant interpretation, the briefing itself"],
                 ["Decision", "Applying a written policy consistently to a specific case", "Funding adjudication, gate evaluation, exception routing"],
-                ["Behavioural", "Patterns across time, and how a party acts rather than presents", "Fraud signals, promise history, debtor deterioration"],
+                ["Behavioral", "Patterns across time, and how a party acts rather than presents", "Fraud signals, promise history, debtor deterioration"],
                 ["Document", "Extraction, classification, verification and tamper detection", "Intake, near duplicate detection, contract reading"],
                 ["Quantitative", "Arithmetic that has to be right, at portfolio scale", "Exposure, concentration, dilution, borrowing base"],
                 ["Agentic", "Carrying out a sequence of work rather than answering about it", "Collections drafting, reconciliation preparation, packet assembly"],
@@ -314,7 +314,7 @@ export default function AiNativePage() {
           need to know about how deep the accounting really goes.
         </p>
         <p>
-          On security, we publish where we actually are rather than a badge. A SOC 2 programme is under
+          On security, we publish where we actually are rather than a badge. A SOC 2 program is under
           way, targeted for completion at the end of 2026, and until a report exists there is no
           certification claim anywhere on this site. Ask for the report, not the badge, and note whether a
           vendor separates their own posture from their cloud provider&rsquo;s. Our{" "}
@@ -378,7 +378,7 @@ function TwoArchitectures() {
               A model is connected to the software.
             </p>
             <p className="mt-1.5 text-[13px] leading-[1.55] text-[var(--fg-subtle)]">
-              It is handed a question and some context. It can summarise, draft and answer.
+              It is handed a question and some context. It can summarize, draft and answer.
             </p>
           </div>
 
@@ -416,7 +416,7 @@ function ContractCard() {
     ["Fee structure", "Clause 4.4"],
     ["Reserve percentage", "Clause 5.1"],
     ["Concentration limit", "Clause 7.3"],
-    ["Ageing and recourse window", "Clause 9.2"],
+    ["Aging and recourse window", "Clause 9.2"],
   ];
   return (
     <figure className="m-0">

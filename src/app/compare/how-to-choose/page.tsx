@@ -48,7 +48,7 @@ const FAQS = [
   },
   {
     q: "What is the most common mistake?",
-    a: "Comparing feature lists. Every platform in this category records the same nouns, and a feature list will tell you that all three finalists do document management, risk monitoring and reporting. It will not tell you that one of them detects duplicates only within a single client file, or that one of them shows a zero when a credit source is unavailable. The distinctions that matter are all at the level of how a capability behaves, and they only surface when you test the behaviour.",
+    a: "Comparing feature lists. Every platform in this category records the same nouns, and a feature list will tell you that all three finalists do document management, risk monitoring and reporting. It will not tell you that one of them detects duplicates only within a single client file, or that one of them shows a zero when a credit source is unavailable. The distinctions that matter are all at the level of how a capability behaves, and they only surface when you test the behavior.",
   },
   {
     q: "Should price be part of the shortlist decision?",
@@ -135,7 +135,7 @@ export default function HowToChoosePage() {
           entire method and everything below is scaffolding around it.
         </p>
         <p>
-          <strong>Decide what you are actually optimising for.</strong> More book with the same headcount is
+          <strong>Decide what you are actually optimizing for.</strong> More book with the same headcount is
           a different requirement from finding out about a problem sooner, which is different again from
           satisfying a lender who has started asking harder questions. Most operations want all three and
           rank them differently under pressure. Rank them now, in writing, while nobody is in the room
@@ -189,7 +189,7 @@ export default function HowToChoosePage() {
       <StepList
         eyebrow="The requirements note"
         title="Write it in an afternoon, before anybody demonstrates anything."
-        lede="Not a request for proposal. A two page note you write for yourselves, which exists so that four people can disagree about what matters before a vendor is in the room to resolve the disagreement in their own favour."
+        lede="Not a request for proposal. A two page note you write for yourselves, which exists so that four people can disagree about what matters before a vendor is in the room to resolve the disagreement in their own favor."
         steps={[
           {
             label: "Today",
@@ -292,7 +292,7 @@ export default function HowToChoosePage() {
           <p className="mt-6 max-w-[70ch] text-[14px] leading-[1.6] text-[var(--fg-subtle)]">
             Our own answers, so you can run the same test here. We hold no security certification today and
             the{" "}
-            <InlineLink href="/platform/security">security page</InlineLink> says so with the programme and
+            <InlineLink href="/platform/security">security page</InlineLink> says so with the program and
             the target date stated. We publish no customer count and no daily volume figure anywhere on this
             site. The company was formed in 2002 and has been building software for this industry since. Ask us
             for references and we will give you names.
@@ -367,7 +367,7 @@ export default function HowToChoosePage() {
         </p>
         <p>
           <strong>Score the six tests, out of what you observed.</strong> Not the answer to a question, the
-          behaviour on a screen. Three points if it did the thing cleanly, one if it did it with help from
+          behavior on a screen. Three points if it did the thing cleanly, one if it did it with help from
           the presenter, zero if it was described rather than shown. Do it in the room, before the
           impression fades, and have each attendee score independently before anybody speaks.
         </p>
@@ -390,7 +390,7 @@ export default function HowToChoosePage() {
           <SectionHead
             eyebrow="Cost"
             title="The three year number, and the four things people leave out of it."
-            lede="Ask for it at the end, never at the shortlist. Comparing licence cost early narrows on the wrong axis, because the cheapest and the most expensive option in this market can converge once the rest of the picture is in."
+            lede="Ask for it at the end, never at the shortlist. Comparing license cost early narrows on the wrong axis, because the cheapest and the most expensive option in this market can converge once the rest of the picture is in."
           />
           <div className="mt-12">
             <DataTable

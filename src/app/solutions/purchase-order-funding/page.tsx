@@ -47,7 +47,7 @@ const FAQS = [
   },
   {
     q: "Do you verify that the goods actually exist?",
-    a: "The platform organises and holds the evidence others produce: inspection certificates, bills of lading, packing lists, warehouse receipts and third party confirmations, each captured at the moment it arrived. It does not assert a fact it cannot prove. Where a document has not arrived, the milestone reads outstanding and names what is missing rather than passing on the strength of an expectation. The judgement about whether the evidence is sufficient stays with your officer.",
+    a: "The platform organizes and holds the evidence others produce: inspection certificates, bills of lading, packing lists, warehouse receipts and third party confirmations, each captured at the moment it arrived. It does not assert a fact it cannot prove. Where a document has not arrived, the milestone reads outstanding and names what is missing rather than passing on the strength of an expectation. The judgment about whether the evidence is sufficient stays with your officer.",
   },
   {
     q: "What controls sit around the supplier payment itself?",
@@ -183,7 +183,7 @@ export default function PurchaseOrderFundingPage() {
           {
             label: "Assessment",
             title: "Three parties are underwritten, not one",
-            body: "The client can fulfil or cannot. The supplier can produce or cannot. The end buyer can pay or cannot, and their credit is what ultimately repays you. Continuous underwriting runs on every material event and reports confidence and coverage separately, so a transaction resting on a buyer you know little about is visibly that rather than quietly that.",
+            body: "The client can fulfill or cannot. The supplier can produce or cannot. The end buyer can pay or cannot, and their credit is what ultimately repays you. Continuous underwriting runs on every material event and reports confidence and coverage separately, so a transaction resting on a buyer you know little about is visibly that rather than quietly that.",
           },
           {
             label: "Structure",
@@ -254,7 +254,7 @@ export default function PurchaseOrderFundingPage() {
           />
           <div className="mt-11">
             <DataTable
-              caption="Purchase order funding risks and platform behaviour"
+              caption="Purchase order funding risks and platform behavior"
               head={["What goes wrong", "How it shows up first", "What FactorFox does"]}
               rows={[
                 [
@@ -370,7 +370,7 @@ function TransactionScene() {
       <figcaption className="mt-3 max-w-[52ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
         Illustration of a funded purchase order as a transaction. Milestones evidenced by named documents,
         outstanding states that say what is missing rather than passing, instrument date monitoring and the
-        expected takeout held against the committed amount are the platform&rsquo;s own behaviour. Party names
+        expected takeout held against the committed amount are the platform&rsquo;s own behavior. Party names
         and figures come from a seeded demonstration book.
       </figcaption>
     </figure>

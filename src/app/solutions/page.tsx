@@ -42,7 +42,7 @@ export default function SolutionsPage() {
           <>
             <p>
               FactorFox is built for the institution that funds. Factors, asset based lenders, purchase
-              order funders, confirming programme operators and freight factors, in North America, Latin
+              order funders, confirming program operators and freight factors, in North America, Latin
               America, Europe, Australia and South Africa.
             </p>
             <p>
@@ -142,7 +142,7 @@ export default function SolutionsPage() {
                 [
                   "Reverse factoring",
                   "The buyer, on a payable they approved themselves",
-                  "Total concentration on one obligor by design, plus an onboarding queue that stalls until the programme never converts",
+                  "Total concentration on one obligor by design, plus an onboarding queue that stalls until the program never converts",
                 ],
                 [
                   "Freight factoring",
@@ -219,7 +219,7 @@ export default function SolutionsPage() {
           { href: "/platform", label: "The platform", note: "Every capability, and what each one observes and refuses." },
           { href: "/platform/briefings", label: "Briefings", note: "The six questions and how scope follows responsibility." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Eligibility, ineligibles, reserves and availability in detail." },
-          { href: "/integrations", label: "Integrations", note: "Organised by business purpose, with an honest status on every row." },
+          { href: "/integrations", label: "Integrations", note: "Organized by business purpose, with an honest status on every row." },
           { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "What a migration involves, in the order it happens." },
           { href: "/compare", label: "Comparison", note: "How to evaluate this category without being sold a demonstration." },
           { href: "/resources/glossary", label: "Glossary", note: "The vocabulary, including the terms that differ by market." },
@@ -229,7 +229,7 @@ export default function SolutionsPage() {
 
       <CtaBand
         title="Come with the structure you actually run."
-        body="Bring a schedule, a borrowing base, a stalled purchase order transaction or a confirming programme that is not converting. The demonstration is more useful when it is against your own problem."
+        body="Bring a schedule, a borrowing base, a stalled purchase order transaction or a confirming program that is not converting. The demonstration is more useful when it is against your own problem."
         primary={{ href: "/demo", label: "Request a FactorFox AI demonstration" }}
         secondary={{ href: "/platform", label: "See the whole platform" }}
       />

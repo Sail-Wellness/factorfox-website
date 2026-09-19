@@ -20,7 +20,7 @@ const CAPABILITIES: { title: string; line: string; href: string }[] = [
   { title: "Intelligence with evidence", line: "Every conclusion opens onto the records that produced it.", href: "/platform/evidence" },
   { title: "Briefings", line: "Six questions, answered for the job you actually do.", href: "/platform/briefings" },
   { title: "Continuous underwriting", line: "Re underwrite on every material event, not once a quarter.", href: "/platform/continuous-underwriting" },
-  { title: "Risk monitoring", line: "Debtor behaviour, concentration and dilution, watched as they move.", href: "/platform/risk-monitoring" },
+  { title: "Risk monitoring", line: "Debtor behavior, concentration and dilution, watched as they move.", href: "/platform/risk-monitoring" },
   { title: "Covenant monitoring", line: "Days to breach on the current trajectory, before it is a phone call.", href: "/platform/covenant-monitoring" },
   { title: "Borrowing base", line: "Availability, ineligibles and reserves, recomputed as the book moves.", href: "/platform/borrowing-base" },
   { title: "Document intelligence", line: "Agreements, invoices, remittances and near duplicates, read and verified.", href: "/platform/document-intelligence" },
@@ -52,7 +52,7 @@ const FAQS = [
   },
   {
     q: "Can FactorFox monitor our bank covenants?",
-    a: "It monitors facility limits, concentration, eligibility, advance rates, reserves, collateral performance and reporting obligations against the covenants you record, and reports days to breach on the current trajectory. It does not replace your lender, your counsel or your judgement. It gives you the time to use all three.",
+    a: "It monitors facility limits, concentration, eligibility, advance rates, reserves, collateral performance and reporting obligations against the covenants you record, and reports days to breach on the current trajectory. It does not replace your lender, your counsel or your judgment. It gives you the time to use all three.",
   },
   {
     q: "Is FactorFox tied to one AI model?",
@@ -60,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Does FactorFox have real double entry accounting?",
-    a: "Yes. Fundings, fee accruals, reserve movements and releases, chargebacks, repurchases and cash application all post as balanced double entry against the client, the schedule and the obligor. The client statement is generated from that ledger, and audit packets assemble from the entries and the documents behind them. Client receivables also synchronise from QuickBooks Online and Xero.",
+    a: "Yes. Fundings, fee accruals, reserve movements and releases, chargebacks, repurchases and cash application all post as balanced double entry against the client, the schedule and the obligor. The client statement is generated from that ledger, and audit packets assemble from the entries and the documents behind them. Client receivables also synchronize from QuickBooks Online and Xero.",
   },
   {
     q: "Which markets does FactorFox operate in?",
@@ -295,7 +295,7 @@ export default function HomePage() {
               <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
                 <p>
                   Every client agreement carries the advance rate, the fee schedule, the discount terms, the
-                  reserve, the concentration limit and the ageing window. Then somebody types all of it in by
+                  reserve, the concentration limit and the aging window. Then somebody types all of it in by
                   hand, where a transcription error becomes a funding error four months later.
                 </p>
                 <p className="text-[var(--fg)]">
@@ -346,7 +346,7 @@ export default function HomePage() {
                 <p>
                   That is why the client statement agrees with your ledger and why an audit packet assembles
                   from the entries themselves. It is also the part nobody demonstrates, because it takes
-                  years rather than a quarter. Client receivables synchronise from{" "}
+                  years rather than a quarter. Client receivables synchronize from{" "}
                   {AVAILABLE_ACCOUNTING.map((i) => i.name).join(" and ")}, both available today.
                 </p>
               </div>
@@ -386,12 +386,23 @@ export default function HomePage() {
               <h2 className="text-section-lg mt-4 max-w-[20ch]">
                 Six questions, answered for your job, every morning.
               </h2>
-              <p className="mt-6 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
-                The same six every time, so the shape is familiar and only the content changes. Each answer
-                carries the evidence that produced it, and only the actions your permissions allow. Scope
-                follows responsibility rather than job title, so somebody who owns forty clients is briefed
-                on the forty, not on the three hundred they are allowed to view.
-              </p>
+              <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+                <p>
+                  Most platforms answer this with a search box. A search box is a tool for someone who
+                  already knows what to look for, and that is the whole problem. The exposure that costs you
+                  money is the one nobody thought to query, on the morning everybody was busy with something
+                  else.
+                </p>
+                <p>
+                  The same six questions every time, so the shape is familiar and only the content changes.
+                  Each answer carries the evidence that produced it, and only the actions your permissions
+                  allow. Scope follows responsibility rather than job title, so somebody who owns forty
+                  clients is briefed on the forty, not on the three hundred they are allowed to view.
+                </p>
+                <p className="text-[var(--fg)]">
+                  <strong>Software that waits to be asked is a sharper rock. It is not intelligence.</strong>
+                </p>
+              </div>
 
               <ul className="mt-7 flex flex-wrap gap-2">
                 {ROLES.map((r) => (

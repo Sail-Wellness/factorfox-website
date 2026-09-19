@@ -30,7 +30,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "Is this the same integration as QuickBooks with a different name on it?",
-    a: "It is the same rail and a different connector. The proposal path, the gates, the normalised receivable and the audit are shared deliberately, because a client who migrates ledgers should not become a different kind of client. What differs is the vendor relationship, the consent flow, the shape of what Xero returns, and the fact that most books it reads sit outside the United States.",
+    a: "It is the same rail and a different connector. The proposal path, the gates, the normalized receivable and the audit are shared deliberately, because a client who migrates ledgers should not become a different kind of client. What differs is the vendor relationship, the consent flow, the shape of what Xero returns, and the fact that most books it reads sit outside the United States.",
   },
   {
     q: "Can FactorFox raise an invoice or apply a credit in our client's Xero?",
@@ -46,11 +46,11 @@ const FAQS = [
   },
   {
     q: "Our debtors are in New Zealand and the United Kingdom. What credit data can we get?",
-    a: "Probity network answers immediately and costs nothing, because it reads how a debtor has actually paid across the FactorFox network rather than buying an opinion about them. Creditsafe covers commercial credit in those markets and its rail is built, but it answers not configured until you hold a contract and keys with Creditsafe. The screen shows it greyed with the vendor named, so an underwriter knows a source exists and is switched off.",
+    a: "Probity network answers immediately and costs nothing, because it reads how a debtor has actually paid across the FactorFox network rather than buying an opinion about them. Creditsafe covers commercial credit in those markets and its rail is built, but it answers not configured until you hold a contract and keys with Creditsafe. The screen shows it grayed with the vendor named, so an underwriter knows a source exists and is switched off.",
   },
   {
     q: "Does the client need a particular Xero plan or an adviser relationship with us?",
-    a: "The connection is authorised by the client from their own Xero session against the organisation you are funding, and no adviser or partner relationship is required for it. What you do need is your own application credentials with Xero, the same posture as every other accounting connector on this site. Your name is on the consent screen and the vendor relationship is yours.",
+    a: "The connection is authorized by the client from their own Xero session against the organization you are funding, and no adviser or partner relationship is required for it. What you do need is your own application credentials with Xero, the same posture as every other accounting connector on this site. Your name is on the consent screen and the vendor relationship is yours.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function XeroPage() {
             <p>
               Written for factors and asset based lenders funding businesses in Australia, New Zealand and the
               United Kingdom, where a request for a client&rsquo;s accounting file is a request for a Xero
-              organisation nine times out of ten.
+              organization nine times out of ten.
             </p>
             <p>
               FactorFox connects to it read only, per client, on the client&rsquo;s own consent, and feeds the
@@ -129,7 +129,7 @@ export default function XeroPage() {
           and produced a second class receivable that the analytics did not fully understand.
         </p>
         <p>
-          <strong>Here the connector is late to nothing.</strong> Xero receivables land in the same normalised
+          <strong>Here the connector is late to nothing.</strong> Xero receivables land in the same normalized
           shape as every other channel, which means concentration under one debtor name across several clients
           works whether those clients are in Brisbane or Birmingham, and dilution movement means the same thing
           in both. A client who switches ledger next year changes how their data arrives and changes nothing
@@ -146,7 +146,7 @@ export default function XeroPage() {
       <FeatureGrid
         eyebrow="What moves"
         title="Contacts and accounting transactions, and what the platform makes of them"
-        lede="Consent is given once by the client, against one organisation, for reading. Everything below happens on the FactorFox side of that boundary."
+        lede="Consent is given once by the client, against one organization, for reading. Everything below happens on the FactorFox side of that boundary."
         columns={3}
         items={[
           {
@@ -194,7 +194,7 @@ export default function XeroPage() {
       >
         <p>
           It would be straightforward to write assignment notices, apply payments or mark invoices as factored
-          inside a client&rsquo;s Xero organisation. Several products do. We decline, and the reason is worth
+          inside a client&rsquo;s Xero organization. Several products do. We decline, and the reason is worth
           stating plainly because it is the kind of thing buyers only think about after it has gone wrong.
         </p>
         <p>
@@ -239,7 +239,7 @@ export default function XeroPage() {
                 [
                   "Probity network",
                   <Status key="probity" kind="available" />,
-                  "Debtor payment behaviour from across the FactorFox network. No vendor, no contract, no per check charge, and nothing about your book leaves your tenant.",
+                  "Debtor payment behavior from across the FactorFox network. No vendor, no contract, no per check charge, and nothing about your book leaves your tenant.",
                 ],
                 [
                   "Creditsafe",
@@ -281,7 +281,7 @@ export default function XeroPage() {
       />
 
       <CtaBand
-        title="Bring a real Xero organisation to the demonstration."
+        title="Bring a real Xero organization to the demonstration."
         body="A sandbox proves the connection works. A client's actual file, with its duplicated contacts and its optimistic due dates, proves what the intake rail does about it."
         primary={{ href: "/demo", label: "Request a FactorFox AI demonstration" }}
         secondary={{ href: "/integrations/quickbooks", label: "Connect QuickBooks" }}

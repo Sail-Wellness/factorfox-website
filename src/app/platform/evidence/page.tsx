@@ -124,6 +124,20 @@ export default function EvidencePage() {
         </p>
       </ProseSection>
 
+      <Section bordered>
+        <Container width="narrow">
+          <figure className="m-0 border-l-4 border-[var(--signal)] pl-6 sm:pl-8">
+            <blockquote className="m-0 text-[clamp(1.25rem,2.4vw,1.6rem)] font-semibold leading-[1.45] tracking-[-0.015em] text-[var(--fg)]">
+              Performing due diligence matters. Proving years later that it was performed is what protects
+              the factor.
+            </blockquote>
+            <figcaption className="mt-4 text-[13.5px] leading-[1.55] text-[var(--fg-subtle)]">
+              Roberto Vasquez, Founder and CEO
+            </figcaption>
+          </figure>
+        </Container>
+      </Section>
+
       <Section tone="sunken" bordered>
         <Container>
           <SectionHead
@@ -138,13 +152,13 @@ export default function EvidencePage() {
               rows={[
                 ["Invoices and schedules", "The obligation itself: amount, terms, obligor, assignment status and the batch it was purchased in."],
                 ["Supporting documents", "That the work happened. Bills of lading, proofs of delivery, timesheets, rate confirmations, signed acceptances."],
-                ["Payment behaviour", "How this debtor actually pays this client, measured against its own history rather than an industry average."],
+                ["Payment behavior", "How this debtor actually pays this client, measured against its own history rather than an industry average."],
                 ["Debtor activity across the network", "Exposure to one debtor held under several client relationships, which is invisible from inside any single client file."],
-                ["Communications and remittances", "What was said and what arrived. The original message is preserved as evidence rather than summarised into a note."],
+                ["Communications and remittances", "What was said and what arrived. The original message is preserved as evidence rather than summarized into a note."],
                 ["Commercial credit results", "The external view at the moment it was pulled, with the pull timestamped, not a live lookup that answers differently tomorrow."],
                 ["Financial statement data", "Trend and capacity where statements exist, with coverage stated plainly where they do not."],
                 ["Verification runs", "That the invoice was confirmed, by whom, through which channel, with the evidence captured at run time."],
-                ["Historical patterns", "The client's own median invoice size, submission timing and dilution behaviour, which is what makes a deviation meaningful."],
+                ["Historical patterns", "The client's own median invoice size, submission timing and dilution behavior, which is what makes a deviation meaningful."],
                 ["Contract and covenant clauses", "The obligation as written. The clause is quoted as the evidence rather than paraphrased into a threshold."],
                 ["Operating activity", "Who did what inside the platform, with the origin recorded, including actions taken from Microsoft Teams or a phone."],
                 ["Prior decisions on the same party", "What your own institution concluded about this debtor before, and on what basis, across every client that touches it."],
@@ -157,7 +171,7 @@ export default function EvidencePage() {
       <StepList
         eyebrow="How the record is protected"
         title="Four mechanics that make the trail hold up."
-        lede="These are database level behaviours rather than policies, because a policy is only as durable as the next person who is in a hurry."
+        lede="These are database level behaviors rather than policies, because a policy is only as durable as the next person who is in a hurry."
         steps={[
           {
             label: "Append only",
@@ -229,7 +243,7 @@ export default function EvidencePage() {
               </dl>
               <p className="mt-5 text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
                 Illustration. The separation of confidence from coverage and the naming of unavailable
-                sources are the platform&rsquo;s own behaviour. The percentages are from a seeded demonstration
+                sources are the platform&rsquo;s own behavior. The percentages are from a seeded demonstration
                 book.
               </p>
             </Card>
@@ -257,7 +271,7 @@ export default function EvidencePage() {
           },
           {
             title: "On the covenant position",
-            body: "The clause is quoted as the evidence for the test. A modelled threshold and a contractual obligation are never shown as the same kind of thing.",
+            body: "The clause is quoted as the evidence for the test. A modeled threshold and a contractual obligation are never shown as the same kind of thing.",
           },
           {
             title: "In the audit packet",
@@ -388,7 +402,7 @@ function SealedPacketScene() {
           </div>
           <figcaption className="mt-3 text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
             Illustration of a sealed audit packet. Sealing, the database level refusal to mutate, the
-            captured gate snapshot and the recorded policy version are the platform&rsquo;s own behaviour. The
+            captured gate snapshot and the recorded policy version are the platform&rsquo;s own behavior. The
             names, identifiers and figures are from a seeded demonstration book.
           </figcaption>
         </figure>

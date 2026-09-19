@@ -57,9 +57,9 @@ None of those checks are clever. All of them are certain, which is the point. Th
 
 A carrier submits an invoice for a load, with the rate confirmation attached. Extraction reads both. The invoice amount and the rate confirmation amount differ by the price of an accessorial charge that the broker did not agree to.
 
-A system optimised for accuracy reads both documents correctly and funds the invoice, because reading was the job and reading succeeded. A system built around revalidation compares the two figures, finds a difference that no rule permits, and holds the item with the discrepancy stated and both documents attached. The second system may have identical extraction quality. It produces a completely different operational result.
+A system optimized for accuracy reads both documents correctly and funds the invoice, because reading was the job and reading succeeded. A system built around revalidation compares the two figures, finds a difference that no rule permits, and holds the item with the discrepancy stated and both documents attached. The second system may have identical extraction quality. It produces a completely different operational result.
 
-The same pattern applies to a bank account change arriving by email, which is the most expensive message a factoring company receives. The correct behaviour is not to read it accurately and apply it. The correct behaviour is to classify it as requiring human verification and refuse to apply it at all.
+The same pattern applies to a bank account change arriving by email, which is the most expensive message a factoring company receives. The correct behavior is not to read it accurately and apply it. The correct behavior is to classify it as requiring human verification and refuse to apply it at all.
 
 ## A framework for evaluating any extraction claim
 
@@ -67,7 +67,7 @@ Ask three questions, in this order, about every document type you actually handl
 
 1. **What does a wrong value cost here?** Sort your document types by the price of a silent error. Amount, invoice number, debtor identity and bank details sit at the top. Almost everything else is a nuisance. Design the controls around the top of that list and stop worrying about the bottom.
 
-2. **Which of the checks are deterministic?** Ask the vendor which validations are arithmetic and which are the model checking itself. A model verifying its own output is one system with two opinions. Deterministic checks are the only ones whose behaviour you can predict before you buy.
+2. **Which of the checks are deterministic?** Ask the vendor which validations are arithmetic and which are the model checking itself. A model verifying its own output is one system with two opinions. Deterministic checks are the only ones whose behavior you can predict before you buy.
 
 3. **What happens when it does not know?** Ask to see the refusal. A system that returns a confident value for an unreadable field will do that on your book every day, and you will not find out for months. A system that says it cannot read this field, on this document, and routes it to a person is telling you the truth in a way you can operate on.
 

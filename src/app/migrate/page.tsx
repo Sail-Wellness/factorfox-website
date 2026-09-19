@@ -170,7 +170,7 @@ export default function MigratePage() {
                 [
                   "Chargeback and dispute history",
                   "Usually the least structured data in the building. Reasons live in free text notes, dispositions live in email, and the pattern that matters is spread across both.",
-                  "Imported with reason and disposition where recorded, retained as evidence where not, and never presented as a clean categorisation that the source cannot support.",
+                  "Imported with reason and disposition where recorded, retained as evidence where not, and never presented as a clean categorization that the source cannot support.",
                 ],
                 [
                   "Cash application history",
@@ -184,7 +184,7 @@ export default function MigratePage() {
                 ],
                 [
                   "Collections state",
-                  "Promises, contact history, escalation status and the collector's own judgement about a debtor. Most of it is notes, and the notes are the value.",
+                  "Promises, contact history, escalation status and the collector's own judgment about a debtor. Most of it is notes, and the notes are the value.",
                   "Contact history and promises are carried so that priority on day one reflects what your collectors already know, rather than starting the portfolio from zero.",
                 ],
               ]}
@@ -239,12 +239,49 @@ export default function MigratePage() {
           are explicit.
         </p>
         <p>
-          <strong>Judgement about people is not in the extract.</strong> Your collections manager knows which
+          <strong>Judgment about people is not in the extract.</strong> Your collections manager knows which
           debtor pays on the second call and which one always disputes at ninety days. Contact history and
           promise records carry a usable amount of that across. Nothing carries all of it, and a vendor who
           tells you otherwise has not done this.
         </p>
       </ProseSection>
+
+      {/* The concrete ask. Deliberately placed before the six stages, because
+          stage one is extraction and a prospect can do this before choosing
+          anyone. */}
+      <Section tone="sunken" bordered>
+        <Container>
+          <SectionHead
+            eyebrow="Start here"
+            title="Seven reports, one cutoff date, and the baseline is yours."
+            lede="Any system can run these, including the one you are leaving. Pull them before you have chosen a replacement, including us. The extract is yours either way, and holding it changes the conversation."
+          />
+          <ol className="mt-10 grid gap-px overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--line)] sm:grid-cols-2">
+            {[
+              ["Detailed aging, at invoice level", "Not a summary. Invoice level is what carries the client and debtor relationships, so there is nothing to map by hand later."],
+              ["Purchases", "What you bought, when, and at what advance. This is the spine every later reconciliation hangs off."],
+              ["Payments", "Including payments applied across several invoices, short paid items and unapplied cash. This is where balances quietly move."],
+              ["Reserves", "Balances and, where the source supports it, their composition. Where it does not, the gap belongs on the reconciliation rather than averaged away."],
+              ["Fees and earnings", "Earned and unearned, on the schedule they were earned under rather than the schedule in force today."],
+              ["Chargebacks and write offs", "With reason and disposition where they were recorded. Amounts and dates alone cannot tell a credit officer whether a pattern is forming."],
+              ["Client and debtor lists", "The master records, including the ones that are inactive. Dormant parties are where duplicate records get created after go live."],
+            ].map(([t, d], n) => (
+              <li key={t} className={`bg-[var(--bg-raised)] p-6 ${n === 6 ? "sm:col-span-2" : ""}`}>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-mono text-[12px] text-[var(--signal)]">{String(n + 1).padStart(2, "0")}</span>
+                  <h3 className="text-[15.5px] leading-[1.35]">{t}</h3>
+                </div>
+                <p className="mt-2.5 pl-8 text-[13.5px] leading-[1.6] text-[var(--fg-muted)]">{d}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-7 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+            All seven as at the same moment, as far back as they go. We ingest them, build the book and
+            reconcile it against your own totals before you are asked to trust anything. A vendor who cannot
+            tell you what their reconciliation will show you is telling you something.
+          </p>
+        </Container>
+      </Section>
 
       <StepList
         eyebrow="How it runs"
@@ -261,7 +298,7 @@ export default function MigratePage() {
             label: "Discovery",
             title: "Find what is not in the extract",
             body:
-              "Sitting with the controller, the credit officer and the collections manager to write down the rules that live in spreadsheets, email and memory. Fee arrangements without a document, eligibility logic maintained by hand, exceptions in force, verbal concessions. This stage is long in proportion to how much of your operation runs on undocumented arrangement, which is not a judgement about you. It is a description of every factoring company we have ever converted.",
+              "Sitting with the controller, the credit officer and the collections manager to write down the rules that live in spreadsheets, email and memory. Fee arrangements without a document, eligibility logic maintained by hand, exceptions in force, verbal concessions. This stage is long in proportion to how much of your operation runs on undocumented arrangement, which is not a judgment about you. It is a description of every factoring company we have ever converted.",
           },
           {
             label: "Mapping",
@@ -325,7 +362,7 @@ export default function MigratePage() {
           was made to tie without anyone knowing why cannot be defended to an examiner, a bank or a client.
         </p>
         <p>
-          <strong>What was imported stays labelled as imported.</strong> Historical records carry their
+          <strong>What was imported stays labeled as imported.</strong> Historical records carry their
           origin, so a note that came from your prior system is never mistaken for something FactorFox
           observed. Everything the platform observes after cutover is append only at the database level and
           carries its own evidence. Read <InlineLink href="/platform/evidence">how evidence works</InlineLink> for what that
@@ -446,7 +483,7 @@ export default function MigratePage() {
           { href: "/platform/accounting", label: "Accounting", note: "Cash application, ledger and audit packets after cutover." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Where eligibility rules go once they leave the spreadsheet." },
           { href: "/platform/pricing", label: "Pricing", note: "What drives cost, including the cost of migration itself." },
-          { href: "/platform/evidence", label: "Intelligence with evidence", note: "Why an imported record stays labelled as imported." },
+          { href: "/platform/evidence", label: "Intelligence with evidence", note: "Why an imported record stays labeled as imported." },
         ]}
       />
 

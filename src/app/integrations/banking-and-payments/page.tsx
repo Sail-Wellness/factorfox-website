@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: "What do you do with an EDI 820 that does not reconcile?",
-    a: "It becomes a proposal that names what it cannot explain. Structured remittance is better raw material than a scanned cheque stub, but it is still an assertion by a debtor about their own deductions. A short payment with an unexplained difference is presented as exactly that rather than absorbed, and duplicates are refused before they can be applied twice.",
+    a: "It becomes a proposal that names what it cannot explain. Structured remittance is better raw material than a scanned check stub, but it is still an assertion by a debtor about their own deductions. A short payment with an unexplained difference is presented as exactly that rather than absorbed, and duplicates are refused before they can be applied twice.",
   },
   {
     q: "Is the bank feed for lockbox reconciliation available?",
@@ -210,7 +210,7 @@ export default function BankingAndPaymentsPage() {
           {
             label: "Adjust",
             title: "Fix the dialect once, in configuration",
-            body: "Company identification, discretionary data, batch descriptors and blocking behaviour are settings rather than code. The point of getting them right once is that nobody has to remember them afterwards.",
+            body: "Company identification, discretionary data, batch descriptors and blocking behavior are settings rather than code. The point of getting them right once is that nobody has to remember them afterwards.",
           },
           {
             label: "Then trust",
@@ -223,7 +223,7 @@ export default function BankingAndPaymentsPage() {
       <FeatureGrid
         eyebrow="Inbound"
         title="EDI 820 and 214, and what structured remittance is actually worth"
-        lede="Getting remittance as data instead of as a scanned stub removes the keying. It does not remove the judgement, and a platform that pretends otherwise creates a quieter kind of error."
+        lede="Getting remittance as data instead of as a scanned stub removes the keying. It does not remove the judgment, and a platform that pretends otherwise creates a quieter kind of error."
         columns={3}
         items={[
           {

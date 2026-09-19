@@ -274,12 +274,12 @@ export default function DocumentIntelligencePage() {
           action with the permission it needs.
         </p>
         <p>
-          Documents that come from a connector do not get a side door. A receivable synchronised from a
+          Documents that come from a connector do not get a side door. A receivable synchronized from a
           client&rsquo;s QuickBooks or Xero ledger still faces every ingestion gate, because a connector is a
           submission channel like any other and a clean import is not the same thing as a verified one.
         </p>
         <p>
-          What the platform will not do is decide. Verification exceptions raise questions and organise the
+          What the platform will not do is decide. Verification exceptions raise questions and organize the
           evidence behind them. A person answers them, and the answer is recorded with their name on it.
         </p>
       </ProseSection>

@@ -118,7 +118,7 @@ export default function TreasuryPage() {
           },
           {
             problem:
-              "The audit trail for payments is the bank's, which means reconstructing who authorised what means asking your bank for records about your own decisions.",
+              "The audit trail for payments is the bank's, which means reconstructing who authorized what means asking your bank for records about your own decisions.",
             response:
               "Every release records the actor, the evidence, the policy version, the approvals and the origin, and audit records are immutable at the database level.",
           },
@@ -307,7 +307,7 @@ export default function TreasuryPage() {
           { href: "/integrations/banking-and-payments", label: "Banking and payments", note: "NACHA, APCA, Fedwire and EDI, with a status on every row." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Where net availability comes from and why it moves." },
           { href: "/platform/accounting", label: "Accounting", note: "What the ledger does after a release executes." },
-          { href: "/platform/fraud-detection", label: "Fraud detection", note: "The behavioural signals behind a hold." },
+          { href: "/platform/fraud-detection", label: "Fraud detection", note: "The behavioral signals behind a hold." },
           { href: "/integrations/microsoft-teams", label: "Microsoft Teams", note: "Approving a release from a phone without loosening anything." },
           { href: "/platform/security", label: "Security and controls", note: "Asymmetric automation, four eyes and immutable audit." },
         ]}
@@ -374,7 +374,7 @@ function ReleaseScene() {
         </div>
       </div>
       <figcaption className="mt-3 max-w-[50ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
-        Illustration of the release queue before file generation. The hold behaviour, the four eyes state, the
+        Illustration of the release queue before file generation. The hold behavior, the four eyes state, the
         release only file rule and the audit fields are the platform&rsquo;s own. Names and figures come from a
         seeded demonstration book.
       </figcaption>

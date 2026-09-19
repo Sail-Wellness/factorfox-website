@@ -31,7 +31,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "What counts as a material event?",
-    a: "Anything that could change a decision. A schedule submitted, an invoice verified or failing verification, a payment arriving early or late against the debtor's own pattern, a concentration crossing a threshold, a dilution movement, a credit limit utilisation change, a document that matches a near duplicate, a bank account change request, a promise made or lapsed, a covenant test moving. Events that cannot change a decision do not trigger a run, because a system that re underwrites on everything is a system whose runs nobody reads.",
+    a: "Anything that could change a decision. A schedule submitted, an invoice verified or failing verification, a payment arriving early or late against the debtor's own pattern, a concentration crossing a threshold, a dilution movement, a credit limit utilization change, a document that matches a near duplicate, a bank account change request, a promise made or lapsed, a covenant test moving. Events that cannot change a decision do not trigger a run, because a system that re underwrites on everything is a system whose runs nobody reads.",
   },
   {
     q: "Is this a credit score?",
@@ -107,9 +107,9 @@ export default function ContinuousUnderwritingPage() {
           },
           {
             problem:
-              "A limit was set once and then quietly consumed. Nobody notices utilisation until something is refused.",
+              "A limit was set once and then quietly consumed. Nobody notices utilization until something is refused.",
             response:
-              "Credit limit utilisation is a monitored signal on both the client and the debtor side, with the movement reported rather than the balance alone.",
+              "Credit limit utilization is a monitored signal on both the client and the debtor side, with the movement reported rather than the balance alone.",
           },
           {
             problem:
@@ -145,7 +145,7 @@ export default function ContinuousUnderwritingPage() {
           {
             label: "Assemble",
             title: "The evidence for this run is gathered and stamped",
-            body: "Invoices, aging observations, payment behaviour, documents, verification results, credit results where a source is connected, and prior decisions on the same party. Sources that cannot be reached are named as unavailable rather than skipped quietly, and coverage falls accordingly.",
+            body: "Invoices, aging observations, payment behavior, documents, verification results, credit results where a source is connected, and prior decisions on the same party. Sources that cannot be reached are named as unavailable rather than skipped quietly, and coverage falls accordingly.",
           },
           {
             label: "Evaluate",
@@ -165,7 +165,7 @@ export default function ContinuousUnderwritingPage() {
           {
             label: "Brief",
             title: "A named person is told, with the action attached",
-            body: "The finding reaches whoever carries that scope, with its severity, its reason, its evidence references and the actions their permissions allow. Anything material outside a person's scope travels the escalation lane and arrives labelled as escalated.",
+            body: "The finding reaches whoever carries that scope, with its severity, its reason, its evidence references and the actions their permissions allow. Anything material outside a person's scope travels the escalation lane and arrives labeled as escalated.",
           },
         ]}
       />
@@ -193,7 +193,7 @@ export default function ContinuousUnderwritingPage() {
                 ["Covenant movement", "The covenants you record, with the clause quoted as evidence", "Reports days to breach on the current path and escalates to the owner"],
                 ["Missed promises", "The promise made, by whom, and the debtor's promise history", "Reopens the case with the reason stamped on it"],
                 ["Verification exceptions", "The verification run captured at run time", "Holds funding and names the override authority required"],
-                ["Credit limit utilisation", "The limit in force, on both the client and the debtor side", "Warns before refusal, and shows which side of the relationship is consuming the limit"],
+                ["Credit limit utilization", "The limit in force, on both the client and the debtor side", "Warns before refusal, and shows which side of the relationship is consuming the limit"],
               ]}
             />
           </div>
@@ -256,8 +256,8 @@ export default function ContinuousUnderwritingPage() {
           name="policies"
           width={2000}
           height={1205}
-          alt="FactorFox Policies screen listing credit limits by client as utilisation against an approved ceiling, beside the eligibility rules applied at advance time: a single debtor concentration cap, a maximum days past due at funding, a minimum invoice size, a default advance rate, cross aged ineligibility and restricted industries held for manual approval."
-          caption="The Policies screen, where gate policy is set. Credit limits are held as utilisation against each client's approved ceiling, and the rules on the right are the ones evaluated at advance time on every invoice."
+          alt="FactorFox Policies screen listing credit limits by client as utilization against an approved ceiling, beside the eligibility rules applied at advance time: a single debtor concentration cap, a maximum days past due at funding, a minimum invoice size, a default advance rate, cross aged ineligibility and restricted industries held for manual approval."
+          caption="The Policies screen, where gate policy is set. Credit limits are held as utilization against each client's approved ceiling, and the rules on the right are the ones evaluated at advance time on every invoice."
         />
       </ProseSection>
 

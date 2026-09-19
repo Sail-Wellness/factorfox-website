@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: "Does FactorAvenue run a general ledger?",
-    a: "We could not find a claim of a general ledger, double entry accounting or a dual ledger anywhere on their site. What is described is cash posting, allocation and reconciliation, and the one occurrence of the phrase ledger entries describes what is synchronised into QuickBooks rather than a ledger the platform maintains. Whether that matters depends on how you close your period today and where your statements come from.",
+    a: "We could not find a claim of a general ledger, double entry accounting or a dual ledger anywhere on their site. What is described is cash posting, allocation and reconciliation, and the one occurrence of the phrase ledger entries describes what is synchronized into QuickBooks rather than a ledger the platform maintains. Whether that matters depends on how you close your period today and where your statements come from.",
   },
   {
     q: "How long does a conversion off FactorAvenue take?",
@@ -216,7 +216,7 @@ export default function FactorAvenuePage() {
         <p>
           On accounting, we could find no claim of a general ledger, double entry or a dual ledger anywhere
           on their site. What is described is cash posting, allocation and reconciliation. The single
-          occurrence of the phrase ledger entries describes what is synchronised into QuickBooks, not a
+          occurrence of the phrase ledger entries describes what is synchronized into QuickBooks, not a
           ledger the platform keeps. If your period close currently depends on statements generated from
           the factoring system rather than from your accounting package, establish which side of that line
           you are on before you shortlist anybody, including us.
@@ -231,7 +231,7 @@ export default function FactorAvenuePage() {
         <p>
           On security, the homepage says SOC 2 Ready Infrastructure and ISO 27001 Aligned Practices. Read
           those precisely. Ready and aligned are not certifications and no certification is claimed. We
-          take the same position for the same reason: our security page says a SOC 2 programme is under way
+          take the same position for the same reason: our security page says a SOC 2 program is under way
           and that no report exists yet. Anyone claiming otherwise in this market should be asked for the
           report.
         </p>

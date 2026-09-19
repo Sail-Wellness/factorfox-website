@@ -42,6 +42,13 @@ export default function DemoPage() {
                   You will speak to people who have run a factoring operation, not to a sales engineer
                   reading a script. Expect direct answers, including about the things we have not built.
                 </p>
+                <p className="text-[var(--fg)]">
+                  <strong>Bring the account that always gives you trouble.</strong> The messy one, with the
+                  debtor nobody can read and the concentration that keeps creeping. That is the account
+                  worth watching, and it is the only honest test of whether any of this works. If it cannot
+                  handle your worst account, you should not buy it. That is a fair test and we are happy to
+                  take it.
+                </p>
               </div>
 
               <dl className="mt-10 space-y-0">
@@ -118,7 +125,7 @@ export default function DemoPage() {
           {
             label: "Minute 0",
             title: "We generate the first briefing against it",
-            body: "You watch the six questions answer themselves on your own portfolio. Where the data does not support an answer, the platform says so instead of filling the gap, and that behaviour is worth seeing as much as the answers are.",
+            body: "You watch the six questions answer themselves on your own portfolio. Where the data does not support an answer, the platform says so instead of filling the gap, and that behavior is worth seeing as much as the answers are.",
           },
           {
             label: "Minute 15",

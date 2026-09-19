@@ -256,10 +256,10 @@ export default function TransportationPage() {
       <RelatedPages
         links={[
           { href: "/integrations/transportation", label: "Transportation sources", note: "FMCSA and Tessera Network, with the controls stated on each row." },
-          { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioural combinations, near duplicates and the bank change hold." },
+          { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioral combinations, near duplicates and the bank change hold." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Rate confirmations and proofs of delivery under a strict schema." },
           { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Payment velocity by broker and exposure aggregated across carriers." },
-          { href: "/platform/collections", label: "Collections", note: "Prioritised by exposure and promise history, at freight volumes." },
+          { href: "/platform/collections", label: "Collections", note: "Prioritized by exposure and promise history, at freight volumes." },
           { href: "/solutions/factoring", label: "Factoring", note: "The commercial book, where the debtor is not a broker." },
           { href: "/platform/evidence", label: "Intelligence with evidence", note: "Why a verdict without its provenance does not count." },
         ]}
@@ -333,7 +333,7 @@ function CarrierScene() {
         Illustration of a carrier side party check. The refusal to assert operating authority currency,
         insurance currency and safety scores, the surfacing of a second registered identity as a
         contradiction, and claim verification returning a verdict with its provenance are the platform&rsquo;s own
-        behaviour. The carrier name comes from a seeded demonstration book.
+        behavior. The carrier name comes from a seeded demonstration book.
       </figcaption>
     </figure>
   );

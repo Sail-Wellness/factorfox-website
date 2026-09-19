@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: "How much of verification can actually be automated?",
-    a: "The gathering, the matching and the exception detection. Not the judgement. Documents are extracted under a strict schema and revalidated in ordinary deterministic code before anything touches your book, purchase orders and proofs of delivery are matched against the invoice, and duplicates and near duplicates are detected inside a client and across the whole portfolio. What reaches an officer is the set that failed a check, with the reason and the evidence attached. A verification run captures its evidence at the moment it runs and is never re fetched later, so what you certified is what you saw.",
+    a: "The gathering, the matching and the exception detection. Not the judgment. Documents are extracted under a strict schema and revalidated in ordinary deterministic code before anything touches your book, purchase orders and proofs of delivery are matched against the invoice, and duplicates and near duplicates are detected inside a client and across the whole portfolio. What reaches an officer is the set that failed a check, with the reason and the evidence attached. A verification run captures its evidence at the moment it runs and is never re fetched later, so what you certified is what you saw.",
   },
   {
     q: "Does the platform decide whether we buy the schedule?",
@@ -103,7 +103,7 @@ export default function FactoringPage() {
             problem:
               "Verification is sampled by whoever has time, and the sample is drawn from the invoices that were easy to verify.",
             response:
-              "Verification is driven by exposure, deviation and debtor behaviour rather than convenience, and every run stores its evidence at the moment it ran.",
+              "Verification is driven by exposure, deviation and debtor behavior rather than convenience, and every run stores its evidence at the moment it ran.",
           },
           {
             problem:
@@ -201,7 +201,7 @@ export default function FactoringPage() {
           {
             label: "Purchase",
             title: "Gates run, and some of them cannot be argued with",
-            body: "Credit limit utilisation, concentration under the aggregated debtor name, eligibility, advance rate by class and facility availability all apply. The machine may hold a purchase on its own authority. Releasing a held purchase requires a named person, four eyes by default, and the reason is recorded in the actor's own words.",
+            body: "Credit limit utilization, concentration under the aggregated debtor name, eligibility, advance rate by class and facility availability all apply. The machine may hold a purchase on its own authority. Releasing a held purchase requires a named person, four eyes by default, and the reason is recorded in the actor's own words.",
           },
           {
             label: "Funding",
@@ -284,7 +284,7 @@ export default function FactoringPage() {
           },
           {
             title: "Client agreements",
-            body: "Terms that drive behaviour, including advance rates by class, recourse periods, fee structures and reserve conditions, recorded so that the surface enforcing them can quote the clause it is enforcing.",
+            body: "Terms that drive behavior, including advance rates by class, recourse periods, fee structures and reserve conditions, recorded so that the surface enforcing them can quote the clause it is enforcing.",
           },
           {
             title: "Verification evidence",
@@ -308,8 +308,8 @@ export default function FactoringPage() {
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwriting on every material event, versioned and immutable." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Extraction, matching, verification and near duplicate detection." },
           { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Payment velocity, dilution movement and aggregated debtor concentration." },
-          { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioural combinations, and the bank change nobody may release alone." },
-          { href: "/platform/collections", label: "Collections", note: "Prioritised by exposure and promise history, constrained by notification status." },
+          { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioral combinations, and the bank change nobody may release alone." },
+          { href: "/platform/collections", label: "Collections", note: "Prioritized by exposure and promise history, constrained by notification status." },
           { href: "/solutions/transportation", label: "Freight factoring", note: "Where the debtor is a broker and the paperwork is a rate confirmation." },
           { href: "/migrate/factorsoft", label: "Moving off FactorSoft", note: "What a migration actually involves, in order." },
           { href: "/platform/pricing", label: "Pricing", note: "How the platform is charged for and what sits inside it." },
@@ -391,7 +391,7 @@ function ScheduleScene() {
       <figcaption className="mt-3 max-w-[52ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
         Illustration of schedule screening before purchase. Deviation against the client&rsquo;s own median, near
         duplicate detection across the portfolio, the advance and reserve split and the named approval
-        requirement are the platform&rsquo;s own behaviour. Client names, invoice numbers and figures come from a
+        requirement are the platform&rsquo;s own behavior. Client names, invoice numbers and figures come from a
         seeded demonstration book.
       </figcaption>
     </figure>

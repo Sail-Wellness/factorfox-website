@@ -42,7 +42,7 @@ const TERMS: Term[] = [
     term: "Aging bucket",
     slug: "aging-bucket",
     definition:
-      "The band an outstanding invoice falls into by days elapsed, used to summarise a portfolio at a glance. Whether the buckets are measured from invoice date or from due date matters more than most people check, because measuring from invoice date makes generous terms look like slow payment. Buckets are also where eligibility bites: an invoice crossing a threshold usually becomes ineligible and removes availability the client was relying on that morning.",
+      "The band an outstanding invoice falls into by days elapsed, used to summarize a portfolio at a glance. Whether the buckets are measured from invoice date or from due date matters more than most people check, because measuring from invoice date makes generous terms look like slow payment. Buckets are also where eligibility bites: an invoice crossing a threshold usually becomes ineligible and removes availability the client was relying on that morning.",
   },
   {
     term: "Assignment",
@@ -105,7 +105,7 @@ const TERMS: Term[] = [
     term: "Confirming",
     slug: "confirming",
     definition:
-      "A payables finance arrangement, common in Spanish speaking markets, in which a buyer arranges for its approved payables to be made available for early payment to suppliers through a financier. Commercially it sits very close to reverse factoring and the two words are often used for the same programme. The credit exposure is to the buyer rather than to the suppliers, which is the entire point of the structure.",
+      "A payables finance arrangement, common in Spanish speaking markets, in which a buyer arranges for its approved payables to be made available for early payment to suppliers through a financier. Commercially it sits very close to reverse factoring and the two words are often used for the same program. The credit exposure is to the buyer rather than to the suppliers, which is the entire point of the structure.",
     see: [{ href: "/solutions/reverse-factoring", label: "Reverse factoring" }],
   },
   {
@@ -167,7 +167,7 @@ const TERMS: Term[] = [
     term: "Double brokering",
     slug: "double-brokering",
     definition:
-      "In freight, accepting a load and then re brokering it to another carrier without authority, so that the party who hauled the freight is not the party who was engaged. For a transportation factor it creates the risk of funding an invoice for a service the invoicing party did not perform, and of paying the wrong carrier entirely. Detection is behavioural rather than documentary, which makes it a pattern problem rather than a checklist problem.",
+      "In freight, accepting a load and then re brokering it to another carrier without authority, so that the party who hauled the freight is not the party who was engaged. For a transportation factor it creates the risk of funding an invoice for a service the invoicing party did not perform, and of paying the wrong carrier entirely. Detection is behavioral rather than documentary, which makes it a pattern problem rather than a checklist problem.",
     see: [
       { href: "/solutions/transportation", label: "Transportation" },
       { href: "/platform/fraud-detection", label: "Fraud detection" },
@@ -243,7 +243,7 @@ const TERMS: Term[] = [
     term: "Lockbox",
     slug: "lockbox",
     definition:
-      "A collection account, usually at a bank, to which debtors send payment so that funds arrive under the funder's control rather than passing through the client. It is the practical mechanism behind dominion of funds and the main defence against misdirected payments. A facility with notification but no lockbox has a control gap that only becomes obvious once a client is under pressure.",
+      "A collection account, usually at a bank, to which debtors send payment so that funds arrive under the funder's control rather than passing through the client. It is the practical mechanism behind dominion of funds and the main defense against misdirected payments. A facility with notification but no lockbox has a control gap that only becomes obvious once a client is under pressure.",
     see: [{ href: "/platform/treasury", label: "Treasury" }],
   },
   {
@@ -270,7 +270,7 @@ const TERMS: Term[] = [
     term: "Notice of assignment",
     slug: "notice-of-assignment",
     definition:
-      "The formal notification to a debtor that a receivable has been assigned and that payment must be made to the factor. It is the document that makes disclosure effective, and it is the first thing anyone asks for when a payment goes to the wrong place. Being able to produce the signed notice for one named invoice, quickly, is a fair test of whether a document archive is genuinely organised.",
+      "The formal notification to a debtor that a receivable has been assigned and that payment must be made to the factor. It is the document that makes disclosure effective, and it is the first thing anyone asks for when a payment goes to the wrong place. Being able to produce the signed notice for one named invoice, quickly, is a fair test of whether a document archive is genuinely organized.",
     see: [{ href: "/platform/document-intelligence", label: "Document intelligence" }],
   },
   {
@@ -284,7 +284,7 @@ const TERMS: Term[] = [
     term: "Purchase order funding",
     slug: "purchase-order-funding",
     definition:
-      "Financing provided against a confirmed purchase order so a supplier can fulfil it, before any invoice exists. The risk is performance as well as credit, because the funder is exposed to whether the goods are actually delivered and accepted. It is usually structured to convert into a factored receivable once the invoice is raised, which makes the handover between the two the point of greatest exposure.",
+      "Financing provided against a confirmed purchase order so a supplier can fulfill it, before any invoice exists. The risk is performance as well as credit, because the funder is exposed to whether the goods are actually delivered and accepted. It is usually structured to convert into a factored receivable once the invoice is raised, which makes the handover between the two the point of greatest exposure.",
     see: [{ href: "/solutions/purchase-order-funding", label: "Purchase order funding" }],
   },
   {
@@ -340,7 +340,7 @@ const TERMS: Term[] = [
     term: "Reverse factoring",
     slug: "reverse-factoring",
     definition:
-      "A programme arranged by a buyer that lets its approved suppliers be paid early, with the financier taking exposure to the buyer rather than to each supplier. It is also called supply chain finance or confirming depending on the market. Because the buyer approves the payable, the credit question is concentrated and the operational question is scale: many small suppliers onboarded against one obligor.",
+      "A program arranged by a buyer that lets its approved suppliers be paid early, with the financier taking exposure to the buyer rather than to each supplier. It is also called supply chain finance or confirming depending on the market. Because the buyer approves the payable, the credit question is concentrated and the operational question is scale: many small suppliers onboarded against one obligor.",
     see: [{ href: "/solutions/reverse-factoring", label: "Reverse factoring" }],
   },
   {
@@ -365,7 +365,7 @@ const TERMS: Term[] = [
     term: "Supply chain finance",
     slug: "supply-chain-finance",
     definition:
-      "The broad category of buyer led programmes financing payables and, in some structures, inventory and purchase orders further up the chain. Reverse factoring is the most common form of it. The term is used loosely enough that it is always worth asking who bears the credit risk and at which point in the chain the money actually enters.",
+      "The broad category of buyer led programs financing payables and, in some structures, inventory and purchase orders further up the chain. Reverse factoring is the most common form of it. The term is used loosely enough that it is always worth asking who bears the credit risk and at which point in the chain the money actually enters.",
     see: [{ href: "/solutions/reverse-factoring", label: "Reverse factoring" }],
   },
   {
@@ -552,7 +552,7 @@ export default function GlossaryPage() {
           identical.</strong> They are related structures with different origins, and the useful question is
           never which word to use. It is who carries the credit risk and at what point in the chain the money
           enters. See <Link href="/solutions/reverse-factoring" className="text-[var(--accent)] underline underline-offset-4 hover:no-underline">reverse factoring</Link>{" "}
-          for how the operational side of one of these programmes runs.
+          for how the operational side of one of these programs runs.
         </p>
       </ProseSection>
 
@@ -560,7 +560,7 @@ export default function GlossaryPage() {
         links={[
           { href: "/resources", label: "Writing", note: "Longer pieces for the funding side of the transaction." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Eligibility, ineligibles, availability and compression." },
-          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Dilution, concentration and payment behaviour." },
+          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Dilution, concentration and payment behavior." },
           { href: "/solutions/factoring", label: "Factoring", note: "Recourse, non recourse and non notification in the product." },
           { href: "/solutions/asset-based-lending", label: "Asset based lending", note: "Borrowing base, collateral and field exams." },
           { href: "/compare", label: "How we compare", note: "Recording systems against decision systems." },

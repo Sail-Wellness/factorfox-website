@@ -73,7 +73,7 @@ export default function StaffingPage() {
           {
             label: "Wednesday",
             title: "The purchase gates run and the exceptions get named",
-            body: "Concentration under the aggregated end customer name, credit limit utilisation, eligibility and availability all apply. A held invoice names the reason and the person who can release it, because in this vertical an unexplained hold on Wednesday becomes an emergency on Thursday.",
+            body: "Concentration under the aggregated end customer name, credit limit utilization, eligibility and availability all apply. A held invoice names the reason and the person who can release it, because in this vertical an unexplained hold on Wednesday becomes an emergency on Thursday.",
           },
           {
             label: "Thursday",
@@ -116,7 +116,7 @@ export default function StaffingPage() {
         </p>
         <p>
           <strong>Concentration is aggregated under one end customer name across every agency you fund.</strong>{" "}
-          A regional hospital system or a distribution centre can sit behind a large share of a staffing
+          A regional hospital system or a distribution center can sit behind a large share of a staffing
           book while looking modest on any single client file, and the aggregate is the figure that changes
           the credit decision.
         </p>
@@ -184,7 +184,7 @@ export default function StaffingPage() {
           { href: "/platform/treasury", label: "Treasury", note: "Release control and days to zero, against a payroll deadline." },
           { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "End customer concentration, payment velocity and dilution movement." },
           { href: "/platform/client-onboarding", label: "Client onboarding", note: "Conditions with due dates and owners, including the ones that recur." },
-          { href: "/platform/collections", label: "Collections", note: "Prioritised by exposure across every agency billing the same end customer." },
+          { href: "/platform/collections", label: "Collections", note: "Prioritized by exposure across every agency billing the same end customer." },
         ]}
       />
 

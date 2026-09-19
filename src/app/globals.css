@@ -5,7 +5,7 @@
 
    The palette is taken from the logo. The blue gradient in the
    mark runs #0955a2 to #42a6dd, the flame runs #8f191c to
-   #f0522e, and the grey is #a1b0c1. Everything below is built
+   #f0522e, and the gray is #a1b0c1. Everything below is built
    out of those three families so the site and the mark read as
    one thing.
 
@@ -191,7 +191,7 @@
    Deep sections put a near black ground inside a page that may be in
    light mode. Redefining the tokens locally means every child element
    resolves against the ground it is actually sitting on instead of
-   each one having to remember to override its own colour.
+   each one having to remember to override its own color.
    ------------------------------------------------------------------ */
 .on-deep {
   --bg: #040811;
@@ -587,7 +587,7 @@
 /* The dialog itself is transparent and only as large as the film, so a click
    anywhere around it lands on the backdrop and closes. */
 .ff-video-dialog {
-  /* Fills the viewport and centres the film, so every click around the film
+  /* Fills the viewport and centers the film, so every click around the film
      lands on the dialog and can be read as a dismiss. */
   width: 100vw;
   max-width: 100vw;
@@ -599,7 +599,7 @@
   overflow: hidden;
   color: var(--fg);
   /* The dim lives on the dialog itself, not only on ::backdrop. The dialog
-     fills the viewport, so this is what actually greys the page, and it holds
+     fills the viewport, so this is what actually grays the page, and it holds
      in browsers and screenshot tools where ::backdrop is unreliable. */
   background-color: rgba(6, 10, 16, 0.82);
   -webkit-backdrop-filter: blur(6px) saturate(80%);
@@ -622,7 +622,7 @@
 }
 
 .ff-video-shell {
-  /* The hero centres its text and the dialog inherits that through the DOM
+  /* The hero centers its text and the dialog inherits that through the DOM
      even while it sits in the top layer. */
   text-align: left;
   display: flex;

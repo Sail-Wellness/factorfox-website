@@ -32,7 +32,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "What is the actual difference between a recording system and a decision system?",
-    a: "A recording system answers what happened. It holds an accurate, ordered account of every transaction and it will reproduce that account faithfully whenever you ask. A decision system answers what should happen next and shows you why it thinks so. Both need to be correct about the past. Only one of them is organised around the question an operator is actually holding at nine in the morning, which is where the exposure is today and what needs a person right now.",
+    a: "A recording system answers what happened. It holds an accurate, ordered account of every transaction and it will reproduce that account faithfully whenever you ask. A decision system answers what should happen next and shows you why it thinks so. Both need to be correct about the past. Only one of them is organized around the question an operator is actually holding at nine in the morning, which is where the exposure is today and what needs a person right now.",
   },
   {
     q: "Why is there no vendor by vendor table on this page?",
@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: "Does modern hosting make a platform a decision system?",
-    a: "No, and this is the most common category error in the evaluation. Browser access, a clean interface and a public API are real improvements to how a recording system is used. They do not change what it is organised around. The test is not how the software is delivered. It is whether the platform can tell you what changed since yesterday, why that matters, what it recommends and what proves the recommendation, without a person assembling the answer first.",
+    a: "No, and this is the most common category error in the evaluation. Browser access, a clean interface and a public API are real improvements to how a recording system is used. They do not change what it is organized around. The test is not how the software is delivered. It is whether the platform can tell you what changed since yesterday, why that matters, what it recommends and what proves the recommendation, without a person assembling the answer first.",
   },
   {
     q: "Can we keep our current system and add intelligence on top?",
@@ -82,7 +82,7 @@ export default function ComparePage() {
             <p>
               It does not separate on features. Invoices, schedules, advances, reserves, ineligibles,
               chargebacks and aging exist everywhere, and they should. It separates on what the system is
-              organised around: keeping an accurate account of what happened, or telling you what to do next
+              organized around: keeping an accurate account of what happened, or telling you what to do next
               and proving why.
             </p>
           </>
@@ -150,7 +150,7 @@ export default function ComparePage() {
               head={["Capability", "Legacy recording platform", "Modern recording platform", "FactorFox"]}
               rows={[
                 [
-                  "Organising question",
+                  "Organizing question",
                   "What happened, and does it tie.",
                   "What happened, available faster and from anywhere.",
                   "What requires a decision now, why, and what proves it.",
@@ -177,17 +177,17 @@ export default function ComparePage() {
                   "Risk detection",
                   "Threshold reports and exception listings a person reads.",
                   "Configurable alerts on individual fields.",
-                  "Behavioural combinations across the portfolio: payment velocity by obligor, dilution movement, invoice size deviation against a client's own median, unusual submission timing.",
+                  "Behavioral combinations across the portfolio: payment velocity by obligor, dilution movement, invoice size deviation against a client's own median, unusual submission timing.",
                 ],
                 [
                   "Exposure across clients",
                   "Visible within a client file. Combining obligors across clients is a manual exercise.",
-                  "Reportable where debtor records have been normalised.",
+                  "Reportable where debtor records have been normalized.",
                   "Concentration read across the book, including exposure under one debtor name appearing through several clients.",
                 ],
                 [
                   "Duplicate documents",
-                  "Caught when an operator recognises one.",
+                  "Caught when an operator recognizes one.",
                   "Exact match detection on identifiers.",
                   "Duplicate and near duplicate detection within a client and across the whole portfolio.",
                 ],
@@ -231,7 +231,7 @@ export default function ComparePage() {
                   "Covenants",
                   "Tracked in a spreadsheet and a diary.",
                   "Tracked, usually as fields to be reported on.",
-                  "Monitored continuously against a default pack modelled on how bank rediscount facilities are written, with the agreement clause quoted as the evidence and every surface stating these are FactorFox covenants rather than anyone's contract.",
+                  "Monitored continuously against a default pack modeled on how bank rediscount facilities are written, with the agreement clause quoted as the evidence and every surface stating these are FactorFox covenants rather than anyone's contract.",
                 ],
                 [
                   "Where the work happens",

@@ -38,7 +38,7 @@ const FAQS = [
   },
   {
     q: "Why does the debtor side matter as much as the client side?",
-    a: "In transportation the client is the carrier and the debtor is usually the broker, so a check offered only on the client throws away half of what you needed. Broker payment behaviour is the risk in freight factoring far more often than carrier registration is, and the broker is the party whose conduct across your whole portfolio you can actually observe.",
+    a: "In transportation the client is the carrier and the debtor is usually the broker, so a check offered only on the client throws away half of what you needed. Broker payment behavior is the risk in freight factoring far more often than carrier registration is, and the broker is the party whose conduct across your whole portfolio you can actually observe.",
   },
   {
     q: "What does Tessera Network verification add that a rate confirmation does not?",
@@ -160,7 +160,7 @@ export default function TransportationPage() {
           <strong>The reason is liability, and it is yours rather than ours.</strong> An advance made against a
           load moved by a carrier whose authority had lapsed is a conversation with your insurer, and the
           strength of your position in that conversation depends on what your own systems told your own people.
-          A system that said nothing leaves your officer&rsquo;s judgement intact. A system that said fine has
+          A system that said nothing leaves your officer&rsquo;s judgment intact. A system that said fine has
           quietly transferred the error to you.
         </p>
         <p>
@@ -252,7 +252,7 @@ export default function TransportationPage() {
           { href: "/solutions/transportation", label: "Transportation factoring", note: "The whole operation, not just the two integrations underneath it." },
           { href: "/platform/fraud-detection", label: "Fraud detection", note: "Duplicate paper, submission timing and the signals around a load." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Rate confirmations and bills of lading, and what extraction is allowed to be." },
-          { href: "/integrations/credit-and-risk", label: "Credit and risk", note: "Broker payment behaviour from the network, at no per check cost." },
+          { href: "/integrations/credit-and-risk", label: "Credit and risk", note: "Broker payment behavior from the network, at no per check cost." },
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "What happens to a decision when a verification exception lands." },
           { href: "/integrations", label: "All integrations", note: "The register, with a status column and a published absence list." },
         ]}
@@ -316,7 +316,7 @@ function RefusalScene() {
       </div>
       <figcaption className="mt-3 max-w-[50ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
         Illustration of the carrier identity panel. The refusal, its wording and the run time capture are the
-        platform&rsquo;s own behaviour. The party name comes from a seeded demonstration book.
+        platform&rsquo;s own behavior. The party name comes from a seeded demonstration book.
       </figcaption>
     </figure>
   );

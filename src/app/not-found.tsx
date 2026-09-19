@@ -39,7 +39,7 @@ export default function NotFound() {
             ["/platform/briefings", "Briefings", "The six questions, answered for your responsibility."],
             ["/solutions/factoring", "Factoring", "For the factoring company, not for the business selling the invoice."],
             ["/solutions/asset-based-lending", "Asset based lending", "Borrowing base, collateral and covenant reporting."],
-            ["/integrations", "Integrations", "Organised by business purpose, with a status on every row."],
+            ["/integrations", "Integrations", "Organized by business purpose, with a status on every row."],
             ["/migrate", "Migrating to FactorFox", "What moves, what breaks, and what your old system never stored."],
             ["/resources/glossary", "Operator glossary", "The vocabulary, as the funding side actually uses it."],
           ].map(([href, label, note]) => (

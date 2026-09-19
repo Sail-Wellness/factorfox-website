@@ -65,7 +65,7 @@ export default function AccountingPage() {
 
       <ProblemSolution
         eyebrow="Why this exists"
-        title="Cash application is not data entry. It is a series of small judgements at speed."
+        title="Cash application is not data entry. It is a series of small judgments at speed."
         lede="A payment for 41,318.62 against four invoices, one of which was short paid for a reason that is on a stub somebody scanned, is a decision. Software that treats it as a match is guessing on your behalf."
         rows={[
           {
@@ -257,7 +257,7 @@ export default function AccountingPage() {
           every question a factoring company actually gets asked is answered.
         </p>
         <p>
-          Your general ledger keeps doing what it does. Client receivable ledgers synchronised from QuickBooks
+          Your general ledger keeps doing what it does. Client receivable ledgers synchronized from QuickBooks
           Online or Xero arrive read only, on the client&rsquo;s consent, and FactorFox never writes into a client
           ledger. Synced invoices still face every ingestion gate, because a connector is a submission channel
           and not a side door onto your book.

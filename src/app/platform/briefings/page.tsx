@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: "What happens to something serious that falls outside my scope?",
-    a: "It reaches you through the escalation lane and it arrives labelled as escalated, with the scope it came from named. It is never blended into your own items as though it were yours. Owners and directors carry book wide escalation scope, so severity can always find a person with the authority to act, and the record shows who was reached and when.",
+    a: "It reaches you through the escalation lane and it arrives labeled as escalated, with the scope it came from named. It is never blended into your own items as though it were yours. Owners and directors carry book wide escalation scope, so severity can always find a person with the authority to act, and the record shows who was reached and when.",
   },
   {
     q: "How is the second briefing of the day different from the first?",
@@ -124,7 +124,7 @@ export default function BriefingsPage() {
             problem:
               "The finding is on one screen and the action is on another, so the person who spots the problem is not the person who fixes it.",
             response:
-              "The action sits on the finding, labelled with the permission it needs, and it is only offered to somebody who holds that permission.",
+              "The action sits on the finding, labeled with the permission it needs, and it is only offered to somebody who holds that permission.",
           },
         ]}
       />
@@ -180,7 +180,7 @@ export default function BriefingsPage() {
             <p className="mt-3 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
               Narrow scope has one obvious failure: something serious happens just outside it and nobody
               hears. So severity has a second route. A material event outside a person&rsquo;s book travels the
-              escalation lane to somebody whose scope covers it, and it arrives labelled, with the scope it
+              escalation lane to somebody whose scope covers it, and it arrives labeled, with the scope it
               came from named.
             </p>
             <p className="mt-4 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
@@ -289,12 +289,12 @@ export default function BriefingsPage() {
                 ],
                 [
                   "Evidence references",
-                  "Links into the actual FactorFox records. Invoices, aging observations, documents, payment behaviour, policy versions, contract clauses.",
+                  "Links into the actual FactorFox records. Invoices, aging observations, documents, payment behavior, policy versions, contract clauses.",
                   "So the person deciding can open what produced the number instead of taking it on faith, and so the same references sit in the packet three years later.",
                 ],
                 [
                   "Actions with permissions",
-                  "The next steps, each labelled with the permission it requires, offered only to somebody holding it.",
+                  "The next steps, each labeled with the permission it requires, offered only to somebody holding it.",
                   "The finding and the fix belong in one place. Showing an action to somebody who cannot take it is how work gets forwarded four times before anything happens.",
                 ],
               ]}

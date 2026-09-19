@@ -52,7 +52,7 @@ const FAQS = [
   },
   {
     q: "Is there anything you will not move?",
-    a: "Report definitions, saved queries, user defined field layouts, in house scripts and any integration built on direct database access. Those are rebuilt, not converted. We would rather say so on a public page than discover it with you in week five. Historical records that have no clean structural home come across as evidence attached to the client and debtor they belong to, labelled with their origin, rather than being forced into live transactional records where they would distort a balance.",
+    a: "Report definitions, saved queries, user defined field layouts, in house scripts and any integration built on direct database access. Those are rebuilt, not converted. We would rather say so on a public page than discover it with you in week five. Historical records that have no clean structural home come across as evidence attached to the client and debtor they belong to, labeled with their origin, rather than being forced into live transactional records where they would distort a balance.",
   },
   {
     q: "What should we ask FactorFox before committing?",
@@ -165,7 +165,7 @@ export default function FactorSoftPage() {
                 ["Chargebacks and disputes", "Amount, date, reason and disposition. This history is what tells an underwriter whether a dilution pattern is forming."],
                 ["Verification records", "What was verified, by whom, by what method and when. It is both evidence and a picture of your current verification coverage."],
                 ["Fee and rate configuration", "Every schedule, tier, minimum, floor and per event charge. Then the versions, if the system holds them. Usually it holds the current one."],
-                ["Notes and correspondence", "The least structured and most underestimated item on this list. It carries the collections judgement your team has built up."],
+                ["Notes and correspondence", "The least structured and most underestimated item on this list. It carries the collections judgment your team has built up."],
                 ["Documents and their linkage", "The files, and the relationship between each file and the transaction it evidences. Verify the linkage on a sample, not in principle."],
                 ["Users, roles and permissions", "Who can do what today. It is the starting point for role design and it usually surfaces access nobody meant to grant."],
                 ["Report definitions", "Not portable, but a specification. Sort them into read, required by a third party, and abandoned."],
@@ -238,7 +238,7 @@ export default function FactorSoftPage() {
             {[
               {
                 q: "How far back does history come across as live records?",
-                a: "Everything open comes across as live, always. The question is how much settled history joins it as transactional detail rather than as searchable evidence. More live history means richer trend analysis on day one and a longer, more expensive reconciliation. Less means a faster cutover and a period where behavioural comparisons reach back only so far.",
+                a: "Everything open comes across as live, always. The question is how much settled history joins it as transactional detail rather than as searchable evidence. More live history means richer trend analysis on day one and a longer, more expensive reconciliation. Less means a faster cutover and a period where behavioral comparisons reach back only so far.",
                 cost: "Trade off: analytical depth on day one against reconciliation scope.",
               },
               {

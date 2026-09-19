@@ -84,8 +84,8 @@ export default function TermsPage() {
             <Clause n="1" title="Agreement to these terms">
               <p>
                 By using this website you accept these terms. If you do not accept them, please do not use
-                the site. If you are using it on behalf of an organisation, you confirm you are authorised to
-                accept these terms for that organisation, and references to you include it.
+                the site. If you are using it on behalf of an organization, you confirm you are authorized to
+                accept these terms for that organization, and references to you include it.
               </p>
               <p>
                 This site is intended for people acting in a business capacity on behalf of financial
@@ -98,7 +98,7 @@ export default function TermsPage() {
               <p>You may read, print and share pages from this site for your own business purposes. You may not:</p>
               <ul className="list-disc space-y-2 pl-6">
                 <li>use the site for any unlawful purpose, or in a way that breaches any applicable law or regulation;</li>
-                <li>attempt to gain access to any part of the site, any server, or any system or network connected to it, that you are not authorised to access;</li>
+                <li>attempt to gain access to any part of the site, any server, or any system or network connected to it, that you are not authorized to access;</li>
                 <li>probe, scan or test the vulnerability of the site, or breach or circumvent any security or authentication measure;</li>
                 <li>interfere with the site or impose an unreasonable load on it, including by denial of service activity or by automated requests at a rate a person could not generate;</li>
                 <li>scrape, harvest or systematically extract content from the site to build or train a competing product or service, or to create a substitute for it;</li>

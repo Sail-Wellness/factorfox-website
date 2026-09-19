@@ -81,9 +81,9 @@ export default function HealthcarePage() {
         </p>
         <p>
           <strong>Net collectable value is a measurement, not an assumption.</strong> FactorFox measures
-          realisation against the provider&rsquo;s own history, by payer and by claim type, in the same way
-          dilution is measured on a commercial book. A provider whose commercial payers realise well and
-          whose workers compensation claims realise poorly is a different credit from one with the same
+          realization against the provider&rsquo;s own history, by payer and by claim type, in the same way
+          dilution is measured on a commercial book. A provider whose commercial payers realize well and
+          whose workers compensation claims realize poorly is a different credit from one with the same
           gross aging and the opposite mix, and the aggregate rate hides that completely.
         </p>
         <p>
@@ -109,10 +109,10 @@ export default function HealthcarePage() {
                 [
                   "Commercial and managed care",
                   "Contracted rates, predictable adjudication, denials that follow published rules",
-                  "Realisation by payer against the provider's own history, denial reasons grouped by code, and appeal outcomes",
+                  "Realization by payer against the provider's own history, denial reasons grouped by code, and appeal outcomes",
                 ],
                 [
-                  "Government programmes",
+                  "Government programs",
                   "Assignment of the receivable is restricted, so the structure is a lockbox and control arrangement rather than a purchase in the ordinary sense",
                   "The arrangement, the account control documents and their dates, held as facts about the relationship. Your counsel decides the structure. The platform holds you to what they decided",
                 ],
@@ -128,7 +128,7 @@ export default function HealthcarePage() {
                 ],
                 [
                   "Self pay and patient responsibility",
-                  "The weakest realisation in the mix, and the portion that grows quietly as plan designs change",
+                  "The weakest realization in the mix, and the portion that grows quietly as plan designs change",
                   "Tracked as its own share of the mix, with movement in that share reported as movement",
                 ],
               ]}
@@ -163,7 +163,7 @@ export default function HealthcarePage() {
             body: "The interval between date of service and submission, measured per provider. Stretching lag is an early operational signal, and it is one of the few in this industry that arrives before the money does.",
           },
           {
-            title: "Reserve against realisation",
+            title: "Reserve against realization",
             body: "Reserves are set against measured net collectable value by payer rather than against a single blended advance rate carried on the client record since onboarding.",
           },
           {
@@ -177,7 +177,7 @@ export default function HealthcarePage() {
         links={[
           { href: "/solutions/factoring", label: "Invoice factoring", note: "The mechanics underneath: schedules, verification, reserves and chargebacks." },
           { href: "/platform/security", label: "Security and controls", note: "The control list your compliance officer will ask for, written for the questionnaire." },
-          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Realisation, payer concentration and dilution movement between reporting dates." },
+          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Realization, payer concentration and dilution movement between reporting dates." },
           { href: "/platform/accounting", label: "Accounting and cash application", note: "Remittance advice to proposal, with takebacks handled as their own event." },
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwriting a provider when the mix moves, not once a year." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Where contingent and restricted claims are treated as ineligible rather than pooled." },
@@ -186,7 +186,7 @@ export default function HealthcarePage() {
 
       <CtaBand
         title="Bring a provider whose aging looks fine."
-        body="We will break their book down by payer against a demonstration set, measure realisation by class, and show you what the blended advance rate was hiding."
+        body="We will break their book down by payer against a demonstration set, measure realization by class, and show you what the blended advance rate was hiding."
         primary={{ href: "/demo", label: "Request a FactorFox AI demonstration" }}
         secondary={{ href: "/solutions", label: "See every industry we fund" }}
       />

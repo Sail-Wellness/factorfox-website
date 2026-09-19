@@ -21,7 +21,7 @@ import { pageMeta, softwareSchema } from "@/lib/seo";
 export const metadata: Metadata = pageMeta({
   title: "Credit bureau integration for factoring",
   description:
-    "Pin every credit check to the decision it informed. Payment behaviour, bureau rails and lien position, captured at run time and never quietly re fetched.",
+    "Pin every credit check to the decision it informed. Payment behavior, bureau rails and lien position, captured at run time and never quietly re fetched.",
   path: "/integrations/credit-and-risk",
   intent: "integration",
   target: "credit bureau integration for factoring",
@@ -30,15 +30,15 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "What does a check being pinned to a decision actually prevent?",
-    a: "It prevents the most quietly corrosive failure in credit software: opening an approved file six months later and seeing today's data next to yesterday's decision. When that happens the decision looks wrong or looks lucky, and either way nobody can defend it. A pinned check means the file shows what the officer saw at the moment they approved, so the review is about the judgement rather than about the passage of time.",
+    a: "It prevents the most quietly corrosive failure in credit software: opening an approved file six months later and seeing today's data next to yesterday's decision. When that happens the decision looks wrong or looks lucky, and either way nobody can defend it. A pinned check means the file shows what the officer saw at the moment they approved, so the review is about the judgment rather than about the passage of time.",
   },
   {
     q: "Why show a check we have not bought instead of hiding it?",
-    a: "Because a greyed row teaches and a hidden feature lies. An underwriter who sees Creditsafe greyed with the vendor named learns something true about their own file: a source exists, it is switched off, and the assessment in front of them was made without it. An underwriter who sees nothing concludes their coverage is complete. The second one is how a thin file gets treated as a full one.",
+    a: "Because a grayed row teaches and a hidden feature lies. An underwriter who sees Creditsafe grayed with the vendor named learns something true about their own file: a source exists, it is switched off, and the assessment in front of them was made without it. An underwriter who sees nothing concludes their coverage is complete. The second one is how a thin file gets treated as a full one.",
   },
   {
     q: "Does Probity network cost anything per check?",
-    a: "No vendor, no contract, no per check charge. It is not a bureau relationship at all. It reads payment behaviour the FactorFox network already holds about a debtor, which is why it can answer immediately and why the answer is about how that debtor actually pays rather than about how a scoring model rates them.",
+    a: "No vendor, no contract, no per check charge. It is not a bureau relationship at all. It reads payment behavior the FactorFox network already holds about a debtor, which is why it can answer immediately and why the answer is about how that debtor actually pays rather than about how a scoring model rates them.",
   },
   {
     q: "Does anything about our book leave the tenant when we run a network check?",
@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: "Do adverse credit events reach us automatically once a party is on the book?",
-    a: "Not from the bureau rails, and the platform says so rather than implying otherwise. Several external sources are declared and dark, and where a monitoring answer depends on one of them the platform reports itself blind and names the missing source. What does move continuously is behaviour the platform observes itself: payment velocity by obligor, dilution movement, concentration change, credit limit utilisation and missed promises.",
+    a: "Not from the bureau rails, and the platform says so rather than implying otherwise. Several external sources are declared and dark, and where a monitoring answer depends on one of them the platform reports itself blind and names the missing source. What does move continuously is behavior the platform observes itself: payment velocity by obligor, dilution movement, concentration change, credit limit utilization and missed promises.",
   },
   {
     q: "We hold a Dun and Bradstreet contract already. What changes on day one?",
@@ -61,7 +61,7 @@ export default function CreditAndRiskPage() {
         data={softwareSchema({
           name: "FactorFox credit and risk integrations",
           description:
-            "Network payment behaviour, commercial credit bureau rails, tax lien position and additional client risk assessment, captured at run time and bound to the underwriting run that used them.",
+            "Network payment behavior, commercial credit bureau rails, tax lien position and additional client risk assessment, captured at run time and bound to the underwriting run that used them.",
           path: "/integrations/credit-and-risk",
         })}
       />
@@ -80,7 +80,7 @@ export default function CreditAndRiskPage() {
               at the point where a party is created and somebody has to decide what to believe about them.
             </p>
             <p>
-              Network payment behaviour, commercial credit, tax lien position and additional client assessment,
+              Network payment behavior, commercial credit, tax lien position and additional client assessment,
               each running the moment a party is born, each attaching to the file as dated evidence, and none
               of them ever refreshed underneath a decision that already used them.
             </p>
@@ -116,7 +116,7 @@ export default function CreditAndRiskPage() {
         <p>
           <strong>FactorFox captures the answer when the check runs and keeps it.</strong> The result is stored
           as dated evidence, attached to the party and to the underwriting run that consumed it. Reopen that run
-          in a year and it still shows the score, the rating, the lien position and the network behaviour exactly
+          in a year and it still shows the score, the rating, the lien position and the network behavior exactly
           as they stood when an officer read them and put their name to a decision.
         </p>
         <p>
@@ -126,7 +126,7 @@ export default function CreditAndRiskPage() {
         </p>
         <p>
           <strong>Continuous underwriting re runs, and versions each run immutably.</strong> Re underwriting on a
-          material event is the right behaviour. Silently swapping the inputs of a completed run is not. Each run
+          material event is the right behavior. Silently swapping the inputs of a completed run is not. Each run
           reports its confidence and its coverage separately, so a confident answer built on half the sources
           reads as exactly that rather than as agreement.
         </p>
@@ -142,7 +142,7 @@ export default function CreditAndRiskPage() {
           <SectionHead
             eyebrow="The sources"
             title="Five rows, three statuses, no rounding up"
-            lede="Two of these need a contract you may not hold. They still appear in the interface, named, greyed, and honest about what your file is missing."
+            lede="Two of these need a contract you may not hold. They still appear in the interface, named, grayed, and honest about what your file is missing."
           />
           <div className="mt-11">
             <DataTable
@@ -165,7 +165,7 @@ export default function CreditAndRiskPage() {
                   "Dun and Bradstreet",
                   <Status key="dnb" kind="contract" />,
                   "United States client credit at intake: business identity and credit, attached to the client file.",
-                  "Same posture as every other bureau rail. No keys, no silent behaviour. Offered only where the tenant country qualifies.",
+                  "Same posture as every other bureau rail. No keys, no silent behavior. Offered only where the tenant country qualifies.",
                 ],
                 [
                   "TaxRock",
@@ -205,7 +205,7 @@ export default function CreditAndRiskPage() {
             problem:
               "A debtor was approved on a bureau score while three of your own clients were already being paid slowly by that same debtor, and nobody joined those facts.",
             response:
-              "Probity network reads the payment behaviour the network already holds, so the debtor's actual conduct across your portfolio is available at the moment they are created.",
+              "Probity network reads the payment behavior the network already holds, so the debtor's actual conduct across your portfolio is available at the moment they are created.",
           },
           {
             problem:
@@ -217,19 +217,19 @@ export default function CreditAndRiskPage() {
             problem:
               "A source your institution never bought is simply absent from the interface, so every file looks fully covered.",
             response:
-              "Unconfigured checks are shown, named and greyed. Coverage is reported separately from confidence, so a thin file announces itself as thin.",
+              "Unconfigured checks are shown, named and grayed. Coverage is reported separately from confidence, so a thin file announces itself as thin.",
           },
         ]}
       />
 
       <FeatureGrid
         eyebrow="Probity network"
-        title="The question a bureau answers slowly, answered from behaviour you are already part of"
+        title="The question a bureau answers slowly, answered from behavior you are already part of"
         lede="It is not a cheaper bureau. It is a different question, asked of a different body of evidence."
         columns={3}
         items={[
           {
-            title: "Behaviour, not opinion",
+            title: "Behavior, not opinion",
             body: "How a debtor has actually paid, drawn from the network plane rather than from a model's view of their filings. The two are different objects and an underwriter should have both.",
           },
           {
@@ -270,7 +270,7 @@ export default function CreditAndRiskPage() {
 
       <CtaBand
         title="Ask to see a check that is switched off."
-        body="Any vendor can demonstrate a successful lookup. Ask instead to see a source you have not bought, greyed and named, and watch what the underwriting run says about its own coverage."
+        body="Any vendor can demonstrate a successful lookup. Ask instead to see a source you have not bought, grayed and named, and watch what the underwriting run says about its own coverage."
         primary={{ href: "/demo", label: "Request a FactorFox AI demonstration" }}
         secondary={{ href: "/integrations", label: "Review our integrations" }}
       />
@@ -325,13 +325,13 @@ function ChecksScene() {
           ))}
 
           <p className="text-[0.8125rem] leading-[1.5] text-[var(--fg-muted)]">
-            The greyed row is not hidden. The underwriting run reports coverage of four sources out of five, and
+            The grayed row is not hidden. The underwriting run reports coverage of four sources out of five, and
             states its confidence separately from that coverage.
           </p>
         </div>
       </div>
       <figcaption className="mt-3 max-w-[50ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
-        Illustration of birth checks on a new debtor. The unconfigured row behaviour, the run time capture and
+        Illustration of birth checks on a new debtor. The unconfigured row behavior, the run time capture and
         the separation of coverage from confidence are the platform&rsquo;s own. Names and results come from a
         seeded demonstration book.
       </figcaption>

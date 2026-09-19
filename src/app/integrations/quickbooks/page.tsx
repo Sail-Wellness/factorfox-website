@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: "Where are the OAuth tokens kept?",
-    a: "Encrypted at rest, and they are never written to a log and never returned by any interface, including to an administrator. Refresh happens server side on a schedule that keeps the connection alive without a person re authorising every few weeks, and a refresh that fails marks the connection as needing reconnection rather than failing quietly on the morning somebody needed the schedule.",
+    a: "Encrypted at rest, and they are never written to a log and never returned by any interface, including to an administrator. Refresh happens server side on a schedule that keeps the connection alive without a person re authorizing every few weeks, and a refresh that fails marks the connection as needing reconnection rather than failing quietly on the morning somebody needed the schedule.",
   },
   {
     q: "What does FactorFox do if the QuickBooks configuration is missing?",
@@ -61,7 +61,7 @@ export default function QuickBooksPage() {
         data={softwareSchema({
           name: "FactorFox QuickBooks Online integration",
           description:
-            "OAuth connection to a client's QuickBooks Online company, idempotent receivable synchronisation into the FactorFox intake rail, applied by a named human and subject to every ingestion gate.",
+            "OAuth connection to a client's QuickBooks Online company, idempotent receivable synchronization into the FactorFox intake rail, applied by a named human and subject to every ingestion gate.",
           path: "/integrations/quickbooks",
         })}
       />
@@ -99,9 +99,9 @@ export default function QuickBooksPage() {
         rows={[
           {
             problem:
-              "A client exports an ageing, edits it, emails it, and your team reformats it into the shape your intake expects. The reformatting step is invisible and it is where errors enter.",
+              "A client exports an aging, edits it, emails it, and your team reformats it into the shape your intake expects. The reformatting step is invisible and it is where errors enter.",
             response:
-              "Open invoices, customers, balances and dates come across structured, with the identifiers QuickBooks assigned them, into one normalised receivable shape that does not care how the client names their columns.",
+              "Open invoices, customers, balances and dates come across structured, with the identifiers QuickBooks assigned them, into one normalized receivable shape that does not care how the client names their columns.",
           },
           {
             problem:
@@ -136,22 +136,22 @@ export default function QuickBooksPage() {
           },
           {
             label: "Connect",
-            title: "The client authorises from their own QuickBooks session",
+            title: "The client authorizes from their own QuickBooks session",
             body: "An operator starts the connection against a specific client record. The client consents in Intuit's own flow. Nobody at your institution ever handles a QuickBooks password, which is the point of OAuth and the reason credential sharing has no place in this workflow.",
           },
           {
             label: "Callback",
-            title: "The authorisation returns, the tokens are stored encrypted",
+            title: "The authorization returns, the tokens are stored encrypted",
             body: "The callback exchanges the grant for tokens which are encrypted at rest immediately. They are never written to a log, never rendered on a screen and never returned by any interface, including to your own administrators.",
           },
           {
             label: "Refresh",
-            title: "The connection stays alive without anyone re authorising monthly",
+            title: "The connection stays alive without anyone re authorizing monthly",
             body: "Refresh runs server side ahead of expiry. A refresh that fails puts the connection into a state that names itself, so the client is asked to reconnect on a calm day rather than on the morning you needed their schedule.",
           },
           {
             label: "Sync",
-            title: "Open receivables arrive normalised and idempotent",
+            title: "Open receivables arrive normalized and idempotent",
             body: "Invoices, customers, balances and dates map into one internal receivable shape, keyed on the identifiers QuickBooks assigned. Currency, dates and credit notes land in known fields, so a debtor is the same debtor whether the bookkeeper typed a comma in the name this month or not.",
           },
           {
@@ -163,11 +163,11 @@ export default function QuickBooksPage() {
       />
 
       <ProseSection
-        eyebrow="The normalised receivable"
+        eyebrow="The normalized receivable"
         title="One shape, so an underwriting run never has to know where an invoice came from."
         aside={
           <Card accent="signal">
-            <Eyebrow tone="signal">Why normalisation is a control</Eyebrow>
+            <Eyebrow tone="signal">Why normalization is a control</Eyebrow>
             <p className="mt-3 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
               Concentration under one debtor name across several clients is one of the signals that matters
               most and is hardest to see. It only works if the same debtor resolves to the same party no matter
@@ -217,7 +217,7 @@ export default function QuickBooksPage() {
               caption="QuickBooks integration controls"
               head={["Control", "How it works"]}
               rows={[
-                ["Authorisation", "OAuth against the client's own QuickBooks session, under your Intuit application. No password is ever handled by your institution or by FactorFox."],
+                ["Authorization", "OAuth against the client's own QuickBooks session, under your Intuit application. No password is ever handled by your institution or by FactorFox."],
                 ["Token storage", "Encrypted at rest. Never logged, never rendered, never returned by any interface."],
                 ["Token refresh", "Server side and ahead of expiry. A failed refresh marks the connection as needing reconnection and names it rather than degrading silently."],
                 ["Direction", "Read only in effect. Receivable data comes in. Nothing is written back into the client's company file."],
@@ -241,7 +241,7 @@ export default function QuickBooksPage() {
           { href: "/platform/client-onboarding", label: "Client onboarding", note: "Where a ledger connection sits in the first two weeks of a relationship." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "The ingestion gates a synced invoice still has to pass." },
           { href: "/platform/accounting", label: "Accounting", note: "What happens on your own ledger once a proposal is applied." },
-          { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "What a normalised receivable feeds, and why coverage is reported separately." },
+          { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "What a normalized receivable feeds, and why coverage is reported separately." },
           { href: "/integrations", label: "All integrations", note: "The full register with a status on every row." },
         ]}
       />
@@ -296,7 +296,7 @@ function DegradeScene() {
         </div>
       </div>
       <figcaption className="mt-3 max-w-[50ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
-        Illustration of the unconfigured state. The behaviour is the platform&rsquo;s own: the exact missing
+        Illustration of the unconfigured state. The behavior is the platform&rsquo;s own: the exact missing
         configuration is named on the screen where it is needed. The client name comes from a seeded
         demonstration book.
       </figcaption>

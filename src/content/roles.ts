@@ -44,7 +44,7 @@ export const ROLES: Role[] = [
     gets: [
       "Every re underwrite triggered by a material event, with the run versioned",
       "Confidence and coverage reported separately, never collapsed into one score",
-      "Limit utilisation on both the client and the debtor side",
+      "Limit utilization on both the client and the debtor side",
       "Second officer approvals waiting on you, with the requester named",
     ],
   },
@@ -78,7 +78,7 @@ export const ROLES: Role[] = [
     scope: "Assigned clients",
     cadence: "Morning brief, client events",
     gets: [
-      "Client behaviour that changed before the client calls you about it",
+      "Client behavior that changed before the client calls you about it",
       "Availability by client, and what would free more of it",
       "Onboarding files stalled and the exact document missing",
       "Disputes and chargebacks against your accounts",

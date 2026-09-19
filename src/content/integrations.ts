@@ -61,13 +61,13 @@ export const CATEGORIES: { key: IntegrationCategory; title: string; blurb: strin
   {
     key: "accounting",
     title: "Accounting",
-    blurb: "Client ledgers synchronised into proposals, never posted to your book without a human.",
+    blurb: "Client ledgers synchronized into proposals, never posted to your book without a human.",
     page: "/integrations/quickbooks",
   },
   {
     key: "credit",
     title: "Credit and risk",
-    blurb: "Commercial credit, network payment behaviour and lien position at the moment a party is created.",
+    blurb: "Commercial credit, network payment behavior and lien position at the moment a party is created.",
     page: "/integrations/credit-and-risk",
   },
   {
@@ -189,9 +189,9 @@ export const INTEGRATIONS: Integration[] = [
     status: "available",
     page: "/integrations/quickbooks",
     requiresCredentials: true,
-    summary: "Client receivables synchronised from QuickBooks into the intake rail.",
+    summary: "Client receivables synchronized from QuickBooks into the intake rail.",
     moves:
-      "Open invoices, customers, balances and dates move from the client's QuickBooks company into a normalised receivable. Nothing moves back into the client's books.",
+      "Open invoices, customers, balances and dates move from the client's QuickBooks company into a normalized receivable. Nothing moves back into the client's books.",
     solves:
       "The schedule that used to be exported, reformatted and emailed now arrives structured, with external identifiers that make a second sync idempotent.",
     benefits: ["Operations", "Account executives", "Your clients"],
@@ -227,7 +227,7 @@ export const INTEGRATIONS: Integration[] = [
     category: "credit",
     status: "available",
     page: "/integrations/credit-and-risk",
-    summary: "Debtor payment behaviour drawn from the FactorFox network itself.",
+    summary: "Debtor payment behavior drawn from the FactorFox network itself.",
     moves: "Nothing leaves your tenant. The network plane already knows what it knows about a debtor.",
     solves:
       "The question a credit bureau answers slowly and expensively, answered instantly and at no cost, from how that debtor has actually paid across the network.",
@@ -251,7 +251,7 @@ export const INTEGRATIONS: Integration[] = [
     benefits: ["Credit officers", "Underwriters"],
     controls: [
       "The rail is built and answers not configured until you hold a contract and keys",
-      "An unconfigured check is shown to the operator, not hidden. A greyed row teaches. A hidden feature lies",
+      "An unconfigured check is shown to the operator, not hidden. A grayed row teaches. A hidden feature lies",
       "Results are captured at run time and never silently refreshed under a decision",
     ],
   },
@@ -266,7 +266,7 @@ export const INTEGRATIONS: Integration[] = [
     moves: "Business identity and credit in, attached to the client file.",
     solves: "Client side credit that matches the debtor side discipline.",
     benefits: ["Credit officers", "Underwriters"],
-    controls: ["Same posture as every other bureau rail. No keys, no silent behaviour", "Offered only where the tenant country qualifies"],
+    controls: ["Same posture as every other bureau rail. No keys, no silent behavior", "Offered only where the tenant country qualifies"],
   },
   {
     slug: "taxrock",

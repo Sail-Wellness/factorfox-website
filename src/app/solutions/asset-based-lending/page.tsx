@@ -43,11 +43,11 @@ const FAQS = [
   },
   {
     q: "What does the platform do with a field exam?",
-    a: "It holds the findings as conditions rather than as a filed report. An exam that recommends a lower advance rate on one class, adds an ineligible category or sets a follow up date becomes something the borrowing base and the monitoring surface honour, with the exam cited as the evidence. The next exam then has a defensible record of what was done about the last one, which is usually the question the examiner opens with.",
+    a: "It holds the findings as conditions rather than as a filed report. An exam that recommends a lower advance rate on one class, adds an ineligible category or sets a follow up date becomes something the borrowing base and the monitoring surface honor, with the exam cited as the evidence. The next exam then has a defensible record of what was done about the last one, which is usually the question the examiner opens with.",
   },
   {
     q: "We are the borrower on our own facility as well as a lender. Does the platform handle both directions?",
-    a: "Yes, and they are labelled as different categories of obligation everywhere they appear. The tests your borrower owes you are one surface. The covenants you owe your own bank on a rediscount line or a corporate facility are another, and a covenant recorded from your credit agreement is never blended with a modelled FactorFox standard into one compliance score. Breaching a standard is a management problem. Breaching a contract may be an event of default.",
+    a: "Yes, and they are labeled as different categories of obligation everywhere they appear. The tests your borrower owes you are one surface. The covenants you owe your own bank on a rediscount line or a corporate facility are another, and a covenant recorded from your credit agreement is never blended with a modeled FactorFox standard into one compliance score. Breaching a standard is a management problem. Breaching a contract may be an event of default.",
   },
   {
     q: "Is asset based finance the same thing as asset based lending?",
@@ -121,12 +121,12 @@ export default function AssetBasedLendingPage() {
           {
             label: "Examination",
             title: "Field exam findings become live conditions, not a filed report",
-            body: "A lowered advance rate, a new ineligible category, a required follow up or an unresolved reconciliation is honoured by the base and cited to the exam. At the next exam you have a record of what was done about the last one, which is the question examiners tend to open with.",
+            body: "A lowered advance rate, a new ineligible category, a required follow up or an unresolved reconciliation is honored by the base and cited to the exam. At the next exam you have a record of what was done about the last one, which is the question examiners tend to open with.",
           },
           {
             label: "Reporting up",
             title: "What you owe your own lender is computed from the same book",
-            body: "Facility utilisation, concentration, dilution, eligibility movement and the reporting obligations in your own credit agreement are computed continuously and assembled into sealed packets, so signing a compliance certificate is a review rather than an assembly exercise.",
+            body: "Facility utilization, concentration, dilution, eligibility movement and the reporting obligations in your own credit agreement are computed continuously and assembled into sealed packets, so signing a compliance certificate is a review rather than an assembly exercise.",
           },
         ]}
       />
@@ -151,7 +151,7 @@ export default function AssetBasedLendingPage() {
         }
       >
         <p>
-          Receivable collateral revalues itself every day through payment behaviour. Inventory revalues on
+          Receivable collateral revalues itself every day through payment behavior. Inventory revalues on
           a count. Equipment revalues on an appraisal that may be two years old and was performed by
           somebody who has since retired. Treating those three as equally current, because they all appear
           as numbers in the same column, is how a base that looks fine becomes a workout that was
@@ -164,9 +164,9 @@ export default function AssetBasedLendingPage() {
           missing input and a zero balance are different facts and only one of them is good news.
         </p>
         <p>
-          <strong>Behaviour is watched between reports.</strong> Payment velocity by obligor, dilution
+          <strong>Behavior is watched between reports.</strong> Payment velocity by obligor, dilution
           movement against the borrower&rsquo;s own history, concentration change including exposure under one
-          obligor name across several borrowers, credit limit utilisation and missed promises. These move
+          obligor name across several borrowers, credit limit utilization and missed promises. These move
           long before a certificate does, and they are the reason a monthly reporting cadence is not the
           same thing as monthly monitoring.
         </p>
@@ -250,11 +250,11 @@ export default function AssetBasedLendingPage() {
             problem:
               "Between reporting dates the facility is monitored by hoping the borrower calls.",
             response:
-              "Payment velocity, dilution, concentration and utilisation are measured continuously, and material movement reaches the responsible officer's briefing the morning it happens.",
+              "Payment velocity, dilution, concentration and utilization are measured continuously, and material movement reaches the responsible officer's briefing the morning it happens.",
           },
           {
             problem:
-              "Field exam findings are filed, remembered for a quarter, and gradually stop being honoured by the base.",
+              "Field exam findings are filed, remembered for a quarter, and gradually stop being honored by the base.",
             response:
               "Findings become conditions the base enforces and cites, so the next exam sees what was actually done rather than what was intended.",
           },
@@ -283,11 +283,11 @@ export default function AssetBasedLendingPage() {
           },
           {
             title: "Collateral monitoring",
-            body: "Obligor payment behaviour, dilution movement, concentration change and credit limit utilisation measured against the borrower's own history rather than a portfolio average.",
+            body: "Obligor payment behavior, dilution movement, concentration change and credit limit utilization measured against the borrower's own history rather than a portfolio average.",
           },
           {
             title: "Covenant reporting",
-            body: "Tests computed continuously with the clause quoted as the evidence and days to breach on the current trajectory. FactorFox standards and contractual covenants are labelled separately, always.",
+            body: "Tests computed continuously with the clause quoted as the evidence and days to breach on the current trajectory. FactorFox standards and contractual covenants are labeled separately, always.",
           },
           {
             title: "Exception and approval flow",
@@ -311,7 +311,7 @@ export default function AssetBasedLendingPage() {
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "The five layer computation, ineligibles and certificate production." },
           { href: "/platform/covenant-monitoring", label: "Covenant monitoring", note: "Eight families of test, with the clause quoted as evidence." },
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwriting on every material event, with confidence and coverage separate." },
-          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Obligor behaviour, dilution and aggregated concentration between reports." },
+          { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Obligor behavior, dilution and aggregated concentration between reports." },
           { href: "/platform/treasury", label: "Treasury", note: "Availability, release control and days to zero on the current burn." },
           { href: "/solutions/factoring", label: "Factoring", note: "Where the same book buys receivables outright instead of lending against them." },
           { href: "/platform/accounting", label: "Accounting and close", note: "Accrual, reserve movement and the sealed packets behind a certificate." },
@@ -410,14 +410,14 @@ function AvailabilityScene() {
             ))}
           </dl>
           <p className="mt-3 font-mono text-[0.625rem] uppercase tracking-[0.11em] text-[var(--fg-subtle)]">
-            Field exam FE-2025-03 &middot; advance rate on inventory reduced &middot; condition honoured by the base
+            Field exam FE-2025-03 &middot; advance rate on inventory reduced &middot; condition honored by the base
           </p>
         </div>
       </div>
       <figcaption className="mt-3 max-w-[52ch] text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
         Illustration of a borrowing base by collateral class. Per class advance rates, reasoned ineligibles,
         the age of the evidence behind each class, days to zero on the current trajectory and field exam
-        findings enforced as conditions are the platform&rsquo;s own behaviour. Borrower name and figures come
+        findings enforced as conditions are the platform&rsquo;s own behavior. Borrower name and figures come
         from a seeded demonstration book.
       </figcaption>
     </figure>

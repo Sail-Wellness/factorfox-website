@@ -46,7 +46,7 @@ const FAQS = [
   },
   {
     q: "Does the same platform run asset based lending, not just factoring?",
-    a: "Yes. Factoring, asset based lending, purchase order funding and reverse factoring run on the same records with different eligibility, advance and reserve behaviour. A borrowing base with ineligibles and reserves is the asset based lending surface. A schedule of purchased invoices is the factoring surface. Operators running more than one product get one book, one covenant position and one brief across all of it.",
+    a: "Yes. Factoring, asset based lending, purchase order funding and reverse factoring run on the same records with different eligibility, advance and reserve behavior. A borrowing base with ineligibles and reserves is the asset based lending surface. A schedule of purchased invoices is the factoring surface. Operators running more than one product get one book, one covenant position and one brief across all of it.",
   },
 ];
 
@@ -132,7 +132,7 @@ export default function PlatformPage() {
           {
             label: "Pre funding",
             title: "Every schedule meets its gates before anyone talks about releasing money",
-            body: "Verification status, invoice size against the client's own median, submission timing against the client's own pattern, credit limit utilisation on both sides, and the specific gate that is holding a schedule with the reason written out. A bank account change sits under a human only hold and automated approval of it is refused outright, not merely discouraged.",
+            body: "Verification status, invoice size against the client's own median, submission timing against the client's own pattern, credit limit utilization on both sides, and the specific gate that is holding a schedule with the reason written out. A bank account change sits under a human only hold and automated approval of it is refused outright, not merely discouraged.",
           },
           {
             label: "Release",
@@ -168,7 +168,7 @@ export default function PlatformPage() {
           />
           <div className="mt-11">
             <DataTable
-              caption="Behaviour the platform refuses"
+              caption="Behavior the platform refuses"
               head={["FactorFox will not", "Why that is deliberate"]}
               rows={[
                 [

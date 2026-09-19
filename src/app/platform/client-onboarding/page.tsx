@@ -85,13 +85,47 @@ export default function ClientOnboardingPage() {
             problem:
               "A feature that is not configured for your tenant is simply invisible, so the operator does not know a check exists, let alone that it did not run.",
             response:
-              "An unconfigured check is shown and named as unconfigured. A greyed row teaches an operator what is available. A hidden feature quietly tells them a check happened when it did not.",
+              "An unconfigured check is shown and named as unconfigured. A grayed row teaches an operator what is available. A hidden feature quietly tells them a check happened when it did not.",
           },
           {
             problem:
               "The first funding is assembled by one person under time pressure, and whether every condition was met is a matter of trust.",
             response:
               "Gates are explicit, each one states what it proves, and the ones that protect money can never be made advisory. Four eyes applies to the release, and the audit record names both people.",
+          },
+        ]}
+      />
+
+      {/* The four documents a shop already owns. Everything here restates a
+          capability the platform pages already describe. Reading a policy
+          document into configuration is deliberately NOT claimed: it is in the
+          post IFA newsletter but nothing on this site supports it yet, and it
+          may be added by the owner only. */}
+      <FeatureGrid
+        eyebrow="How you start"
+        title="No data entry. Drop in the documents you already own."
+        lede="Opening your first book or leaving another platform, the motion is the same. The documents that already govern your business carry the setup, so the setup comes from them rather than from somebody retyping it."
+        columns={2}
+        items={[
+          {
+            title: "Your policies, applied rather than remembered",
+            body:
+              "Your credit policy, your verification rules and your gate policy are configured once and then applied by the platform on every party and every schedule, so the procedure your team follows on a busy Friday is the one you wrote down rather than the one somebody remembers.",
+          },
+          {
+            title: "Your client agreements",
+            body:
+              "The executed agreement carries the advance rate, the fee schedule, the discount terms, the reserve and the concentration limit. Nobody retypes an advance rate, which is where a transcription error becomes a funding error four months later.",
+          },
+          {
+            title: "Your banking agreement",
+            body:
+              "The covenants in your facility are recorded and tracked against the live book rather than recalculated the week a certificate is due. A lender prices what it cannot see, and a borrowing base computed from live collateral leaves less to price.",
+          },
+          {
+            title: "Your history, if you are switching",
+            body:
+              "Seven standard reports, as far back as they go, all as of one cutoff date. We ingest them, build the book and reconcile it against your own totals before you are asked to trust anything. The aging carries the client and debtor relationships, so there is nothing to map by hand.",
           },
         ]}
       />
@@ -109,7 +143,7 @@ export default function ClientOnboardingPage() {
           {
             label: "Birth checks",
             title: "The checks a party is born with run immediately",
-            body: "Creation is the trigger, not a later manual step. Network payment behaviour on the debtors, lien position on the client, sanctions and AML screening on the party, and registration identity where the industry calls for it. Results attach to the party as dated evidence.",
+            body: "Creation is the trigger, not a later manual step. Network payment behavior on the debtors, lien position on the client, sanctions and AML screening on the party, and registration identity where the industry calls for it. Results attach to the party as dated evidence.",
           },
           {
             label: "Documents",
@@ -151,7 +185,7 @@ export default function ClientOnboardingPage() {
               {
                 name: "Probity network",
                 status: "available" as const,
-                body: "Debtor payment behaviour drawn from the FactorFox network itself. No vendor, no contract, no per check charge, and nothing about your book leaves your tenant.",
+                body: "Debtor payment behavior drawn from the FactorFox network itself. No vendor, no contract, no per check charge, and nothing about your book leaves your tenant.",
               },
               {
                 name: "TaxRock",
@@ -186,7 +220,7 @@ export default function ClientOnboardingPage() {
               {
                 name: "Dun and Bradstreet",
                 status: "contract" as const,
-                body: "United States client credit at intake, offered where the tenant country qualifies. Same posture: no keys, no silent behaviour.",
+                body: "United States client credit at intake, offered where the tenant country qualifies. Same posture: no keys, no silent behavior.",
               },
               {
                 name: "Bank feed",
@@ -217,7 +251,7 @@ export default function ClientOnboardingPage() {
         title="The operator is told what did not happen, by name."
         aside={
           <Card accent="signal">
-            <Eyebrow tone="signal">A greyed row teaches</Eyebrow>
+            <Eyebrow tone="signal">A grayed row teaches</Eyebrow>
             <p className="mt-3 text-[0.9375rem] leading-[1.65] text-[var(--fg-muted)]">
               An unconfigured check appears in the drawer with its status and the exact configuration that is
               missing.
@@ -245,7 +279,7 @@ export default function ClientOnboardingPage() {
         </p>
         <p>
           <strong>This has a second effect that customers tend to notice later.</strong> It makes the cost of
-          a contract visible in the place where it matters. When a credit officer sees the same greyed row
+          a contract visible in the place where it matters. When a credit officer sees the same grayed row
           three times in a week on files they are uncomfortable with, that is a much better argument for
           buying a bureau feed than anything a salesperson could construct.
         </p>
@@ -308,7 +342,7 @@ export default function ClientOnboardingPage() {
           },
           {
             title: "The covenant pack starts collecting",
-            body: "From the first month, against the default pack modelled on how bank rediscount facilities are actually written. Every surface states that these are FactorFox covenants and not anyone's contract.",
+            body: "From the first month, against the default pack modeled on how bank rediscount facilities are actually written. Every surface states that these are FactorFox covenants and not anyone's contract.",
           },
           {
             title: "The client's first ninety days are visible",

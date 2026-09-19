@@ -39,7 +39,7 @@ const FAQS = [
   },
   {
     q: "Can an officer close a case that should not be closed?",
-    a: "They can close it, and it may well reopen without them. Closure is a judgement and the platform respects it. But a case reopens on the facts: a lapsed promise, a reversed payment, a dispute raised, a new invoice from the same obligor going past due. The reopen is stamped with the condition that caused it, so a case that has reopened four times reads as a pattern rather than as somebody's oversight.",
+    a: "They can close it, and it may well reopen without them. Closure is a judgment and the platform respects it. But a case reopens on the facts: a lapsed promise, a reversed payment, a dispute raised, a new invoice from the same obligor going past due. The reopen is stamped with the condition that caused it, so a case that has reopened four times reads as a pattern rather than as somebody's oversight.",
   },
   {
     q: "Does the calendar integration mean my collectors live in Outlook?",

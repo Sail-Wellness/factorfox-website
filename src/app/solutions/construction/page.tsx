@@ -61,7 +61,7 @@ export default function ConstructionPage() {
             problem:
               "The general contractor has not been paid by the owner, so nobody is paying your client, and the contract says that is allowed.",
             response:
-              "Pay when paid and pay if paid terms are recorded per job as facts that change what the aging means, so slow payment is attributed to the clause rather than to the debtor's behaviour.",
+              "Pay when paid and pay if paid terms are recorded per job as facts that change what the aging means, so slow payment is attributed to the clause rather than to the debtor's behavior.",
           },
           {
             problem:
@@ -147,7 +147,7 @@ export default function ConstructionPage() {
           },
           {
             label: "Monitoring",
-            title: "Job progress and payment behaviour are watched together",
+            title: "Job progress and payment behavior are watched together",
             body: "A job where billing has continued but payment has not is a different signal from a client whose whole book is slowing. Payment velocity is measured per general contractor across every client billing them, which is where a struggling contractor first becomes visible.",
           },
           {
@@ -163,7 +163,7 @@ export default function ConstructionPage() {
           { href: "/solutions/factoring", label: "Invoice factoring", note: "Schedules, verification, reserves and chargebacks underneath this vertical." },
           { href: "/platform/borrowing-base", label: "Borrowing base", note: "Where retainage and unbilled amounts are treated as ineligible rather than assumed." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Pay applications and schedules of values under a strict schema." },
-          { href: "/platform/collections", label: "Collections", note: "Prioritised by exposure and promise history, with deadline conditions in view." },
+          { href: "/platform/collections", label: "Collections", note: "Prioritized by exposure and promise history, with deadline conditions in view." },
           { href: "/platform/briefings", label: "Briefings", note: "Where an expiring notice deadline reaches a person who can still act on it." },
           { href: "/solutions/manufacturing", label: "Manufacturing", note: "The other vertical where deductions arrive after the invoice was agreed." },
         ]}

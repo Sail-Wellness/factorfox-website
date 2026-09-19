@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "What happens if someone in our Microsoft tenant is not a FactorFox user?",
-    a: "They get a friendly refusal card explaining that the account is not linked, and nothing is created. No user, no tenant, no shadow record. Being in the Teams channel is not authorisation. Microsoft proves identity, FactorFox grants authority, and those are two separate decisions.",
+    a: "They get a friendly refusal card explaining that the account is not linked, and nothing is created. No user, no tenant, no shadow record. Being in the Teams channel is not authorization. Microsoft proves identity, FactorFox grants authority, and those are two separate decisions.",
   },
   {
     q: "Can someone approve their own funding request from Teams?",
@@ -50,7 +50,7 @@ const FAQS = [
   },
   {
     q: "Is it in the Microsoft Teams app store?",
-    a: "Not yet. It is installed by custom upload into your tenant, and it is running in controlled release with named customers. We say controlled release rather than available because that is what it is. A marketplace listing is sequenced after the current validation programme.",
+    a: "Not yet. It is installed by custom upload into your tenant, and it is running in controlled release with named customers. We say controlled release rather than available because that is what it is. A marketplace listing is sequenced after the current validation program.",
   },
 ];
 
@@ -119,7 +119,7 @@ export default function TeamsPage() {
             problem:
               "Adding people to the chat quietly becomes a way of granting access to information nobody decided to grant.",
             response:
-              "Conversation is not authorisation. An unlinked Microsoft account is refused by name and nothing is created for it.",
+              "Conversation is not authorization. An unlinked Microsoft account is refused by name and nothing is created for it.",
           },
         ]}
       />
@@ -218,10 +218,10 @@ export default function TeamsPage() {
                 ["Inbound authentication", "Bot Connector signature validated on every activity. Unsigned requests are refused with 401 before any handler runs."],
                 ["Identity resolution", "Microsoft object identifier matched to a FactorFox user by subject. Email is never used as the match key."],
                 ["Provisioning", "None. Identity linking is explicit, performed once by the user with their FactorFox credentials, and recorded in an audited table."],
-                ["Authorisation", "Role checks, four eyes, counter review and facility guards run on the server for every Teams initiated action, identically to the web path."],
+                ["Authorization", "Role checks, four eyes, counter review and facility guards run on the server for every Teams initiated action, identically to the web path."],
                 ["Graph scopes", "Application permissions, least privilege, limited to the features enabled: Mail.Send, Mail.ReadWrite, Calendars.ReadWrite, Tasks.ReadWrite.All. The capabilities screen shows what the token actually carries."],
                 ["Mailbox scoping", "An Exchange application access policy can fence the application to a single shared mailbox rather than the whole tenant."],
-                ["Outbound delivery", "Graph mail passes the same delivery wall as every other channel, including allowlist and sink behaviour in non production environments."],
+                ["Outbound delivery", "Graph mail passes the same delivery wall as every other channel, including allowlist and sink behavior in non production environments."],
                 ["Audit", "Every action records actor, evidence, policy version, confidence where applicable, and origin. Audit records are immutable at the database level."],
                 ["Revocation", "Graph access is revoked per tenant with one call and the revocation is stored and audited. Teams can be disabled by clearing one setting."],
                 ["Blast radius", "Nothing in the platform depends on the adapters. Removing Teams removes Teams and changes nothing else."],
@@ -277,7 +277,7 @@ export default function TeamsPage() {
           { href: "/platform/evidence", label: "Intelligence with evidence", note: "What sits behind the number on the card." },
           { href: "/platform/security", label: "Security and controls", note: "The whole control surface, not just this integration." },
           { href: "/platform/treasury", label: "Treasury", note: "What an approved release actually does next." },
-          { href: "/integrations", label: "All integrations", note: "Organised by business purpose, with a status on every row." },
+          { href: "/integrations", label: "All integrations", note: "Organized by business purpose, with a status on every row." },
         ]}
       />
 

@@ -48,7 +48,7 @@ const FAQS = [
   },
   {
     q: "What about the transportation plumbing?",
-    a: "This is the part people underestimate on a freight book. Carrier payment rails, fuel card arrangements, prepaid card programmes, batch payment file formats and any load management system feeding invoices in are separate commercial and technical relationships. They do not migrate with the data. Each one has to be re established, tested with a small live batch, and cut over on a date you choose. Inventory them in week one and treat them as their own workstream, because the funding run is the thing that cannot slip.",
+    a: "This is the part people underestimate on a freight book. Carrier payment rails, fuel card arrangements, prepaid card programs, batch payment file formats and any load management system feeding invoices in are separate commercial and technical relationships. They do not migrate with the data. Each one has to be re established, tested with a small live batch, and cut over on a date you choose. Inventory them in week one and treat them as their own workstream, because the funding run is the thing that cannot slip.",
   },
   {
     q: "How does the change of ownership affect a decision to move?",
@@ -112,7 +112,7 @@ export default function WinFactorPage() {
             </p>
             <p className="mt-4 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
               Ask while you are a customer in good standing with time on the clock. The answer is different
-              when you ask it during a notice period, and the difference is not in your favour.
+              when you ask it during a notice period, and the difference is not in your favor.
             </p>
           </Card>
         }
@@ -228,12 +228,12 @@ export default function WinFactorPage() {
             {[
               {
                 q: "How much settled history arrives as live records?",
-                a: "Everything open comes across as live, always. The question is how much closed history joins it as transactional detail rather than as searchable evidence. More live history means deeper trend analysis from day one and a longer reconciliation. Less means a faster cutover and a period where behavioural comparison reaches back only so far. On a hosted platform this decision is constrained by what you can actually obtain, which is why the request goes first.",
+                a: "Everything open comes across as live, always. The question is how much closed history joins it as transactional detail rather than as searchable evidence. More live history means deeper trend analysis from day one and a longer reconciliation. Less means a faster cutover and a period where behavioral comparison reaches back only so far. On a hosted platform this decision is constrained by what you can actually obtain, which is why the request goes first.",
                 cost: "Trade off: analytical depth on day one against reconciliation scope.",
               },
               {
                 q: "What happens to the payment rails on cutover weekend?",
-                a: "A freight book funds daily and often outside banking hours. Batch payment files, fuel card arrangements, prepaid card programmes and any wallet product are separate relationships that do not travel with the data. Each is re established, tested with a small live batch, and cut over on a date you choose rather than a date that arrives.",
+                a: "A freight book funds daily and often outside banking hours. Batch payment files, fuel card arrangements, prepaid card programs and any wallet product are separate relationships that do not travel with the data. Each is re established, tested with a small live batch, and cut over on a date you choose rather than a date that arrives.",
                 cost: "Trade off: a dedicated workstream now against a funding run that does not go out.",
               },
               {
