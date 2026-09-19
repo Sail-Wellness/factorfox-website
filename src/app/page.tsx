@@ -4,6 +4,7 @@ import { Container, Section, SectionHead, Eyebrow, CTA, JsonLd, Status } from "@
 import { BriefingPanel } from "@/components/briefing-panel";
 import { HeroDeck } from "@/components/hero-animation";
 import { VideoModal } from "@/components/video-modal";
+import { HeroLoop } from "@/components/hero-loop";
 import { pageMeta, softwareSchema, faqSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
 import { INTEGRATIONS } from "@/content/integrations";
@@ -148,6 +149,35 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* ============================================ THE FILM, 16:9 */}
+      {/* Two minutes with music, so it waits to be asked. preload metadata
+          means the browser takes a few kilobytes on load rather than 8.6 MB. */}
+      <Section bordered>
+        <Container>
+          <div className="mx-auto max-w-[62ch] text-center">
+            <Eyebrow tone="signal">The film</Eyebrow>
+            <h2 className="text-section-lg mt-4">Two minutes on what changes.</h2>
+            <p className="mt-5 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
+              Where the category is going, why the intelligence has to sit inside the ledger rather than
+              beside it, and what that looks like on an ordinary operating day.
+            </p>
+          </div>
+          <figure className="ff-film mt-10">
+            <video
+              className="ff-film-video"
+              src="/media/factorfox-are-you-ready-wide.mp4"
+              poster="/media/factorfox-are-you-ready-wide-poster.jpg"
+              controls
+              playsInline
+              preload="metadata"
+            />
+            <figcaption>
+              Are you ready? The AI native specialty finance operating system.
+            </figcaption>
+          </figure>
+        </Container>
+      </Section>
+
       {/* ============================================ THE STRIP */}
       {/* The fast pass. Somebody who will not read a paragraph gets the whole
           product here in about eight seconds, and every tile is a door. */}
@@ -238,6 +268,23 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </Container>
+      </Section>
+
+      {/* ============================================ THE LOOP */}
+      {/* The film says the same thing the band above it says, which is why it
+          sits here rather than at the top of the page. It is aria-hidden: the
+          words are already on the page, and a silent loop that repeats forever
+          has nothing to announce. */}
+      <Section tone="sunken" bordered>
+        <Container>
+          <figure className="ff-loop m-0">
+            <HeroLoop />
+            <figcaption className="ff-loop-caption">
+              Six kinds of model, one operating system. The work decides which one runs, and every
+              conclusion records which one produced it.
+            </figcaption>
+          </figure>
         </Container>
       </Section>
 

@@ -458,6 +458,74 @@
   }
 }
 
+/* ------------------------------------------------ the loop, and the wide film */
+
+/* The loop is a composed piece with its own type and its own mark inside it,
+   so it is shown as a picture rather than used as a background behind copy.
+   It is aria-hidden because the band above it already says what it says, and
+   it is silent and endless, so there is nothing for it to announce.
+
+   The still is a background on the figure, not only a poster on the video, so
+   the block looks the same before hydration, on a phone, and under reduced
+   motion, and so the height never changes when the video arrives. */
+.ff-loop {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.875rem;
+  border: 1px solid var(--line);
+  background-color: var(--bg-raised);
+  background-image: url("/media/factorfox-hero-poster.jpg");
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--shadow-card);
+}
+.ff-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.ff-loop-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 2.5rem 1.5rem 1rem;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--fg-subtle);
+  background: linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0));
+}
+
+@media (prefers-reduced-motion: reduce) { .ff-hero-video { display: none; } }
+@media (max-width: 720px) { .ff-hero-video { display: none; } }
+
+/* ---------------------------------------------------------- the wide film */
+.ff-film { margin: 0 auto; max-width: 1200px; }
+.ff-film-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border-radius: 0.875rem;
+  background: #0c1016;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+}
+.ff-film figcaption {
+  margin-top: 0.875rem;
+  color: var(--fg-subtle);
+  font-size: 13px;
+  line-height: 1.55;
+  text-align: center;
+}
+
 /* ------------------------------------------------ the film, and its modal */
 /* Vertical film, 9 by 16, so the shell is sized off the height of the viewport
    rather than its width. A 16 by 9 box would letterbox this into a stripe. */
