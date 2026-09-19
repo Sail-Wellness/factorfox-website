@@ -132,6 +132,14 @@ export default function AiNativePage() {
           in week five of an implementation, when somebody asks the software why it reached a conclusion
           and needs an answer that will survive an examiner.
         </p>
+        <p>
+          The distinction is not ours alone to draw, and it is easy to check. Read how the other platforms
+          in this category describe themselves and you will find AI powered, AI assisted, AI enabled and
+          AI automation. Those are accurate. They describe capability added to a system that was designed
+          before the capability existed, which is a reasonable thing to build and a different thing from
+          this. We are not aware of another factoring platform that describes itself as AI native, and
+          the reason is architectural rather than promotional.
+        </p>
       </ProseSection>
 
       {/* ── the precedent ──────────────────────────────────────────────── */}
@@ -156,7 +164,8 @@ export default function AiNativePage() {
                 operating system underneath it.
               </p>
               <p className="mt-4 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-                FactorFox moved on that in 2002.
+                FactorFox moved on that in 2002, as the first cloud platform built specifically for
+                factoring companies.
               </p>
             </Card>
 

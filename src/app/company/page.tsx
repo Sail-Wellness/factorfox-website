@@ -68,9 +68,9 @@ export default function CompanyPage() {
           },
           {
             label: "2002",
-            title: "FactorFox begins",
+            title: "The first cloud platform built for factoring companies",
             body:
-              "A platform for factoring companies, built by someone who had been a client of one. Over the following years it grew into an operating system for factoring and asset based lending businesses across several markets, most of them small and mid sized institutions where one person wears four hats and nobody has an engineering department to call.",
+              "A platform for factoring companies, built by someone who had been a client of one, and delivered over the web at a time when every other product in the category shipped as Windows software a firm installed and maintained itself. The International Factoring Association's own magazine records it as the world's first cloud native platform built specifically for factoring companies. The nearest comparable claim in the adjacent asset based lending category dates its first cloud platform to 2011. Over the following years it grew into an operating system for factoring and asset based lending businesses across several markets, most of them small and mid sized institutions where one person wears four hats and nobody has an engineering department to call.",
           },
           {
             label: "2020",

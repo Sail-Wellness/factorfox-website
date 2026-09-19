@@ -231,8 +231,10 @@ export default function HomePage() {
                 </p>
                 <p>
                   When the cloud arrived, the shift that mattered was that an application stopped depending
-                  on the operating system underneath it. This is that shift one layer up. The model is an
-                  engine, and it should be replaceable without replacing the vehicle.
+                  on the operating system underneath it. We made that move first: FactorFox launched in
+                  2002 as the first cloud platform built specifically for factoring companies. This is that
+                  same shift one layer up. The model is an engine, and it should be replaceable without
+                  replacing the vehicle.
                 </p>
                 <p className="text-[var(--fg)]">
                   <strong>
