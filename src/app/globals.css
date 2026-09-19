@@ -490,19 +490,6 @@
   object-fit: cover;
   pointer-events: none;
 }
-.ff-loop-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
-  padding: 2.5rem 1.5rem 1rem;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.55;
-  color: var(--fg-subtle);
-  background: linear-gradient(to top, rgba(255,255,255,0.92), rgba(255,255,255,0));
-}
 
 @media (prefers-reduced-motion: reduce) { .ff-hero-video { display: none; } }
 @media (max-width: 720px) { .ff-hero-video { display: none; } }

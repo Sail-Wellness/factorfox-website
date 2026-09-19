@@ -268,26 +268,21 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+
+            {/* The film is this band's argument in motion, so it lives inside it. It is
+                aria-hidden: the words are already above it, and a silent loop that
+                repeats forever has nothing to announce. */}
+            <figure className="m-0 mt-14">
+              <div className="ff-loop">
+                <HeroLoop />
+              </div>
+              <figcaption className="mt-4 text-center text-[13.5px] leading-[1.6] text-[var(--fg-subtle)]">
+                Six kinds of model, one operating system. The work decides which one runs, and every
+                conclusion records which one produced it.
+              </figcaption>
+            </figure>
         </Container>
       </Section>
-
-      {/* ============================================ THE LOOP */}
-      {/* The film says the same thing the band above it says, which is why it
-          sits here rather than at the top of the page. It is aria-hidden: the
-          words are already on the page, and a silent loop that repeats forever
-          has nothing to announce. */}
-      <Section tone="sunken" bordered>
-        <Container>
-          <figure className="ff-loop m-0">
-            <HeroLoop />
-            <figcaption className="ff-loop-caption">
-              Six kinds of model, one operating system. The work decides which one runs, and every
-              conclusion records which one produced it.
-            </figcaption>
-          </figure>
-        </Container>
-      </Section>
-
       {/* ============================================ DOCUMENTS AS CONFIGURATION */}
       <Section tone="sunken" bordered>
         <Container>
