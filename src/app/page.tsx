@@ -29,9 +29,9 @@ const CAPABILITIES: { title: string; line: string; href: string }[] = [
 ];
 
 export const metadata: Metadata = pageMeta({
-  title: "Factoring software built on briefings, not dashboards",
+  title: "AI factoring software built on briefings, not dashboards",
   description:
-    "FactorFox gives factors, asset based lenders and purchase order funders role aware briefings, evidence behind every conclusion and approvals in Teams.",
+    "AI native invoice factoring software for factors, asset based lenders and PO funders: role aware briefings, evidence behind every conclusion, Teams approvals.",
   path: "/",
   intent: "product",
   target: "factoring software",

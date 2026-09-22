@@ -21,7 +21,7 @@ import { INTEGRATIONS } from "@/content/integrations";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "AI native, and what it actually means",
+  title: "AI factoring software, and what AI native means",
   description:
     "Where the intelligence lives decides what the software can do. The architecture behind FactorFox, and why it stays independent of any one model.",
   path: "/platform/ai-native",

@@ -19,7 +19,7 @@ import { JsonLd } from "@/components/primitives";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "A factoring platform for the operating day",
+  title: "Invoice factoring software for the operating day",
   description:
     "One platform for the operating day: briefings, evidence, underwriting, risk, covenants, borrowing base, documents, fraud, collections and treasury.",
   path: "/platform",
