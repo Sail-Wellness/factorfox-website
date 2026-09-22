@@ -9,12 +9,15 @@ import { NAV, SITE } from "@/lib/site";
 export function SiteHeader() {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
+  const signInRef = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
     setOpenGroup(null);
     setMobileOpen(false);
+    setSignInOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -22,10 +25,12 @@ export function SiteHeader() {
       if (e.key === "Escape") {
         setOpenGroup(null);
         setMobileOpen(false);
+        setSignInOpen(false);
       }
     }
     function onClick(e: MouseEvent) {
       if (navRef.current && !navRef.current.contains(e.target as Node)) setOpenGroup(null);
+      if (signInRef.current && !signInRef.current.contains(e.target as Node)) setSignInOpen(false);
     }
     document.addEventListener("keydown", onKey);
     document.addEventListener("mousedown", onClick);
@@ -131,13 +136,43 @@ export function SiteHeader() {
         </nav>
 
         <div className="ml-auto flex items-center gap-3 min-[1300px]:ml-4">
-          <a
-            href={SITE.appUrl}
-            className="hidden whitespace-nowrap text-[15px] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)] sm:block"
-            rel="noopener"
-          >
-            Sign in
-          </a>
+          <div ref={signInRef} className="relative hidden sm:block">
+            <button
+              type="button"
+              className="flex items-center gap-1.5 whitespace-nowrap text-[15px] font-medium text-[var(--fg-muted)] hover:text-[var(--fg)]"
+              aria-expanded={signInOpen}
+              aria-haspopup="true"
+              aria-controls="signin-menu"
+              onClick={() => setSignInOpen((v) => !v)}
+            >
+              Sign in
+              <span aria-hidden="true" className="text-[10px] opacity-60">&#9662;</span>
+            </button>
+            {signInOpen ? (
+              <div
+                id="signin-menu"
+                className="absolute right-0 top-full z-50 mt-3 w-[17rem] rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-2"
+                style={{ boxShadow: "var(--shadow-lift)" }}
+              >
+                <a
+                  href={SITE.appUrl}
+                  rel="noopener"
+                  className="block rounded-lg px-3 py-2.5 hover:bg-[var(--bg-sunken)]"
+                >
+                  <span className="block text-[14.5px] font-semibold text-[var(--fg)]">FactorFox AI</span>
+                  <span className="mt-0.5 block text-[12.5px] text-[var(--fg-subtle)]">The new platform</span>
+                </a>
+                <a
+                  href={SITE.classicAppUrl}
+                  rel="noopener"
+                  className="block rounded-lg px-3 py-2.5 hover:bg-[var(--bg-sunken)]"
+                >
+                  <span className="block text-[14.5px] font-semibold text-[var(--fg)]">FactorFox Classic</span>
+                  <span className="mt-0.5 block text-[12.5px] text-[var(--fg-subtle)]">If your account has not moved yet</span>
+                </a>
+              </div>
+            ) : null}
+          </div>
           <Link
             href="/demo"
             className="btn-primary hidden whitespace-nowrap !px-5 !py-2.5 !text-[14px] sm:inline-flex"
@@ -190,8 +225,11 @@ export function SiteHeader() {
               >
                 Request a demonstration
               </Link>
-              <a href={SITE.appUrl} className="text-center text-[15px] font-medium text-[var(--fg-muted)]" rel="noopener">
-                Sign in
+              <a href={SITE.appUrl} className="btn-secondary w-full justify-center" rel="noopener">
+                Sign in to FactorFox AI
+              </a>
+              <a href={SITE.classicAppUrl} className="text-center text-[14px] font-medium text-[var(--fg-muted)]" rel="noopener">
+                Sign in to FactorFox Classic
               </a>
             </div>
           </div>

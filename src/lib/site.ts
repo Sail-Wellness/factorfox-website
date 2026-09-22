@@ -4,7 +4,14 @@ export const SITE = {
   url: "https://factorfox.com",
   founded: "2002",
   tagline: "The intelligence and operating platform for specialty finance.",
-  appUrl: "https://nimbus.factorfox.net/",
+  /**
+   * Two sign in doors during the migration. FactorFox AI is the platform every
+   * customer is moving to and is listed first. Classic is the legacy platform
+   * and stays until the last customer has moved; when it goes, delete
+   * classicAppUrl and the header collapses back to a single Sign in link.
+   */
+  appUrl: "https://app.factorfox.com/",
+  classicAppUrl: "https://nimbus.factorfox.net/",
   bookingUrl: "https://outlook.office.com/book/FactorFoxBookingPage@factorfox.com/",
   contactEmail: "sales@factorfox.com",
   /**
