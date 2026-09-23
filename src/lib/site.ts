@@ -64,6 +64,9 @@ export const NAV: NavGroup[] = [
     href: "/platform",
     children: [
       { href: "/platform/ai-native", label: "AI native", note: "Where the intelligence lives, and why it is model independent" },
+      { href: "/platform/capital-network", label: "Capital Network", note: "Participation and syndication between factors" },
+      { href: "/platform/studio", label: "FactorFox Studio", note: "Reports from plain English, on governed measures" },
+      { href: "/platform/white-label", label: "White label client portal", note: "Your brand, from your website address" },
       { href: "/platform/briefings", label: "Briefings", note: "Six questions, answered for your responsibility" },
       { href: "/platform/evidence", label: "Intelligence with evidence", note: "Every conclusion opens onto what proves it" },
       { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwrite on every material event" },
@@ -147,6 +150,9 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
     links: [
       { href: "/platform", label: "Overview" },
       { href: "/platform/ai-native", label: "AI native" },
+      { href: "/platform/capital-network", label: "Capital Network" },
+      { href: "/platform/studio", label: "FactorFox Studio" },
+      { href: "/platform/white-label", label: "White label client portal" },
       { href: "/platform/briefings", label: "Briefings" },
       { href: "/platform/evidence", label: "Intelligence with evidence" },
       { href: "/platform/continuous-underwriting", label: "Continuous underwriting" },

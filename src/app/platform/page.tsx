@@ -348,6 +348,27 @@ const GROUPS: { key: string; blurb: string; links: { href: string; label: string
       },
     ],
   },
+  {
+    key: "Capital and clients",
+    blurb: "Where the platform reaches past your own four walls: to other factors' capital, and to your clients.",
+    links: [
+      {
+        href: "/platform/capital-network",
+        label: "Capital Network",
+        note: "Sell and buy participations with other FactorFox factors, booked on both ledgers from one canonical asset.",
+      },
+      {
+        href: "/platform/white-label",
+        label: "White label client portal",
+        note: "Your clients see your brand on your own address. Setup is your website address.",
+      },
+      {
+        href: "/platform/studio",
+        label: "FactorFox Studio",
+        note: "Reports from plain English on governed measures, and AI help on notices and invitations.",
+      },
+    ],
+  },
 ];
 
 function CapabilityMap() {
@@ -356,7 +377,7 @@ function CapabilityMap() {
       <Container>
         <SectionHead
           eyebrow="Every capability"
-          title="Twelve capabilities, one record underneath all of them."
+          title="Sixteen capabilities, one record underneath all of them."
           lede="Grouped by the moment in the day they belong to rather than by the department that owns them, because the department boundary is where most operations lose an exception."
         />
         <div className="mt-12 space-y-12">

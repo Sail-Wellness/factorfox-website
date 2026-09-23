@@ -26,6 +26,9 @@ const CAPABILITIES: { title: string; line: string; href: string }[] = [
   { title: "Document intelligence", line: "Agreements, invoices, remittances and near duplicates, read and verified.", href: "/platform/document-intelligence" },
   { title: "Accounting and treasury", line: "Cash application, fee accrual, payment files and release control.", href: "/platform/accounting" },
   { title: "Microsoft Teams", line: "Briefings, signals and approvals where your team already works.", href: "/integrations/microsoft-teams" },
+  { title: "Capital Network", line: "Sell and buy participations with other factors, booked on both ledgers.", href: "/platform/capital-network" },
+  { title: "FactorFox Studio", line: "Ask for a report in plain English. Every figure calculated and explained.", href: "/platform/studio" },
+  { title: "White label client portal", line: "Your clients see your brand. Setup is your website address.", href: "/platform/white-label" },
 ];
 
 export const metadata: Metadata = pageMeta({
@@ -189,7 +192,7 @@ export default function HomePage() {
               <h2 className="text-section-lg mt-4 max-w-[20ch]">Everything, in one pass.</h2>
             </div>
             <p className="max-w-[38ch] text-[15px] leading-[1.6] text-[var(--fg-muted)]">
-              Nine capabilities, one ledger underneath them. Open any of them for the detail.
+              Twelve capabilities, one ledger underneath them. Open any of them for the detail.
             </p>
           </div>
 
