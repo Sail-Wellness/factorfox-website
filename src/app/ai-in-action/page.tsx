@@ -73,7 +73,7 @@ export default function AiInActionPage() {
           </>
         }
         primaryCta={{ href: "/demo", label: "Request a private demonstration" }}
-        secondaryCta={{ href: "/platform/ai-native", label: "How it is built" }}
+        secondaryCta={{ href: "/platform/ai-native", label: "What AI native means" }}
       />
 
       <Section tone="sunken" bordered>
@@ -181,9 +181,9 @@ export default function AiInActionPage() {
           making the call, which is the only ending we would put on film.
         </p>
         <p>
-          If you want the architecture rather than the demonstration, that is written out in full on{" "}
-          <Link href="/platform/ai-native">the AI native page</Link>, including where we are the wrong
-          answer.
+          If you want the whole picture rather than the demonstration, it is written out on{" "}
+          <Link href="/platform/ai-native">AI native factoring software</Link>: what the platform does,
+          what AI native means, and how to check it.
         </p>
       </ProseSection>
 
@@ -191,7 +191,7 @@ export default function AiInActionPage() {
 
       <RelatedPages
         links={[
-          { href: "/platform/ai-native", label: "AI native", note: "Where the intelligence lives, and why it is model independent." },
+          { href: "/platform/ai-native", label: "AI native factoring software", note: "What the platform does, and why it is model agnostic." },
           { href: "/platform/briefings", label: "Briefings", note: "The six questions, and how scope is decided." },
           { href: "/platform/evidence", label: "Intelligence with evidence", note: "What sits behind every conclusion on a screen." },
           { href: "/platform/accounting", label: "Accounting", note: "The double entry core, and what it means at period close." },

@@ -265,8 +265,8 @@ const GROUPS: { key: string; blurb: string; links: { href: string; label: string
     links: [
       {
         href: "/platform/ai-native",
-        label: "AI native, and model agnostic",
-        note: "Where the intelligence sits relative to the ledger, why the platform is not built around any one model, and what that is worth on an ordinary operating day.",
+        label: "AI native factoring software",
+        note: "What AI native means for factoring, asset based lending and purchase order finance, where the intelligence sits relative to the ledger, and why the platform is model agnostic.",
       },
       {
         href: "/platform/briefings",

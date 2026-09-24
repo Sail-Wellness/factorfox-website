@@ -63,7 +63,7 @@ export const NAV: NavGroup[] = [
     label: "Platform",
     href: "/platform",
     children: [
-      { href: "/platform/ai-native", label: "AI native", note: "Where the intelligence lives, and why it is model independent" },
+      { href: "/platform/ai-native", label: "AI native", note: "AI native factoring software, and why it is model agnostic" },
       { href: "/platform/capital-network", label: "Capital Network", note: "Participation and syndication between factors" },
       { href: "/platform/studio", label: "FactorFox Studio", note: "Reports from plain English, on governed measures" },
       { href: "/platform/white-label", label: "White label client portal", note: "Your brand, from your website address" },

@@ -247,7 +247,7 @@ export default function HomePage() {
                 </p>
               </div>
               <Link href="/platform/ai-native" className="btn-secondary mt-8 inline-flex">
-                Read the architecture
+                What AI native factoring software means
               </Link>
             </div>
 
