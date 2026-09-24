@@ -390,7 +390,7 @@ export function DataTable({
 }) {
   return (
     <div
-      className="u-scroll-x rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]"
+      className="u-scroll-x relative rounded-xl border border-[var(--line)] bg-[var(--bg-raised)]"
       tabIndex={0}
       role="region"
       aria-label={caption ?? "Data table"}

@@ -56,6 +56,20 @@ const FAQS = [
   },
 ];
 
+/* Competitor pages are reached from here and from /migrate, and deliberately not from the menus. */
+const VENDOR_PAGES = [
+  { href: "/migrate/factorsoft", label: "FactorSoft alternative" },
+  { href: "/migrate/winfactor", label: "WinFactor alternative" },
+  { href: "/migrate/factorcloud", label: "FactorCloud alternative" },
+  { href: "/compare/cadence-alternative", label: "Cadence alternative" },
+  { href: "/compare/lendscape-alternative", label: "Lendscape alternative" },
+  { href: "/compare/dancerace-alternative", label: "Dancerace alternative" },
+  { href: "/migrate/factorview", label: "FactorView alternative" },
+  { href: "/compare/xen-alternative", label: "XEN alternative" },
+  { href: "/compare/soft4factoring-alternative", label: "SOFT4Factoring alternative" },
+  { href: "/migrate/factoravenue", label: "FactorAvenue alternative" },
+];
+
 export default function ComparePage() {
   return (
     <>
@@ -391,6 +405,28 @@ export default function ComparePage() {
           },
         ]}
       />
+
+      <Section bordered>
+        <Container>
+          <SectionHead
+            eyebrow="Vendor by vendor"
+            title="Comparing FactorFox with a specific platform"
+            lede="Each page sets out what that vendor says about itself in public, with the source and the date checked, beside FactorFox on the same topics, and says where the other product may be the better fit."
+          />
+          <ul className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {VENDOR_PAGES.map((v) => (
+              <li key={v.href}>
+                <Link
+                  href={v.href}
+                  className="block rounded-lg border border-[var(--line)] bg-[var(--bg-raised)] px-4 py-3.5 text-[15px] font-semibold hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  {v.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </Section>
 
       <FaqBlock items={FAQS} title="What buyers ask when the shortlist is down to three" />
 

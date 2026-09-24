@@ -91,6 +91,12 @@ export const PAGES: PageEntry[] = [
   { path: "/compare", intent: "comparison", target: "factoring software comparison", priority: 0.85, changeFrequency: "monthly" },
   { path: "/compare/how-to-choose", intent: "commercial", target: "how to choose factoring software", priority: 0.9, changeFrequency: "monthly" },
   { path: "/compare/factorfox-alternative", intent: "brand", target: "FactorFox alternative", priority: 0.9, changeFrequency: "monthly" },
+  /* Competitor comparisons. Linked from /compare and /migrate, never from the navigation menus. */
+  { path: "/compare/cadence-alternative", intent: "comparison", target: "Cadence factoring software alternative", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/compare/lendscape-alternative", intent: "comparison", target: "Lendscape alternative", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/compare/dancerace-alternative", intent: "comparison", target: "Dancerace alternative", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/compare/xen-alternative", intent: "comparison", target: "XEN factoring software alternative", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/compare/soft4factoring-alternative", intent: "comparison", target: "SOFT4Factoring alternative", priority: 0.6, changeFrequency: "monthly" },
 
   /* resources */
   { path: "/resources", intent: "informational", target: "factoring operations writing", priority: 0.7, changeFrequency: "weekly" },
