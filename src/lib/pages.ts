@@ -97,6 +97,7 @@ export const PAGES: PageEntry[] = [
   { path: "/resources/glossary", intent: "informational", target: "factoring terms glossary", priority: 0.75, changeFrequency: "monthly" },
 
   /* company and conversion */
+  { path: "/news", intent: "brand", target: "FactorFox news", priority: 0.6, changeFrequency: "monthly" },
   { path: "/company", intent: "brand", target: "FactorFox company", priority: 0.6, changeFrequency: "monthly" },
   { path: "/demo", intent: "conversion", target: "", priority: 0.8, changeFrequency: "monthly" },
 

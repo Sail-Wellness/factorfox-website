@@ -37,7 +37,7 @@ export default function CompanyPage() {
           <>
             <p>
               FactorFox has been making software for this industry since 2002. It started because its
-              founder, a developer who ran a business in the late 1990s and factored his own invoices to
+              founder, Roberto Vasquez, now Founder and CEO, a developer who ran a business in the late 1990s and factored his own invoices to
               fund it, spent that period on the other side of the desk: submitting schedules, chasing
               verifications, waiting on advances and wondering why the answers took so long.
             </p>

@@ -202,6 +202,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
     title: "Company",
     links: [
       { href: "/company", label: "About FactorFox" },
+      { href: "/news", label: "News and press" },
       { href: "/partners", label: "Partners" },
       { href: "/resources", label: "Writing" },
       { href: "/resources/glossary", label: "Glossary" },
