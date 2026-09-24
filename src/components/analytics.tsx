@@ -131,7 +131,7 @@ function ConsentBanner({ onDecide }: { onDecide: (c: "granted" | "denied") => vo
         <p className="max-w-[68ch] text-[0.875rem] leading-[1.55] text-[var(--fg-muted)]">
           We would like to measure which pages help people decide. Analytics only, no advertising and no
           third party tracking, and nothing loads until you say yes.{" "}
-          <a href="/legal/privacy" className="underline underline-offset-2">
+          <a href="/legal/privacy/" className="underline underline-offset-2">
             What we collect
           </a>
           .

@@ -296,7 +296,7 @@ export function DemoForm() {
         </button>
         <p className="text-[0.75rem] leading-[1.5] text-[var(--fg-subtle)]">
           We use this to prepare the demonstration and to reply. Nothing is sold or shared.{" "}
-          <a href="/legal/privacy" className="underline underline-offset-2">
+          <a href="/legal/privacy/" className="underline underline-offset-2">
             Privacy
           </a>
           .

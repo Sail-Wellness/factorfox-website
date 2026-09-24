@@ -32,7 +32,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 
   images: {
-    // No image optimiser on a static host. Everything in /public/product is
+    // No image optimizer on a static host. Everything in /public/product is
     // already sized and encoded as webp for this reason.
     unoptimized: true,
   },

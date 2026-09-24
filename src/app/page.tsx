@@ -32,7 +32,7 @@ const CAPABILITIES: { title: string; line: string; href: string }[] = [
 ];
 
 export const metadata: Metadata = pageMeta({
-  title: "AI factoring software built on briefings, not dashboards",
+  title: "AI factoring software built on briefings",
   description:
     "AI native invoice factoring software for factors, asset based lenders and PO funders: role aware briefings, evidence behind every conclusion, Teams approvals.",
   path: "/",
@@ -121,8 +121,8 @@ export default function HomePage() {
             <div className="mt-7 flex flex-col items-center gap-2">
               <VideoModal
                 src="/media/factorfox-briefing.mp4"
-                poster="/media/factorfox-briefing-poster.jpg"
-                thumb="/media/factorfox-briefing-thumb.jpg"
+                poster="/media/factorfox-briefing-poster.webp"
+                thumb="/media/factorfox-briefing-thumb-100.webp"
                 title="A morning briefing, start to finish"
                 caption="Recorded on a demonstration book. Figures are seeded, not a customer's."
                 label="Watch a briefing happen"
@@ -173,10 +173,10 @@ export default function HomePage() {
             <video
               className="ff-film-video"
               src="/media/factorfox-are-you-ready-wide.mp4"
-              poster="/media/factorfox-are-you-ready-wide-poster.jpg"
+              poster="/media/factorfox-are-you-ready-wide-poster-1280.webp"
               controls
               playsInline
-              preload="metadata"
+              preload="none"
             />
             <figcaption>
               Are you ready? The AI native specialty finance operating system.

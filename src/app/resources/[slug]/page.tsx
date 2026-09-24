@@ -33,6 +33,15 @@ export async function generateMetadata({
 }
 
 /** Article typography, applied through the same tokens as the rest of the site. */
+/* Internal links in article bodies are written as /path. The canonical form is /path/, and a
+   link without the slash costs the reader and the crawler a redirect hop, so add it here. */
+function withTrailingSlash(href?: string) {
+  if (!href || !href.startsWith("/") || href.startsWith("//")) return href;
+  const [path, hash] = href.split("#");
+  const fixed = path.endsWith("/") || /\.[a-z0-9]+$/i.test(path) ? path : `${path}/`;
+  return hash !== undefined ? `${fixed}#${hash}` : fixed;
+}
+
 const mdxComponents = {
   h2: (props: React.ComponentProps<"h2">) => (
     <h2 {...props} className="mt-12 scroll-mt-24 text-[clamp(1.4rem,2.6vw,1.85rem)] first:mt-0" />
@@ -46,9 +55,10 @@ const mdxComponents = {
   li: (props: React.ComponentProps<"li">) => (
     <li {...props} className="text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)]" />
   ),
-  a: (props: React.ComponentProps<"a">) => (
+  a: ({ href, ...props }: React.ComponentProps<"a">) => (
     <a
       {...props}
+      href={withTrailingSlash(href)}
       className="text-[var(--accent)] underline decoration-[color-mix(in_srgb,var(--accent)_40%,transparent)] underline-offset-4 hover:decoration-[var(--accent)]"
     />
   ),
