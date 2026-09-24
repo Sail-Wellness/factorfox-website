@@ -84,7 +84,7 @@ export default function AiInActionPage() {
                 className="w-full rounded-xl border border-[var(--line)] bg-[#0b1017]"
                 style={{ aspectRatio: "9 / 16", boxShadow: "var(--shadow-card)" }}
                 src="/media/factorfox-briefing.mp4"
-                poster="/media/factorfox-briefing-poster.jpg"
+                poster="/media/factorfox-briefing-poster.webp"
                 controls
                 playsInline
                 preload="none"

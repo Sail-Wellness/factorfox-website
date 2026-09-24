@@ -85,7 +85,7 @@ export function VideoModal({ src, poster, title, caption, label, sublabel, thumb
       <button type="button" onClick={openDialog} className="ff-video-trigger" aria-haspopup="dialog">
         <span className="ff-video-thumb">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={thumb ?? poster} alt="" aria-hidden="true" loading="lazy" decoding="async" />
+          <img src={thumb ?? poster} alt="" aria-hidden="true" width={44} height={60} decoding="async" />
           <span className="ff-video-play" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" focusable="false">
               <path d="M8 5.5v13l11-6.5z" />
@@ -128,7 +128,9 @@ export function VideoModal({ src, poster, title, caption, label, sublabel, thumb
             ref={videoRef}
             className="ff-video-player"
             src={src}
-            poster={poster}
+            // Only asked for once the dialog opens. A poster on a closed dialog
+            // is still downloaded, and nobody sees it.
+            poster={open ? poster : undefined}
             controls
             playsInline
             preload="none"

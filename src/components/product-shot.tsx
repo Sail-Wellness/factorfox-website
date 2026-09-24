@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 /**
  * A real FactorFox screen, in the viewer's theme.
  *
@@ -47,28 +45,44 @@ export function ProductShot({
   const shared =
     "h-auto w-full border border-[var(--line-strong)] bg-[var(--bg-raised)]";
 
+  /* Raster screens ship at 2000 and 1000 pixels wide. The static host has no
+     image optimizer, so the srcset is written here: a phone takes the 1000
+     pixel file and a wide screen takes the 2000. */
+  const srcSet = (base: string) =>
+    unoptimized ? undefined : `${base}-1000.${format} 1000w, ${base}.${format} 2000w`;
+  const sizes = "(max-width: 900px) 100vw, 60vw";
+  const loading = priority ? "eager" : "lazy";
+  const fetchPriority = priority ? "high" : "auto";
+  const lightBase = `/product/${name}`;
+  const darkBase = `/product/${name}-dark`;
+
   return (
     <figure className={`m-0 ${className}`}>
       <div style={{ boxShadow: "var(--shadow-card)" }}>
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={light}
+          srcSet={srcSet(lightBase)}
+          sizes={sizes}
           alt={alt}
           width={width}
           height={height}
-          priority={priority}
-          unoptimized={unoptimized}
-          sizes="(max-width: 900px) 100vw, 60vw"
+          loading={loading}
+          fetchPriority={fetchPriority}
+          decoding="async"
           className={`${shared} block dark:hidden`}
         />
-        <Image
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={dark}
+          srcSet={srcSet(darkBase)}
+          sizes={sizes}
           alt=""
           aria-hidden="true"
           width={width}
           height={height}
-          priority={priority}
-          unoptimized={unoptimized}
-          sizes="(max-width: 900px) 100vw, 60vw"
+          loading="lazy"
+          decoding="async"
           className={`${shared} hidden dark:block`}
         />
       </div>

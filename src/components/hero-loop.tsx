@@ -37,7 +37,7 @@ export function HeroLoop() {
     <video
       className="ff-hero-video"
       src="/media/factorfox-hero-loop.mp4"
-      poster="/media/factorfox-hero-poster.jpg"
+      poster="/media/factorfox-hero-poster-1600.webp"
       autoPlay
       muted
       loop

@@ -477,7 +477,7 @@
   border-radius: 0.875rem;
   border: 1px solid var(--line);
   background-color: var(--bg-raised);
-  background-image: url("/media/factorfox-hero-poster.jpg");
+  background-image: url("/media/factorfox-hero-poster-1600.webp");
   background-position: center;
   background-size: cover;
   box-shadow: var(--shadow-card);
@@ -492,7 +492,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) { .ff-hero-video { display: none; } }
-@media (max-width: 720px) { .ff-hero-video { display: none; } }
+@media (max-width: 720px) {
+  .ff-hero-video { display: none; }
+  .ff-loop { background-image: url("/media/factorfox-hero-poster-800.webp"); }
+}
 
 /* ---------------------------------------------------------- the wide film */
 .ff-film { margin: 0 auto; max-width: 1200px; }
