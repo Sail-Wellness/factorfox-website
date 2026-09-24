@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@/components/analytics";
 import { JsonLd } from "@/components/primitives";
-import { organizationSchema, websiteSchema } from "@/lib/seo";
+import { websiteSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 /**
@@ -69,7 +69,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </noscript>
       </head>
       <body className="flex min-h-screen flex-col">
-        <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <JsonLd data={websiteSchema()} />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}

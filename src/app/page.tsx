@@ -5,7 +5,7 @@ import { BriefingPanel } from "@/components/briefing-panel";
 import { HeroDeck } from "@/components/hero-animation";
 import { VideoModal } from "@/components/video-modal";
 import { HeroLoop } from "@/components/hero-loop";
-import { pageMeta, softwareSchema, faqSchema } from "@/lib/seo";
+import { pageMeta, softwareSchema, faqSchema, organizationSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
 import { INTEGRATIONS } from "@/content/integrations";
 
@@ -76,12 +76,16 @@ export default function HomePage() {
     <>
       <JsonLd
         data={[
-          softwareSchema({
-            name: "FactorFox",
-            description:
-              "Intelligence and operating platform for factoring, asset based lending, purchase order funding and reverse factoring.",
-            path: "/",
-          }),
+          organizationSchema(),
+          {
+            ...softwareSchema({
+              name: "FactorFox",
+              description:
+                "AI native operating platform for invoice factoring, asset based lending, purchase order finance and reverse factoring.",
+              path: "/",
+            }),
+            "@id": "https://factorfox.com/#software",
+          },
           faqSchema(FAQS),
         ]}
       />

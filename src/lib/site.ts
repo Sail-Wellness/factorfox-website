@@ -27,8 +27,8 @@ export const SITE = {
    * Where the demonstration and partner forms post. This is the platform API's
    * own public door, /v1/public/lead-intake/web, which allowlists this origin,
    * checks the honeypot and the time on form, rate limits by address, dedupes,
-   * and records the lead. It lives in the FactorFox Azure environment, so a
-   * submission never leaves infrastructure we control.
+   * and records the lead. It runs on infrastructure FactorFox controls, so a
+   * submission never leaves it.
    *
    * NEXT_PUBLIC_LEAD_ENDPOINT overrides it. The default is here rather than
    * only in a repository variable so that the form works from a clean clone,
@@ -50,9 +50,17 @@ export const SITE = {
    */
   profiles: [
     "https://www.linkedin.com/company/factorfox-software-llc",
-    "https://www.factoring.org/vendor_details.asp?ID=1321",
-    "https://www.crunchbase.com/organization/factorfox",
+    "https://sourceforge.net/software/product/FactorFox/",
+    "https://slashdot.org/software/p/FactorFox/",
+    "https://www.trustradius.com/products/factorfox/reviews",
   ],
+  /**
+   * Owner directive, September 2026: the founder is the only officer named in
+   * structured data. Third party databases carry a wrong chief executive, and
+   * the Organization graph on the homepage is one of the ways that is
+   * corrected. Do not add other officer titles here.
+   */
+  founder: { name: "Roberto Vasquez", jobTitle: "Founder and CEO" },
 } as const;
 
 export type NavChild = { href: string; label: string; note?: string };

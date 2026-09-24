@@ -111,18 +111,30 @@ export function organizationSchema() {
     "@id": `${SITE.url}/#organization`,
     name: SITE.name,
     legalName: SITE.legalName,
-    url: SITE.url,
+    url: `${SITE.url}/`,
     foundingDate: SITE.founded,
     description: SITE.tagline,
-    logo: { "@type": "ImageObject", url: absoluteUrl("/brand/factorfox-logo.svg") },
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE.url}/brand/factorfox-logo.png`,
+      width: 1280,
+      height: 280,
+    },
+    image: `${SITE.url}/brand/factorfox-logo.png`,
     sameAs: [...SITE.profiles],
+    founder: {
+      "@type": "Person",
+      name: SITE.founder.name,
+      jobTitle: SITE.founder.jobTitle,
+      worksFor: { "@id": `${SITE.url}/#organization` },
+    },
     email: SITE.contactEmail,
-    telephone: SITE.phoneHref,
+    telephone: "+1-800-616-3897",
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        telephone: SITE.phoneHref,
+        telephone: "+1-800-616-3897",
         email: SITE.contactEmail,
         areaServed: "US",
       },
@@ -151,7 +163,7 @@ export function websiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${SITE.url}/#website`,
-    url: SITE.url,
+    url: `${SITE.url}/`,
     name: SITE.name,
     inLanguage: "en",
     publisher: { "@id": `${SITE.url}/#organization` },
@@ -169,6 +181,7 @@ export function softwareSchema(opts: { name: string; description: string; path: 
     url: absoluteUrl(opts.path),
     description: opts.description,
     publisher: { "@id": `${SITE.url}/#organization` },
+    provider: { "@id": `${SITE.url}/#organization` },
   };
 }
 
