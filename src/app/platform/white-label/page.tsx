@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "Is it safe to point FactorFox at our website?",
-    a: "It reads presentation only: colors, typeface, logo and name. It never imports a script or a stylesheet and never copies markup, and every value it proposes is checked again on the way in, so it can only ever propose what a person could have typed. It will only fetch a public https address, which keeps a typed website from becoming a way into anyone's internal network.",
+    a: "Yes. It reads presentation only: colors, typeface, logo and name. Nothing executable comes across from your site, it only reads public web addresses, and everything it proposes is a value a person could have typed into the editor themselves.",
   },
   {
     q: "Will it publish anything without us?",
@@ -151,7 +151,7 @@ export default function WhiteLabelPage() {
           },
           {
             title: "Only what they have with you",
-            body: "What a client can do is resolved on the server from the facilities it actually holds. Hiding a button is never how access is controlled.",
+            body: "A client sees and can act on only the products and facilities it actually holds with you.",
           },
           {
             title: "Stable through your redesigns",

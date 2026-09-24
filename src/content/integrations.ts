@@ -379,8 +379,8 @@ export const INTEGRATIONS: Integration[] = [
     ],
   },
   {
-    slug: "tessera",
-    name: "Tessera Network",
+    slug: "freight-claim-verification",
+    name: "Freight claim verification",
     category: "transportation",
     status: "available",
     page: "/integrations/transportation",

@@ -36,7 +36,7 @@ const FAQS = [
   },
   {
     q: "Does the participant see my client list?",
-    a: "No. An opportunity lists anonymized. Nothing on the card names the client or the debtor, and you can choose to mask your own name as well. More is revealed in levels, and each level is a dual party record both sides agreed to. A participant sees the client only once that level has been reached, and the screens are built so that a response can never carry more than the disclosure level allows.",
+    a: "No. An opportunity lists anonymized. Nothing on the card names the client or the debtor, and you can choose to mask your own name as well. More is revealed in levels, and each level is a dual party record both sides agreed to. A participant sees the client only once that level has been reached, and nothing beyond the agreed level is shown.",
   },
   {
     q: "Is this treated as a participation or as secured financing?",
@@ -136,7 +136,7 @@ export default function CapitalNetworkPage() {
           {
             label: "02",
             title: "Discover",
-            body: "Capital providers set mandates for what they want to buy, and the network signals fits to both sides. A signal is computed from each party's own book and the anonymized listing, never from anyone else's.",
+            body: "Capital providers set mandates for what they want to buy, and the network signals fits to both sides. Signals never draw on anyone else's book.",
           },
           {
             label: "03",
@@ -151,7 +151,7 @@ export default function CapitalNetworkPage() {
           {
             label: "05",
             title: "Fund",
-            body: "Funding is approved and then confirmed by people. The confirmation posts on both books, each on a connection bound to that book.",
+            body: "Funding is approved and then confirmed by people, and the confirmation posts on both books.",
           },
           {
             label: "06",
@@ -168,7 +168,7 @@ export default function CapitalNetworkPage() {
         items={[
           {
             title: "A participation passport",
-            body: "Measured facts about a participant rather than a questionnaire: liquidity read from its own general ledger and exposure read from the participation subledger.",
+            body: "Measured facts about a participant, such as liquidity and existing exposure, rather than a questionnaire.",
           },
           {
             title: "A ledger both sides read",

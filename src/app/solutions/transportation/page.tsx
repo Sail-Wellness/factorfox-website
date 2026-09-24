@@ -38,7 +38,7 @@ const FAQS = [
   },
   {
     q: "How do you handle double brokering?",
-    a: "By cross validating the load against parties other than the one asking to be paid. Tessera Network claim verification sends a claim out and returns a verdict with the provenance behind it, and a verdict without its provenance does not count. Alongside that, duplicate and near duplicate documents are detected within the client and across the whole portfolio, which is what catches the same rate confirmation funded at two factors. The platform does not declare a load double brokered. It puts the contradiction, and where it came from, in front of an officer.",
+    a: "By cross validating the load against parties other than the one asking to be paid. Independent freight claim verification sends a claim out and returns a verdict with the provenance behind it, and a verdict without its provenance does not count. Alongside that, duplicate and near duplicate documents are detected within the client and across the whole portfolio, which is what catches the same rate confirmation funded at two factors. The platform does not declare a load double brokered. It puts the contradiction, and where it came from, in front of an officer.",
   },
   {
     q: "Can the platform hold load level detail rather than just an invoice?",
@@ -170,7 +170,7 @@ export default function TransportationPage() {
         </p>
         <p>
           <strong>Cross validation comes from parties other than the one asking to be paid.</strong>{" "}
-          Tessera Network claim verification returns a verdict with its provenance attached, and a verdict
+          Independent freight claim verification returns a verdict with its provenance attached, and a verdict
           without provenance does not count. Verification runs capture their evidence at the moment they
           run and are never re fetched, so what an officer certified is what an officer saw.
         </p>
@@ -255,7 +255,7 @@ export default function TransportationPage() {
 
       <RelatedPages
         links={[
-          { href: "/integrations/transportation", label: "Transportation sources", note: "FMCSA and Tessera Network, with the controls stated on each row." },
+          { href: "/integrations/transportation", label: "Transportation sources", note: "FMCSA and freight claim verification, with the controls stated on each row." },
           { href: "/platform/fraud-detection", label: "Fraud detection", note: "Behavioral combinations, near duplicates and the bank change hold." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Rate confirmations and proofs of delivery under a strict schema." },
           { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Payment velocity by broker and exposure aggregated across carriers." },
@@ -283,7 +283,7 @@ const CHECKS: { label: string; value: string; note: string; kind: "available" | 
   { label: "Operating authority currency", value: "Not asserted", note: "Captured from the source. The gate refuses to conclude", kind: "info" },
   { label: "Insurance currency", value: "Not asserted", note: "Captured, never verified. Hold your own certificate", kind: "info" },
   { label: "Safety score", value: "Not asserted", note: "Displayed as read, with no claim attached to it", kind: "info" },
-  { label: "Claim verification", value: "Verdict returned", note: "Tessera Network, provenance attached to the verdict", kind: "available" },
+  { label: "Claim verification", value: "Verdict returned", note: "Independent verification, provenance attached to the verdict", kind: "available" },
 ];
 
 function CarrierScene() {

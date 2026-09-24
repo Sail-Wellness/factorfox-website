@@ -41,7 +41,7 @@ const FAQS = [
     a: "In transportation the client is the carrier and the debtor is usually the broker, so a check offered only on the client throws away half of what you needed. Broker payment behavior is the risk in freight factoring far more often than carrier registration is, and the broker is the party whose conduct across your whole portfolio you can actually observe.",
   },
   {
-    q: "What does Tessera Network verification add that a rate confirmation does not?",
+    q: "What does freight claim verification add that a rate confirmation does not?",
     a: "Corroboration from a party other than the one asking to be paid. A rate confirmation is a document the client supplied. A verified claim carries the provenance behind the verdict, and the verdict without its provenance does not count. Verification runs capture their evidence at run time and are never re fetched, so a load verified in March still shows what was known in March.",
   },
   {
@@ -61,7 +61,7 @@ export default function TransportationPage() {
         data={softwareSchema({
           name: "FactorFox transportation integrations",
           description:
-            "FMCSA carrier and broker identity on both the client and debtor side, and Tessera Network freight claim verification with provenance, for transportation factoring operations.",
+            "FMCSA carrier and broker identity on both the client and debtor side, and independent freight claim verification with provenance, for transportation factoring operations.",
           path: "/integrations/transportation",
         })}
       />
@@ -77,7 +77,7 @@ export default function TransportationPage() {
           <>
             <p>
               Written for freight factors and the underwriters who look at both ends of a load. FMCSA lookup on
-              the carrier you are funding and on the broker who owes the money, and Tessera Network claim
+              the carrier you are funding and on the broker who owes the money, and independent freight claim
               verification for the load itself.
             </p>
             <p>
@@ -113,7 +113,7 @@ export default function TransportationPage() {
             problem:
               "The only evidence a load happened is a rate confirmation and a bill of lading, both supplied by the party asking to be paid.",
             response:
-              "Tessera Network verification brings back a verdict with the provenance behind it, from a party other than the one submitting the invoice.",
+              "Freight claim verification brings back a verdict with the provenance behind it, from a party other than the one submitting the invoice.",
           },
           {
             problem:
@@ -190,8 +190,8 @@ export default function TransportationPage() {
                   "Operating authority currency, insurance currency and safety scores are not asserted, and the gate that would assert them is forbidden from guessing.",
                 ],
                 [
-                  "Tessera Network",
-                  <Status key="tessera" kind="available" />,
+                  "Freight claim verification",
+                  <Status key="claim-verification" kind="available" />,
                   "A claim goes out for verification. A verdict comes back with the provenance behind it, captured at run time.",
                   "A verdict without provenance does not count as verification, and a run is never re fetched underneath the decision that used it.",
                 ],

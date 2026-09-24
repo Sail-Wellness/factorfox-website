@@ -31,7 +31,7 @@ export const metadata: Metadata = pageMeta({
 const FAQS = [
   {
     q: "Does the AI make up numbers?",
-    a: "It cannot. The model reads your words and turns them into a report definition. It never sees a figure from your book and it never writes a database query. The definition is checked against FactorFox's registry of governed measures, and every number is calculated by FactorFox from those measures. If the model's definition does not pass the check, a deterministic reader builds the definition instead.",
+    a: "No. The AI works out what you are asking for. Every number is calculated by FactorFox from governed measures, each with a stated definition, period and source, so a Studio figure is the same figure the rest of the platform produces.",
   },
   {
     q: "What if a report shows something a colleague should not see?",
@@ -99,7 +99,7 @@ export default function StudioPage() {
             problem:
               "AI reporting tools produce confident numbers, and nobody can say where they came from.",
             response:
-              "The model never sees a number and never writes a query. Every figure is calculated by FactorFox from a governed measure with a stated definition, period and source.",
+              "The AI interprets the request. Every figure is calculated by FactorFox from a governed measure with a stated definition, period and source.",
           },
           {
             problem:
@@ -133,7 +133,7 @@ export default function StudioPage() {
           {
             label: "03",
             title: "Run",
-            body: "The report runs on the book as it stands, with a short note of what FactorFox noticed, written from the rows rather than by a model.",
+            body: "The report runs on the book as it stands, with a short note of what FactorFox noticed in the results.",
           },
           {
             label: "04",
@@ -168,12 +168,11 @@ export default function StudioPage() {
         ]}
       />
 
-      <ProseSection eyebrow="The design choice" title="Why the model is kept away from the numbers.">
+      <ProseSection eyebrow="The design choice" title="Why the AI never decides what the numbers are.">
         <p>
-          A language model is very good at understanding what somebody means and very bad at being the
-          system of record. So Studio splits the job. The model reads your request and proposes a
-          definition. FactorFox validates that definition against measures it already governs, runs one
-          controlled query under your own access, and writes the numbers itself.
+          AI is very good at understanding what somebody means and should never be the system of record.
+          So Studio splits the job. The AI works out what you are asking for. FactorFox produces the
+          numbers, from measures it already governs and under your own access.
         </p>
         <p>
           That is why a Studio report can go in front of a credit committee or a lender. The figures are
