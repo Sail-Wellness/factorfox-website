@@ -1,0 +1,81 @@
+---
+title: "What factoring software does, and what it should"
+description: "Factoring software for the funder, explained: the purchase cycle, the ledger, ABL and PO finance, three generations of platform, and what AI should do."
+published: "2026-09-26"
+audience: "Factoring company owners, operators and credit officers"
+cluster: "Invoice factoring"
+related: ["/", "/solutions/factoring", "/platform/ai-native", "/platform/accounting"]
+---
+
+Factoring software, as this page means it, is the system a factoring company runs its own book on. It is not a marketplace for businesses that want to sell invoices, and it is not the application a client fills in to get funded. It is written for the owner, the operator and the credit officer at the funder: the people who buy the receivable, carry the risk and answer to a bank for it.
+
+The distinction matters because the search term carries both audiences, and only one of them is buying software. Everything below is in purchase side vocabulary.
+
+## What factoring software does for the funder
+
+At its core, [factoring software](/) runs one cycle, over and over, for every client on the book. The steps are the same at every factor. What differs is how much of it a person has to hold in their head.
+
+**Schedules.** A client submits a schedule of invoices by email, portal or file transfer. The software captures the invoices, the debtors and the supporting documents, and reads each one against that client's own history before anybody decides to buy. An invoice several times the client's usual size, or a debtor appearing for the first time, should be visible before the purchase rather than after the funding.
+
+**Verification.** Purchase orders, proofs of delivery and debtor confirmations are gathered and matched against the invoice. Good software directs verification effort to where the exposure is rather than to whatever was easy to check, keeps the evidence of what was checked and when, and respects non notification accounts, where the debtor must not learn of the assignment.
+
+**Advances and reserves.** On purchase, the invoice splits into the advance the client receives now and the reserve held back until the debtor pays and the recourse period runs. Fees begin to accrue on the terms of the client agreement.
+
+**Collections.** Debtors are contacted in order of exposure and promise history, within whatever the notification status allows. Missed promises, and misdirected payments where the debtor paid the client instead of the factor, should be tracked conditions with their own aging rather than notes in a margin.
+
+**Cash application.** Remittances are matched to invoices. Short pays and credit notes are dilution and should be recorded as dilution rather than absorbed. An invoice that ages past its recourse period becomes a chargeback against the client, and the effect on that client's availability should be known before it is raised.
+
+**Rebates.** Once the debtor has paid, what remains of the reserve after fees goes back to the client, released with a record of who authorized it.
+
+**Client and debtor reporting.** Clients see statements, availability and open items. The factor sees exposure to each debtor aggregated across every client that sells to it, which is usually the number that changes a credit committee's mind and is almost never visible from a single client file.
+
+**The ledger.** Underneath all of it, every funding, fee accrual, reserve movement, chargeback and receipt should post as balanced double entry, so the client statement agrees with the books without anybody forcing it to. Software that records transactions and leaves the accounting to a separate package can work, and many books run that way. It means reconciliation is a monthly job rather than a property of the system. FactorFox takes the first approach, set out on [accounting](/platform/accounting/).
+
+Recourse, non recourse and non notification are not three products. They are three sets of constraints on the same cycle, and most factors run all three, often for the same client. Good [invoice factoring software](/solutions/factoring/) carries the difference at the level of the individual purchase rather than the client record, because that is how the deals are actually written.
+
+## How it differs for asset based lending and purchase order finance
+
+[Asset based lending](/solutions/asset-based-lending/) moves from invoice by invoice purchase to a revolving line against a pool of collateral. The central object is the borrowing base: eligible collateral, less ineligibles such as aged items, cross age, concentration, contras and disputes, at an advance rate by collateral class, less reserves. The software has to recompute availability as the collateral moves, give the reason for every exclusion so the borrower can see why, and monitor the covenants the lender itself operates under. A borrowing base certificate should be a moment you sign, not a moment you calculate.
+
+[Purchase order finance](/solutions/purchase-order-funding/) starts earlier, before an invoice exists. Three parties are underwritten rather than one: the client who must fulfill, the supplier who must produce, and the end buyer whose credit ultimately repays you. The software has to hold the cost, margin and takeout agreed at structuring, the instrument dates, the production milestones and the documents that evidence each one, and then the moment the order becomes an invoice and the invoice becomes a receivable.
+
+A funder that offers more than one of these gains a great deal from running them on one record. Exposure to a single buyer does not care which product created it.
+
+## Three generations of factoring software
+
+The first generation was installed software. You did not so much buy factoring software as buy factoring software for Windows, and inherit the upgrade cycle and the migrations that came with it. Systems of that era were built to record what happened, accurately and in order, and plenty of well run books were built on them.
+
+The second generation moved to the cloud, and the application stopped depending on the operating system underneath it. FactorFox made that move first, launching in 2002 as the first cloud platform built specifically for factoring companies. A factor no longer had to run servers to fund its clients.
+
+The third generation is AI native. [AI native factoring software](/platform/ai-native/) puts the intelligence inside the operating system rather than connecting a model to it afterwards. It works from the same records as the ledger, applies the policy that was in force at the time, and shows the evidence behind every conclusion. It is the same shift the cloud made, one layer up: the model becomes an engine that should be replaceable without replacing the vehicle, which is why FactorFox is model agnostic.
+
+Every generation still has sensible buyers. The question for any operation is what it needs to see, and how early.
+
+## What AI should and should not do in factoring software
+
+AI should read. Invoices, remittances, bills of lading and client agreements carry the facts a factor needs, and reading them reliably removes the keying that becomes a funding error four months later. A useful test of any platform is to hand it an executed client agreement and watch whether it sets the client up from the document, with the clause each term came from attached.
+
+AI should notice. The exposures that cost money usually sit in the relationship between records rather than in any one of them: one debtor under three spellings across four clients, dilution moving in a way the client's history does not explain, an invoice well above the client's own median, a near duplicate of a document another client submitted weeks earlier.
+
+AI should explain. A conclusion that cannot be opened onto the records that produced it will be ignored the first time it is inconvenient, and in factoring that is exactly when it matters. An answer should carry its severity, its reason, references into the underlying records and the recommended action with the permission it requires. When a source is unavailable, the software should say so and name the source rather than show a zero.
+
+AI should not move money. The machine may stop a funding on its own authority. Only a named person should let it through, with a second name required by default. Stopping money while a question is open is cheap and reversible, and releasing it is neither. Nor should AI replace legal review, lender approval or the judgment of the credit officer. What it can do is monitor conditions, organize the evidence and give the people who decide time to act.
+
+And it should not claim more than it does. Ask any vendor whether its risk models learn from your outcomes, what the label is and who confirms it. FactorFox's do not yet, and it says so on its own site.
+
+## A buyer checklist
+
+Put these to every vendor on the list, in a working session, on your own data where you can.
+
+- Does it run every product you offer, whether factoring, asset based lending or purchase order finance, on one record?
+- Is there a real double entry ledger, and is the client statement generated from it?
+- Can any figure on screen be opened onto the records behind it, live, on a number you choose?
+- Can a requester approve their own release from any surface? The answer should be no.
+- What appears on screen when a data source is switched off?
+- Is exposure to one debtor aggregated across every client that sells to it?
+- Is there an integration register with a status against every row?
+- Which certifications are held today, with a report you can read?
+- What do you take with you on exit, and which clause in the agreement says so?
+- Will the vendor re price a sample of your settled invoices and show every difference before you sign?
+
+The longer version of this list, including the contract clauses, is on [how to choose](/compare/how-to-choose/). The quickest way to run it against FactorFox is to bring a slice of your own book to a [demonstration](/demo/).

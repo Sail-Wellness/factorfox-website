@@ -1,0 +1,84 @@
+---
+title: "AI invoice factoring software: what it should do"
+description: "What AI invoice factoring software should do for the factor at each step of the funding day, from schedule intake to cash application and evidence."
+published: "2026-09-26"
+audience: "Factoring company owners, operators and credit officers"
+cluster: "Invoice factoring"
+related: ["/solutions/factoring", "/platform/ai-native", "/platform/document-intelligence", "/platform/fraud-detection"]
+---
+
+This is written for the people who run a factoring company: the owner who answers to the funding line, the operations manager whose team works the schedules, and the credit officer who has to explain a purchase to a bank long after the advance went out. It is not for a business looking to sell its invoices. When a vendor tells a funder that its factoring software uses AI, what should that software actually be doing on an ordinary day, at each step where your money is at stake?
+
+AI earns its place where the work is reading unstructured paper, comparing a submission against history nobody has time to hold in their head, and writing the morning's position in plain language. It should never be the thing that lets money leave. What follows walks the invoice factoring day in order and says what the software should do at each point, and where FactorFox stands.
+
+## Schedule intake and document reading
+
+The day starts with a schedule, and the schedule arrives however the client prefers: an email with nine invoices in one PDF, a portal upload, a file over SFTP. Good AI factoring software holds every door to the same evidence standard, so the channel a client picks does not decide how carefully the paper is examined.
+
+Reading is the part models genuinely improved. What matters is not a headline accuracy figure but what the software does when it is wrong or unsure. The original document should be kept exactly as it arrived, with the extraction marked as a derivative of it. A response that does not fit the expected structure should be rejected rather than repaired, and a field that could not be read should be recorded as unread and routed to a person, never left blank to become zero somewhere downstream. FactorFox works this way. It does not publish an extraction accuracy figure. It runs your own documents, including the bad ones, and shows what was read, what was refused and where a person was needed. The detail is on [document intelligence](/platform/document-intelligence/).
+
+## Verification that follows the exposure
+
+In most shops verification is sampled by whoever has time, from the invoices that were easy to check. Software should turn that around, so effort goes where exposure, deviation and debtor behavior say it should. Purchase orders, proofs of delivery, signed acknowledgments and third party confirmations are gathered and matched against the invoice, and what reaches an officer is the set that failed a check, with the reason attached.
+
+Two properties matter. The evidence from a verification run should be captured when the run happens and never fetched again later, so what you certified is what you saw. And on non notification accounts, verification methods that would reveal the assignment should be unavailable, not merely discouraged. FactorFox holds to both.
+
+## Duplicate and fraud signals
+
+Duplicate funding is rarely a straight photocopy. It is the same receivable under a new invoice number, a fresh scan of an old document, or the same paper submitted under two related clients. Software has to compare within the client and across the whole portfolio at the moment of verification, because a check that only looks inside one client file cannot see the last case at all.
+
+Fraud is a combination problem. A large invoice, a weekend submission, a new debtor: each happens every week in a healthy book, and a system that flags each alone trains a competent team to clear the queue unread. FactorFox raises signals on combinations arriving together on the same party, and measures deviation against the client's own history (its own median invoice, its own submission rhythm) rather than a portfolio average. When an officer dismisses a signal, the dismissal carries a written reason and a name, and if the same combination fires again the earlier dismissal is shown beside it. See [fraud detection](/platform/fraud-detection/).
+
+## Funding decisions: the machine may stop money
+
+Here the design of the software matters more than any model. Automation in lending is not symmetric. A wrong hold costs an hour and a phone call. A wrong release costs the advance.
+
+So the rule should be plain: the machine may stop money on its own authority, and only a named person may let it through. In FactorFox, credit limit utilization, concentration under the aggregated debtor name, eligibility, advance rate and facility availability all apply at purchase. Four eyes applies by default. In solo mode an AI counter review is logged where the second officer's name would sit, and it refuses outright when any underlying fact has changed since the request was raised. Certain gates can never be made advisory. A bank account change sits under a human only hold, and automated approval is refused outright rather than switched off by default. A client is also re underwritten on every material event, and each run is versioned so the position behind a funding decision can be opened later. [Continuous underwriting](/platform/continuous-underwriting/) covers that loop.
+
+## Collections ordered by what is at risk
+
+An aged trial balance sorted by days spends the collector's morning in the order the calendar produced. Software should rank the work by exposure at risk and by what this obligor has done when it promised before, with age still visible on every row.
+
+FactorFox treats a promise as a dated commitment with an amount and a named person at the debtor. When the date passes without the cash, the promise lapses on its own and the case reopens with the reason stamped on it. Contact history sits against the obligor as well as the case. What it does not do is chase for you. The recovery is still the collector's. More on [collections](/platform/collections/).
+
+## Cash application as proposals
+
+Cash application is a series of small judgments made at speed, and automatic matching that posts against the wrong invoice because the amounts happened to agree is how a week of unwinding starts. The right design is that the software proposes and a person applies.
+
+In FactorFox, a remittance arriving in a shared mailbox through Microsoft Outlook and Graph mail (controlled release) or as EDI 820 remittance (available) becomes a proposal with the original attached. The proposal states what it matched, what it could not match and what is left over. A person accepts, adjusts or refuses it, and their name goes on the posting. A short pay raises a deduction rather than disappearing, and it joins that obligor's dilution history. Mail that looks like a bank account change is classified as requiring verification and never applied. See [accounting](/platform/accounting/).
+
+## Client agreements read into configuration
+
+Every client agreement already contains the operating rules for the relationship: advance rate, fee schedule, discount terms, reserve, concentration limit, aging and recourse window. Typed in by hand, a transcription error becomes a funding error months later.
+
+This is one of the clearest places for AI to do real work. Give FactorFox the executed agreement and it reads the terms, including the fees and the discount schedule, and sets the client up against them, with the clause each term came from attached. A disagreement about what was agreed is then settled by opening the clause rather than by memory. Reading your facility agreement into covenants the same way is in development, not in the product today.
+
+## Briefings instead of dashboards
+
+A dashboard waits for somebody to know what to look for, and the exposure that costs money is usually the one nobody thought to query.
+
+A FactorFox briefing answers six fixed questions: where is risk and why, which decisions require me now, what changed since the last brief, where is cash and what can move safely, what is likely to happen next, and am I within covenant. Scope follows responsibility rather than job title, so an account executive who owns forty clients is briefed on those forty and not on everything the role can open. Every item carries its severity, the reason, references into the records and the next actions, each labeled with the permission it needs. A second briefing states the difference rather than restating the book. The same briefing reaches the web application, Microsoft Teams (controlled release) and mobile. See [briefings](/platform/briefings/).
+
+## Evidence behind every conclusion
+
+An inference you cannot open is an opinion, and in an operation that answers to a bank and an auditor, an opinion gets ignored the first time it is inconvenient.
+
+The standard to hold any vendor to is that every conclusion opens onto the records that produced it. FactorFox refuses to show a change it cannot prove and offers to take a first observation instead of inventing a yesterday. It reports confidence and coverage separately, so a thin file does not read as a strong one, and it names the sources that did not answer rather than averaging them away. Audit packets are sealed and cannot be changed afterwards. The principle is set out on [intelligence with evidence](/platform/evidence/).
+
+## Reporting from plain English
+
+The custom report is where questions go to wait for the one person who can build it. AI can remove the wait, provided it is never the system of record.
+
+FactorFox Studio takes a request in plain English and states what it understood before anything runs: the period, who is included, the measures, the filters, the grouping and the order. The AI works out what you are asking for. FactorFox calculates every figure from governed measures, each with a stated definition, period and source. A shared report runs under each viewer's own permissions, and a measure a role does not include is withheld and named as withheld. Today Studio's custom reports cover clients and debtors. See [FactorFox Studio](/platform/studio/).
+
+## What to ask a vendor that says its factoring software uses AI
+
+Five questions do most of the work in a demonstration. Pick any conclusion on any screen and ask what produced it; you want the records, the policy that applied and the reason, not the answer reworded. Ask to see a screen with a data source disconnected, because a named absence is a working system and a zero is a hazard. Ask whether the software can release money on its own under any configuration, and expect a flat no. Ask what happens when extraction is unsure, and whether the value is rejected and routed to a person or quietly repaired and posted. And if the vendor says its models learn from your outcomes, ask what the label is, who confirms it and how false positives are tracked. FactorFox does not make that claim. What it records is every dismissal, with a written reason and a name.
+
+Then ask about the model itself. A platform built around one model family inherits that family's roadmap, pricing and outages. FactorFox is model agnostic by design: the model doing the work is a configuration decision, so a better one can be adopted when it ships.
+
+## AI enabled versus AI native
+
+AI enabled means a model is connected to the software. It is handed a question and some context, and it can summarize, draft and answer. What it cannot do is see the ledger the way the ledger sees itself.
+
+AI native means the intelligence is part of the operating system. It works from the same records as the ledger, applies the policy that was in force at the time, and refuses to show a change it cannot prove. Both kinds demonstrate well. The difference appears when somebody asks the software to prove a conclusion it reached on its own: one shows you the answer again in different words, the other opens the records. That distinction is what [AI native factoring software](/platform/ai-native/) means here, and it is why FactorFox runs on a real double entry general ledger rather than sitting beside one. The purchase side of the day, from schedule to reserve release, is covered on [invoice factoring software](/solutions/factoring/).
