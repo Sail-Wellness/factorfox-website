@@ -14,9 +14,15 @@ export const metadata: Metadata = {
  * opposite of that: it says what happened, it is ours, and it sends people
  * somewhere useful instead of into a dead end.
  */
+/* Retired WordPress sections, sent to their nearest current home when an old deep link
+   that has no individual redirect lands here. The response stays a 404 for crawlers, so
+   nothing that does not exist is ever reported as a page. */
+const LEGACY_SECTIONS = `(function(){var p=location.pathname,m=[["/blog/","/resources/"],["/post/","/resources/"],["/factoring-services/","/solutions/"],["/category/","/resources/"],["/tag/","/resources/"],["/author/","/company/"]];for(var i=0;i<m.length;i++){if(p.indexOf(m[i][0])===0){location.replace(m[i][1]);return;}}})();`;
+
 export default function NotFound() {
   return (
     <Section>
+      <script dangerouslySetInnerHTML={{ __html: LEGACY_SECTIONS }} />
       <Container>
         <div className="max-w-[46rem]">
           <Eyebrow tone="signal">404</Eyebrow>
