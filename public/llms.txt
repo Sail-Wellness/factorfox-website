@@ -52,7 +52,7 @@ authority and insurance are captured rather than verified.
 - [Specialty finance software in one platform](https://factorfox.com/solutions/): One platform across factoring, asset based lending, purchase order funding, reverse factoring and freight, with books for the industries you fund most.
 - [Asset based lending software for ABL teams](https://factorfox.com/solutions/asset-based-lending/): Run borrowing base, ineligibles, advance rates by collateral class, field exam findings and covenant reporting to the bank behind your asset based book.
 - [Construction factoring software and retainage](https://factorfox.com/solutions/construction/): Fund subcontractor receivables with schedules of values, retainage, lien deadlines, pay when paid clauses and joint checks held as expiring conditions.
-- [Invoice factoring software for funding companies](https://factorfox.com/solutions/factoring/): Run schedules, verification, advance and reserve, chargebacks and notice of assignment, with recourse, non recourse and non notification on one book.
+- [AI invoice factoring software for factors](https://factorfox.com/solutions/factoring/): Run schedules, verification, advance and reserve, chargebacks and notice of assignment, with recourse, non recourse and non notification on one book.
 - [Medical factoring software for payer mix](https://factorfox.com/solutions/healthcare/): Fund medical receivables against payer mix, claim aging from date of service, net collectable value, remittance advice and takebacks you can trace.
 - [Manufacturing factoring software for funders](https://factorfox.com/solutions/manufacturing/): Fund producers and distributors through purchase order to invoice, chargebacks, dilution from returns, and concentration among buyers that set terms.
 - [Purchase order funding software for lenders](https://factorfox.com/solutions/purchase-order-funding/): Fund supplier payments, letters of credit and production milestones, then follow the conversion from purchase order to invoice to receivable on one file.
@@ -124,10 +124,14 @@ authority and insurance are captured rather than verified.
 ## Writing
 
 - [AI in specialty finance is mostly automation](https://factorfox.com/resources/ai-in-specialty-finance/): Tell automation and intelligence apart before you buy either, and see why evidence is what decides whether an intelligence layer is usable at all.
+- [AI invoice factoring software: what it should do](https://factorfox.com/resources/ai-invoice-factoring-software/): What AI invoice factoring software should do for the factor at each step of the funding day, from schedule intake to cash application and evidence.
+- [Best factoring software in 2026, compared](https://factorfox.com/resources/best-factoring-software/): Ten factoring software platforms compared for the factor choosing one: finance types, ledger, AI, deployment, security and pricing, stated fairly.
 - [Which factoring workflows repay automation](https://factorfox.com/resources/factoring-workflows-to-automate/): Sort the work in your operation into three piles, apply the test that decides which pile each workflow lands in, and avoid the half automated trap.
 - [How to evaluate the systems a factor depends on](https://factorfox.com/resources/how-to-choose-a-factoring-company/): Assess your operating platform, funding line, credit sources, payment rails and participation partners on failure behavior rather than feature lists.
 - [What a factor should require before advancing](https://factorfox.com/resources/invoice-factoring-requirements/): The client, debtor and invoice conditions that should be true before money leaves, sorted by what each one prevents and what it costs you to skip it.
+- [Invoice factoring software features that matter](https://factorfox.com/resources/invoice-factoring-software-features/): A feature checklist for factors comparing invoice factoring software, grouped by the operating day, with what good looks like and what to ask in a demo.
 - [Why the OCR accuracy number misleads factors](https://factorfox.com/resources/ocr-invoice-scanning/): See what really lands in a factoring inbox, what breaks when a model reads it, and why a strict schema beats any accuracy figure a vendor will quote.
+- [What factoring software does, and what it should](https://factorfox.com/resources/what-is-factoring-software/): Factoring software for the funder, explained: the purchase cycle, the ledger, ABL and PO finance, three generations of platform, and what AI should do.
 
 ## Notes for anyone quoting this site
 
