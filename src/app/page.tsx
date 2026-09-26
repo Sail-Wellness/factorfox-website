@@ -95,13 +95,17 @@ export default function HomePage() {
         <span className="u-glow-edges pointer-events-none absolute inset-0" aria-hidden="true" />
         <Container width="wide" className="relative">
           <div className="mx-auto max-w-[52rem] text-center">
-            <Eyebrow tone="signal">
-              Factoring &middot; Asset based lending &middot; Purchase order funding &middot; Reverse factoring
-            </Eyebrow>
-
-            <h1 className="text-hero mt-6">
-              Your business does not need another dashboard. It needs a{" "}
-              <span className="text-[var(--accent)]">briefing</span>.
+            {/* The eyebrow is part of the H1 so the heading names what the page is, AI factoring
+                software, in the words buyers search for, while the line people read stays the same. */}
+            <h1 className="m-0">
+              <span className="u-eyebrow block" style={{ color: "var(--signal)" }}>
+                AI factoring software for factoring, asset based lending, purchase order funding and
+                reverse factoring
+              </span>
+              <span className="text-hero mt-6 block">
+                Your business does not need another dashboard. It needs a{" "}
+                <span className="text-[var(--accent)]">briefing</span>.
+              </span>
             </h1>
 
             <p className="text-body-lg mx-auto mt-7 max-w-[44rem] text-balance text-[var(--fg-muted)] sm:text-[19px]">

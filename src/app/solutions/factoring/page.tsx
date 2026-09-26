@@ -20,7 +20,7 @@ import { JsonLd } from "@/components/primitives";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
-  title: "Invoice factoring software for funding companies",
+  title: "AI invoice factoring software for factors",
   description:
     "Run schedules, verification, advance and reserve, chargebacks and notice of assignment, with recourse, non recourse and non notification on one book.",
   path: "/solutions/factoring",
@@ -72,8 +72,8 @@ export default function FactoringPage() {
           { name: "Solutions", path: "/solutions" },
           { name: "Factoring", path: "/solutions/factoring" },
         ]}
-        eyebrow="Invoice factoring"
-        title="Factoring software for the factor, not for the business selling the invoice."
+        eyebrow="AI invoice factoring software"
+        title="Invoice factoring software for the factor, not for the business selling the invoice."
         lede={
           <>
             <p>
@@ -305,6 +305,9 @@ export default function FactoringPage() {
 
       <RelatedPages
         links={[
+          { href: "/resources/ai-invoice-factoring-software", label: "AI invoice factoring software", note: "What AI should do at each step of the funding day." },
+          { href: "/resources/invoice-factoring-software-features", label: "Invoice factoring software features", note: "A checklist for the demonstration, grouped by the operating day." },
+          { href: "/platform/ai-native", label: "AI native factoring software", note: "What the platform does, in nine parts." },
           { href: "/platform/continuous-underwriting", label: "Continuous underwriting", note: "Re underwriting on every material event, versioned and immutable." },
           { href: "/platform/document-intelligence", label: "Document intelligence", note: "Extraction, matching, verification and near duplicate detection." },
           { href: "/platform/risk-monitoring", label: "Risk monitoring", note: "Payment velocity, dilution movement and aggregated debtor concentration." },

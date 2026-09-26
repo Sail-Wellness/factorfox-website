@@ -174,7 +174,7 @@ export const FOOTER_COLUMNS: { title: string; links: NavChild[] }[] = [
   {
     title: "Solutions",
     links: [
-      { href: "/solutions/factoring", label: "Factoring" },
+      { href: "/solutions/factoring", label: "Invoice factoring software" },
       { href: "/solutions/asset-based-lending", label: "Asset based lending" },
       { href: "/solutions/purchase-order-funding", label: "Purchase order funding" },
       { href: "/solutions/reverse-factoring", label: "Reverse factoring" },
