@@ -3,7 +3,7 @@ export const SITE = {
   legalName: "FactorFox Software LLC",
   url: "https://factorfox.com",
   founded: "2002",
-  tagline: "The intelligence and operating platform for specialty finance.",
+  tagline: "One operating system. One financial record. One connected ecosystem.",
   /**
    * Two sign in doors during the migration. FactorFox AI is the platform every
    * customer is moving to and is listed first. Classic is the legacy platform

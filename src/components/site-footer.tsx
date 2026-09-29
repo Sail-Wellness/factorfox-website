@@ -12,8 +12,8 @@ export function SiteFooter() {
           <div>
             <Image src="/brand/factorfox-logo.svg" alt="FactorFox" width={300} height={80} className="h-9 w-auto" />
             <p className="mt-5 max-w-[34ch] text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-              The intelligence and operating platform for factoring, asset based lending, purchase order
-              funding, reverse factoring and specialty finance. Building software for this industry since {SITE.founded}.
+              One operating system. One financial record. One connected ecosystem. For factoring, asset
+              based lending, purchase order funding, reverse factoring and specialty finance, since {SITE.founded}.
             </p>
             <Link href="/demo" className="btn-secondary mt-7">
               Request a demonstration

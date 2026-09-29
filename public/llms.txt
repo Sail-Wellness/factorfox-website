@@ -22,7 +22,7 @@ authority and insurance are captured rather than verified.
 
 ## Start here
 
-- [AI factoring software built on briefings](https://factorfox.com/): AI native invoice factoring software for factors, asset based lenders and PO funders: role aware briefings, evidence behind every conclusion, Teams approvals.
+- [AI factoring software on one financial record](https://factorfox.com/): Factoring software on one operating system, one financial record and one connected ecosystem, for factors, asset based lenders and purchase order funders.
 - [The company behind FactorFox](https://factorfox.com/company/): Founded in 2002, sold to private equity in 2020, reacquired by the founder, and rebuilt as an AI native platform for the institutions that fund.
 - [Invoice factoring software for the operating day](https://factorfox.com/platform/): One platform for the operating day: briefings, evidence, underwriting, risk, covenants, borrowing base, documents, fraud, collections and treasury.
 

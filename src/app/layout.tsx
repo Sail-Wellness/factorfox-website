@@ -33,11 +33,11 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "FactorFox | Factoring and asset based lending software built on briefings, not dashboards",
+    default: "FactorFox | One operating system. One financial record. One connected ecosystem.",
     template: "%s | FactorFox",
   },
   description:
-    "FactorFox is the intelligence and operating platform for factoring, asset based lending, purchase order funding and reverse factoring. Role aware briefings, evidence behind every conclusion, covenant monitoring, and approvals inside Microsoft Teams.",
+    "FactorFox is one operating system, one financial record and one connected ecosystem for factoring, asset based lending, purchase order funding and reverse factoring.",
   applicationName: SITE.name,
   authors: [{ name: SITE.legalName, url: SITE.url }],
   creator: SITE.legalName,
