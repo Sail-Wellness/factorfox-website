@@ -88,7 +88,7 @@ authority and insurance are captured rather than verified.
 
 ## Talk to us
 
-- [Request a FactorFox demonstration](https://factorfox.com/demo/): See FactorFox run against a slice of your own portfolio: briefings, evidence, underwriting, covenants and Teams approvals, on your book not a sample.
+- [See your business on FactorFox AI before you buy](https://factorfox.com/demo/): Send your FMS reports, policies, client agreements and banking documents. See your own business running on FactorFox AI, reconciled, before you commit.
 
 ## Legal
 

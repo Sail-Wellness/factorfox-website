@@ -7,9 +7,9 @@ import { pageMeta, breadcrumbSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
-  title: "Request a FactorFox demonstration",
+  title: "See your business on FactorFox AI before you buy",
   description:
-    "See FactorFox run against a slice of your own portfolio: briefings, evidence, underwriting, covenants and Teams approvals, on your book not a sample.",
+    "Send your FMS reports, policies, client agreements and banking documents. See your own business running on FactorFox AI, reconciled, before you commit.",
   path: "/demo",
   intent: "conversion",
 });
@@ -26,37 +26,34 @@ export default function DemoPage() {
 
       <Section className="!pb-10">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-20">
+          <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-16">
             <div>
               <Eyebrow tone="signal">Demonstration</Eyebrow>
-              <h1 className="mt-4 text-[clamp(2rem,4.4vw,3rem)]">
-                Bring your own book. We will brief you on it.
+              <h1 className="mt-4 text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.12]">
+                See your business running on FactorFox AI before you buy it.
               </h1>
               <div className="mt-6 space-y-4 text-[1.0625rem] leading-[1.7] text-[var(--fg-muted)]">
                 <p>
-                  A demonstration on generic sample data proves nothing. Give us a slice of your portfolio,
-                  even an export of open receivables, and we will show you what the first briefing says
-                  about it and open the evidence behind each line.
+                  Send us your existing FMS reports, your operating policies, your client agreements and your
+                  banking documents. FactorFox AI prepares your financial environment from them, interprets
+                  your operating requirements and organizes your institutional controls.
                 </p>
                 <p>
-                  You will speak to people who have run a factoring operation, not to a sales engineer
-                  reading a script. Expect direct answers, including about the things we have not built.
+                  Then you review your own business inside the platform: your clients, your debtors and your
+                  balances, reconciled to your own report totals, with every configured term traced to the
+                  clause it came from. You make the purchasing decision after that, not before.
                 </p>
                 <p className="text-[var(--fg)]">
-                  <strong>Bring the account that always gives you trouble.</strong> The messy one, with the
-                  debtor nobody can read and the concentration that keeps creeping. That is the account
-                  worth watching, and it is the only honest test of whether any of this works. If it cannot
-                  handle your worst account, you should not buy it. That is a fair test and we are happy to
-                  take it.
+                  <strong>No blind migration. No generic demonstration. No commitment based on promises.</strong>
                 </p>
               </div>
 
               <dl className="mt-10 space-y-0">
                 {[
-                  ["What we will ask for", "A slice of open receivables. Nothing that identifies a debtor is required to make the point."],
-                  ["How long it takes", "Forty five minutes. Longer if you want to get into gates, covenants or the audit trail."],
-                  ["What you get after", "The briefing we generated against your slice, and a written note on what we could not see and why."],
-                  ["If you are migrating", "We will talk through your current data model before anyone talks about a contract."],
+                  ["Your FMS reports", "The standard reports from your current system, as far back as they go and all as of one cutoff date: invoice level aging, purchases, payments, reserves, fees, and chargebacks and adjustments, plus client and debtor lists. Excel or CSV preferred, PDF workable."],
+                  ["Your documents", "Operating policies and procedures, executed client agreements, and your bank facility agreement."],
+                  ["What you see", "Your own book in FactorFox AI, reconciled to your source totals, configured from your own documents, and briefed on the way your team will be briefed every morning."],
+                  ["While it is prepared", "Your data sits in its own isolated environment, and nothing is sent to your clients, your debtors or your staff."],
                 ].map(([t, d]) => (
                   <div key={t} className="grid gap-1 border-t border-[var(--line)] py-4 sm:grid-cols-[minmax(0,11rem)_1fr] sm:gap-8">
                     <dt className="u-eyebrow pt-1">{t}</dt>
@@ -105,42 +102,42 @@ export default function DemoPage() {
               format="svg"
               width={1228}
               height={550}
-              alt="FactorFox workspace with document, risk, workflow and collections surfaces in the sidebar, a pending invoices list, and an empty intake area waiting for an invoice to be dropped in for extraction."
-              caption="The workspace as it stands before a book is loaded. What fills it on the call is your export, not a sample portfolio we prepared earlier."
+              alt="FactorFox workspace with document, risk, workflow and collections surfaces in the sidebar, a pending invoices list, and an empty intake area waiting for documents to be dropped in."
+              caption="The workspace as it stands before a book is loaded. What fills it for your review is your own business, not a sample portfolio we prepared earlier."
             />
           </div>
         </Container>
       </Section>
 
       <StepList
-        eyebrow="What the session looks like"
-        title="Forty five minutes, on your data, with the awkward questions welcome."
-        lede="We would rather spend the time on your book than on a slide about ours. Nothing below requires a signature or a shortlist place."
+        eyebrow="How it works"
+        title="Your reports and documents in. Your own business, running, out."
+        lede="The migration is not something that happens after you sign. It is how you evaluate the platform."
         steps={[
           {
-            label: "Before",
-            title: "You send a slice of open receivables",
-            body: "An export is enough. Client, debtor, invoice number, amount, date, status, and whatever aging you already produce. If your compliance team wants debtor names masked, mask them. The point survives.",
+            label: "01",
+            title: "You send what you already have",
+            body: "The standard reports from your current FMS, your policies and procedures, your executed client agreements and your bank facility agreement. No data entry, and no new forms to fill in.",
           },
           {
-            label: "Minute 0",
-            title: "We generate the first briefing against it",
-            body: "You watch the six questions answer themselves on your own portfolio. Where the data does not support an answer, the platform says so instead of filling the gap, and that behavior is worth seeing as much as the answers are.",
+            label: "02",
+            title: "FactorFox AI rebuilds your book",
+            body: "Clients, debtors, open invoices, reserves and history are reconstructed from your reports and reconciled against their own totals. Anything that does not tie is named, not smoothed over.",
           },
           {
-            label: "Minute 15",
-            title: "You open the evidence behind whatever looks wrong",
-            body: "Pick the line you least believe. We open what produced it. This is the part of the demonstration that tends to decide things.",
+            label: "03",
+            title: "Your operating rules are set up from your documents",
+            body: "Client agreements become terms, fees and gates. Policies become the approvals and controls your team works under. Your facility covenants are recorded and tracked against the live book. Every setting links back to the document it came from.",
           },
           {
-            label: "Minute 30",
-            title: "We show you the controls, including the refusals",
-            body: "Four eyes on a release, a bank change held for human review, a gate that refuses to assert something it cannot verify. If your bank or your auditor will ask, ask it here first.",
+            label: "04",
+            title: "You review your own business inside the platform",
+            body: "Your morning briefing on your own book, the evidence behind every line, and the controls, including the ones that refuse. Pick the account that always gives you trouble and watch what it does with it.",
           },
           {
-            label: "After",
-            title: "You get the briefing and an honest list of what we could not see",
-            body: "In writing. Including the sources that were not connected and what each one would have added. If a capability you need is planned rather than available, that list is where you find out.",
+            label: "05",
+            title: "You decide with the evidence in front of you",
+            body: "In writing, you also get what could not be reconciled or configured and why. If you go ahead, the work is not repeated: the reconstruction you reviewed is the starting point for your migration.",
           },
         ]}
       />
@@ -149,8 +146,12 @@ export default function DemoPage() {
         title="Before you fill anything in"
         items={[
           {
-            q: "Do we have to send real data?",
-            a: "No. Masked debtor names and rounded amounts still produce a real briefing, because the movement and the relationships are what the platform reads. Some operators send a full export under an agreement instead. Either works.",
+            q: "Do we have to send everything at once?",
+            a: "No. The invoice level aging and one executed client agreement are enough to start, and the rest can follow. The more of your operation you send, the more of it you see running before you decide.",
+          },
+          {
+            q: "Is our data safe while you prepare it?",
+            a: "Your data sits in its own isolated environment, and nothing is sent to your clients, your debtors or your staff while it is prepared. If your compliance team wants an agreement in place first, we sign it before anything is sent.",
           },
           {
             q: "Who will we actually be talking to?",
@@ -158,7 +159,7 @@ export default function DemoPage() {
           },
           {
             q: "We are on FactorSoft. Is this a waste of time?",
-            a: "It is the opposite. Bring your data model questions. We publish a working guide to what a FactorSoft conversion involves, and the first call usually spends more time on your extract than on our screens.",
+            a: "It is the opposite. Send the standard reports FactorSoft already produces and you will see your own book running on FactorFox AI. Our working guide to a FactorSoft conversion sets out what moves and what needs a decision.",
           },
           {
             q: "We are not ready to switch systems. Should we still book?",
