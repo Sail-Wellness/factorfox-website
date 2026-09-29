@@ -16,6 +16,7 @@ import {
 } from "@/components/page-parts";
 import { JsonLd } from "@/components/primitives";
 import { pageMeta, softwareSchema } from "@/lib/seo";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta({
   title: "Factoring software pricing and what drives it",
@@ -28,12 +29,12 @@ export const metadata: Metadata = pageMeta({
 
 const FAQS = [
   {
-    q: "Why is there no price on this page?",
-    a: "Because any number we published would be wrong for most of the people reading it, and a wrong number is worse than no number. A twelve client operation funding weekly and a two hundred client operation funding four times a day are different products in every respect that drives cost. What we can do, and will do on a first call, is give you a real number for your book rather than a range designed to survive being quoted back at us.",
+    q: "Where are FactorFox AI prices published?",
+    a: "On Microsoft Marketplace. Every FactorFox AI plan and its list price is public there. It is one subscription, priced on the volume you factor each month, with no per user fees. You can subscribe through your Microsoft account or request a private offer. A call is still worth having for the parts a price list cannot answer, which are the migration and the shape of your book.",
   },
   {
-    q: "Is that not just the same demo gate everyone else uses?",
-    a: "It would be if we gave you nothing until you sat through a presentation. That is why this page exists. Everything on it is what we would tell you in the first twenty minutes anyway: what drives cost in this category, what each pricing model rewards and punishes, what migration really costs, and what to ask us that we would find inconvenient. Come to the call already knowing all of it.",
+    q: "Do we have to sit through a demonstration to see a price?",
+    a: "No. The list prices are on Microsoft Marketplace, and this page sets out everything else we would tell you in the first twenty minutes anyway: what drives cost in this category, what each pricing model rewards and punishes, what migration really costs, and what to ask us that we would find inconvenient. Come to the call already knowing all of it.",
   },
   {
     q: "Which pricing model is best for a growing factor?",
@@ -71,7 +72,7 @@ export default function PricingPage() {
           { name: "Pricing", path: "/platform/pricing" },
         ]}
         eyebrow="Pricing"
-        title="Nobody in this category publishes a price. Here is everything else."
+        title="FactorFox AI pricing is public on Microsoft Marketplace. Here is how to read it."
         lede={
           <>
             <p>
@@ -79,15 +80,23 @@ export default function PricingPage() {
               asked to compare three platforms and has three demonstration requests instead of three numbers.
             </p>
             <p>
-              We are not going to invent a price on a web page. What we will do is set out what actually
-              drives cost in this category, what each pricing model rewards, what migration really costs, what
-              your current system costs including the people it needs, and the questions that make a vendor
-              uncomfortable in a useful way.
+              FactorFox AI is one subscription, priced on the volume you factor each month, with no per user
+              fees, and every plan and list price is published on{" "}
+              <a
+                href={SITE.marketplaceUrl}
+                rel="noopener"
+                className="font-semibold text-[var(--accent)] underline underline-offset-4 hover:no-underline"
+              >
+                Microsoft Marketplace
+              </a>
+              . The rest of this page is what a price list cannot tell you: what drives cost in this
+              category, what each pricing model rewards, what migration really costs, and what your current
+              system costs including the people it needs.
             </p>
           </>
         }
         primaryCta={{ href: "/demo", label: "Get a number for your book" }}
-        secondaryCta={{ href: "/compare", label: "Compare platforms" }}
+        secondaryCta={{ href: SITE.marketplaceUrl, label: "See plans on Microsoft Marketplace" }}
       />
 
       <ProseSection

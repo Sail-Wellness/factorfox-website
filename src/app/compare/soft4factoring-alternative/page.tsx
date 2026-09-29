@@ -40,7 +40,7 @@ const FAQS = [
   },
   {
     q: "Does FactorFox publish pricing?",
-    a: "No. It is quoted on a call, because negotiated schedules exist and a public number would misstate them.",
+    a: "Yes. FactorFox AI plans and list prices are published on Microsoft Marketplace, priced on monthly factored volume with no per user fees.",
   },
   {
     q: "Is FactorFox certified?",
@@ -61,7 +61,7 @@ const LEDE = (
 
 const BETTER_FIT = (
     <>
-      <p>{"SOFT4Factoring publishes its pricing and states ISO 27001 certification. A factor that has already standardized on Microsoft Dynamics 365 Business Central for its company accounting, and wants a published per user price, has good reasons to look at it."}</p>
+      <p>{"SOFT4Factoring publishes its pricing and states ISO 27001 certification. A factor that has already standardized on Microsoft Dynamics 365 Business Central for its company accounting, and wants per user pricing, has good reasons to look at it."}</p>
       <p>{"FactorFox’s SOC 2 program is in progress and we claim no certification until a report exists. If you want an AI native platform built specifically for specialty finance, with asset based lending and purchase order finance on the same record, compare the two on your own book."}</p>
     </>
 );

@@ -137,7 +137,8 @@ export default function NewsPage() {
           <>
             <p>
               In September 2026 FactorFox relaunched as an AI native operating system for specialty finance.
-              The launch was covered by ABF Journal, IFA Commercial Factor and PR.com.
+              The launch was covered by ABF Journal, IFA Commercial Factor and PR.com, and FactorFox AI is
+              now available on Microsoft Marketplace.
             </p>
             <p>
               For interviews, facts or images, write to{" "}
@@ -155,6 +156,33 @@ export default function NewsPage() {
         primaryCta={{ href: "/platform/ai-native", label: "What AI native factoring software means" }}
         secondaryCta={{ href: "/ai-in-action", label: "Watch the 85 second briefing" }}
       />
+
+      <Section bordered>
+        <Container>
+          <SectionHead eyebrow="Announcements" title="FactorFox AI is on Microsoft Marketplace" />
+          <div
+            className="mt-10 rounded-xl border border-[var(--line)] bg-[var(--bg-raised)] p-6 sm:p-7"
+            style={{ boxShadow: "var(--shadow-card)" }}
+          >
+            <p className="u-label text-[var(--fg-subtle)]">
+              FactorFox &middot; <time dateTime="2026-09-29">September 29, 2026</time>
+            </p>
+            <p className="mt-3 max-w-[74ch] text-[15px] leading-[1.65] text-[var(--fg-muted)]">
+              FactorFox AI, the AI native operating system for factoring, asset based lending and purchase
+              order finance, is now listed on Microsoft Marketplace as a SaaS offer. Plans and list prices are
+              public there, priced on the volume a factor funds each month with no per user fees, and
+              factors can subscribe through their Microsoft account or request a private offer.
+            </p>
+            <a
+              href={SITE.marketplaceUrl}
+              className="mt-4 inline-block text-[14px] font-semibold text-[var(--accent)] underline underline-offset-4 hover:no-underline"
+              rel="noopener"
+            >
+              See FactorFox AI on Microsoft Marketplace
+            </a>
+          </div>
+        </Container>
+      </Section>
 
       <Section bordered>
         <Container>

@@ -16,6 +16,7 @@ import {
   Status,
 } from "@/components/page-parts";
 import { JsonLd } from "@/components/primitives";
+import { SITE } from "@/lib/site";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -273,6 +274,7 @@ export default function TeamsPage() {
       <RelatedPages
         links={[
           { href: "/integrations/microsoft-365", label: "Microsoft 365", note: "Outlook, Calendar, Bookings and Entra ID in detail." },
+          { href: SITE.marketplaceUrl, label: "FactorFox AI on Microsoft Marketplace", note: "Plans and list prices, and subscribing through your Microsoft account." },
           { href: "/platform/briefings", label: "Briefings", note: "The six questions and how scope is decided." },
           { href: "/platform/evidence", label: "Intelligence with evidence", note: "What sits behind the number on the card." },
           { href: "/platform/security", label: "Security and controls", note: "The whole control surface, not just this integration." },

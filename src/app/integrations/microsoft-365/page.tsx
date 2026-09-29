@@ -18,6 +18,7 @@ import {
   Status,
 } from "@/components/page-parts";
 import { JsonLd } from "@/components/primitives";
+import { SITE } from "@/lib/site";
 import { pageMeta, softwareSchema } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta({
@@ -346,6 +347,7 @@ export default function Microsoft365Page() {
       <RelatedPages
         links={[
           { href: "/integrations/microsoft-teams", label: "Microsoft Teams", note: "Briefings, signal cards and approvals with four eyes intact." },
+          { href: SITE.marketplaceUrl, label: "FactorFox AI on Microsoft Marketplace", note: "Plans and list prices, and subscribing through your Microsoft account." },
           { href: "/platform/accounting", label: "Accounting", note: "Where a cash application proposal ends up once a person applies it." },
           { href: "/platform/collections", label: "Collections", note: "The case that projects a follow up into the calendar." },
           { href: "/platform/security", label: "Security and controls", note: "Scopes, revocation, break glass and immutable audit in full." },

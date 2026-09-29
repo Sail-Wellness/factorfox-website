@@ -5,6 +5,7 @@ import { BriefingPanel } from "@/components/briefing-panel";
 import { HeroDeck } from "@/components/hero-animation";
 import { VideoModal } from "@/components/video-modal";
 import { HeroLoop } from "@/components/hero-loop";
+import { SITE } from "@/lib/site";
 import { pageMeta, softwareSchema, faqSchema, organizationSchema } from "@/lib/seo";
 import { ROLES } from "@/content/roles";
 import { INTEGRATIONS } from "@/content/integrations";
@@ -85,6 +86,8 @@ export default function HomePage() {
               path: "/",
             }),
             "@id": "https://factorfox.com/#software",
+            name: "FactorFox AI",
+            sameAs: [SITE.marketplaceUrl],
           },
           faqSchema(FAQS),
         ]}
@@ -136,6 +139,18 @@ export default function HomePage() {
                 or open it on its own page
               </Link>
             </div>
+
+            <p className="mt-6 text-[13.5px] leading-[1.5] text-[var(--fg-muted)]">
+              FactorFox AI is{" "}
+              <a
+                href={SITE.marketplaceUrl}
+                rel="noopener"
+                className="font-semibold text-[var(--accent)] underline underline-offset-4 hover:no-underline"
+              >
+                available on Microsoft Marketplace
+              </a>
+              , with plans and list prices published there.
+            </p>
           </div>
 
           <div className="mx-auto mt-16 max-w-[1000px]">

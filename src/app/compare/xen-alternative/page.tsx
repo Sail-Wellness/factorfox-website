@@ -35,7 +35,7 @@ const DIFFERENCES = [
 const FAQS = [
   {
     q: "Does FactorFox have a free tier?",
-    a: "No. FactorFox pricing is quoted on a call, because negotiated schedules exist and a public number would misstate them.",
+    a: "No. FactorFox AI plans and list prices are published on Microsoft Marketplace, priced on monthly factored volume, and you can subscribe there or request a private offer.",
   },
   {
     q: "Does FactorFox offer white labeling?",
@@ -60,7 +60,7 @@ const LEDE = (
 
 const BETTER_FIT = (
     <>
-      <p>{"XEN publishes a free tier with self sign up. FactorFox does not publish pricing and starts with a demonstration, so a new or very small factor that wants to try software on its own that afternoon may prefer XEN’s approach."}</p>
+      <p>{"XEN publishes a free tier with self sign up. FactorFox has no free tier: its plans start as paid subscriptions on Microsoft Marketplace, so a new or very small factor that wants to try software at no cost that afternoon may prefer XEN’s approach."}</p>
       <p>{"If you need asset based lending, purchase order finance, a built in ledger or covenant monitoring on the same record, compare the two on your own book."}</p>
     </>
 );

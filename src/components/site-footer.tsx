@@ -41,6 +41,14 @@ export function SiteFooter() {
               </span>
             </a>
 
+            <a
+              href={SITE.marketplaceUrl}
+              rel="noopener"
+              className="mt-4 inline-block text-[12.5px] leading-[1.45] text-[var(--fg-subtle)] underline underline-offset-4 hover:text-[var(--accent)]"
+            >
+              FactorFox AI on Microsoft Marketplace
+            </a>
+
             {/* A published number is a statement that a person answers. It is
                 deliberately above the fold of the footer rather than buried on
                 a contact page. */}

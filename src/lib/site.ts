@@ -36,6 +36,8 @@ export const SITE = {
    */
   leadEndpoint: "https://test.factorfox.com/v1/public/lead-intake/web",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
+  /** FactorFox AI on Microsoft Marketplace, live 29 September 2026, plans and list prices public. */
+  marketplaceUrl: "https://marketplace.microsoft.com/en-us/product/factorfoxsoftware.factorfox",
   ifaListing: "https://www.factoring.org/vendor_details.asp?ID=1321",
   /** Owner confirmed, 28 August 2026. */
   locality: "Winter Garden",
@@ -53,6 +55,7 @@ export const SITE = {
     "https://sourceforge.net/software/product/FactorFox/",
     "https://slashdot.org/software/p/FactorFox/",
     "https://www.trustradius.com/products/factorfox/reviews",
+    "https://marketplace.microsoft.com/en-us/product/factorfoxsoftware.factorfox",
   ],
   /**
    * Owner directive, September 2026: the founder is the only officer named in

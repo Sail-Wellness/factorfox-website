@@ -63,7 +63,7 @@ const FACTORFOX_ROWS: [string, ReactNode][] = [
   ["Accounting integrations", <span key="a">QuickBooks Online and Xero, <Status kind="available" /></span>],
   ["Microsoft Teams", <span key="t">Briefings, signals and approvals in Teams, <Status kind="controlled" /></span>],
   ["Security certification", "A SOC 2 program is in progress. No certification is claimed until a report exists."],
-  ["Pricing", "Not published. Quoted on a call, because negotiated schedules exist."],
+  ["Pricing", "Plans and list prices published on Microsoft Marketplace, priced on monthly factored volume with no per user fees"],
   ["Customers", "Over 100 organizations across North America, Latin America, Europe, Australia and South Africa"],
 ];
 
