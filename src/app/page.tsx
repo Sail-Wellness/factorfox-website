@@ -60,7 +60,7 @@ const FAQS = [
   },
   {
     q: "Is FactorFox tied to one AI model?",
-    a: "No. FactorFox is model agnostic by design. The intelligence is part of the architecture rather than a model bolted to the side of it, so a model can be evaluated, routed around during an outage or replaced with a better one without a migration project. Every conclusion records which model produced it, on which policy version, with the evidence attached.",
+    a: "No. FactorFox is model agnostic by design and can draw on a catalog of over 12,000 models, using the one that fits each job. The intelligence is part of the architecture rather than a model bolted to the side of it, so a model can be evaluated, routed around during an outage or replaced with a better one without a migration project. Every conclusion records which model produced it, on which policy version, with the evidence attached.",
   },
   {
     q: "Does FactorFox have real double entry accounting?",
@@ -165,7 +165,7 @@ export default function HomePage() {
               ["2002", "Building for this industry since"],
               ["6", "Questions every briefing answers"],
               ["5", "Continents where customers run"],
-              ["0", "Conclusions without evidence"],
+              ["12,000+", "Models FactorFox can draw on"],
             ].map(([n, l]) => (
               <div key={l}>
                 <dt className="u-tabular font-display text-[2rem] font-extrabold leading-none tracking-[-0.03em] text-[var(--accent)]">
@@ -246,17 +246,29 @@ export default function HomePage() {
       </Section>
 
       {/* ============================================ MODEL AGNOSTIC */}
+      {/* "Over 12,000 models": owner directive, 30 September 2026. The model catalog FactorFox draws on
+          listed 12,010 models that day. Stated as "over 12,000" because the count moves daily, and the
+          catalog's provider is deliberately not named anywhere on the site. */}
       <Section bordered>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16">
             <div>
               <Eyebrow tone="signal">The architecture</Eyebrow>
-              <h2 className="text-section-lg mt-4 max-w-[22ch]">Model agnostic, and it has to be.</h2>
+              <h2 className="text-section-lg mt-4 max-w-[22ch]">
+                Over 12,000 models. The right one for each job.
+              </h2>
               <div className="mt-6 space-y-4 text-[16.5px] leading-[1.7] text-[var(--fg-muted)]">
                 <p>
                   Almost anyone can connect a model to software now, so asking whether a platform has AI no
-                  longer separates anything. Two questions do. Where does the intelligence sit relative to
-                  the ledger, and what happens to you when the model underneath it changes.
+                  longer separates anything. What separates platforms is what they are tied to. Software
+                  built around one model inherits that model&rsquo;s limits, its pricing and its bad days.
+                </p>
+                <p>
+                  FactorFox is model agnostic. It can draw on a catalog of over 12,000 models and uses the one
+                  that fits the work in front of it: reading a scanned proof of delivery is a different job
+                  from weighing a funding decision against your policy, and neither should be forced through
+                  the same model. When a better model ships, FactorFox can adopt it. When a provider has an
+                  outage, your funding day does not.
                 </p>
                 <p>
                   When the cloud arrived, the shift that mattered was that an application stopped depending
@@ -284,6 +296,7 @@ export default function HomePage() {
               <Eyebrow>The difference, on an ordinary day</Eyebrow>
               <dl className="mt-5 divide-y divide-[var(--line)]">
                 {[
+                  ["A job needs a different kind of model", "The platform uses the one that fits, from a catalog of over 12,000."],
                   ["A model has an outage", "The platform routes, and records that it did."],
                   ["A better model ships", "It is evaluated and adopted. Not a migration project."],
                   ["An examiner asks why", "The conclusion opens onto the evidence that produced it."],

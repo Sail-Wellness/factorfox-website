@@ -116,7 +116,7 @@ const CAPABILITIES: Capability[] = [
   {
     eyebrow: "Independent of any one model",
     title: "Model agnostic AI",
-    body: "FactorFox is model agnostic by design. The model doing the work is a configuration decision rather than an architectural one, so when a better model ships the platform can adopt it, and when a provider has a bad afternoon your funding day does not.",
+    body: "FactorFox is model agnostic by design and can draw on a catalog of over 12,000 models, using the one that fits each job. When a better model ships the platform can adopt it, and when a provider has a bad afternoon your funding day does not.",
     href: "#model-agnostic",
     linkLabel: "Why model agnostic matters",
     status: "available",
@@ -314,7 +314,8 @@ export default function AiNativePage() {
                 good and expensive the moment it is not.
               </p>
               <p className="mt-4 text-[15px] leading-[1.65] text-[var(--fg-muted)]">
-                FactorFox is model agnostic. Same architectural bet, made twice, twenty four years apart.
+                FactorFox is model agnostic, with a catalog of over 12,000 models to draw on and the one that
+                fits each job doing the work. Same architectural bet, made twice, twenty four years apart.
               </p>
             </Card>
           </div>
