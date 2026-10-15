@@ -106,6 +106,7 @@ export const PAGES: PageEntry[] = [
   { path: "/news", intent: "brand", target: "FactorFox news", priority: 0.6, changeFrequency: "monthly" },
   { path: "/company", intent: "brand", target: "FactorFox company", priority: 0.6, changeFrequency: "monthly" },
   { path: "/demo", intent: "conversion", target: "", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/meet-fox", intent: "conversion", target: "factoring software webinar", priority: 0.8, changeFrequency: "weekly" },
 
   /* legal */
   { path: "/legal/privacy", intent: "legal", target: "", priority: 0.3, changeFrequency: "yearly" },

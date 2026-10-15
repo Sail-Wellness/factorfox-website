@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@/components/analytics";
+import { MeetFoxPromo } from "@/components/meet-fox";
 import { JsonLd } from "@/components/primitives";
 import { websiteSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </main>
         <SiteFooter />
         <Analytics />
+        <MeetFoxPromo />
       </body>
     </html>
   );
