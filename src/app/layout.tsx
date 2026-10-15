@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@/components/analytics";
 import { MeetFoxPromo } from "@/components/meet-fox";
+import { MeetFoxBar } from "@/components/meet-fox-bar";
 import { JsonLd } from "@/components/primitives";
 import { websiteSchema } from "@/lib/seo";
 import { SITE } from "@/lib/site";
@@ -61,7 +62,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         {/* Scroll reveal hides its content until it is observed. Without
             JavaScript nothing observes it, so it is given back here. */}
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className="flex min-h-screen flex-col">
         <JsonLd data={websiteSchema()} />
+        <MeetFoxBar />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}

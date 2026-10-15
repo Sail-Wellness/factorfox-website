@@ -43,3 +43,10 @@ export const MEET_FOX = {
 export function webinarHasEnded(now: number = Date.now()) {
   return now >= Date.parse(MEET_FOX.end);
 }
+
+/**
+ * The announcement bar above the header runs until midnight Eastern at the
+ * start of November 20. Between the end of the webinar and then it thanks
+ * attendees instead of inviting registrations.
+ */
+export const MEET_FOX_BAR_UNTIL = "2026-11-20T00:00:00-05:00";

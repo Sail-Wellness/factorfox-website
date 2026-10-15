@@ -800,3 +800,38 @@
 @media (prefers-reduced-motion: reduce) {
   .ff-promo-dialog[open] { animation: none; }
 }
+
+/* ------------------------------------------- Meet Fox announcement bar */
+.mfx-bar {
+  background: #000;
+  color: #f5f5f7;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  text-align: center;
+}
+.mfx-bar p {
+  margin: 0;
+  padding: 0.7rem 1rem;
+}
+.mfx-strong { font-weight: 600; }
+.mfx-long { color: #d2d2d7; }
+.mfx-short { display: none; color: #d2d2d7; }
+.mfx-link {
+  margin-left: 0.9rem;
+  color: #2997ff;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.mfx-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.mfx-link:focus-visible { outline: 2px solid #2997ff; outline-offset: 2px; border-radius: 2px; }
+.mfx-post { display: none; }
+html[data-mfx="post"] .mfx-live { display: none; }
+html[data-mfx="post"] .mfx-post { display: block; }
+html[data-mfx="gone"] .mfx-bar { display: none; }
+@media (max-width: 720px) {
+  .mfx-long { display: none; }
+  .mfx-short { display: inline; }
+  .mfx-details { display: none; }
+  .mfx-link { margin-left: 0.6rem; }
+}
