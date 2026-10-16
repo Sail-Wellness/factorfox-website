@@ -13,7 +13,6 @@ const STATE_SCRIPT = `(function(){try{var n=Date.now(),e=Date.parse("${MEET_FOX.
  * not dismissible: it stays until the date passes.
  */
 export function MeetFoxBar() {
-  if (Date.now() >= Date.parse(MEET_FOX_BAR_UNTIL)) return null;
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: STATE_SCRIPT }} />

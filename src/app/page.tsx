@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MeetFoxHome } from "@/components/meet-fox-home";
 import type { Metadata } from "next";
 import { Container, Section, SectionHead, Eyebrow, CTA, JsonLd, Status } from "@/components/primitives";
 import { BriefingPanel } from "@/components/briefing-panel";
@@ -92,6 +93,9 @@ export default function HomePage() {
           faqSchema(FAQS),
         ]}
       />
+
+      {/* Meet Fox webinar banner, directly below the menu until November 20, 2026. */}
+      <MeetFoxHome />
 
       {/* ============================================ HERO */}
       <section className="relative overflow-hidden border-b border-[var(--line)] bg-[var(--bg)] pb-20 pt-14 sm:pt-20">
