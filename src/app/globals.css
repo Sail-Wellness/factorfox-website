@@ -837,67 +837,62 @@ html[data-mfx="gone"] .mfx-bar { display: none; }
 }
 
 /* ------------------------------------------- Meet Fox homepage banner */
+/* Sized to about a third of a laptop screen so the homepage headline stays
+   above the fold beneath it (owner, October 16, 2026: half the first size). */
 .mfx-home {
   background: #000;
   color: #f5f5f7;
   overflow: hidden;
 }
 .mfx-home-inner {
-  max-width: 1600px;
+  max-width: 1440px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
-  gap: 2rem;
-  padding: 0 clamp(1.25rem, 6vw, 7.5rem);
+  column-gap: clamp(1.5rem, 3vw, 3rem);
+  padding: 0 clamp(1.25rem, 5vw, 5rem);
+  min-height: 300px;
 }
-.mfx-home-copy { padding: clamp(2.5rem, 5vw, 4.5rem) 0; }
+.mfx-home-copy { padding: 2rem 0; font-family: var(--font-inter), system-ui, sans-serif; }
 .mfx-home-title {
   margin: 0;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: clamp(3.4rem, 8.6vw, 9.5rem);
+  font-size: clamp(2.6rem, 4.8vw, 4.75rem);
   line-height: 1;
   font-weight: 600;
   letter-spacing: -0.035em;
   color: #f5f5f7;
 }
 .mfx-home-sub {
-  margin: clamp(1rem, 2vw, 1.75rem) 0 0;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: clamp(1.35rem, 2.6vw, 2.6rem);
-  line-height: 1.2;
+  margin: 0.6rem 0 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.5rem);
+  line-height: 1.25;
   font-weight: 500;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
   color: #a1a1a6;
 }
 .mfx-home-event {
-  margin: clamp(1.5rem, 3vw, 3rem) 0 0;
-  font-family: var(--font-inter), system-ui, sans-serif;
-  font-size: clamp(1.05rem, 1.65vw, 1.6rem);
-  line-height: 1.4;
+  margin: 1.1rem 0 0;
+  font-size: clamp(0.95rem, 1.1vw, 1.0625rem);
+  line-height: 1.45;
   font-weight: 600;
-  letter-spacing: -0.01em;
   color: #f5f5f7;
 }
-.mfx-home-event > span { display: block; font-weight: 500; color: #a1a1a6; }
-.mfx-home-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: clamp(1.5rem, 2.6vw, 2.5rem);
-}
+.mfx-home-date { display: block; font-weight: 500; color: #a1a1a6; }
+.mfx-home-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .mfx-home-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 9.5rem;
-  padding: 0.95rem 2rem;
+  min-width: 8.5rem;
+  padding: 0.85rem 1.75rem;
   border-radius: 999px;
   background: #0071e3;
   color: #fff;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
+  white-space: nowrap;
   transition: background-color 0.15s ease;
 }
 .mfx-home-btn:hover { background: #0077ed; }
@@ -908,24 +903,31 @@ html[data-mfx="gone"] .mfx-bar { display: none; }
   box-shadow: inset 0 0 0 1.5px rgba(245, 245, 247, 0.55);
 }
 .mfx-home-btn-ghost:hover { background: rgba(245, 245, 247, 0.1); }
-.mfx-home-art { align-self: stretch; display: flex; align-items: flex-end; justify-content: center; }
-.mfx-home-art img { display: block; width: 100%; max-width: 760px; height: auto; }
+.mfx-home-art { align-self: end; height: 300px; }
+.mfx-home-art img { display: block; height: 100%; width: auto; }
 .mfx-home .mfx-post { display: none; }
 html[data-mfx="post"] .mfx-home .mfx-live { display: none; }
 html[data-mfx="post"] .mfx-home .mfx-post { display: flex; }
 html[data-mfx="gone"] .mfx-home { display: none; }
 /* The homepage banner carries the invitation, so the bar above the menu steps aside there. */
 body:has(.mfx-home) .mfx-bar { display: none; }
-@media (max-width: 900px) {
-  .mfx-home-inner { grid-template-columns: 1fr; gap: 0; }
-  .mfx-home-copy { padding-bottom: 0.5rem; }
-  .mfx-home-art { justify-content: center; }
-  .mfx-home-art img { max-width: 520px; }
+@media (max-width: 1100px) {
+  .mfx-home-inner { grid-template-columns: minmax(0, 1fr) auto; }
+  .mfx-home-cta { grid-column: 1; padding-bottom: 2rem; }
+  .mfx-home-copy { padding-bottom: 1.25rem; }
+  .mfx-home-art { grid-column: 2; grid-row: 1 / span 2; height: 280px; }
 }
-@media (max-width: 640px) {
-  .mfx-home-copy { padding-top: 2rem; }
-  .mfx-home-art img { max-width: 300px; }
+@media (max-width: 720px) {
+  .mfx-home-inner { grid-template-columns: 1fr; min-height: 0; }
+  .mfx-home-art { display: none; }
+  .mfx-home-copy { padding: 1.5rem 0 1rem; }
+  .mfx-home-cta { padding-bottom: 1.5rem; }
 }
 @media (max-width: 480px) {
-  .mfx-home-btn { flex: 1 1 0; min-width: 0; padding: 0.9rem 1rem; }
+  .mfx-home-copy { padding: 1.1rem 0 0.85rem; }
+  .mfx-home-title { font-size: 2.25rem; }
+  .mfx-home-sub { margin-top: 0.35rem; font-size: 1rem; }
+  .mfx-home-event { margin-top: 0.65rem; font-size: 0.875rem; line-height: 1.4; }
+  .mfx-home-cta { padding-bottom: 1.1rem; }
+  .mfx-home-btn { flex: 1 1 0; min-width: 0; padding: 0.7rem 1rem; font-size: 0.9375rem; }
 }

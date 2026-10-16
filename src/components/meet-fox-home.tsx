@@ -16,17 +16,15 @@ export function MeetFoxHome() {
       <div className="mfx-home-inner">
         <div className="mfx-home-copy">
           <p id="mfx-home-title" className="mfx-home-title">Meet Fox.</p>
-          <p className="mfx-home-sub">
-            Your AI operating partner
-            <br />
-            for specialty finance.
-          </p>
+          <p className="mfx-home-sub">Your AI operating partner for specialty finance.</p>
           <p className="mfx-home-event">
             FactorFox live demonstration on Microsoft Teams
-            <span>
+            <span className="mfx-home-date">
               Thursday, November 19, 2026 <span className="whitespace-nowrap">at 1:00 PM ET</span>
             </span>
           </p>
+        </div>
+        <div className="mfx-home-cta">
           <div className="mfx-home-actions mfx-live">
             <a
               href={MEET_FOX.registrationUrl}
@@ -58,11 +56,10 @@ export function MeetFoxHome() {
           <img
             src="/media/meet-fox-fox-1100.jpg"
             srcSet="/media/meet-fox-fox-700.jpg 700w, /media/meet-fox-fox-1100.jpg 1100w"
-            sizes="(max-width: 900px) 80vw, 45vw"
+            sizes="340px"
             width={1100}
             height={976}
             alt=""
-            fetchPriority="high"
             decoding="async"
           />
         </div>
