@@ -34,7 +34,7 @@ export const SITE = {
    * only in a repository variable so that the form works from a clean clone,
    * and so that forgetting the variable cannot quietly break lead capture.
    */
-  leadEndpoint: "https://test.factorfox.com/v1/public/lead-intake/web",
+  leadEndpoint: "https://app.factorfox.com/v1/public/lead-intake/web",
   linkedin: "https://www.linkedin.com/company/factorfox-software-llc",
   /** FactorFox AI on Microsoft Marketplace, live 29 September 2026, plans and list prices public. */
   marketplaceUrl: "https://marketplace.microsoft.com/en-us/product/factorfoxsoftware.factorfox",
