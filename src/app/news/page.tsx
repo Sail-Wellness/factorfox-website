@@ -11,11 +11,11 @@ import {
 import { JsonLd } from "@/components/primitives";
 import { pageMeta, absoluteUrl } from "@/lib/seo";
 import { SITE } from "@/lib/site";
+import { STORIES } from "@/lib/news";
 
 /*
-  Launch coverage, September 2026. Headlines are the publishers' own, with hyphens set as spaces
-  to match the site's house style. Dates are the publication dates shown on each story. Add new
-  coverage to STORIES; the page, the schema and the footer link all follow from it.
+  Coverage and announcements live in src/lib/news.ts so the investor page shows the same
+  published items. Add new coverage there; this page, its schema and /investors follow.
 */
 
 export const metadata: Metadata = pageMeta({
@@ -26,56 +26,6 @@ export const metadata: Metadata = pageMeta({
   intent: "brand",
   target: "FactorFox news",
 });
-
-type Story = {
-  outlet: string;
-  outletUrl: string;
-  headline: string;
-  url: string;
-  date: string; // ISO
-  display: string;
-  author?: string;
-  summary: string;
-  type: "NewsArticle" | "Article";
-};
-
-const STORIES: Story[] = [
-  {
-    outlet: "ABF Journal",
-    outletUrl: "https://www.abfjournal.com/",
-    headline: "FactorFox Unveils Next Generation AI Native Finance Platform",
-    url: "https://www.abfjournal.com/factorfox-unveils-next-generation-ai-native-finance-platform/",
-    date: "2026-09-22",
-    display: "September 22, 2026",
-    author: "Rita Garwood",
-    summary:
-      "ABF Journal reports on the relaunch of FactorFox as an AI native operating system for specialty finance, built from more than twenty years of industry experience, model agnostic by design and running on a real double entry general ledger.",
-    type: "NewsArticle",
-  },
-  {
-    outlet: "IFA Commercial Factor",
-    outletUrl: "https://magazine.factoring.org/",
-    headline: "FactorFox Introduces the Next Generation of Its AI Native Specialty Finance Platform",
-    url: "https://magazine.factoring.org/news/factorfox-introduces-the-next-generation-of-its-ai-native-specialty-finance-platform",
-    date: "2026-09-21",
-    display: "September 21, 2026",
-    author: "William Bounds",
-    summary:
-      "The International Factoring Association's magazine covers Actionable Intelligence, agreement reading, covenant monitoring, role based briefings and the rule that the AI recommends while authorized people approve.",
-    type: "NewsArticle",
-  },
-  {
-    outlet: "PR.com",
-    outletUrl: "https://www.pr.com/",
-    headline: "FactorFox Introduces an AI Native Operating System Built for the Next Era of Specialty Finance",
-    url: "https://www.pr.com/press-release/979437",
-    date: "2026-09-22",
-    display: "September 22, 2026",
-    summary:
-      "The launch announcement: an AI native operating system for factoring companies, asset based lenders and purchase order funders, with evidence behind every answer and human authorization on every movement of money.",
-    type: "Article",
-  },
-];
 
 const FACTS: [string, string][] = [
   ["Company", `${SITE.legalName}`],

@@ -105,6 +105,7 @@ export const PAGES: PageEntry[] = [
   /* company and conversion */
   { path: "/news", intent: "brand", target: "FactorFox news", priority: 0.6, changeFrequency: "monthly" },
   { path: "/company", intent: "brand", target: "FactorFox company", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/investors", intent: "brand", target: "FactorFox investor relations", priority: 0.5, changeFrequency: "monthly" },
   { path: "/demo", intent: "conversion", target: "", priority: 0.8, changeFrequency: "monthly" },
   { path: "/meet-fox", intent: "conversion", target: "factoring software webinar", priority: 0.8, changeFrequency: "weekly" },
 

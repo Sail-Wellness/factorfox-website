@@ -270,6 +270,19 @@ export default function CompanyPage() {
         </Container>
       </Section>
 
+      <Section bordered className="!py-0">
+        <Container>
+          <p className="py-10 text-[16px] leading-[1.65] text-[var(--fg-muted)]">
+            Investors, capital providers and strategic partners can learn about the company and start a
+            conversation on our{" "}
+            <Link href="/investors" className="font-semibold text-[var(--accent)] underline underline-offset-4">
+              investor relations and strategic partnerships page
+            </Link>
+            .
+          </p>
+        </Container>
+      </Section>
+
       <RelatedPages
         links={[
           { href: "/platform", label: "The platform", note: "What it observes, concludes and refuses." },
